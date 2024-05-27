@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc." />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon" />
+
+  <!-- Map CSS -->
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
+
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+  <link rel="stylesheet" href="style-custom.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neuicons@1.9.0/css/neu.min.css">
+
+  <!-- Title -->
+  <title>Sapiengraph - Dashboard</title>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-vertical fixed-start navbar-expand-md navbar-light" id="sidebar">
+    <div class="container-fluid">
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarCollapse"
+        aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="./index.html">
+        <img src="./assets/img/logo.svg" class="navbar-brand-img mx-auto" alt="...">
+      </a>
+
+      <!-- User (xs) -->
+      <div class="navbar-user d-md-none">
+
+        <div class="btn-group dropdown">
+
+          <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            example@nubela.co <i class="fe fe-chevron-down ms-3"></i>
+          </button>
+
+          <div class="dropdown-menu dropdown-menu-end shadow-lg w-100" aria-labelledby="dropdownMenuButton">
+
+            <div class="row align-items-center">
+              <a class="text-center text-secondary nav-link mt-3 mb-1" href="index.html">
+                <i class="fe fe-log-out"></i> Log out
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Credits (md)-->
+      <div class="navbar-user d-none d-md-flex border-bottom pb-4 mb-4">
+
+        <div class="row">
+
+          <div class="col-12">
+            <label class="mb-2 text-gray-700">
+              Credits
+              <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 3220</code><code class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/4600 </code>
+            </label>
+
+            <div class="progress">
+              <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                aria-valuemin="0" aria-valuemax="100">
+                3220/4600
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="col-12">
+
+            <a class="btn btn-outline-success w-100 mt-3" href="account-buy-credits.html">
+              Buy credits
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidebarCollapse">
+
+        <!-- Credits (xs)-->
+        <div class="navbar-user d-md-none mb-4">
+
+          <div class="row text-center text-md-left">
+
+          <div class="col-12">
+            <label class="mb-2 text-gray-700">
+              Credits
+              <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 3220</code><code class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/4600 </code>
+            </label>
+
+            <div class="progress">
+              <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                aria-valuemin="0" aria-valuemax="100">
+                3220/4600
+              </div>
+            </div>
+
+
+          </div>
+
+            <div class="col-12">
+
+              <a class="btn btn-outline-success w-100 mt-3" href="account-buy-credits.html">
+                Buy credits
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#sidebarBilling" data-bs-toggle="collapse" role="button" aria-expanded="true"
+              aria-controls="sidebarBilling">
+              <i class="fe fe-dollar-sign"></i> Billing
+            </a>
+            <div class="collapse show" id="sidebarBilling">
+              <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                  <a href="./account-plans-and-payments.html" class="nav-link">
+                    <span class="border-start border-2 ps-3">Plan and payments</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./account-buy-credits.html" class="nav-link fw-bold">
+                    <span class="border-start border-2 ps-3 text-success border-success">Buy credits</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./account-invoices.html" class="nav-link">
+                    <span class="border-start border-2 ps-3">Invoices</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sidebarAccount" data-bs-toggle="collapse" role="button" aria-expanded="true"
+              aria-controls="sidebarAccount">
+              <i class="fe fe-user"></i> Account
+            </a>
+            <div class="collapse show" id="sidebarAccount">
+              <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link">
+                    <span class="border-start border-2 ps-3">Change email</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="account-change-password.html" class="nav-link">
+                    <span class="border-start border-2 ps-3">Change password</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="account-2fa.html" class="nav-link">
+                    <span class="border-start border-2 ps-3">Two factor security</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item mb-4">
+            <a class="nav-link" href="#!">
+              <i class="fe fe-file"></i> Docs
+            </a>
+          </li>
+
+          <!-- old-logout
+            <hr class="my-4">
+
+            <li class="nav-item">
+              <a class="nav-link mb-3" href="index.html">
+                <i class="fe fe-log-out"></i> Log out 
+              </a>
+            </li>
+            -->
+
+        </ul>
+
+        <div class="mt-md-auto"></div>
+
+        <!-- User (md) -->
+        <div class="navbar-user d-none d-md-flex" id="sidebarUser">
+
+          <div class="btn-group dropup">
+
+            <button type="button" class="btn btn-outline-secondary dropdown-toggle w-100" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              example@nubela.co <i class="fe fe-chevron-up ms-3"></i>
+            </button>
+
+            <div class="dropdown-menu dropdown-menu-center shadow-lg w-100" aria-labelledby="dropdownMenuButton">
+
+
+              <div class="row align-items-center">
+                <a class="text-center text-secondary nav-link mt-3 mb-1" href="index.html">
+                  <i class="fe fe-log-out"></i> Log out
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div> <!-- / .navbar-collapse -->
+
+    </div>
+  </nav>
+
+  <!--MODAL TOPUP-->
+  <div class="modal fade" id="modalNext" tabindex="-1" aria-labelledby="modalNextLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <a type="button" class="btn-close h1 ps-4 pt-4" data-bs-dismiss="modal" aria-label="Close">
+        </a>
+
+        <div class="modal-body">
+
+          <div class="row justify-content-center">
+
+            <div class="col-12">
+
+              <h1 class="fw-bold mb-3">
+                Order confirmation
+              </h1>
+
+              <p class="mb-6 lead">
+                Confirm of a one-time purchase of <span class="fw-bold">100</span> credits and <br>use our formulas up to
+                <span class="fw-bold">100</span> times for <span
+                  class="fw-bold">$9.90</span>?
+              </p>
+
+              <div class="row border-bottom pb-2 mb-4">
+                <div class="col-6">
+                  <h2 class="h2 fw-bold">
+                    Credits
+                  </h2>
+                  <p class="lead">
+                    <span class="fw-bold">100</span> credits
+                  </p>
+                </div>
+
+                <div class="col-6 text-end">
+                  <h2 class="h2 fw-bold">
+                    Total
+                  </h2>
+                  <p class="lead fw-bold">
+                    $9.90
+                  </p>
+                </div>
+              </div>
+
+              <div class="row border-bottom pb-2 mb-4">
+                <div class="col-6">
+                  <p class="lead">
+                    Payment method
+                  </p>
+                </div>
+
+                <div class="col-6 text-end">
+                  <p class="lead">
+                    Visa ending in <span class="fw-bold me-2">1234</span>
+                    <a class="fw-bold border-bottom border-success text-success" href="account-plans-and-payments.html">
+                      Change
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="row mb-6">
+                <div class="col-12 text-end">
+                  <p class="text-muted small">
+                    All prices include VAT where applicable
+                  </p>
+                </div>
+              </div>
+
+              <a class="btn btn-lg btn-success w-100" href="account-buy-credits-after-stripe-prompt.html">
+                Buy credits
+              </a>
+
+              <button class="btn btn-lg btn-link text-success w-100 mt-3 close" data-bs-dismiss="modal">
+                Cancel
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+      <!--MODAL CANCEL-->
+      <div class="modal fade" id="modalCancel" aria-labelledby="modalCancelLabel" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+  
+            <a type="button" class="btn-close h1 ps-4 pt-4" data-dismiss="modal" aria-label="Close">
+            </a>
+  
+            <div class="modal-body">
+  
+              <div class="row justify-content-center pb-md-5">
+  
+                <div class="col-12 col-md-9 text-center mb-4">
+                  <i class="neu-so-faq text-success display-1"></i>
+  
+                  <h1 class="fw-bold mb-3 mt-4">
+                    Cancel your subscription plan?
+                  </h1>
+  
+                  <p class="mb-4 text-gray-700 fs-lg">
+                    We’re sorry to see you go. Would you tell us why?
+                  </p>
+                </div>
+  
+                <div class="col-12 col-md-8">
+  
+                  <!--Radio button-->
+                  <div class="mb-5">
+                    <div class="form-check mb-3">
+                      <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel1">
+                      <label class="form-check-label" for="radioCancel1">
+                        Too many bugs or technical issue
+                      </label>
+                    </div>
+                    <div class="form-check mb-3">
+                      <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel2">
+                      <label class="form-check-label" for="radioCancel2">
+                        Could not get the data I needed
+                      </label>
+                    </div>
+                    <div class="form-check mb-3">
+                      <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel3">
+                      <label class="form-check-label" for="radioCancel3">
+                        Price too expensive
+                      </label>
+                    </div>
+                    <div class="form-check mb-3">
+                      <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel4">
+                      <label class="form-check-label" for="radioCancel4">
+                        Temporarily taking a break or plan to return
+                      </label>
+                    </div>
+                    <div class="form-check mb-3">
+                      <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel5">
+                      <label class="form-check-label" for="radioCancel5">
+                        Financial issue
+                      </label>
+                    </div>
+                    <div class="form-check mb-3">
+                      <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel6">
+                      <label class="form-check-label" for="radioCancel6">
+                        Don't need the tool
+                      </label>
+                    </div>
+                    <div class="form-check mb-3">
+                      <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel7">
+                      <label class="form-check-label" for="radioCancel7">
+                        Other
+                      </label>
+                      <textarea class="form-control mt-2" placeholder="Tell us why" id="floatingTextarea2" style="height: 100px"></textarea>
+                    </div>
+                  </div>
+  
+                  <div class="row align-items-center">
+  
+                    <div class="col-12 col-md-6 text-center">
+                      <a type="button" class="mt-4 text-success" data-bs-dismiss="modal">
+                        Don't cancel
+                      </a>
+                    </div>
+  
+                    <div class="col-12 col-md-6">
+                      <button class="btn btn-success w-100 mt-4" data-bs-target="#modalCancelNext" data-bs-toggle="modal" data-bs-dismiss="modal">
+                        Next
+                      </button>
+                    </div>
+  
+                  </div>
+  
+                </div>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+        </div>
+      </div>
+  
+      <!--MODAL CANCEL 2-->
+      <div class="modal fade" id="modalCancelNext" aria-labelledby="modalCancelNextLabel" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+  
+            <a type="button" class="btn-close h1 ps-4 pt-4" data-bs-dismiss="modal" aria-label="Close">
+            </a>
+  
+            <div class="modal-body">
+  
+              <div class="row justify-content-center pb-md-5">
+  
+                <div class="col-12 col-md-9 text-center mb-4">
+                  <i class="neu-so-faq text-success display-1"></i>
+                </div>
+  
+                <div class="col-12 col-md-9 text-center">
+  
+                  <h1 class="fw-bold">
+                    Cancel your subscription plan?
+                  </h1>
+  
+                  <p class="mb-4 lead">
+                    Pressing the "Yes, continue" button will cancel your current plan. Are you sure want to cancel your Sapiengraph subscription?<br>
+                    <br>
+                    Your existing plan will stay active<br>
+                    <span class="fw-bold">until 31 December 2023</span>.
+                  </p>
+  
+                  <div class="row align-items-center">
+  
+                    <div class="col-12 col-md-6">
+                      <a type="button" class="mt-4 text-success" data-bs-dismiss="modal">
+                        Don't cancel
+                      </a>
+                    </div>
+  
+                    <div class="col-12 col-md-6">
+                      <a class="btn btn-lg btn-success w-100 mt-4" href="account-plans-and-payments-cancel-success.html">
+                        Yes, continue
+                      </a>
+                    </div>
+  
+                  </div>
+  
+                </div>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+        </div>
+      </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12 main-content-dashboard">
+
+          <!-- Header -->
+          <div class="header mt-md-5">
+            <div class="header-body">
+
+              <div class="row align-items-center">
+                <div class="col">
+
+                  <!-- Pretitle -->
+                  <h6 class="header-pretitle">
+                    Overview
+                  </h6>
+
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    Billing
+                  </h1>
+
+                </div>
+              </div> <!-- / .row -->
+
+              <div class="row align-items-center">
+                <div class="col">
+
+                  <!-- Nav -->
+                  <ul class="nav nav-tabs nav-overflow header-tabs">
+                    <li class="nav-item">
+                      <a href="account-plans-and-payments.html" class="nav-link">
+                        Plan and payments
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="account-buy-credits.html" class="nav-link active border-success">
+                        Buy Credits
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="account-invoices.html" class="nav-link">
+                        Invoices
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+
+            <div class="card-header">
+              <div class="row align-items-center">
+
+                <div class="col">
+
+                  <!-- Title -->
+                  <h4 class="card-header-title">
+                    Credits info
+                  </h4>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+
+              <div class="row">
+
+                <div class="col-12">
+
+                  <div class="row mb-3">
+
+                    <div class="col">
+                      <label>
+                        <i class="neu-wallet h3"></i> Credits
+                      </label>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col mb-4">
+                      <div class="border bg-lighter" style="border-radius: 8px; height: 56px;">
+                        <div class="pt-3 ps-3 text-gray-700">
+                          <code class="h1 text-black" style="font-family: Cerebri Sans,sans-serif;"> 3220</code><code
+                            class="h4 fw-normal text-gray-700"
+                            style="font-family: Cerebri Sans,sans-serif;">/4600</code>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="progress" style="height: 24px;">
+                    <div class="progress-bar bg-secondary" role="progressbar" aria-label="Example with label" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                      3220/4600
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Buy credtis -->
+          <div class="card">
+
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col">
+
+                  <!-- Title -->
+                  <h4 class="card-header-title">
+                    Buy credits
+                  </h4>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+
+              <div class="row">
+
+                <div class="col-12 table-responsive">
+                
+                  <table class="table table-bordered" >
+                
+                    <colgroup>
+                      <col style="width: 20%;">
+                      <col style="width: 20%;">
+                      <col class="bg-lighter" style="width: 20%;">
+                      <col style="width: 20%;">
+                      <col style="width: 20%;">
+                    </colgroup>
+                
+                    <thead>
+                      <tr class="">
+                        <th scope="col" class="text-uppercase text-dark">Free Trial<br></th>
+                        <th scope="col" class="text-uppercase text-dark">Lite <br></th>
+                        <th scope="col" class="text-uppercase text-dark">Pro <br><span class="fw-normal h5 text-muted">Current plan</span></th>
+                        <th scope="col" class="text-uppercase text-dark">Business<br></th>
+                        <th scope="col" class="text-uppercase text-dark">Enterprise<br></th>
+                      </tr>
+                    </thead>
+                
+                    <tbody class="">
+
+                      <tr>
+                        <td>
+                          <code class="h1 fw-bold text-black" style="font-family: Cerebri Sans,sans-serif;">
+                            FREE</code></td>
+                        <td>
+                          <code class="h1 fw-bold text-black" style="font-family: Cerebri Sans,sans-serif;">
+                            $9.90</code>/ mo</td>
+                        <td>
+                          <code class="h1 fw-bold text-black" style="font-family: Cerebri Sans,sans-serif;">
+                            $99</code>/ mo</td>
+                        <td>
+                          <code class="h1 fw-bold text-black" style="font-family: Cerebri Sans,sans-serif;">
+                            $500</code>/ mo</td>
+                        <td>
+                          <code class="h1 fw-bold text-black" style="font-family: Cerebri Sans,sans-serif;">
+                            Custom</code></td>
+                      </tr>
+
+                      <tr>
+                        <td>One time trial of <br>
+                          <code class="badge bg-light text-black"
+                          style="font-family: Cerebri Sans,sans-serif;"> <span class="h4 fw-normal">10</span></code> credits</td>
+                        <td>
+                          <code class="badge bg-light text-black"
+                          style="font-family: Cerebri Sans,sans-serif;"> <span class="h4 fw-normal">100</span></code> credits/ mo</td>
+                        <td>
+                          <code class="badge bg-light text-black"
+                          style="font-family: Cerebri Sans,sans-serif;"> <span class="h4 fw-normal">4600</span></code> credits/ mo</td>
+                        </td>
+                        <td>
+                          <code class="badge bg-light text-black"
+                          style="font-family: Cerebri Sans,sans-serif;"> <span class="h4 fw-normal">25000</span></code> credits/ mo</td>
+                        </td>
+                        <td>Custom credit</td>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>None</td>
+                        <td>Use our formulas up to 
+                          <code class="badge bg-light text-black"
+                          style="font-family: Cerebri Sans,sans-serif;"> <span class="h4 fw-normal">
+                            100</span></code> times</td>
+                        <td>Use our formulas up to 
+                          <code class="badge bg-light text-black"
+                          style="font-family: Cerebri Sans,sans-serif;"> <span class="h4 fw-normal">
+                            4600</span></code> times</td>
+                        <td>Use our formulas up to 
+                          <code class="badge bg-light text-black"
+                          style="font-family: Cerebri Sans,sans-serif;"> <span class="h4 fw-normal">
+                            25000</span></code> times</td>
+                        <td>Use our formulas in Custom</td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <button type="submit" class="btn btn-outline-success w-100" data-bs-toggle="modal"
+                            data-bs-target="#modalNext">
+                            Upgrade plan
+                          </button>
+                        </td>
+                        <td>
+                          <button type="submit" class="btn btn-outline-success w-100" data-bs-toggle="modal"
+                            data-bs-target="#modalNext">
+                            Upgrade plan
+                          </button>
+                        </td>
+                        <td>
+                          <button type="submit" class="btn btn-outline-secondary w-100" data-bs-toggle="modal"
+                            data-bs-target="#modalCancel">
+                            Cancel plan
+                          </button>
+                        </td>
+                        <td>
+                          <button type="submit" class="btn btn-outline-success w-100" data-bs-toggle="modal" data-bs-target="#modalNext">
+                            Upgrade plan
+                          </button>
+                        </td>
+                        <td>
+                          <a href="#!" type="submit" class="btn btn-outline-success w-100">
+                            Contact us
+                        </a>
+                        </td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                
+                </div>
+
+              </div>
+
+            </div>            
+
+          </div>
+
+          <!-- FAQ-->
+          <div class="card">
+
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col">
+
+                  <!-- Title -->
+                  <h4 class="card-header-title">
+                    FAQ
+                  </h4>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+
+              <div class="accordion" id="helpAccordionOne">
+
+                <div class="accordion-item">
+  
+                  <!-- Button -->
+                  <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#helpOne" aria-expanded="false" aria-controls="helpOne">
+  
+                    <!-- Title -->
+                    <span class="me-4" id="helpOneHeading">
+                      Why doesn't my account stay logged in?
+                    </span>
+  
+                  </div>
+  
+                  <!-- Collapse -->
+                  <div class="accordion-collapse collapse" id="helpOne" aria-labelledby="helpOneHeading" data-bs-parent="#helpAccordionOne">
+                    <div class="accordion-body">
+  
+                      <!-- Text -->
+                      <p class="text-gray-700 mb-0">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!
+                      </p>
+  
+                    </div>
+                  </div>
+  
+                </div>
+
+                <div class="accordion-item">
+  
+                  <!-- Button -->
+                  <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#helpTwo" aria-expanded="false" aria-controls="helpTwo">
+  
+                    <!-- Title -->
+                    <span class="me-4" id="helpTwoHeading">
+                      I'd like to renew but I am getting a 404 error
+                    </span>
+  
+                  </div>
+  
+                  <!-- Collapse -->
+                  <div class="accordion-collapse collapse" id="helpTwo" aria-labelledby="helpTwoHeading" data-bs-parent="#helpAccordionOne">
+                    <div class="accordion-body">
+  
+                      <!-- Text -->
+                      <p class="text-gray-700 mb-0">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!
+                      </p>
+
+                    </div>
+                  </div>
+  
+                </div>
+
+                <div class="accordion-item">
+  
+                  <!-- Button -->
+                  <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#helpThree" aria-expanded="false" aria-controls="helpThree">
+  
+                    <!-- Title -->
+                    <span class="me-4" id="helpThreeHeading">
+                      Why can't I upgrade for free?
+                    </span>
+  
+                  </div>
+  
+                  <!-- Collapse -->
+                  <div class="accordion-collapse collapse" id="helpThree" aria-labelledby="helpThreeHeading" data-bs-parent="#helpAccordionOne">
+                    <div class="accordion-body">
+  
+                      <!-- Text -->
+                      <p class="text-gray-700 mb-0">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!
+                      </p>
+  
+                    </div>
+                  </div>
+  
+                </div>
+
+                <div class="accordion-item">
+  
+                  <!-- Button -->
+                  <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#helpFour" aria-expanded="false" aria-controls="helpFour">
+  
+                    <!-- Title -->
+                    <span class="me-4" id="helpFourHeading">
+                      Why doesn't my account stay logged in?
+                    </span>
+  
+                  </div>
+  
+                  <!-- Collapse -->
+                  <div class="accordion-collapse collapse" id="helpFour" aria-labelledby="helpFourHeading" data-bs-parent="#helpAccordionOne">
+                    <div class="accordion-body">
+  
+                      <!-- Text -->
+                      <p class="text-gray-700 mb-0">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate fugiat!
+                      </p>
+  
+                    </div>
+                  </div>
+  
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div> <!-- / .row -->
+    </div>
+
+  </div> <!-- / .main-content -->
+
+  <!-- JAVASCRIPT -->
+  <!-- Map JS -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+  <!-- Vendor JS -->
+  <script src="./assets/js/vendor.bundle.js"></script>
+
+  <!-- Theme JS -->
+  <script src="./assets/js/theme.bundle.js"></script>
+
+</body>
+
+</html>

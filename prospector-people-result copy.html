@@ -1,0 +1,1240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc." />
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon"/>
+    
+    <!-- Map CSS -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
+    
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+    <link rel="stylesheet" href="style-custom.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neuicons@1.9.0/css/neu.min.css">
+    
+    <!-- Title -->
+    <title>People Result - Sapiengraph Prospector - Dashboard</title>
+    <style>
+
+      th.active-header {
+      color: black !important;
+    }
+    th:hover {
+      cursor: pointer;
+    }
+    </style>
+  </head>
+  <body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-vertical fixed-start navbar-expand-md navbar-light" id="sidebar">
+    <div class="container-fluid">
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarCollapse"
+        aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="./index.html">
+        <img src="./assets/img/logo.svg" class="navbar-brand-img mx-auto" alt="...">
+      </a>
+
+      <!-- User (xs) -->
+      <div class="navbar-user d-md-none">
+
+        <div class="btn-group dropdown">
+
+          <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            example@nubela.co <i class="fe fe-chevron-down ms-3"></i>
+          </button>
+
+          <div class="dropdown-menu dropdown-menu-end shadow-lg w-100" aria-labelledby="dropdownMenuButton">
+
+            <div class="row align-items-center">
+              <a class="text-center text-secondary nav-link mt-3 mb-1" href="index.html">
+                <i class="fe fe-log-out"></i> Log out
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Credits (md)-->
+      <div class="navbar-user d-none d-md-flex border-bottom pb-4 mb-4">
+
+        <div class="row">
+
+          <div class="col-12 mb-4">
+
+            <label class="mb-2 text-gray-700">
+              Credits
+              <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 100,000</code><code class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/125,000 </code>
+            </label>
+
+            <div class="progress">
+              <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                aria-valuemin="0" aria-valuemax="100">
+                100,000/125,000
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-12 mb-3">
+            
+            <label class="mb-2 text-gray-700">
+              Fresh profiles
+              <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 7,500</code><code class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/12,500 </code>
+            </label>
+
+            <div class="progress">
+              <div class="progress-bar bg-secondary" role="progressbar" style="width: 60%;" aria-valuenow="60"
+                aria-valuemin="0" aria-valuemax="100">
+                7,500/12,500
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-12">
+
+            <a class="btn btn-outline-success rounded-pill w-100 mt-3" href="index.html">
+              Buy credits
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidebarCollapse">
+
+        <!-- Credits (xs)-->
+        <div class="navbar-user d-md-none mb-4">
+
+          <div class="row text-center text-md-left">
+
+            <div class="col-12 mb-4">
+  
+              <label class="mb-2 text-gray-700">
+                Credits
+                <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 100,000</code><code class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/125,000 </code>
+              </label>
+  
+              <div class="progress">
+                <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                  aria-valuemin="0" aria-valuemax="100">
+                  100,000/125,000
+                </div>
+              </div>
+  
+            </div>
+  
+            <div class="col-12 mb-3">
+              
+              <label class="mb-2 text-gray-700">
+                Fresh profiles
+                <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 7,500</code><code class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/12,500 </code>
+              </label>
+  
+              <div class="progress">
+                <div class="progress-bar bg-secondary" role="progressbar" style="width: 60%;" aria-valuenow="60"
+                  aria-valuemin="0" aria-valuemax="100">
+                  7,500/12,500
+                </div>
+              </div>
+  
+            </div>
+  
+            <div class="col-12">
+  
+              <a class="btn btn-outline-success rounded-pill w-100 mt-3" href="index.html">
+                Buy credits
+              </a>
+  
+            </div>
+  
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#sidebarBilling" data-bs-toggle="collapse" role="button" aria-expanded="true"
+              aria-controls="sidebarBilling">
+              <i class="fe fe-dollar-sign"></i> Billing
+            </a>
+            <div class="collapse show" id="sidebarBilling">
+              <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                  <a href="./account-plans-and-payments.html" class="nav-link">
+                    <span class="border-start border-2 ps-3">Plan and payments</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./index.html" class="nav-link ">
+                    <span class="border-start border-2 ps-3 ">Buy credits</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-success" href="#!">
+              <i class="fe fe-target"></i> Prospector
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="job-change-monitor.html">
+              <i class="fe fe-briefcase"></i> Job Change Monitor
+            </a>
+          </li>
+          <li class="nav-item mb-4">
+            <a class="nav-link" href="#!">
+              <i class="fe fe-file"></i> Docs
+            </a>
+          </li>
+
+          <!-- old-logout
+            <hr class="my-4">
+
+            <li class="nav-item">
+              <a class="nav-link mb-3" href="index.html">
+                <i class="fe fe-log-out"></i> Log out 
+              </a>
+            </li>
+            -->
+
+        </ul>
+
+        <div class="mt-md-auto"></div>
+
+        <!-- User (md) -->
+        <div class="navbar-user d-none d-md-flex" id="sidebarUser">
+
+          <div class="btn-group dropup">
+
+            <button type="button" class="btn btn-outline-secondary dropdown-toggle w-100" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              example@nubela.co <i class="fe fe-chevron-up ms-3"></i>
+            </button>
+
+            <div class="dropdown-menu dropdown-menu-center shadow-lg w-100" aria-labelledby="dropdownMenuButton">
+
+              <div class="row align-items-center">
+                <a class="text-center text-secondary nav-link mt-3 mb-1" href="index.html">
+                  <i class="fe fe-log-out"></i> Log out
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div> <!-- / .navbar-collapse -->
+
+    </div>
+  </nav>
+  
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+  
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12 main-content-prospector">
+
+            <!-- PEOPLE TAB-->
+              <!-- Header -->
+              <div class="header mt-5">
+                <div>
+        
+                  <div class="row align-items-end d-flex">
+                    <div class="col-7">
+        
+                      <!-- Pretitle -->
+                      <h6 class="header-pretitle">
+                        Prospector
+                      </h6>
+        
+                      <!-- Title -->
+                      <h1 class="header-title">
+                        Person Prospector
+                      </h1>
+        
+                    </div>
+                  </div> <!-- / .row -->
+
+                </div>
+              </div>
+        
+              <!-- NAVS-->
+              <div class="col-12 mb-3">
+                <div class="card card-body custom-rounded border py-3">
+                  <ul class="nav">
+                    <li class="nav-item text-left text-md-center">
+                      <a class="nav-link text-muted custom-link" href="prospector-saved-result.html"><i class="neu neu-bookmark"></i> Saved</a>
+                    </li>
+                    <li class="nav-item text-left text-md-center">
+                      <a class="nav-link text-success custom-link" href="prospector-people-result.html"><i class="neu neu-user-2"></i> People</a>
+                    </li>
+                    <li class="nav-item text-left text-md-center">
+                      <a class="nav-link text-muted custom-link" href="prospector-companies-result.html"><i class="neu neu-company"></i> Companies</a>
+                    </li>
+                    <li class="nav-item text-left text-md-center">
+                      <a class="nav-link text-muted custom-link" href="prospector-customers-result.html"><i class="neu neu-groups"></i> Customers</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+        
+              <div class="row">
+            
+                <!-- FILTER-->
+                <div class="col-12 col-lg-12 col-xl-4 mb-2 mb-lg-0">
+                  <div class="card card-body custom-rounded shadow-light border">
+                    <div class="d-flex align-items-center mb-n2">
+                      <div class=" h3 mt-n2"><span class="mr-1">Filter Criteria</span>
+                        <a class="btn btn-outline-success rounded-pill btn-sm  h3 mt-3 ms-3" href="prospector.html">Reset</a>
+                        <a class="btn btn-link text-success rounded-pill btn-sm  h3 mt-3 ms-n1" href="#!"><i class="neu neu-so-save d-none d-md-inline-block"></i> Save search</a>                        
+                      </div>
+            
+                      <button class="btn btn-sm btn-success rounded-pill lift  ms-auto d-none d-xl-block mt-n4"><i
+                          class="fe fe-chevron-left"></i></button>
+                    </div>
+            
+                    <!-- OVERVIEW/filter-->
+                    <div class="">
+                      <div class="card border-0 pb-0 mb-0">
+                    
+                        <!-- FILTER-->
+                        <div class="mb-3" id="peopleOverview">
+                          <div class="card-body bg-lighter border rounded">
+                            <!-- toggle-->
+                            <a class="d-flex align-items-center text-reset text-decoration-none" data-bs-toggle="collapse"
+                            href="#peoplePersonal" role="button" aria-expanded="false" aria-controls="peoplePersonal">
+                            <div class="   me-auto"><i class="neu neu-user-2 me-2"></i>Personal filter</div>
+                            <!-- chevron-->
+                            <span class="collapse-chevron text-muted ms-4 mb-n1">
+                              <i class="fe fe-lg fe-chevron-up"></i>
+                            </span>
+                          </a>
+                          <div class="collapse show" id="peoplePersonal">
+                            <form class="pt-4 mt-4 border-top">
+                              <div class="mb-4 d-flex justify-content-between">
+                                <div class="col-6 pe-2">
+                                  <label for="exampleInputCompany" class="form-label ">First Name</label>
+                                  <input type="text" class="form-control form-control-sm" placeholder="Bill" id="exampleInputCompany"
+                                    aria-describedby="emailHelp">
+                                </div>
+                                <div class="col-6 ps-2">
+                                  <label for="exampleInputCompany" class="form-label ">Last Name</label>
+                                  <input type="text" class="form-control form-control-sm" placeholder="Gates" id="exampleInputCompany"
+                                    aria-describedby="emailHelp">
+                                </div>
+                              </div>
+                              <div class="mb-4">
+                                <label for="exampleInputCompany" class="form-label  ">Country</label>
+                                <input type="text" class="form-control form-control-sm" placeholder="E.g. United States, Singapore, Japan"
+                                  id="exampleInputCompany" aria-describedby="emailHelp">
+                              </div>
+                              <div class="mb-4">
+                                <label for="exampleInputCompany" class="form-label ">Current Company</label>
+                                <input type="text" class="form-control form-control-sm" placeholder="E.g. Apple, Amazon, Microsoft"
+                                  id="exampleInputCompany" aria-describedby="emailHelp">
+                                <ul class="list-group suggestions" id="companySuggestions"></ul>
+                                <div class="mt-2">
+                                  <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> IBM <i
+                                      class="neu neu-so-close-circle ms-1"></i></div>
+                                  <div class="btn rounded-pill btn-sm btn-outline-success ps-3 mt-2"> Netflix <i
+                                      class="neu neu-so-close-circle ms-1"></i></div>
+                                </div>
+                              </div>
+                              <div class="mb-4">
+                                <label for="exampleInputCompany" class="form-label ">Job Title</label>
+                                <input type="text" class="form-control form-control-sm"
+                                  placeholder="E.g. CEO, CTO, Senior Software Engineer" id="exampleInputCompany"
+                                  aria-describedby="emailHelp">
+                                <div class="mt-3">
+                                  <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3"> Software Engineer <i
+                                      class="neu neu-so-close-circle ms-1"></i></div>
+                                </div>
+                              </div>
+                              <div class="mb-4">
+                                <label for="exampleInputCompany" class="form-label ">Job Description</label>
+                                <input type="text" class="form-control form-control-sm" placeholder="E.g. Technology, Education"
+                                  id="exampleInputCompany" aria-describedby="emailHelp">
+                              </div>
+                              <div class="mb-4">
+                                <label for="exampleInputCompany" class="form-label ">Current Role Date</label>
+                                <div class="d-flex justify-content-between">
+                                  <input style="width: 45%;" type="date" class="form-control form-control-sm text-muted" placeholder="Min"
+                                    id="exampleInputCompany" aria-describedby="emailHelp">
+                                  <hr style="height: 2px; width: 2%; margin-top: 14px;">
+                                  <input style="width: 45%;" type="date" class="form-control form-control-sm text-muted" placeholder="Max"
+                                    id="exampleInputCompany" aria-describedby="emailHelp">
+                                </div>
+                              </div>
+                              <div class="mb-4">
+                                <label for="exampleInputCompany2" class="form-label ">Past Company</label>
+                                <input type="text" class="form-control form-control-sm" placeholder="E.g. Google, IBM, Twitter"
+                                  id="exampleInputCompany2" aria-describedby="emailHelp">
+                                <ul class="list-group suggestions" id="companySuggestions2"></ul>
+                                <div class="mt-2">
+                                  <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Apple <i
+                                      class="neu neu-so-close-circle ms-1"></i>
+                                  </div>
+                                  <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Google <i
+                                      class="neu neu-so-close-circle ms-1"></i>
+                                  </div>
+                                  <div class="btn rounded-pill btn-sm btn-outline-success ps-3 mt-2"> Amazon <i
+                                      class="neu neu-so-close-circle ms-1"></i>
+                                  </div>
+                                  <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Twitter <i
+                                      class="neu neu-so-close-circle ms-1"></i>
+                                  </div>
+                                  <div class="btn rounded-pill btn-sm btn-outline-success ps-3 mt-2"> Facebook <i
+                                      class="neu neu-so-close-circle ms-1"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
+                            </div>
+
+                          </div>
+                        </div>
+                    
+                        <!-- PERSONAL FILTER-->
+                        <div class="card-body bg-lighter border rounded mb-3">
+                          <!-- toggle-->
+                          <a class="d-flex align-items-center text-reset text-decoration-none" data-bs-toggle="collapse"
+                            href="#peoplePersonal" role="button" aria-expanded="false" aria-controls="peoplePersonal">
+                            <div class="   me-auto"><i class="neu neu-user-2 me-2"></i>Personal filter</div>
+                            <!-- chevron-->
+                            <span class="collapse-chevron text-muted ms-4 mb-n1">
+                              <i class="fe fe-lg fe-chevron-down"></i>
+                            </span>
+                          </a>
+                          <div class="collapse hide"  id="peoplePersonal">
+                          <form class="pt-4 mt-4 border-top">
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Headline</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. CEO, CTO, Senior Software Engineer"
+                                id="exampleInputCompany" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Industry</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. Technology, Software, Accounting"
+                                id="exampleInputCompany" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Skill</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. Coding, Debugging, Testing"
+                                id="exampleInputCompany" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Interest</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. Technology" id="exampleInputCompany"
+                                aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Summary</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. CEO, CTO, Senior Software Engineer"
+                                id="exampleInputCompany" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Past Job Title</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. CEO, CTO, Senior Software Engineer"
+                                id="exampleInputCompany" aria-describedby="emailHelp">
+                              <ul class="list-group suggestions" id="companySuggestions"></ul>
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Past Job Description</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. Technology, Education"
+                                id="exampleInputCompany" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Region</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. California" id="exampleInputCompany"
+                                aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">City</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. Seattle, Los Angeles"
+                                id="exampleInputCompany" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-2">
+                              <label for="exampleInputCompany" class="form-label ">Language</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. English, Chinese, Spanish"
+                                id="exampleInputCompany" aria-describedby="emailHelp">
+                            </div>
+                          </form>
+                          </div>
+                        </div>
+                    
+                        <!-- COMPANY INFO FILTER-->
+                        <div class="card-body bg-lighter border rounded mb-3">
+                          <!-- toggle-->
+                          <a class="d-flex align-items-center text-reset text-decoration-none" data-bs-toggle="collapse"
+                            href="#peopleCompany" role="button" aria-expanded="false" aria-controls="peopleCompany">
+                            <div class="  me-auto"><i class="neu neu-company me-2"></i>Company Info filter</div>
+                            <!-- chevron-->
+                            <span class="collapse-chevron text-muted ms-4 mb-n1">
+                              <i class="fe fe-lg fe-chevron-down"></i>
+                            </span>
+                          </a>
+                          <div class="collapse hide" id="peopleCompany">
+                          <form class="pt-4 mt-4 border-top">
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Company Description</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g Technology, Medical Device"
+                                id="exampleInputCompany" aria-describedby="emailHelp">
+                              <ul class="list-group suggestions" id="companySuggestions"></ul>
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Company Industry</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. Higher and Education"
+                                id="exampleInputCompany" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Company Type</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. Non Profit"
+                                id="exampleInputCompany" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Employee Count</label>
+                              <div class="d-flex justify-content-between">
+                                <input style="width: 45%;" type="text" class="form-control form-control-sm"
+                                  placeholder="Min" id="exampleInputCompany" aria-describedby="emailHelp">
+                                  <hr style="height: 2px; width: 2%; margin-top: 14px;"> <input style="width: 45%;" type="text" class="form-control form-control-sm"
+                                  placeholder="Max" id="exampleInputCompany" aria-describedby="emailHelp">
+                              </div>
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Follower Count</label>
+                              <div class="d-flex justify-content-between">
+                                <input style="width: 45%;" type="text" class="form-control form-control-sm"
+                                  placeholder="Min" id="exampleInputCompany" aria-describedby="emailHelp">
+                                  <hr style="height: 2px; width: 2%; margin-top: 14px;"> <input style="width: 45%;" type="text" class="form-control form-control-sm"
+                                  placeholder="Max" id="exampleInputCompany" aria-describedby="emailHelp">
+                              </div>
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Year Founded</label>
+                              <div class="d-flex justify-content-between">
+                                <input style="width: 45%;" type="text" class="form-control form-control-sm"
+                                  placeholder="Min" id="exampleInputCompany" aria-describedby="emailHelp">
+                                  <hr style="height: 2px; width: 2%; margin-top: 14px;"> <input style="width: 45%;" type="text" class="form-control form-control-sm"
+                                  placeholder="Max" id="exampleInputCompany" aria-describedby="emailHelp">
+                              </div>
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Country</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. United States, Singapore, Japan"
+                                id="exampleInputCompany" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Region</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. California" id="exampleInputCompany"
+                                aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">City</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. Seattle, Los Angeles"
+                                id="exampleInputCompany" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Funding Amount</label>
+                              <div class="d-flex justify-content-between">
+                                <div class="input-group" style="width: 45%;">
+                                  <span class="input-group-text">$</span>
+                                  <input type="text" class="form-control form-control-sm" placeholder="Min" id="exampleInputCompany"
+                                    aria-describedby="emailHelp">
+                                </div>
+                                <hr style="height: 2px; width: 2%; margin-top: 14px;">
+                                <div class="input-group" style="width: 45%;">
+                                  <span class="input-group-text">$</span>
+                                  <input style="width: 45%;" type="text" class="form-control form-control-sm" placeholder="Max"
+                                    id="exampleInputCompany" aria-describedby="emailHelp">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Funding Raised</label>
+                              <div class="d-flex justify-content-between">
+                                <input style="width: 45%;" type="date" class="form-control form-control-sm text-muted"
+                                  placeholder="Min" id="exampleInputCompany" aria-describedby="emailHelp">
+                                  <hr style="height: 2px; width: 2%; margin-top: 14px;"> 
+                                  <input style="width: 45%;" type="date" class="form-control form-control-sm text-muted"
+                                  placeholder="Max" id="exampleInputCompany" aria-describedby="emailHelp">
+                              </div>
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">LinkedIn Groups</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g Haskell"
+                                id="exampleInputCompany" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Company LinkedIn URL</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="www.linkedin.com/company/apple"
+                                id="exampleInputCompany" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-2">
+                              <label for="exampleInputCompany" class="form-label ">Past Company LinkedIn URL</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="www.linkedin.com/company/apple"
+                                id="exampleInputCompany" aria-describedby="emailHelp">
+                            </div>
+                          </form>
+                          </div>
+                        </div>
+
+                        <!-- EDUCATION FILTER-->
+                        <div class="card-body bg-lighter border rounded">
+                          <!-- toggle-->
+                          <a class="d-flex align-items-center text-reset text-decoration-none" data-bs-toggle="collapse" href="#peopleEducation"
+                            role="button" aria-expanded="false" aria-controls="peopleEducation">
+                            <div class="  me-auto"><i class="neu neu-book-open me-2"></i>Education filter</div>
+                            <!-- chevron-->
+                            <span class="collapse-chevron text-muted ms-4 mb-n1">
+                              <i class="fe fe-lg fe-chevron-down"></i>
+                            </span>
+                          </a>
+                          <div class="collapse hide" id="peopleEducation">
+                          <form class=" pt-4 mt-4 border-top" >
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">School Name</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. University of Cambridge"
+                                id="exampleInputCompany" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Field Of Study</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. Computer Science"
+                                id="exampleInputCompany" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-4">
+                              <label for="exampleInputCompany" class="form-label ">Degree Name</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. MBA"
+                                id="exampleInputCompany" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-2">
+                              <label for="exampleInputCompany" class="form-label ">School LinkedIn URL</label>
+                              <input type="text" class="form-control form-control-sm" placeholder="www.linkedin.com/school/national-university-of-singapore/"
+                                id="exampleInputCompany" aria-describedby="emailHelp">
+                            </div>
+                          </form>
+                          </div>
+                        </div>                          
+                    
+                      </div>                                 
+                    </div>
+            
+                    <div class="btn btn-outline-success rounded-pill btn-block lift mt-4"><i class="neu neu-search"></i> Search criteria</div>
+                  </div>
+                </div>
+            
+                <!-- RESULT-->
+                <div class="col-lg-12 col-xl-8">
+                  <div class="card card-body custom-rounded bg-white text-left shadow-light border">
+            
+                    <div class="row mb-3">
+                      <div class="col-12 col-lg-5">
+                        <p class=" mt-2"><i class="neu neu-so-structure me-1 text-success"></i>2,345,678 <span
+                            class="font-weight-normal text-muted">results found</span></p>
+                      </div>
+                      <div class="col-12 col-lg-7 d-md-flex justify-content-lg-end mt-4 mt-md-1">
+                        <div
+                          class=" text-muted small text-right me-md-2 mb-3 mb-md-0 mt-n3 d-flex align-items-center">
+                          <!-- Added d-flex and align-items-center -->
+                          <span class="flex-grow-1">Displaying</span> <!-- Displaying text with flex-grow-1 -->
+                          <div class="btn-group ms-3 ms-md-2 w-100"> <!-- Button group -->
+                            <button type="button"
+                              class="btn btn-sm rounded-pill px-3 btn-outline-secondary dropdown-toggle btn-mobile-full-width"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              10 results
+                            </button>
+                            <div class="dropdown-menu me-3">
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">15 results</a>
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">20 results</a>
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">25 results</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" text-muted small text-right mb-3 mb-lg-0">
+                          <div class="btn-group w-100">
+                            <button type="button" class="btn btn-sm rounded-pill px-3 btn-outline-success dropdown-toggle ms-1"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              Export to .CSV
+                            </button>
+                            <div class="dropdown-menu me-3">
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">Export to .CSV</a>
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">Export to .XLSX</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <div class="table-responsive">
+                      <table class="table table-sm rounded-table table-hover table-nowrap custom-table">
+                        <thead style="background-color: #F9FAFB;">
+                          <tr class="text-muted small text-uppercase">
+                            <th scope="col" class="small custom-control custom-checkbox mt-n1">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="selectAllCheckbox"
+                                onclick="handleSelectAllCheckbox()">
+                              <label class="form-check-label small text-muted" for="selectAllCheckbox"></label>
+                            </th>
+                            <th scope="col">Full Name</th>
+                            <th scope="col"></th>
+                            <th scope="col">Followers</th>
+                            <th scope="col">Company</th>
+                            <th scope="col">Job Title</th>
+                            <th scope="col">Phone Number</th>
+                            <th scope="col">Personal Email</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody class="fs-base">
+                          <!-- 1 -->
+                          <tr class="align-middle">
+                            <td class="custom-control custom-checkbox" style="border-bottom: 0 !important;">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1" checked
+                                onclick="handleCheckbox(this)">
+                              <label class="form-check-label small text-muted" for="flexRadioDefault1"></label>
+                            </td>
+                            <td class="align-middle">
+                              <div class="d-flex">
+                                <div class="avatar avatar-xs">
+                                  <img class="avatar-img rounded-circle" src="assets/img/photos/bill gates photo.jpeg"
+                                    alt="person picture">
+                                </div>
+                                <div class="ms-3">Bill Gates                                 
+                                </div>
+                              </div>
+                            </td>
+                            <td class="align-middle">
+                              <a class="custom-link text-muted" href="#!"><i class="neu neu-br-linkedin ms-n3"></i></a>
+                              <a class="custom-link text-muted" href="#!"><i class="neu neu-br-twitter ms-n1"></i></a>
+                              <a class="custom-link text-muted" href="#!"><i class="neu neu-br-fb-sq ms-n1"></i></a>
+                            </td>
+                            <td class="align-middle">12,345,678</td>
+                            <td class="align-middle">
+                              <a class="d-flex custom-link text-black" href="prospector-companies-detail.html">
+                                <div class="avatar avatar-xs">
+                                  <img class="img" width="22" height="auto" src="assets/img/logo/Microsoft.svg" alt="company logo">
+                                </div>
+                                <div class="ms-3 ">Microsoft</div>
+                              </a>
+                            </td>
+                            <td class="align-middle">Founder</td>
+                            <td class="align-middle">+1 555 123 1234</td>
+                            <td class="align-middle">bill.gates@gatesfoundation.org</td>
+                            <td class="align-middle"> <!-- Add your button here -->
+                              <small class=""><i class="neu neu-so-tick-circle text-success"></i>
+                                Row unlocked</small>
+                            </td>
+                          </tr>
+                          <!-- 2 -->
+                          <tr class="align-middle">
+                            <td class="custom-control custom-checkbox" style="border-bottom: 0 !important;">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" checked
+                                onclick="handleCheckbox(this)">
+                              <label class="form-check-label small text-muted" for="flexRadioDefault2"></label>
+                            </td>
+                            <td class="align-middle">
+                              <div class="d-flex">
+                                <div class="avatar avatar-xs">
+                                  <img class="avatar-img rounded-circle" src="assets/img/photos/bezos.png" alt="person picture">
+                                </div>
+                                <div class="ms-3">Jeff Bezos
+                                </div>
+                              </div>
+                            </td>
+                            <td class="align-middle">
+                              <a class="custom-link text-muted" href="#!"><i class="neu neu-br-linkedin ms-n3"></i></a>
+                              <a class="custom-link text-muted" href="#!"><i class="neu neu-br-twitter ms-n1"></i></a>
+                              <a class="custom-link text-muted" href="#!"><i class="neu neu-br-fb-sq ms-n1"></i></a>
+                            </td>
+                            <td class="align-middle">8,912,345</td>
+                            <td class="align-middle">
+                              <a class="d-flex custom-link text-black" href="prospector-companies-detail.html">
+                                <div class="avatar avatar-xs">
+                                  <img class="img" width="22" height="auto" src="assets/img/logo/Amazon logo.jpeg"
+                                    alt="company logo">
+                                </div>
+                                <div class="ms-3">Amazon</div>
+                              </a>
+                            </td>
+                            <td class="align-middle">CEO</td>
+                            <td class="align-middle">+1 555 123 1234</td>
+                            <td class="align-middle">jeff@amazon.com</td>
+                            <td class="align-middle"> <!-- Add your button here -->
+                              <small class=""><i class="neu neu-so-tick-circle text-success"></i>
+                                Row unlocked</small>
+                            </td>
+                          </tr>
+                          <!-- 3 -->
+                          <tr class="align-middle">
+                            <td class="custom-control custom-checkbox" style="border-bottom: 0 !important;">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault3"
+                                onclick="handleCheckbox(this)">
+                              <label class="form-check-label small text-muted" for="flexRadioDefault3"></label>
+                            </td>
+                            <td class="align-middle">
+                              <div class="d-flex">
+                                <div class="avatar avatar-xs">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-2.jpg"
+                                    alt="person picture">
+                                </div>
+                                <div class="ms-3">D**** K***</div>
+                              </div>
+                            </td>
+                            <td>
+
+                            </td>
+                            <td class="align-middle">567,891</td>
+                            <td class="align-middle">
+                              <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
+                                <div class="avatar avatar-xs">
+                                  <img class="img mt-2" width="22" height="auto" src="assets/img/logo/IBM logo.svg"
+                                    alt="company logo">
+                                </div>
+                                <div class="ms-3">***</div>
+                              </a>
+                            </td>
+                            <td class="align-middle">Software Engineer</td>
+                            <td class="align-middle">** *** *** ****</td>
+                            <td class="align-middle">*****************</td>
+                            <td class="align-middle"> <!-- Add your button here -->
+                              <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
+                                Unlock
+                                this
+                                row</button>
+                            </td>
+                          </tr>
+                          <!-- 4 -->
+                          <tr class="align-middle">
+                            <td class="custom-control custom-checkbox" style="border-bottom: 0 !important;">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault4" checked
+                                onclick="handleCheckbox(this)">
+                              <label class="form-check-label small text-muted" for="flexRadioDefault4"></label>
+                            </td>
+                            <td class="align-middle">
+                              <div class="d-flex">
+                                <div class="avatar avatar-xs">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-5.jpg"
+                                    alt="person picture">
+                                </div>
+                                <div class="ms-3">Kokoro Rose</div>
+                              </div>
+                            </td>
+                            <td class="align-middle">
+                              <a class="custom-link text-muted" href="#!"><i class="neu neu-br-linkedin ms-n3"></i></a>
+                              <a class="custom-link text-muted" href="#!"><i class="neu neu-br-twitter ms-n1"></i></a>
+                            </td>
+                            <td class="align-middle">4,567,891</td>
+                            <td class="align-middle">
+                              <a class="d-flex custom-link text-black" href="#!">
+                                <div class="avatar avatar-xs">
+                                  <img class="img" width="22" height="auto" src="assets/img/logo/netflix.jpeg" alt="company logo">
+                                </div>
+                                <div class="ms-3">Netflix</div>
+                              </a>
+                            </td>
+                            <td class="align-middle">Marketing Specialist</td>
+                            <td class="align-middle">None found</td>
+                            <td class="align-middle">kokorose@netflix.com</td>
+                            <td class="align-middle"> <!-- Add your button here -->
+                              <small class=""><i class="neu neu-so-tick-circle text-success"></i>
+                                Row unlocked</small>
+                            </td>
+                          </tr>
+                          <!-- 5 -->
+                          <tr class="align-middle">
+                            <td class="custom-control custom-checkbox" style="border-bottom: 0 !important;">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault5"
+                                onclick="handleCheckbox(this)">
+                              <label class="form-check-label small text-muted" for="flexRadioDefault5"></label>
+                            </td>
+                            <td class="align-middle">
+                              <div class="d-flex">
+                                <div class="avatar avatar-xs">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-3.jpg"
+                                    alt="person picture">
+                                </div>
+                                <div class="ms-3">K**** P***</div>
+                              </div>
+                            </td>
+                            <td>
+
+                            </td>
+                            <td class="align-middle">891,234</td>
+                            <td class="align-middle">
+                              <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
+                                <div class="avatar avatar-xs">
+                                  <img class="img" width="22" height="auto" src="assets/img/logo/Google-logoicon.svg"
+                                    alt="company logo">
+                                </div>
+                                <div class="ms-3">******</div>
+                            </td>
+                            <td class="align-middle">CTO</td>
+                            <td class="align-middle">** *** *** ****</td>
+                            <td class="align-middle">None found</td>
+                            <td class="align-middle"> <!-- Add your button here -->
+                              <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
+                                Unlock
+                                this
+                                row</button>
+                            </td>
+                          </tr>
+                          <!-- 6 -->
+                          <tr class="align-middle">
+                            <td class="custom-control custom-checkbox" style="border-bottom: 0 !important;">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault6"
+                                onclick="handleCheckbox(this)">
+                              <label class="form-check-label small text-muted" for="flexRadioDefault6"></label>
+                            </td>
+                            <td class="align-middle">
+                              <div class="d-flex">
+                                <div class="avatar avatar-xs">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-4.jpg"
+                                    alt="person picture">
+                                </div>
+                                <div class="ms-3">J*** M***</div>
+                              </div>
+                            </td>
+                            <td>
+                              
+                            </td>
+                            <td class="align-middle">2,345,678</td>
+                            <td class="align-middle">
+                              <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
+                                <div class="avatar avatar-xs">
+                                  <img class="img" width="22" height="auto" src="assets/img/logo/Spotify logo.svg"
+                                    alt="company logo">
+                                </div>
+                                <div class="ms-3">*******</div>
+                            </td>
+                            <td class="align-middle">CEO</td>
+                            <td class="align-middle">** *** *** ****</td>
+                            <td class="align-middle">*************</td>
+                            <td class="align-middle"> <!-- Add your button here -->
+                              <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
+                                Unlock
+                                this
+                                row</button>
+                            </td>
+                          </tr>
+                          <!-- 7 -->
+                          <tr class="align-middle">
+                            <td class="custom-control custom-checkbox" style="border-bottom: 0 !important;">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault7"
+                                onclick="handleCheckbox(this)">
+                              <label class="form-check-label small text-muted" for="flexRadioDefault7"></label>
+                            </td>
+                            <td class="align-middle">
+                              <div class="d-flex">
+                                <div class="avatar avatar-xs">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-6.jpg"
+                                    alt="person picture">
+                                </div>
+                                <div class="ms-3">A*** R**</div>
+                              </div>
+                            </td>
+                            <td>
+                              
+                            </td>
+                            <td class="align-middle">912,345</td>
+                            <td class="align-middle">
+                              <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
+                                <div class="avatar avatar-xs">
+                                  <img class="img" width="22" height="auto" src="assets/img/logo/Apple 14.svg" alt="company logo">
+                                </div>
+                                <div class="ms-3">*****</div>
+                            </td>
+                            <td class="align-middle">Senior Designer</td>
+                            <td class="align-middle">None found</td>
+                            <td class="align-middle">**************</td>
+                            <td class="align-middle"> <!-- Add your button here -->
+                              <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
+                                Unlock
+                                this
+                                row</button>
+                            </td>
+                          </tr>
+                          <!-- 8 -->
+                          <tr class="align-middle">
+                            <td class="custom-control custom-checkbox" style="border-bottom: 0 !important;">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault8"
+                                onclick="handleCheckbox(this)">
+                              <label class="form-check-label small text-muted" for="flexRadioDefault8"></label>
+                            </td>
+                            <td class="align-middle">
+                              <div class="d-flex">
+                                <div class="avatar avatar-xs">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-8.jpg"
+                                    alt="person picture">
+                                </div>
+                                <div class="ms-3">M*** J***</div>
+                              </div>
+                            </td>
+                            <td>
+                              
+                            </td>
+                            <td class="align-middle">678,910</td>
+                            <td class="align-middle">
+                              <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
+                                <div class="avatar avatar-xs">
+                                  <img class="img mt-2" width="22" height="auto" src="assets/img/logo/IBM logo.svg"
+                                    alt="company logo">
+                                </div>
+                                <div class="ms-3">***</div>
+                            </td>
+                            <td class="align-middle">Marketing Specialist</td>
+                            <td class="align-middle">** *** *** ****</td>
+                            <td class="align-middle">*****************</td>
+                            <td class="align-middle"> <!-- Add your button here -->
+                              <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
+                                Unlock
+                                this
+                                row</button>
+                            </td>
+                          </tr>
+                          <!-- 9 -->
+                          <tr class="align-middle">
+                            <td class="custom-control custom-checkbox" style="border-bottom: 0 !important;">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault9"
+                                onclick="handleCheckbox(this)">
+                              <label class="form-check-label small text-muted" for="flexRadioDefault9"></label>
+                            </td>
+                            <td class="align-middle">
+                              <div class="d-flex">
+                                <div class="avatar avatar-xs">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg"
+                                    alt="person picture">
+                                </div>
+                                <div class="ms-3">S**** G****</div>
+                              </div>
+                            </td>
+                            <td>
+                              
+                            </td>
+                            <td class="align-middle">4,567,891</td>
+                            <td class="align-middle">
+                              <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
+                                <div class="avatar avatar-xs">
+                                  <img class="img" width="22" height="auto" src="assets/img/logo/Air.svg" alt="company logo">
+                                </div>
+                                <div class="ms-3">*******</div>
+                            </td>
+                            <td class="align-middle">Strategic Partner</td>
+                            <td class="align-middle">None found</td>
+                            <td class="align-middle">***********</td>
+                            <td class="align-middle"> <!-- Add your button here -->
+                              <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
+                                Unlock
+                                this
+                                row</button>
+                            </td>
+                          </tr>
+                          <!-- 10 -->
+                          <tr class="align-middle">
+                            <td class="custom-control custom-checkbox" style="border-bottom: 0 !important;">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault10"
+                                onclick="handleCheckbox(this)">
+                              <label class="form-check-label small text-muted" for="flexRadioDefault10"></label>
+                            </td>
+                            <td class="align-middle">
+                              <div class="d-flex">
+                                <div class="avatar avatar-xs">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-7.jpg"
+                                    alt="person picture">
+                                </div>
+                                <div class="ms-3">J*** D**</div>
+                              </div>
+                            </td>
+                            <td>
+                              
+                            </td>
+                            <td class="align-middle">891,234</td>
+                            <td class="align-middle">
+                              <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
+                                <div class="avatar avatar-xs">
+                                  <img class="img" width="22" height="auto" src="assets/img/logo/Google-logoicon.svg"
+                                    alt="company logo">
+                                </div>
+                                <div class="ms-3">******</div>
+                            </td>
+                            <td class="align-middle">Senior Software Engineer</td>
+                            <td class="align-middle">** *** *** ****</td>
+                            <td class="align-middle">None found</td>
+                            <td class="align-middle"> <!-- Add your button here -->
+                              <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
+                                Unlock
+                                this
+                                row</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+            
+                    <div class="row border-top pt-4">
+                      <div class="col-12 col-md-12 col-lg-12 mb-4 d-lg-flex justify-content-md-center border-bottom pb-4">
+                        <!---->
+                        <button class="btn btn-success btn rounded-pill me-3 mb-3 mb-lg-0 lift d-none d-lg-block text-nowrap"><i
+                            class="neu neu-so-lock-square"></i> Unlock all results</button>
+                        <!-- Mobile-->
+                        <button class="btn btn-success w-100 rounded-pill btn-pill me-3 mb-3 mb-lg-0 lift d-lg-none"><i
+                            class="neu neu-so-lock-square"></i> Unlock all results</button>
+                        <!---->
+                        <button
+                          class="btn btn-outline-success btn rounded-pill lift me-3 mb-3 mb-lg-0 d-none d-lg-block text-nowrap"><i
+                            class="neu neu-document-ui"></i> Unlock this page</button>
+                        <!-- Mobile-->
+                        <button class="btn btn-outline-success w-100 rounded-pill btn-pill lift me-3 mb-3 mb-lg-0 d-lg-none"><i
+                            class="neu neu-document-ui"></i> Unlock this page</button>
+                        <!---->
+                        <button class="btn btn-outline-success btn rounded-pill lift mb-3 mb-lg-0 d-none d-lg-block text-nowrap"><i
+                            class="neu neu-todo-done"></i> Unlock 3 selected rows</button>
+                        <!-- Mobile-->
+                        <button class="btn btn-outline-success w-100 rounded-pill btn-block btn-pill lift mb-3 mb-lg-0 d-lg-none"><i
+                            class="neu neu-todo-done"></i> Unlock 3 selected rows</button>
+                      </div>
+                      <div class="col-12 col-lg-12 col-xl-12">
+                        <nav aria-label="pagination">
+                          <ul class="pagination pagination justify-content-center mb-0">
+                            <li class="page-item disabled">
+                              <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">2 </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">Next</a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+            
+                  </div>
+            
+                </div> <!-- RESULT-->
+            
+              </div><!-- PEOPLE TAB-->
+        
+              <br>
+        </div>
+      </div> <!-- / .row -->
+    </div>
+  
+  </div> <!-- / .main-content -->
+  
+  <!-- JAVASCRIPT -->
+  
+  <!-- Table sorting JS-->
+  <script>
+    let currentColumn = 3; // Set Last checked as the default sorted column
+    let lastCheckedColumnSorted = true;
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+      // Simulate click on "Last checked" header after the page loads (default sort)
+      sortTable(currentColumn);
+      lastCheckedColumnSorted = false;
+    });
+
+    function sortTable(columnIndex) {
+      const table = document.getElementById('myTable');
+      const tbody = table.querySelector('tbody');
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+
+      rows.sort((a, b) => {
+        let cellA = a.getElementsByTagName('td')[columnIndex].innerText.trim().toLowerCase();
+        let cellB = b.getElementsByTagName('td')[columnIndex].innerText.trim().toLowerCase();
+
+        if (columnIndex === 3) { // For Last checked column, reverse sorting
+          [cellA, cellB] = [cellB, cellA];
+        }
+
+        return cellA.localeCompare(cellB);
+      });
+
+      tbody.innerHTML = '';
+      rows.forEach(row => {
+        tbody.appendChild(row);
+      });
+
+      resetHeaders();
+      const clickedHeader = document.getElementById(`header${columnIndex}`);
+
+      if (!lastCheckedColumnSorted && columnIndex === 3) {
+        clickedHeader.classList.add('active-header');
+        lastCheckedColumnSorted = true;
+      } else {
+        clickedHeader.classList.add('active-header');
+      }
+
+      currentColumn = columnIndex;
+      resetSortIcons(columnIndex);
+    }
+
+    function resetHeaders() {
+      const headers = document.querySelectorAll('th');
+      headers.forEach(header => {
+        header.classList.remove('active-header');
+      });
+    }
+
+    function resetSortIcons(exceptIndex) {
+      const icons = document.querySelectorAll('.fa-sort');
+      icons.forEach(icon => {
+        icon.classList.remove('fa-sort-up', 'fa-sort-down');
+        icon.classList.add('fa-sort');
+      });
+
+      const clickedHeaderIcon = document.getElementById(`header${exceptIndex}`).getElementsByTagName('i')[0];
+      clickedHeaderIcon.classList.remove('fa-sort');
+      clickedHeaderIcon.classList.add('fas', 'fa-sort');
+    }
+  </script>
+  
+  <script src="script-all-checkbox.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+  
+  
+  <!-- Map JS -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+  
+  <!-- Vendor JS -->
+  <script src="./assets/js/vendor.bundle.js"></script>
+  
+  <!-- Theme JS -->
+  <script src="./assets/js/theme.bundle.js"></script>
+
+  <!-- Search Autocomplete JS-->
+  <script src="search-autocomplete.js"></script>  
+
+  </body>
+</html>

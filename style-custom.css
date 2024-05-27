@@ -1,0 +1,195 @@
+/* Text to white */
+.text-change .text-muted, 
+.text-change .text-info {
+  color: white !important;
+}
+
+.form-check-input:checked {
+    background-color: #00bd94; /* Set the background color for form-check */
+}
+
+/* Toggle switch */
+.form-switch .form-check-input:checked {
+  background-color: #00bd94; 
+}
+
+/* Custom CSS for counting animation */
+.count-up {
+    display: inline-block;
+    transition: transform 1s ease-in-out;
+}
+
+/* Custom CSS to change Bootstrap outline success button colors */
+.btn-outline-success {
+    border-color: #00bd94 !important;
+    color: #00bd94 !important;
+}
+
+.btn-outline-success:hover {
+    color: #fff !important; /* Text color on hover */
+    background-color: #00bd94 !important; /* Background color on hover */
+}
+
+.btn-outline-success:active {
+    color: #fff !important; /* Text color on active */
+    background-color: #00bd94 !important; /* Background color on active */
+    border-color: #00bd94 !important; /* Border color on active */
+}
+
+/* Custom CSS for change success color */
+.alert-success {
+    background-color: #00bd94 !important;
+}
+.bg-success {
+    background-color: #00bd94 !important;
+}
+.text-success {
+    color: #00bd94 !important;
+}
+
+.div-inline{
+    display:inline-block;
+}
+.blur{
+    filter: blur(4px);
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+.dropdown-center{
+    top: 120% !important;
+    left: 50% !important;
+    right: auto !important;
+    text-align: center !important;
+    transform: translate(-50%, 0) !important;
+}
+
+@media (min-width: 1500px) {
+    .main-content-dashboard {
+        flex: 0 0 auto;
+        width: 73.33333%;
+    }   
+}
+
+@media (min-width: 1500px) {
+    .main-content-prospector {
+        flex: 0 0 auto;
+        width: 100%;
+    }   
+}
+
+.dropdown-menu-center{
+    right: auto !important;
+    left: 50% !important;
+    -webkit-transform: translate(-50%, 0) !important;
+    -o-transform: translate(-50%, 0) !important;
+    transform: translate(-50%, 0) !important;
+}
+  .mt-minus{
+    margin-top: -12rem !important;
+}
+
+
+tr.noBorder td, thead {
+  border-bottom-style: hidden;
+}
+
+td,th {
+    border-color: #edf2f8;
+    
+}
+
+.accordion-button:not(.collapsed) {
+    color: black;
+    background-color: #edf2f8;
+}
+
+.form-control:focus {
+    border-color: #00bd94;
+    box-shadow: 0 0 0 0.2rem rgba(245, 255, 247, 0.25);
+} 
+
+
+.pagination>li.active>a {
+    border-color: #00bd94 !important;
+    background: #00bd94 !important;
+  color: #fff;
+}
+
+.nav-pills .nav-item .nav-link.active-success {
+  background-color: #00bd94;
+  /* Bootstrap's success color */
+  color: #fff;
+  /* Text color for active link */
+  border-radius: 50px;
+  /* Rounded corners */
+}
+
+.nav-pills .nav-item .nav-link.active-success:hover {
+  background-color: #04a07a;
+  /* Bootstrap's success color with darker shade */
+  color: #fff !important;
+}
+
+.custom-link:hover {
+  color: #02BD94 !important;
+}
+
+.link-hover:hover {
+  color: #06AC87 !important;
+  text-decoration: underline !important;
+}
+
+@media (max-width: 576px) {
+  .btn-mobile-full-width {
+    width: 100% !important;
+  }
+}
+
+/* Define your custom active link color */
+.nav-link.active {
+  color: #02BD94 !important;
+  /* Change color to your desired one */
+}
+
+.custom-table-cell {
+  max-width: 250px; /* Adjust the max-width as needed */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 400px) {
+  .truncate-mobile {
+    max-width: 200px; /* Adjust the max-width as needed */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }  
+}
+
+/* FOR SEARCH AUTOCOMPLETE */
+.suggestions {
+  position: absolute;
+  width: calc(100% - 3rem); /* Adjust width as needed */
+  z-index: 1000;
+  margin-top: 0.1rem;
+  background-color: white; /* Set background color */
+  border-radius: 0.25rem; /* Add border radius for a rounded look */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Add shadow for depth */
+}
+
+.suggestions .list-group-item {
+  cursor: pointer;
+}
+
+.suggestions .list-group-item:hover {
+  background-color: #F9FBFD; /* Change background color on hover */
+  color: #02BD94 !important;
+}
+/* FOR SEARCH AUTOCOMPLETE */
+
+.scrollable-div {
+  max-height: 645px; /* Adjust the height as needed */
+  overflow-y: auto;
+}

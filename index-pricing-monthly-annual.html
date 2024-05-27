@@ -1,0 +1,1405 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc." />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon" />
+
+  <!-- Map CSS -->
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
+
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+  <link rel="stylesheet" href="style-custom.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neuicons@1.9.0/css/neu.min.css">
+  <script src="script-custom.js" defer></script>
+
+  <!-- Include countUp.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8"></script>
+
+
+  <!-- Title -->
+  <title>Sapiengraph - Dashboard</title>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-vertical fixed-start navbar-expand-md navbar-light mb-md-4" id="sidebar">
+    <div class="container-fluid">
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarCollapse"
+        aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="./index.html">
+        <img src="./assets/img/logo.svg" class="navbar-brand-img mx-auto" alt="...">
+      </a>
+
+      <!-- User (xs) -->
+      <div class="navbar-user d-md-none">
+
+        <div class="btn-group dropdown">
+
+          <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            example@nubela.co <i class="fe fe-chevron-down ms-3"></i>
+          </button>
+
+          <div class="dropdown-menu dropdown-menu-end shadow-lg w-100" aria-labelledby="dropdownMenuButton">
+
+            <div class="row align-items-center">
+              <a class="text-center text-secondary nav-link mt-3 mb-1" href="index.html">
+                <i class="fe fe-log-out"></i> Log out
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Credits (md)-->
+      <div class="navbar-user d-none d-md-flex border-bottom pb-4 mb-4">
+
+        <div class="row">
+
+          <div class="col-12 mb-4">
+
+            <label class="mb-2 text-gray-700">
+              Credits
+              <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 100,000</code><code
+                class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/125,000 </code>
+            </label>
+
+            <div class="progress">
+              <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                aria-valuemin="0" aria-valuemax="100">
+                100,000/125,000
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-12 mb-3">
+
+            <label class="mb-2 text-gray-700">
+              Fresh profiles
+              <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 7,500</code><code
+                class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/12,500 </code>
+            </label>
+
+            <div class="progress">
+              <div class="progress-bar bg-secondary" role="progressbar" style="width: 60%;" aria-valuenow="60"
+                aria-valuemin="0" aria-valuemax="100">
+                7,500/12,500
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-12">
+
+            <a class="btn btn-outline-success rounded-pill w-100 mt-3" href="index.html">
+              Buy credits
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidebarCollapse">
+
+        <!-- Credits (xs)-->
+        <div class="navbar-user d-md-none mb-4">
+
+          <div class="row text-center text-md-left">
+
+            <div class="col-12 mb-4">
+
+              <label class="mb-2 text-gray-700">
+                Credits
+                <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 100,000</code><code
+                  class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/125,000 </code>
+              </label>
+
+              <div class="progress">
+                <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                  aria-valuemin="0" aria-valuemax="100">
+                  100,000/125,000
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-12 mb-3">
+
+              <label class="mb-2 text-gray-700">
+                Fresh profiles
+                <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 7,500</code><code
+                  class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/12,500 </code>
+              </label>
+
+              <div class="progress">
+                <div class="progress-bar bg-secondary" role="progressbar" style="width: 60%;" aria-valuenow="60"
+                  aria-valuemin="0" aria-valuemax="100">
+                  7,500/12,500
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-12">
+
+              <a class="btn btn-outline-success rounded-pill w-100 mt-3" href="index.html">
+                Buy credits
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#sidebarBilling" data-bs-toggle="collapse" role="button" aria-expanded="true"
+              aria-controls="sidebarBilling">
+              <i class="fe fe-dollar-sign"></i> Billing
+            </a>
+            <div class="collapse show" id="sidebarBilling">
+              <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                  <a href="./account-plans-and-payments.html" class="nav-link">
+                    <span class="border-start border-2 ps-3">Plan and payments</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./index.html" class="nav-link fw-bold">
+                    <span class="border-start border-2 ps-3 text-success border-success">Buy credits</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="prospector.html">
+              <i class="fe fe-target"></i> Prospector
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="job-change-monitor.html">
+              <i class="fe fe-briefcase"></i> Job Change Monitor
+            </a>
+          </li>
+          <li class="nav-item mb-4">
+            <a class="nav-link" href="#!">
+              <i class="fe fe-file"></i> Docs
+            </a>
+          </li>
+
+          <!-- old-logout
+            <hr class="my-4">
+
+            <li class="nav-item">
+              <a class="nav-link mb-3" href="index.html">
+                <i class="fe fe-log-out"></i> Log out 
+              </a>
+            </li>
+            -->
+
+        </ul>
+
+        <div class="mt-md-auto"></div>
+
+        <!-- User (md) -->
+        <div class="navbar-user d-none d-md-flex" id="sidebarUser">
+
+          <div class="btn-group dropup">
+
+            <button type="button" class="btn btn-outline-secondary dropdown-toggle w-100" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              example@nubela.co <i class="fe fe-chevron-up ms-3"></i>
+            </button>
+
+            <div class="dropdown-menu dropdown-menu-center shadow-lg w-100" aria-labelledby="dropdownMenuButton">
+
+
+              <div class="row align-items-center">
+                <a class="text-center text-secondary nav-link mt-3 mb-1" href="index.html">
+                  <i class="fe fe-log-out"></i> Log out
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div> <!-- / .navbar-collapse -->
+
+    </div>
+  </nav>
+
+  <!--MODAL TOPUP-->
+  <div class="modal fade" id="modalNext" tabindex="-1" aria-labelledby="modalNextLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <a type="button" class="btn-close h1 ps-4 pt-4" data-bs-dismiss="modal" aria-label="Close">
+        </a>
+
+        <div class="modal-body">
+
+          <div class="row justify-content-center">
+
+            <div class="col-12">
+
+              <h1 class="fw-bold mb-3">
+                Order confirmation
+              </h1>
+
+              <p class="lead mb-1">
+                Would you like to subscribe a plan for<br>
+              </p>
+
+              <p class="mb-4 pb-4 border-bottom lead">
+                $49/month (<span class="fw-bold font-monospace badge bg-light">1,055,000</span> credits) + (<span
+                  class="fw-bold font-monospace badge bg-light">1,055,000</span> formulas) and (<span
+                  class="fw-bold font-monospace badge bg-light">105,500</span> fresh profiles)?
+              </p>
+
+              <div class="row border-bottom pb-2 mb-4">
+                <div class="col-12 col-md-8">
+                  <h2 class="h2 fw-bold">
+                    Credits
+                  </h2>
+                  <p class="lead">
+                    <span class="fw-bold font-monospace badge bg-light">1,055,000</span> credits + <span
+                      class="fw-bold font-monospace badge bg-light">1,055,000</span> formulas
+                  </p>
+                  <p class="lead">
+                    <span class="fw-bold font-monospace badge bg-light">105,500</span> fresh profiles
+                  </p>
+                  <p class="small text-muted mb-4">
+                    Credits will expire at the end of every billing period
+                  </p>
+                </div>
+
+                <div class="col-12 col-md-4 text-md-end">
+                  <h2 class="h2 fw-bold">
+                    Subtotal
+                  </h2>
+                  <p class="lead">
+                    <span class="fw-bold">$1899</span>/month
+                  </p>
+                  <p class="lead">
+                    <span class="fw-bold">$1900</span>/month
+                  </p>
+                </div>
+              </div>
+
+              <div class="row border-bottom pb-2 mb-4">
+
+                <div class="col-12 col-md-4">
+                  <h2 class="h2 fw-bold">
+                    Total
+                  </h2>
+                </div>
+
+                <div class="col-12 col-md-8 text-md-end">
+                  <p class="lead">
+                    <span class="fw-bold">$3799</span>/month
+                  </p>
+                </div>
+
+              </div>
+
+              <div class="row border-bottom pb-2 mb-4">
+                <div class="col-6">
+                  <p class="lead">
+                    Payment method
+                  </p>
+                </div>
+
+                <div class="col-6 text-end">
+                  <p class="lead">
+                    Visa ending in <span class="fw-bold me-2">1234</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="row mb-4">
+                <div class="col-12 text-md-end">
+                  <p class="text-muted small mb-0">
+                    All prices include VAT where applicable
+                  </p>
+                </div>
+              </div>
+
+              <h2 class="h3 mb-4">
+                12-Month Contract
+              </h2>
+
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1" checked onclick="handleCheckbox(this)">
+                <label class="form-check-label small text-muted" for="flexRadioDefault1">
+                  By ticking this checkbox, I agree to a 12-month service contract with Sapiengraph as detailed in the
+                  <a class="text-success" href="#!" target="_blank">sales agreement</a>. I understand that this contract
+                  will automatically renew every 12 months unless I cancel it before the renewal date. If I cancel early
+                  before the end of the 12-month period, I acknowledge my obligation to pay the remaining balance of the
+                  contract term, and I agree that Sapiengraph may bill me for this amount. I have read and understood
+                  these terms.
+                </label>
+              </div>
+
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" onclick="handleCheckbox(this)">
+                <label class="form-check-label small text-muted" for="flexRadioDefault2">
+                  I do not want a 12 month contract, and I accept an additional 100% increase in the price for my casual
+                  use of Sapiengraph.
+                </label>
+              </div>
+
+              <a class="btn btn-lg btn-success w-100" href="account-buy-credits-after-stripe-prompt.html">
+                Buy credits
+              </a>
+
+              <button class="btn btn-lg btn-link text-success w-100 mt-3 close" data-bs-dismiss="modal">
+                Cancel
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--MODAL CANCEL-->
+  <div class="modal fade" id="modalCancel" aria-labelledby="modalCancelLabel" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <a type="button" class="btn-close h1 ps-4 pt-4" data-dismiss="modal" aria-label="Close">
+        </a>
+
+        <div class="modal-body">
+
+          <div class="row justify-content-center pb-md-5">
+
+            <div class="col-12 col-md-9 text-center mb-4">
+              <i class="neu-so-faq text-success display-1"></i>
+
+              <h1 class="fw-bold mb-3 mt-4">
+                Cancel your subscription plan?
+              </h1>
+
+              <p class="mb-4 text-gray-700 fs-lg">
+                We’re sorry to see you go. Would you tell us why?
+              </p>
+            </div>
+
+            <div class="col-12 col-md-8">
+
+              <!--Radio button-->
+              <div class="mb-5">
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel1">
+                  <label class="form-check-label" for="radioCancel1">
+                    Too many bugs or technical issue
+                  </label>
+                </div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel2">
+                  <label class="form-check-label" for="radioCancel2">
+                    Could not get the data I needed
+                  </label>
+                </div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel3">
+                  <label class="form-check-label" for="radioCancel3">
+                    Price too expensive
+                  </label>
+                </div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel4">
+                  <label class="form-check-label" for="radioCancel4">
+                    Temporarily taking a break or plan to return
+                  </label>
+                </div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel5">
+                  <label class="form-check-label" for="radioCancel5">
+                    Financial issue
+                  </label>
+                </div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel6">
+                  <label class="form-check-label" for="radioCancel6">
+                    Don't need the tool
+                  </label>
+                </div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel7">
+                  <label class="form-check-label" for="radioCancel7">
+                    Other
+                  </label>
+                  <textarea class="form-control mt-2" placeholder="Tell us why" id="floatingTextarea2"
+                    style="height: 100px"></textarea>
+                </div>
+              </div>
+
+              <div class="row align-items-center">
+
+                <div class="col-12 col-md-6 text-center">
+                  <a type="button" class="mt-4 text-success" data-bs-dismiss="modal">
+                    Don't cancel
+                  </a>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <button class="btn btn-success w-100 mt-4" data-bs-target="#modalCancelNext" data-bs-toggle="modal"
+                    data-bs-dismiss="modal">
+                    Next
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--MODAL CANCEL 2-->
+  <div class="modal fade" id="modalCancelNext" aria-labelledby="modalCancelNextLabel" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <a type="button" class="btn-close h1 ps-4 pt-4" data-bs-dismiss="modal" aria-label="Close">
+        </a>
+
+        <div class="modal-body">
+
+          <div class="row justify-content-center pb-md-5">
+
+            <div class="col-12 col-md-9 text-center mb-4">
+              <i class="neu-so-faq text-success display-1"></i>
+            </div>
+
+            <div class="col-12 col-md-9 text-center">
+
+              <h1 class="fw-bold">
+                Cancel your subscription plan?
+              </h1>
+
+              <p class="mb-4 lead">
+                Pressing the "Yes, continue" button will cancel your current plan. Are you sure want to cancel your
+                Sapiengraph subscription?<br>
+                <br>
+                Your existing plan will stay active<br>
+                <span class="fw-bold">until 31 December 2023</span>.
+              </p>
+
+              <div class="row align-items-center">
+
+                <div class="col-12 col-md-6">
+                  <a type="button" class="mt-4 text-success" data-bs-dismiss="modal">
+                    Don't cancel
+                  </a>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <a class="btn btn-lg btn-success w-100 mt-4" href="account-plans-and-payments-cancel-success.html">
+                    Yes, continue
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12 main-content-dashboard">
+
+          <!-- Header -->
+          <div class="header mt-md-5">
+            <div class="header-body">
+
+              <div class="row align-items-center">
+                <div class="col">
+
+                  <!-- Pretitle -->
+                  <h6 class="header-pretitle">
+                    Overview
+                  </h6>
+
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    Billing
+                  </h1>
+
+                </div>
+              </div> <!-- / .row -->
+
+              <div class="row align-items-center">
+                <div class="col">
+
+                  <!-- Nav -->
+                  <ul class="nav nav-tabs nav-overflow header-tabs">
+                    <li class="nav-item">
+                      <a href="account-plans-and-payments.html" class="nav-link">
+                        Plan and payments
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="index.html" class="nav-link active border-success">
+                        Buy Credits
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+
+            Create a new Google Sheet document or open your existing document to start using the Sapiengraph
+            <a class="btn btn-sm btn-outline-white ms-2" href="https://docs.google.com/spreadsheets" target="_blank">
+              Open Google Sheet <i class="fe fe-arrow-right"></i>
+            </a>
+
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+            </button>
+
+          </div>
+
+          <div class="card">
+
+            <div class="card-header">
+              <div class="row align-items-center">
+
+                <div class="col">
+
+                  <!-- Title -->
+                  <h4 class="card-header-title">
+                    Credits info
+                  </h4>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+
+              <div class="row">
+
+                <div class="col-12 mb-5">
+
+                  <div class="row mb-3">
+
+                    <div class="col">
+                      <label>
+                        <i class="neu-wallet h3"></i> Credits
+                      </label>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col mb-4">
+                      <div class="border bg-lighter" style="border-radius: 8px; height: 56px;">
+                        <div class="pt-3 ps-3 text-gray-700">
+                          <code class="h1 text-black" style="font-family: Cerebri Sans,sans-serif;"> 100,000</code><code
+                            class="h4 fw-normal text-gray-700"
+                            style="font-family: Cerebri Sans,sans-serif;">/125,000</code>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="progress" style="height: 24px;">
+                    <div class="progress-bar bg-secondary" role="progressbar" aria-label="Example with label"
+                      style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                      100,000/125,000
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="col-12">
+
+                  <div class="row mb-3">
+
+                    <div class="col">
+                      <label>
+                        <i class="neu-user h3"></i> Fresh profiles
+                      </label>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col mb-4">
+                      <div class="border bg-lighter" style="border-radius: 8px; height: 56px;">
+                        <div class="pt-3 ps-3 text-gray-700">
+                          <code class="h1 text-black" style="font-family: Cerebri Sans,sans-serif;">7,500</code><code
+                            class="h4 fw-normal text-gray-700"
+                            style="font-family: Cerebri Sans,sans-serif;">/12,500</code>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="progress" style="height: 24px;">
+                    <div class="progress-bar bg-secondary" role="progressbar" aria-label="Example with label"
+                      style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                      7,500/12,500
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Buy credits -->
+          <div class="card">
+
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col">
+
+                  <!-- Title -->
+                  <h4 class="card-header-title">
+                    Buy credits
+                  </h4>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+
+              <div class="mb-5 mt-4">
+
+                <!-- Desktop pricing -->
+                <div class="d-none d-xl-block">
+                  <ul class="nav d-flex justify-content-center">
+                    <li>
+                      <a class="border px-3 py-3 text-muted" href="index-pricing-monthly.html" style="border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 8px; border-bottom-left-radius: 8px; border-color: #869ab8!important;">
+                        Monthly plans
+                      </a>
+                    </li>
+                    <li>
+                      <a class="border border-success bg-success text-white px-3 py-3" href="index-pricing-monthly-annual.html" style="border-radius: 0px; border-left: none!important;">
+                        Annual plans, billed monthly
+                      </a>
+                    </li>
+                    <li>
+                      <a class="border text-muted py-3 px-3" href="index.html" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-left: none!important; border-color: #869ab8!important;">
+                        Annual plans, billed annually
+                        <span class="text-success font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="right" title="All 12+2 months credits, formulas and fresh profiles issued at one go immediately upon subscription of a plan">
+                          <span class="text-opacity-80">
+                            <span class="badge bg-secondary-soft h6 rounded-pill text-uppercase ms-1 mb-0">+ EXTRA 2 FREE MONTHS <i class="fe fe-info small"></i></span>
+                          </span>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Mobile pricing -->
+                <div class="text-center d-xl-none">
+
+                  <a class="btn btn-lg btn-light w-100 mb-3" href="index-pricing-monthly.html">
+                    Monthly plans
+                  </a>
+    
+                  <a class="btn btn-lg btn-success w-100 mb-3" href="index-pricing-monthly-annual.html">
+                    Annual plans, billed monthly
+                  </a>
+    
+                  <a class="btn btn-lg btn-light w-100 pt-3" href="index.html">
+                    Annual plans, billed annually
+                    <span class="text-success font-weight-bold" data-toggle="tooltip" data-placement="right" title="All 12+2 months credits, formulas and fresh profiles issued at one go immediately upon subscription of a plan">
+                      <span class="text-opacity-80">
+                        <span class="badge bg-secondary-soft h6 rounded-pill text-uppercase ms-1 mb-0">+ EXTRA 2 FREE MONTHS <i class="fe fe-info small"></i></span>
+                      </span>
+                    </span>
+                  </a>
+    
+                </div>
+
+              </div>
+
+              <div class="row g-3">
+
+                <div class="col-12 col-lg-6 col-xl-3">
+
+                  <div class="card card-body">
+
+                    <div class="mb-4">
+                      <img class="img-fluid img icons" width="40" alt="lite icon" src="assets/img/icons/lite.svg">
+                    </div>
+
+                    <h2 class="h3 fw-bold mb-4">
+                      Lite
+                    </h2>
+
+                    <h3 id="litePrice" class="display-4 font-weight-bold mb-0">
+                      $<span>49</span>
+                    </h3>
+
+                    <div class="mb-3">
+                      <p class="small text-muted billedText">
+                        /mo, billed monthly
+                      </p>
+                    </div>
+
+                    <div class="mb-3">
+                      <button type="submit" class="btn btn-outline-success rounded-pill w-100" data-bs-toggle="modal"
+                        data-bs-target="#modalNext">
+                        Upgrade plan
+                      </button>
+                    </div>
+
+                    <hr class="mb-5">
+
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Features included
+                    </small>
+
+                    <div class="mt-2 mb-4">
+
+                      <p class="mb-2">
+                        <i class="fe fe-database text-success"></i> 12,500 credits
+                      </p>
+
+                      <p class="mb-3">
+                        <i class="fe fe-zap text-success"></i> 12,500 formulas
+                      </p>
+
+                      <p class="small text-muted mb-1">
+                        $0.392¢ / credit
+                      </p>
+
+                      <p class="small text-muted mb-0">
+                        Credits issued monthly, expire every month
+                      </p>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="text-center mt-n4" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                      title="If added to a plan, we will provide fresh profile data &lt;29 days.">
+                      <span class="badge bg-white rounded-pill h6 text-info border border-info">
+                        <i class="fe fe-info"></i> Fresh add-on
+                      </span>
+                    </div>
+
+                    <div class="mt-3">
+
+                      <p class="mb-2">
+                        <i class="fe fe-dollar-sign text-success"></i> +$50
+                        <span class="small text-muted d-block">/mo, billed monthly</span>
+                      </p>
+
+                      <p class="mb-5">
+                        <i class="fe fe-user text-success"></i> 2,500 fresh profiles
+                      </p>
+
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="lite50">
+                        <label class="form-check-label" for="lite50">Enable fresh add-on </label>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="col-12 col-lg-6 col-xl-3">
+
+                  <div class="card card-body">
+
+                    <div class="mb-4">
+                      <img class="img-fluid img icons" width="40" alt="pro icon" src="assets/img/icons/pro.svg">
+                    </div>
+
+                    <h2 class="h3 fw-bold mb-4">
+                      Pro
+                    </h2>
+
+                    <h3 id="proPrice" class="display-4 font-weight-bold mb-0">
+                      $<span>299</span>
+                    </h3>
+
+                    <div class="mb-3">
+                      <p class="small text-muted billedText">
+                        /mo, billed monthly
+                      </p>
+                    </div>
+
+                    <div class="mb-3">
+                      <button type="submit" class="btn btn-outline-success rounded-pill w-100" data-bs-toggle="modal"
+                        data-bs-target="#modalNext">
+                        Upgrade plan
+                      </button>
+                    </div>
+
+                    <hr class="mb-5">
+
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Features included
+                    </small>
+
+                    <div class="mt-2 mb-4">
+
+                      <p class="mb-2">
+                        <i class="fe fe-database text-success"></i> 125,000 credits
+                      </p>
+
+                      <p class="mb-3">
+                        <i class="fe fe-zap text-success"></i> 125,000 formulas
+                      </p>
+
+                      <p class="small text-muted mb-1">
+                        $0.239¢ / credit
+                      </p>
+
+                      <p class="small text-muted mb-0">
+                        Credits issued monthly, expire every month
+                      </p>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="text-center mt-n4" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                      title="If added to a plan, we will provide fresh profile data &lt;29 days.">
+                      <span class="badge bg-white rounded-pill h6 text-info border border-info">
+                        <i class="fe fe-info"></i> Fresh add-on
+                      </span>
+                    </div>
+
+                    <div class="mt-3">
+
+                      <p class="mb-2">
+                        <i class="fe fe-dollar-sign text-success"></i> +$300
+                        <span class="small text-muted d-block">/mo, billed monthly</span>
+                      </p>
+
+                      <p class="mb-5">
+                        <i class="fe fe-user text-success"></i> 12,500 fresh profiles
+                      </p>
+
+                      <div class="form-check form-switch" checked>
+                        <input class="form-check-input" type="checkbox" role="switch" id="pro300">
+                        <label class="form-check-label" for="pro300">Enable fresh add-on </label>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="col-12 col-lg-6 col-xl-3">
+
+                  <div class="card card-body">
+
+                    <div class="mb-4">
+                      <img class="img-fluid img icons" width="40" alt="pro+ icon" src="assets/img/icons/pro-plus.svg">
+                    </div>
+
+                    <h2 class="h3 fw-bold mb-4">
+                      Pro+
+                    </h2>
+
+                    <h3 id="proPlusPrice" class="display-4 font-weight-bold mb-0">
+                      $<span>899</span>
+                    </h3>
+
+                    <div class="mb-3">
+                      <p class="small text-muted billedText">
+                        /mo, billed monthly
+                      </p>
+                    </div>
+
+                    <div class="mb-3">
+                      <button type="submit" class="btn btn-outline-success rounded-pill w-100" data-bs-toggle="modal"
+                        data-bs-target="#modalNext">
+                        Upgrade plan
+                      </button>
+                    </div>
+
+                    <hr class="mb-5">
+
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Features included
+                    </small>
+
+                    <div class="mt-2 mb-4">
+
+                      <p class="mb-2">
+                        <i class="fe fe-database text-success"></i> 449,500 credits
+                      </p>
+
+                      <p class="mb-3">
+                        <i class="fe fe-zap text-success"></i> 449,500 formulas
+                      </p>
+
+                      <p class="small text-muted mb-1">
+                        $0.200¢ / credit
+                      </p>
+
+                      <p class="small text-muted mb-0">
+                        Credits issued monthly, expire every month
+                      </p>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="text-center mt-n4" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                      title="If added to a plan, we will provide fresh profile data &lt;29 days.">
+                      <span class="badge bg-white rounded-pill h6 text-info border border-info">
+                        <i class="fe fe-info"></i> Fresh add-on
+                      </span>
+                    </div>
+
+                    <div class="mt-3">
+
+                      <p class="mb-2">
+                        <i class="fe fe-dollar-sign text-success"></i> +$900
+                        <span class="small text-muted d-block">/mo, billed monthly</span>
+                      </p>
+
+                      <p class="mb-5">
+                        <i class="fe fe-user text-success"></i> 44,950 fresh profiles
+                      </p>
+
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="proplus900">
+                        <label class="form-check-label" for="proplus900">Enable fresh add-on </label>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="col-12 col-lg-6 col-xl-3">
+
+                  <div class="card card-body">
+
+                    <div class="mb-4">
+                      <img class="img-fluid img icons" width="40" alt="business icon"
+                        src="assets/img/icons/business.svg">
+                    </div>
+
+                    <h2 class="h3 fw-bold mb-4">
+                      Business
+                    </h2>
+
+                    <h3 id="bizPrice" class="display-4 font-weight-bold mb-0">
+                      $<span>1,899</span>
+                    </h3>
+
+                    <div class="mb-3">
+                      <p class="small text-muted billedText">
+                        /mo, billed monthly
+                      </p>
+                    </div>
+
+                    <div class="mb-3">
+                      <button type="submit" class="btn btn-outline-success rounded-pill w-100" data-bs-toggle="modal"
+                        data-bs-target="#modalNext">
+                        Upgrade plan
+                      </button>
+                    </div>
+
+                    <hr class="mb-5">
+
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Features included
+                    </small>
+
+                    <div class="mt-2 mb-4">
+
+                      <p class="mb-2">
+                        <i class="fe fe-database text-success"></i> 1,055,000 credits
+                      </p>
+
+                      <p class="mb-3">
+                        <i class="fe fe-zap text-success"></i> 1,055,000 formulas
+                      </p>
+
+                      <p class="small text-muted mb-1">
+                        $0.180¢ / credit
+                      </p>
+
+                      <p class="small text-muted mb-0">
+                        Credits issued monthly, expire every month
+                      </p>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="text-center mt-n4" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                      title="If added to a plan, we will provide fresh profile data &lt;29 days.">
+                      <span class="badge bg-white rounded-pill h6 text-info border border-info">
+                        <i class="fe fe-info"></i> Fresh add-on
+                      </span>
+                    </div>
+
+                    <div class="mt-3">
+
+                      <p class="mb-2">
+                        <i class="fe fe-dollar-sign text-success"></i> +$1,900
+                        <span class="small text-muted d-block">/mo, billed monthly</span>
+                      </p>
+
+                      <p class="mb-5">
+                        <i class="fe fe-user text-success"></i> 105,500 fresh profiles
+                      </p>
+
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="business1900">
+                        <label class="form-check-label" for="business1900">Enable fresh add-on </label>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="col-12 mt-md-0">
+
+                  <div class="card card-body bg-dark px-5 py-5 mb-0"
+                    style="background-image: url(assets/img/illustrations/Pricing\ background\ illustration.svg);">
+
+                    <div class="row justify-content-center align-items-center">
+
+                      <div class="col-12 col-lg-6 mb-5 mb-lg-0">
+
+                        <div class="mb-4">
+                          <img class="img-fluid img icons" width="40" alt="enterprise icon"
+                            src="assets/img/icons/enterprise.svg">
+                        </div>
+
+                        <h2 class="display-4 mb-3 text-white">
+                          Sapiengraph for <span class="text-success">Enterprise</span>
+                        </h2>
+
+                        <p class="lead mb-4 text-white-50">
+                          Supercharge Google Sheets with advanced data enrichment. Effortless, secure, and tailored for
+                          precision.
+                        </p>
+
+                        <button class="btn btn-lg btn-success rounded-pill w-50">
+                          Contact us
+                        </button>
+
+                      </div>
+
+                      <div class="col-12 col-lg-6">
+
+                        <div class="row">
+
+                          <div class="col-12 col-lg-6">
+
+                            <div class="mb-4">
+                              <h3 class="lead text-white mb-2">
+                                <i class="fe fe-database me-3"></i> Custom credits
+                              </h3>
+                              <p class="text-white-50 mb-0 small">
+                                Start from x,xxx,xxx credits per month
+                              </p>
+                            </div>
+
+                            <div class="mb-4">
+                              <h3 class="lead text-white mb-2">
+                                <i class="fe fe-zap me-3"></i> Custom formulas
+                              </h3>
+                              <p class="text-white-50 mb-0 small">
+                                Start from x,xxx,xxx formulas per month
+                              </p>
+                            </div>
+
+                          </div>
+
+                          <div class="col-12 col-lg-6">
+
+                            <div class="mb-4">
+                              <h3 class="lead text-white mb-2">
+                                <i class="fe fe-user me-3"></i> Custom fresh profiles
+                              </h3>
+                              <p class="text-white-50 mb-0 small">
+                                Start from x,xxx,xxx fresh profiles per month
+                              </p>
+                            </div>
+
+                            <div class="mb-0 mb-md-4">
+                              <h3 class="lead text-white mb-2">
+                                <i class="fe fe-phone me-3"></i> Priority support
+                              </h3>
+                              <p class="text-white-50 mb-0 small">
+                                We provide great support to help you
+                              </p>
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- FAQ-->
+          <div class="card">
+
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col">
+
+                  <!-- Title -->
+                  <h4 class="card-header-title">
+                    FAQ
+                  </h4>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+
+              <div class="accordion" id="helpAccordionOne">
+
+                <div class="accordion-item">
+
+                  <!-- Button -->
+                  <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse"
+                    data-bs-target="#helpOne" aria-expanded="false" aria-controls="helpOne">
+
+                    <!-- Title -->
+                    <span class="me-4" id="helpOneHeading">
+                      Why doesn't my account stay logged in?
+                    </span>
+
+                  </div>
+
+                  <!-- Collapse -->
+                  <div class="accordion-collapse collapse" id="helpOne" aria-labelledby="helpOneHeading"
+                    data-bs-parent="#helpAccordionOne">
+                    <div class="accordion-body">
+
+                      <!-- Text -->
+                      <p class="text-gray-700 mb-0">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet
+                        perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa
+                        provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur.
+                        Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate
+                        fugiat!
+                      </p>
+
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="accordion-item">
+
+                  <!-- Button -->
+                  <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse"
+                    data-bs-target="#helpTwo" aria-expanded="false" aria-controls="helpTwo">
+
+                    <!-- Title -->
+                    <span class="me-4" id="helpTwoHeading">
+                      I'd like to renew but I am getting a 404 error
+                    </span>
+
+                  </div>
+
+                  <!-- Collapse -->
+                  <div class="accordion-collapse collapse" id="helpTwo" aria-labelledby="helpTwoHeading"
+                    data-bs-parent="#helpAccordionOne">
+                    <div class="accordion-body">
+
+                      <!-- Text -->
+                      <p class="text-gray-700 mb-0">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet
+                        perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa
+                        provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur.
+                        Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate
+                        fugiat!
+                      </p>
+
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="accordion-item">
+
+                  <!-- Button -->
+                  <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse"
+                    data-bs-target="#helpThree" aria-expanded="false" aria-controls="helpThree">
+
+                    <!-- Title -->
+                    <span class="me-4" id="helpThreeHeading">
+                      Why can't I upgrade for free?
+                    </span>
+
+                  </div>
+
+                  <!-- Collapse -->
+                  <div class="accordion-collapse collapse" id="helpThree" aria-labelledby="helpThreeHeading"
+                    data-bs-parent="#helpAccordionOne">
+                    <div class="accordion-body">
+
+                      <!-- Text -->
+                      <p class="text-gray-700 mb-0">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet
+                        perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa
+                        provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur.
+                        Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate
+                        fugiat!
+                      </p>
+
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="accordion-item">
+
+                  <!-- Button -->
+                  <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse"
+                    data-bs-target="#helpFour" aria-expanded="false" aria-controls="helpFour">
+
+                    <!-- Title -->
+                    <span class="me-4" id="helpFourHeading">
+                      Why doesn't my account stay logged in?
+                    </span>
+
+                  </div>
+
+                  <!-- Collapse -->
+                  <div class="accordion-collapse collapse" id="helpFour" aria-labelledby="helpFourHeading"
+                    data-bs-parent="#helpAccordionOne">
+                    <div class="accordion-body">
+
+                      <!-- Text -->
+                      <p class="text-gray-700 mb-0">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet
+                        perferendis, temporibus obcaecati pariatur. Reprehenderit magnam necessitatibus vel culpa
+                        provident quas nesciunt sunt aut cupiditate fugiat! Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur.
+                        Reprehenderit magnam necessitatibus vel culpa provident quas nesciunt sunt aut cupiditate
+                        fugiat!
+                      </p>
+
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div> <!-- / .row -->
+    </div>
+
+  </div> <!-- / .main-content -->
+
+  <!-- JAVASCRIPT -->
+  <!-- Map JS -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+  <!-- Vendor JS -->
+  <script src="./assets/js/vendor.bundle.js"></script>
+
+  <!-- Theme JS -->
+  <script src="./assets/js/theme.bundle.js"></script>
+
+</body>
+
+</html>

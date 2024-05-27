@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc." />
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon"/>
+    
+    <!-- Map CSS -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
+    
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+    <link rel="stylesheet" href="style-custom.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neuicons@1.9.0/css/neu.min.css">
+    
+    <!-- Title -->
+    <title>Companies - Sapiengraph Prospector - Dashboard</title>
+    <style>
+
+      th.active-header {
+      color: black !important;
+    }
+    th:hover {
+      cursor: pointer;
+    }
+    </style>
+  </head>
+  <body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-vertical fixed-start navbar-expand-md navbar-light" id="sidebar">
+    <div class="container-fluid">
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarCollapse"
+        aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="./index.html">
+        <img src="./assets/img/logo.svg" class="navbar-brand-img mx-auto" alt="...">
+      </a>
+
+      <!-- User (xs) -->
+      <div class="navbar-user d-md-none">
+
+        <div class="btn-group dropdown">
+
+          <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            example@nubela.co <i class="fe fe-chevron-down ms-3"></i>
+          </button>
+
+          <div class="dropdown-menu dropdown-menu-end shadow-lg w-100" aria-labelledby="dropdownMenuButton">
+
+            <div class="row align-items-center">
+              <a class="text-center text-secondary nav-link mt-3 mb-1" href="index.html">
+                <i class="fe fe-log-out"></i> Log out
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Credits (md)-->
+      <div class="navbar-user d-none d-md-flex border-bottom pb-4 mb-4">
+
+        <div class="row">
+
+          <div class="col-12 mb-4">
+
+            <label class="mb-2 text-gray-700">
+              Credits
+              <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 100,000</code><code class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/125,000 </code>
+            </label>
+
+            <div class="progress">
+              <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                aria-valuemin="0" aria-valuemax="100">
+                100,000/125,000
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-12 mb-3">
+            
+            <label class="mb-2 text-gray-700">
+              Fresh profiles
+              <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 7,500</code><code class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/12,500 </code>
+            </label>
+
+            <div class="progress">
+              <div class="progress-bar bg-secondary" role="progressbar" style="width: 60%;" aria-valuenow="60"
+                aria-valuemin="0" aria-valuemax="100">
+                7,500/12,500
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-12">
+
+            <a class="btn btn-outline-success rounded-pill w-100 mt-3" href="index.html">
+              Buy credits
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidebarCollapse">
+
+        <!-- Credits (xs)-->
+        <div class="navbar-user d-md-none mb-4">
+
+          <div class="row text-center text-md-left">
+
+            <div class="col-12 mb-4">
+  
+              <label class="mb-2 text-gray-700">
+                Credits
+                <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 100,000</code><code class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/125,000 </code>
+              </label>
+  
+              <div class="progress">
+                <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                  aria-valuemin="0" aria-valuemax="100">
+                  100,000/125,000
+                </div>
+              </div>
+  
+            </div>
+  
+            <div class="col-12 mb-3">
+              
+              <label class="mb-2 text-gray-700">
+                Fresh profiles
+                <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 7,500</code><code class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/12,500 </code>
+              </label>
+  
+              <div class="progress">
+                <div class="progress-bar bg-secondary" role="progressbar" style="width: 60%;" aria-valuenow="60"
+                  aria-valuemin="0" aria-valuemax="100">
+                  7,500/12,500
+                </div>
+              </div>
+  
+            </div>
+  
+            <div class="col-12">
+  
+              <a class="btn btn-outline-success rounded-pill w-100 mt-3" href="index.html">
+                Buy credits
+              </a>
+  
+            </div>
+  
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#sidebarBilling" data-bs-toggle="collapse" role="button" aria-expanded="true"
+              aria-controls="sidebarBilling">
+              <i class="fe fe-dollar-sign"></i> Billing
+            </a>
+            <div class="collapse show" id="sidebarBilling">
+              <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                  <a href="./account-plans-and-payments.html" class="nav-link">
+                    <span class="border-start border-2 ps-3">Plan and payments</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./index.html" class="nav-link ">
+                    <span class="border-start border-2 ps-3 ">Buy credits</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-success" href="prospector-companies-result.html">
+              <i class="fe fe-target"></i> Prospector
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="job-change-monitor.html">
+              <i class="fe fe-briefcase"></i> Job Change Monitor
+            </a>
+          </li>
+          <li class="nav-item mb-4">
+            <a class="nav-link" href="#!">
+              <i class="fe fe-file"></i> Docs
+            </a>
+          </li>
+
+          <!-- old-logout
+            <hr class="my-4">
+
+            <li class="nav-item">
+              <a class="nav-link mb-3" href="index.html">
+                <i class="fe fe-log-out"></i> Log out 
+              </a>
+            </li>
+            -->
+
+        </ul>
+
+        <div class="mt-md-auto"></div>
+
+        <!-- User (md) -->
+        <div class="navbar-user d-none d-md-flex" id="sidebarUser">
+
+          <div class="btn-group dropup">
+
+            <button type="button" class="btn btn-outline-secondary dropdown-toggle w-100" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              example@nubela.co <i class="fe fe-chevron-up ms-3"></i>
+            </button>
+
+            <div class="dropdown-menu dropdown-menu-center shadow-lg w-100" aria-labelledby="dropdownMenuButton">
+
+              <div class="row align-items-center">
+                <a class="text-center text-secondary nav-link mt-3 mb-1" href="index.html">
+                  <i class="fe fe-log-out"></i> Log out
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div> <!-- / .navbar-collapse -->
+
+    </div>
+  </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+    
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 main-content-prospector">
+    
+            <!-- Header -->
+            <div class="header mt-5">
+              <div class="">
+    
+                <div class="row align-items-end d-flex">
+                  <div class="col-7">
+    
+                    <!-- Pretitle -->
+                    <h6 class="header-pretitle">
+                      Prospector
+                    </h6>
+    
+                    <!-- Title -->
+                    <h1 class="header-title">
+                      Companies Prospector
+                    </h1>
+    
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+            </div>
+            
+            
+            <!-- NAVS-->
+            <div class="col-12 mb-3">
+              <div class="card card-body custom-rounded border py-3">
+                <ul class="nav">
+                  <li class="nav-item text-left text-md-center">
+                    <a class="nav-link text-muted custom-link" href="prospector-saved-result.html"><i class="neu neu-bookmark"></i>
+                      Saved</a>
+                  </li>
+                  <li class="nav-item text-left text-md-center">
+                    <a class="nav-link text-muted custom-link" href="prospector-people-result.html"><i class="neu neu-user-2"></i>
+                      People</a>
+                  </li>
+                  <li class="nav-item text-left text-md-center">
+                    <a class="nav-link text-success custom-link" href="prospector-companies-result.html"><i
+                        class="neu neu-company"></i> Companies</a>
+                  </li>
+                  <li class="nav-item text-left text-md-center">
+                    <a class="nav-link text-muted custom-link" href="prospector-customers-result.html"><i
+                        class="neu neu-groups"></i> Customers</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="row">
+            
+              <!-- FILTER-->
+              <div class="col-12 col-lg-12 col-xl-4 mb-2 mb-lg-0">
+                <div class="card card-body custom-rounded shadow-light border">
+                  <div class="d-flex align-items-center mb-n2">
+                    <div class=" h3 mt-n2"><span class="mr-1">Filter Criteria</span>
+                      <a class="btn btn-outline-success rounded-pill btn-sm  h3 mt-3 ms-3"
+                        href="prospector-companies.html">Reset</a>
+                      <a class="btn btn-link text-success rounded-pill btn-sm  h3 mt-3 ms-n1" href="#!"><i
+                          class="neu neu-so-save d-none d-md-inline-block"></i> Save search</a>
+                    </div>
+            
+                    <button class="btn btn-sm btn-success rounded-pill lift  ms-auto d-none d-xl-block mt-n4"><i
+                        class="fe fe-chevron-left"></i></button>
+                  </div>
+            
+                  <!-- OVERVIEW/filter-->
+                  <div class="scrollable-div">
+                    <div class="accordion" id="companyOverviewAccordion">
+                      <div class="card border-0 pb-0 mb-0">
+            
+                        <div class="mb-3">
+                          <div class="card-body bg-lighter border rounded">
+                            <!-- toggle-->
+                            <a class="d-flex align-items-center text-reset text-decoration-none" data-bs-toggle="collapse"
+                              href="#companyOverviewFilter" role="button" aria-expanded="false"
+                              aria-controls="companyOverviewFilter">
+                              <div class="  me-auto"><i class="fe fe-zap me-3"></i>Overview</div>
+                              <!-- chevron-->
+                              <span class="collapse-chevron text-muted ms-4 mb-n1">
+                                <i class="fe fe-lg fe-chevron-up"></i>
+                              </span>
+                            </a>
+            
+                            <div class="collapse show" id="companyOverviewFilter">
+                              <form class="pt-4 mt-4 border-top">
+                                <div class="mb-4">
+                                  <label for="exampleInputIndustry" class="form-label ">Industry</label>
+                                  <input type="text" class="form-control form-control-sm"
+                                    placeholder="E.g. Technology, Software, Entertainment" id="exampleInputIndustry"
+                                    aria-describedby="emailHelp">
+                                  <div class="mt-2">
+                                    <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Software Development <i
+                                        class="neu neu-so-close-circle ms-1"></i></div>
+                                    <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Technology <i
+                                        class="neu neu-so-close-circle ms-1"></i></div>
+                                  </div>
+                                </div>
+                                <div class="mb-4">
+                                  <label for="exampleInputCompany" class="form-label ">Company Name</label>
+                                  <input type="text" class="form-control form-control-sm"
+                                    placeholder="E.g. Google, Apple, Microsoft" id="exampleInputCompany"
+                                    aria-describedby="emailHelp">
+                                  <ul class="list-group suggestions" id="companySuggestions"></ul>
+                                </div>
+                                <div class="mb-4">
+                                  <label for="exampleInputCompany" class="form-label  ">Country</label>
+                                  <input type="text" class="form-control form-control-sm"
+                                    placeholder="E.g. United States, Singapore, Japan" id="exampleInputCompany"
+                                    aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-4">
+                                  <label for="exampleInputCompany" class="form-label ">Company Type</label>
+                                  <input type="text" class="form-control form-control-sm"
+                                    placeholder="E.g. Public Company, Non Profit, Privately Held" id="exampleInputCompany"
+                                    aria-describedby="emailHelp">
+                                  <div class="mt-3">
+                                    <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3"> Public Company <i
+                                        class="neu neu-so-close-circle ms-1"></i></div>
+                                  </div>
+                                </div>
+                                <div class="mb-2">
+                                  <label for="exampleInputCompany" class="form-label ">Revenue</label>
+                                  <div class="d-flex justify-content-between">
+                                    <div class="input-group" style="width: 45%;">
+                                      <span class="input-group-text">$</span>
+                                      <input type="text" class="form-control form-control-sm" placeholder="Min revenue"
+                                        id="exampleInputCompany" aria-describedby="emailHelp">
+                                    </div>
+                                    <hr style="height: 2px; width: 2%; margin-top: 14px;">
+                                    <div class="input-group" style="width: 45%;">
+                                      <span class="input-group-text">$</span>
+                                      <input style="width: 45%;" type="text" class="form-control form-control-sm"
+                                        placeholder="Max revenue" id="exampleInputCompany" aria-describedby="emailHelp">
+                                    </div>
+                                  </div>
+                                  <div class="mt-3">
+                                    <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3"> $750M - $2B <i
+                                        class="neu neu-so-close-circle ms-1"></i></div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+            
+                        <!-- ADVANCED FILTER-->
+                        <div class="">
+                          <div class="card-body bg-lighter border rounded">
+                            <!-- toggle-->
+                            <a class="d-flex align-items-center text-reset text-decoration-none" data-bs-toggle="collapse"
+                              href="#companyAdvanced" role="button" aria-expanded="false" aria-controls="companyAdvanced">
+                              <div class="  me-auto"><i class="neu neu-company me-2"></i>Advanced filter</div>
+                              <!-- chevron-->
+                              <span class="collapse-chevron text-muted ms-4 mb-n1">
+                                <i class="fe fe-lg fe-chevron-down"></i>
+                              </span>
+                            </a>
+            
+                            <div class="collapse hide" id="companyAdvanced">
+                              <form class="pt-4 mt-4 border-top">
+                                <div class="mb-4">
+                                  <label for="exampleInputCompany" class="form-label ">Employee Count</label>
+                                  <div class="d-flex justify-content-between">
+                                    <input style="width: 45%;" type="text" class="form-control form-control-sm" placeholder="Min"
+                                      id="exampleInputCompany" aria-describedby="emailHelp">
+                                    <hr style="height: 2px; width: 2%; margin-top: 14px;"> <input style="width: 45%;" type="text"
+                                      class="form-control form-control-sm" placeholder="Max" id="exampleInputCompany"
+                                      aria-describedby="emailHelp">
+                                  </div>
+                                </div>
+                                <div class="mb-4">
+                                  <label for="exampleInputCompany" class="form-label ">Year Founded</label>
+                                  <div class="d-flex justify-content-between">
+                                    <input style="width: 45%;" type="text" class="form-control form-control-sm" placeholder="Min"
+                                      id="exampleInputCompany" aria-describedby="emailHelp">
+                                    <hr style="height: 2px; width: 2%; margin-top: 14px;"> <input style="width: 45%;" type="text"
+                                      class="form-control form-control-sm" placeholder="Max" id="exampleInputCompany"
+                                      aria-describedby="emailHelp">
+                                  </div>
+                                </div>
+                                <div class="mb-4">
+                                  <label for="exampleInputCompany" class="form-label ">Description</label>
+                                  <input type="text" class="form-control form-control-sm" placeholder="E.g. Medical Device"
+                                    id="exampleInputCompany" aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-4">
+                                  <label for="exampleInputCompany" class="form-label ">Region</label>
+                                  <input type="text" class="form-control form-control-sm" placeholder="E.g. California"
+                                    id="exampleInputCompany" aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-4">
+                                  <label for="exampleInputCompany" class="form-label ">City</label>
+                                  <input type="text" class="form-control form-control-sm" placeholder="E.g. Seattle, Los Angeles"
+                                    id="exampleInputCompany" aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-4">
+                                  <label for="exampleInputCompany" class="form-label ">Follower Count</label>
+                                  <div class="d-flex justify-content-between">
+                                    <input style="width: 45%;" type="text" class="form-control form-control-sm" placeholder="Min"
+                                      id="exampleInputCompany" aria-describedby="emailHelp">
+                                    <hr style="height: 2px; width: 2%; margin-top: 14px;"> <input style="width: 45%;" type="text"
+                                      class="form-control form-control-sm" placeholder="Max" id="exampleInputCompany"
+                                      aria-describedby="emailHelp">
+                                  </div>
+                                </div>
+                                <div class="mb-4">
+                                  <label for="exampleInputCompany" class="form-label ">Funding Amount</label>
+                                  <div class="d-flex justify-content-between">
+                                    <div class="input-group" style="width: 45%;">
+                                      <span class="input-group-text">$</span>
+                                      <input type="text" class="form-control form-control-sm" placeholder="Min"
+                                        id="exampleInputCompany" aria-describedby="emailHelp">
+                                    </div>
+                                    <hr style="height: 2px; width: 2%; margin-top: 14px;">
+                                    <div class="input-group" style="width: 45%;">
+                                      <span class="input-group-text">$</span>
+                                      <input style="width: 45%;" type="text" class="form-control form-control-sm" placeholder="Max"
+                                        id="exampleInputCompany" aria-describedby="emailHelp">
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="mb-2">
+                                  <label for="exampleInputCompany" class="form-label ">Funding Raised</label>
+                                  <div class="d-flex justify-content-between">
+                                    <input style="width: 45%;" type="date" class="form-control form-control-sm text-muted"
+                                      placeholder="Min" id="exampleInputCompany" aria-describedby="emailHelp">
+                                    <hr style="height: 2px; width: 2%; margin-top: 14px;">
+                                    <input style="width: 45%;" type="date" class="form-control form-control-sm text-muted"
+                                      placeholder="Max" id="exampleInputCompany" aria-describedby="emailHelp">
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+            
+                      </div>
+                    </div>
+                  </div>
+            
+                  <div class="btn btn-outline-success rounded-pill btn-block lift mt-4"><i class="neu neu-search"></i> Search
+                    criteria
+                  </div>
+                </div>
+              </div>
+            
+              <!-- RESULT-->
+              <div class="col-12 col-lg-12 col-xl-8">
+                <div class="card custom-rounded bg-white text-left pb-lg-3">
+                  <div class="card-body">
+                    <div class="row align-items-center mb-4">
+                    <div class="col-lg-6 d-flex">
+                      <img class="avatar avatar me-3" src="assets/img/logo/Air.svg"> 
+                      <div class=""><span class="h1">*******</span>
+                      <p class=""> <i class="neu neu-br-linkedin-sq me-1"></i>********************</p></div>
+                    </div>
+                    <div class="col-lg-6 text-md-end d-none d-lg-block mb-5">
+                      <div class="btn btn-sm btn-success rounded-pill lift mt-n3">
+                        <i class="neu neu-so-lock-square me-1"></i>Unlock Detail
+                      </div>
+                    </div>
+                    <div class="col-12 text-md-end d-block d-lg-none mb-5">
+                      <div class="btn btn btn-success rounded-pill w-100 lift mt-2">
+                        <i class="neu neu-so-lock-square me-1"></i>Unlock Detail
+                      </div>
+                    </div>
+                    </div>
+
+                    <div class="row mb-5 mb-lg-4">
+                      <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                        <div class="">
+                          <p class="lead mb-2">About</p>
+                          <p class="text-muted blur">Airbnb revolutionized travel by offering unique accommodations hosted by locals. Founded in 2008, Airbnb connects travelers with cozy homes, apartments, and rooms worldwide, fostering authentic experiences and a sense of belonging. With a presence in over 220 countries, Airbnb continues to redefine hospitality, making travel more personal and meaningful.</p>
+                        </div>
+                        <div class="mt-4">
+                          <p class="small mb-2"> <i class="neu neu-user-2 me-2"></i>*****</p>
+                          <p class="small mb-2"> <i class="neu neu-gps me-2"></i>**********************</p>
+                          <p class="small mb-2"> <i class="neu neu-dollar me-2"></i>*****</p>
+                          <p class="small mb-2"> <i class="neu neu-mail me-2"></i>**********************</p>
+                          <p class="small mb-2"> <i class="fe fe-twitter me-2 ms-1"></i>*******</p>
+                        </div>
+                      </div>
+                    
+                      <!-- INDUSTRIES ETC-->
+                      <div class="col-12 col-lg-5">
+                        <div class="mb-4">
+                          <p class="lead mb-2">Industries</p>
+                          <div class="btn rounded-pill btn-sm btn-outline-secondary me-1 ps-3 mt-2 pe-3"> Hospitality and Lodging</div> 
+                          <div class="btn rounded-pill btn-sm btn-outline-secondary me-1 ps-3 mt-2 pe-3"> Travel and Tourism</div>
+                          <div class="btn rounded-pill btn-sm btn-outline-secondary me-1 ps-3 mt-2 pe-3"> Technology and Internet Services</div>
+                          <div class="btn rounded-pill btn-sm btn-outline-secondary me-1 ps-3 mt-2 pe-3"> Real Estate and Property Management</div>
+                          <div class="btn rounded-pill btn-sm btn-outline-secondary me-1 ps-3 mt-2 pe-3"> Experience Hosting industries</div>
+                        </div>
+                        <div class="">
+                          <p class="lead mb-2">Company Type</p>
+                          <div class="btn rounded-pill btn-sm btn-outline-secondary me-1 ps-3 mt-2 pe-3"> Public Company</div> 
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row mb-md-3">
+                          <div class="col-md-6">
+                            <p class="fw-bold small text-gray-700 mb-1">Founded Date</p>
+                            <p class="">August 11, 2008</p>
+                          </div>
+                          <div class="col-md-5">
+                            <p class="fw-bold small text-gray-700 mb-1">Founder</p>
+                            <p class="">Brian Chesky, Nathan Blecharczyk, Joe Gebbia</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <p class="fw-bold small text-gray-700 mb-1">Operating Status</p>
+                            <p class="">Active</p>
+                          </div>
+                          <div class="col-md-5">
+                            <p class="fw-bold small text-gray-700 mb-1">Legal Name</p>
+                            <p class="">Airbnb, Inc</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br>
+    
+          </div>
+        </div> <!-- / .row -->
+      </div>
+    
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT -->
+
+    <!-- Table sorting JS-->
+    <script>
+      let currentColumn = 3; // Set Last checked as the default sorted column
+      let lastCheckedColumnSorted = true;
+  
+      document.addEventListener("DOMContentLoaded", function(event) {
+        // Simulate click on "Last checked" header after the page loads (default sort)
+        sortTable(currentColumn);
+        lastCheckedColumnSorted = false;
+      });
+  
+      function sortTable(columnIndex) {
+        const table = document.getElementById('myTable');
+        const tbody = table.querySelector('tbody');
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+  
+        rows.sort((a, b) => {
+          let cellA = a.getElementsByTagName('td')[columnIndex].innerText.trim().toLowerCase();
+          let cellB = b.getElementsByTagName('td')[columnIndex].innerText.trim().toLowerCase();
+  
+          if (columnIndex === 3) { // For Last checked column, reverse sorting
+            [cellA, cellB] = [cellB, cellA];
+          }
+  
+          return cellA.localeCompare(cellB);
+        });
+  
+        tbody.innerHTML = '';
+        rows.forEach(row => {
+          tbody.appendChild(row);
+        });
+  
+        resetHeaders();
+        const clickedHeader = document.getElementById(`header${columnIndex}`);
+  
+        if (!lastCheckedColumnSorted && columnIndex === 3) {
+          clickedHeader.classList.add('active-header');
+          lastCheckedColumnSorted = true;
+        } else {
+          clickedHeader.classList.add('active-header');
+        }
+  
+        currentColumn = columnIndex;
+        resetSortIcons(columnIndex);
+      }
+  
+      function resetHeaders() {
+        const headers = document.querySelectorAll('th');
+        headers.forEach(header => {
+          header.classList.remove('active-header');
+        });
+      }
+  
+      function resetSortIcons(exceptIndex) {
+        const icons = document.querySelectorAll('.fa-sort');
+        icons.forEach(icon => {
+          icon.classList.remove('fa-sort-up', 'fa-sort-down');
+          icon.classList.add('fa-sort');
+        });
+  
+        const clickedHeaderIcon = document.getElementById(`header${exceptIndex}`).getElementsByTagName('i')[0];
+        clickedHeaderIcon.classList.remove('fa-sort');
+        clickedHeaderIcon.classList.add('fas', 'fa-sort');
+      }
+    </script> 
+
+    <script src="script-custom.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+  
+
+    <!-- Map JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    
+    <!-- Vendor JS -->
+    <script src="./assets/js/vendor.bundle.js"></script>
+    
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.bundle.js"></script>
+    
+    <!-- Search Autocomplete JS-->
+    <script src="search-autocomplete.js"></script>
+
+  </body>
+</html>
