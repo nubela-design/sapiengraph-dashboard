@@ -596,17 +596,17 @@
 .label-monitor-status {
   font-size: 0.813rem;
 }
-.label-monitor-status.yellow {
-  color: #F6C343 !important;
-  border: 1px solid #F6C343;
+.label-monitor-status.muted {
+  color: #95aac9 !important;
+  border: 1px solid #95aac9;
 }
 .label-monitor-status.red {
   color: #ff0000 !important;
   border: 1px solid #ff0000;
 }
 .label-monitor-status.gray {
-  color: #6e84a3 !important;
-  border: 1px solid #6e84a3;
+  color: #3b506c !important;
+  border: 1px solid #3b506c;
 }
 .label-monitor-status.primary {
   color: #00bd94 !important;
