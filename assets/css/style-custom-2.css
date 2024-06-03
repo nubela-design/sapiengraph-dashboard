@@ -596,9 +596,9 @@
 .label-monitor-status {
   font-size: 0.813rem;
 }
-.label-monitor-status.orange {
-  color: #ff6600 !important;
-  border: 1px solid #ff6600;
+.label-monitor-status.yellow {
+  color: #F6C343 !important;
+  border: 1px solid #F6C343;
 }
 .label-monitor-status.red {
   color: #ff0000 !important;
