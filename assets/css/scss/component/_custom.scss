@@ -1,0 +1,24 @@
+// Monitoring Label
+.label-monitor-status {
+  font-size: $fs-13;
+
+  &.orange{
+    color: #ff6600 !important;
+    border: 1px solid #ff6600;
+  }
+
+  &.red{
+    color: #ff0000 !important;
+    border: 1px solid #ff0000;
+  }
+
+  &.gray{
+    color: #6e84a3 !important;
+    border: 1px solid #6e84a3;
+  }
+
+  &.primary{
+    color: $primary !important;
+    border: 1px solid $primary;
+  }
+}
