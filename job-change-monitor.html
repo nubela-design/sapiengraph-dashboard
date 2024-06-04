@@ -372,18 +372,18 @@
 
             <!-- Card -->
             <div class="card">
-              <div class="card-header">
+              <div class="card-header h-auto">
                 <div class="row align-items-center">
-                  <div class="col">
+                  <div class="col-12 col-lg text-center text-lg-start">
                     <!-- Title -->
-                    <h4 class="card-header-title mb-0">
+                    <h4 class="card-header-title mb-2 mb-lg-0 py-2">
                       Job Change Monitor List
                     </h4>
                   </div>
 
-                  <div class="col text-end">
+                  <div class="col-12 col-lg text-center text-lg-end">
                     <button
-                      class="btn btn-outline-success rounded-pill fs-13"
+                      class="w-100 w-auto-lg btn btn-outline-success rounded-pill fs-13"
                       type="button"
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
@@ -889,18 +889,18 @@
             <div class="modal-footer text-center">
               <button
                 type="button"
-                class="btn btn-success rounded-pill px-4 d-inline-flex align-items-center"
+                class="w-100 btn btn-success rounded-pill px-4 d-flex justify-content-center align-items-start text-center"
                 id="exportGS"
               >
-                <div class="lds-ring">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
+                <div class="d-inline-flex justify-content-center">
+                  <div class="lds-ring">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <span id="textExportButton" class="w-100"> Export </span>
                 </div>
-                <span id="textExportButton">
-                  Export
-                </span>
               </button>
             </div>
           </div>

@@ -593,6 +593,12 @@
 /*--- /Footer ---*/
 /*--- Header ---*/
 /*--- /Header ---*/
+@media (min-width: 992px) {
+  .w-auto-lg {
+    width: auto !important;
+  }
+}
+
 .label-monitor-status {
   font-size: 0.813rem;
 }
@@ -657,22 +663,8 @@
   cursor: wait;
 }
 #exportGS.button--loading .lds-ring {
-  display: inline-block;
-}
-#exportGS.button--loading::after {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  border: 4px solid transparent;
-  border-top-color: #ffffff;
-  border-radius: 50%;
-  animation: button-loading-spinner 1s ease infinite;
+  display: inline-flex;
+  align-self: center;
 }
 @keyframes button-loading-spinner {
   from {
