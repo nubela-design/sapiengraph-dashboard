@@ -613,6 +613,100 @@
   border: 1px solid #00bd94;
 }
 
+#exportGS .lds-ring,
+#exportGS .lds-ring div {
+  box-sizing: border-box;
+}
+#exportGS .lds-ring {
+  display: none;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+#exportGS .lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 3px solid currentColor;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: currentColor transparent transparent transparent;
+}
+#exportGS .lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+#exportGS .lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+#exportGS .lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#exportGS.button--loading {
+  background-color: #95aac9 !important;
+  border: 1px solid #95aac9 !important;
+  cursor: wait;
+}
+#exportGS.button--loading .lds-ring {
+  display: inline-block;
+}
+#exportGS.button--loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* Style the alert container */
+.alert-export {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  display: none;
+}
+
+/* Add an animation to the alert container */
+.alert-export.animate {
+  animation: alert-animation 0.5s ease-out;
+}
+
+@keyframes alert-animation {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 /*--- Scroll Horizontal ---*/
 .scroll {
   white-space: nowrap;
