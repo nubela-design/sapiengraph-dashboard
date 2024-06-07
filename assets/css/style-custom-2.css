@@ -626,6 +626,14 @@
   border: 1px solid #00bd94;
 }
 
+#exportGS.btn-success:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+#exportGS.btn-success:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
 #exportGS .lds-ring,
 #exportGS .lds-ring div {
   box-sizing: border-box;

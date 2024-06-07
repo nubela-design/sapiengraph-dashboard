@@ -34,6 +34,19 @@
 
 // button loading
 #exportGS {
+
+  &.btn-success {
+    &:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
+    &:active {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+
   // Spinner
   .lds-ring,
   .lds-ring div {
