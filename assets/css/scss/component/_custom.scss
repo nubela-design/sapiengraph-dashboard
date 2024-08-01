@@ -34,7 +34,6 @@
 
 // button loading
 #exportGS {
-
   &.btn-success {
     &:focus {
       outline: none !important;
@@ -231,5 +230,63 @@
   }
   100% {
     background-position: 468px 0;
+  }
+}
+
+#prospector-fold {
+  position: relative;
+  width: 100%;
+
+  &.active {
+    #btn-collapse-filter {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+
+    #prospector-filter {
+      width: calc(100% - 67%);
+      -webkit-transition: 0.2s all;
+      transition: 0.2s all;
+
+      &-min {
+        display: none;
+      }
+
+      &-full {
+        display: block;
+      }
+
+      .prospector-filter-header {
+        &-btn {
+          margin-left: auto;
+        }
+      }
+    }
+
+    #prospector-result {
+      width: calc(100% - 33%);
+      -webkit-transition: 0.2s all;
+      transition: 0.2s all;
+    }
+  }
+
+  #prospector-filter {
+    width: calc(100% - 92%);
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+
+    &-min {
+      display: block;
+    }
+
+    &-full {
+      display: none;
+    }
+  }
+
+  #prospector-result {
+    width: calc(100% - 8%);
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
   }
 }

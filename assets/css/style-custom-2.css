@@ -52,80 +52,80 @@
 }
 
 .bg-black {
-  background-color: black !important;
+  background-color: rgb(0, 0, 0) !important;
 }
 @media (min-width: 375px) {
   .bg-black-xsm {
-    background-color: black !important;
+    background-color: rgb(0, 0, 0) !important;
   }
 }
 @media (min-width: 576px) {
   .bg-black-sm {
-    background-color: black !important;
+    background-color: rgb(0, 0, 0) !important;
   }
 }
 @media (min-width: 768px) {
   .bg-black-md {
-    background-color: black !important;
+    background-color: rgb(0, 0, 0) !important;
   }
 }
 @media (min-width: 992px) {
   .bg-black-lg {
-    background-color: black !important;
+    background-color: rgb(0, 0, 0) !important;
   }
 }
 @media (min-width: 1200px) {
   .bg-black-xl {
-    background-color: black !important;
+    background-color: rgb(0, 0, 0) !important;
   }
 }
 @media (min-width: 1400px) {
   .bg-black-xxl {
-    background-color: black !important;
+    background-color: rgb(0, 0, 0) !important;
   }
 }
 @media (min-width: 1900px) {
   .bg-black-xxxl {
-    background-color: black !important;
+    background-color: rgb(0, 0, 0) !important;
   }
 }
 
 .bg-white {
-  background-color: white !important;
+  background-color: rgb(255, 255, 255) !important;
 }
 @media (min-width: 375px) {
   .bg-white-xsm {
-    background-color: white !important;
+    background-color: rgb(255, 255, 255) !important;
   }
 }
 @media (min-width: 576px) {
   .bg-white-sm {
-    background-color: white !important;
+    background-color: rgb(255, 255, 255) !important;
   }
 }
 @media (min-width: 768px) {
   .bg-white-md {
-    background-color: white !important;
+    background-color: rgb(255, 255, 255) !important;
   }
 }
 @media (min-width: 992px) {
   .bg-white-lg {
-    background-color: white !important;
+    background-color: rgb(255, 255, 255) !important;
   }
 }
 @media (min-width: 1200px) {
   .bg-white-xl {
-    background-color: white !important;
+    background-color: rgb(255, 255, 255) !important;
   }
 }
 @media (min-width: 1400px) {
   .bg-white-xxl {
-    background-color: white !important;
+    background-color: rgb(255, 255, 255) !important;
   }
 }
 @media (min-width: 1900px) {
   .bg-white-xxxl {
-    background-color: white !important;
+    background-color: rgb(255, 255, 255) !important;
   }
 }
 
@@ -171,80 +171,80 @@
 /*--- /Bg Color ---*/
 /*--- Text Color ---*/
 .text-black {
-  color: black !important;
+  color: rgb(0, 0, 0) !important;
 }
 @media (min-width: 375px) {
   .text-black-xsm {
-    color: black !important;
+    color: rgb(0, 0, 0) !important;
   }
 }
 @media (min-width: 576px) {
   .text-black-sm {
-    color: black !important;
+    color: rgb(0, 0, 0) !important;
   }
 }
 @media (min-width: 768px) {
   .text-black-md {
-    color: black !important;
+    color: rgb(0, 0, 0) !important;
   }
 }
 @media (min-width: 992px) {
   .text-black-lg {
-    color: black !important;
+    color: rgb(0, 0, 0) !important;
   }
 }
 @media (min-width: 1200px) {
   .text-black-xl {
-    color: black !important;
+    color: rgb(0, 0, 0) !important;
   }
 }
 @media (min-width: 1400px) {
   .text-black-xxl {
-    color: black !important;
+    color: rgb(0, 0, 0) !important;
   }
 }
 @media (min-width: 1900px) {
   .text-black-xxxl {
-    color: black !important;
+    color: rgb(0, 0, 0) !important;
   }
 }
 
 .text-white {
-  color: white !important;
+  color: rgb(255, 255, 255) !important;
 }
 @media (min-width: 375px) {
   .text-white-xsm {
-    color: white !important;
+    color: rgb(255, 255, 255) !important;
   }
 }
 @media (min-width: 576px) {
   .text-white-sm {
-    color: white !important;
+    color: rgb(255, 255, 255) !important;
   }
 }
 @media (min-width: 768px) {
   .text-white-md {
-    color: white !important;
+    color: rgb(255, 255, 255) !important;
   }
 }
 @media (min-width: 992px) {
   .text-white-lg {
-    color: white !important;
+    color: rgb(255, 255, 255) !important;
   }
 }
 @media (min-width: 1200px) {
   .text-white-xl {
-    color: white !important;
+    color: rgb(255, 255, 255) !important;
   }
 }
 @media (min-width: 1400px) {
   .text-white-xxl {
-    color: white !important;
+    color: rgb(255, 255, 255) !important;
   }
 }
 @media (min-width: 1900px) {
   .text-white-xxxl {
-    color: white !important;
+    color: rgb(255, 255, 255) !important;
   }
 }
 
@@ -344,9 +344,7 @@
 
 .fw-900 {
   font-weight: 900 !important;
-}
-
-/*--- /Text Weight ---*/
+} /*--- /Text Weight ---*/
 .fs-6 {
   font-size: 0.375rem;
 }
@@ -785,6 +783,50 @@
     background-position: 468px 0;
   }
 }
+#prospector-fold {
+  position: relative;
+  width: 100%;
+}
+#prospector-fold.active #btn-collapse-filter {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+#prospector-fold.active #prospector-filter {
+  width: 33%;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+#prospector-fold.active #prospector-filter-min {
+  display: none;
+}
+#prospector-fold.active #prospector-filter-full {
+  display: block;
+}
+#prospector-fold.active #prospector-filter .prospector-filter-header-btn {
+  margin-left: auto;
+}
+#prospector-fold.active #prospector-result {
+  width: 67%;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+#prospector-fold #prospector-filter {
+  width: 8%;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+#prospector-fold #prospector-filter-min {
+  display: block;
+}
+#prospector-fold #prospector-filter-full {
+  display: none;
+}
+#prospector-fold #prospector-result {
+  width: 92%;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
 /*--- Scroll Horizontal ---*/
 .scroll {
   white-space: nowrap;
