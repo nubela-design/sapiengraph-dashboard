@@ -787,44 +787,83 @@
   position: relative;
   width: 100%;
 }
-#prospector-fold.active #btn-collapse-filter {
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
-#prospector-fold.active #prospector-filter {
-  width: 33%;
-  -webkit-transition: 0.2s all;
-  transition: 0.2s all;
-}
-#prospector-fold.active #prospector-filter-min {
-  display: none;
-}
-#prospector-fold.active #prospector-filter-full {
-  display: block;
-}
-#prospector-fold.active #prospector-filter .prospector-filter-header-btn {
-  margin-left: auto;
-}
-#prospector-fold.active #prospector-result {
-  width: 67%;
-  -webkit-transition: 0.2s all;
-  transition: 0.2s all;
-}
 #prospector-fold #prospector-filter {
-  width: 8%;
+  width: 100%;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
 #prospector-fold #prospector-filter-min {
-  display: block;
+  display: none;
 }
 #prospector-fold #prospector-filter-full {
+  display: block;
+}
+#prospector-fold #prospector-filter .prospector-filter-header-title {
+  display: inline-flex;
+}
+#prospector-fold #prospector-filter .prospector-filter-header-save-reset {
+  display: inline-flex;
+}
+#prospector-fold #prospector-filter .prospector-filter-header-toggle {
   display: none;
 }
 #prospector-fold #prospector-result {
-  width: 92%;
+  width: 100%;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
+}
+@media (min-width: 1200px) {
+  #prospector-fold.active #prospector-filter {
+    width: 33%;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+  }
+  #prospector-fold.active #prospector-filter-min {
+    display: none;
+  }
+  #prospector-fold.active #prospector-filter-full {
+    display: block;
+  }
+  #prospector-fold.active #prospector-filter .prospector-filter-header-title {
+    display: inline-flex;
+  }
+  #prospector-fold.active #prospector-filter .prospector-filter-header-save-reset {
+    display: inline-flex;
+  }
+  #prospector-fold.active #prospector-filter .prospector-filter-header-toggle #btn-collapse-filter {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+  #prospector-fold.active #prospector-result {
+    width: 67%;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+  }
+  #prospector-fold #prospector-filter {
+    width: 8%;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+  }
+  #prospector-fold #prospector-filter-min {
+    display: block;
+  }
+  #prospector-fold #prospector-filter-full {
+    display: none;
+  }
+  #prospector-fold #prospector-filter .prospector-filter-header-title {
+    display: none;
+  }
+  #prospector-fold #prospector-filter .prospector-filter-header-save-reset {
+    display: none;
+  }
+  #prospector-fold #prospector-filter .prospector-filter-header-toggle {
+    display: inline-flex;
+  }
+  #prospector-fold #prospector-result {
+    width: 92%;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+  }
 }
 
 /*--- Scroll Horizontal ---*/

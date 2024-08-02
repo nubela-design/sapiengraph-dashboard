@@ -323,18 +323,23 @@
               <div class="card custom-rounded shadow-light border w-100">
                 <div class="card-body d-inline-flex flex-column justify-content-center align-items-center">
 
-                  <div class="prospector-filter-header d-flex w-100 justify-content-center align-items-center">
-                    <!-- <div class="prospector-filter-header h3">
+                  <div class="prospector-filter-header d-flex w-100 justify-content-between align-items-center gap-2 border-bottom pb-4">
+                    <div class="prospector-filter-header-title h3 mb-0">
                       <span class="mr-1">Filter Criteria</span>
-                      <span id="tooltip-target" data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true"
+                      <span id="tooltip-target" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true"
                         title='We support <a class="fw-bold text-success link-hover" target="_blank" href="https://nubela.co/blog/ultimate-guide-to-boolean-search-syntax/">Boolean Search Syntax</a> in our search parameters.'>
                         <i class="fe fe-info small"></i>
                       </span>
-                    </div> -->
+                    </div>
 
-                    <div class="prospector-filter-header-btn pb-4 pt-1 border-bottom">
+                    <div class="prospector-filter-header-save-reset gap-2">
+                      <button class="btn btn-sm btn-outline-success rounded-pill" type="button" data-bs-toggle="popover" data-bs-placement="top" data-bs-title="Reset data filter"><i class="fe fe-refresh-cw"></i></button>
+                      <button class="btn btn-sm btn-outline-success rounded-pill" type="button" data-bs-toggle="popover" data-bs-placement="top" data-bs-title="Save data filter" ><i class="fe fe-save"></i></button>
+                    </div>
+
+                    <div class="prospector-filter-header-toggle">
                       <button id="btn-collapse-filter"
-                        class="btn btn-sm btn-success rounded-pill lift font-weight-bold ms-auto">
+                        class="btn btn-sm btn-success rounded-pill lift font-weight-bold">
                         <i class="fe fe-chevron-right"></i>
                       </button>
                     </div>
@@ -343,19 +348,17 @@
                   <!-- Min Filter -->
                   <div id="prospector-filter-min" class="w-100">
                     <div class="mt-4 text-center">
-                      <a class="d-flex align-items-center justify-content-center text-reset text-decoration-none mb-5 custom-link"
-                        href="prospector-companies-result.html" role="button">
+                      <button id="btn-overveiw-filter" class="d-flex align-items-center justify-content-center text-reset text-decoration-none mb-5 custom-link border-0 bg-transparent" role="button">
                         <div class=" font-weight-bold lead"><i class="fe fe-zap h4"></i></div>
-                      </a>
-                      <a class="d-flex align-items-center justify-content-center text-reset text-decoration-none mb-3 custom-link"
-                        href="prospector-companies-result.html" role="button">
+                      </button>
+                      <button id="btn-advance-filter" class="d-flex align-items-center justify-content-center text-reset text-decoration-none mb-3 custom-link border-0 bg-transparent" role="button">
                         <div class=" font-weight-bold lead"><i class="neu neu-company h4"></i></div>
-                      </a>
+                      </button>
                     </div>
                   </div>
 
                   <!-- Full Filter -->
-                  <div id="prospector-filter-full" class="w-100">
+                  <div id="prospector-filter-full" class="w-100 mt-3">
                     <div class="accordion" id="companyOverviewAccordion">
                       <div class="card border-0 pb-0 mb-0">
 
@@ -528,6 +531,10 @@
                               </form>
                             </div>
                           </div>
+                        </div>
+
+                        <div class="btn btn-outline-success rounded-pill btn-block lift mt-4"><i class="neu neu-search"></i>
+                          Search criteria
                         </div>
 
                       </div>
@@ -1108,6 +1115,16 @@
   <script>
     document.getElementById('btn-collapse-filter').addEventListener('click', function () {
       document.getElementById('prospector-fold').classList.toggle('active');
+    });
+    document.getElementById('btn-overveiw-filter').addEventListener('click', function () {
+      document.getElementById('prospector-fold').classList.toggle('active');
+      document.getElementById('companyAdvanced').classList.remove('show');
+      document.getElementById('companyOverviewFilter').classList.add('show');
+    });
+    document.getElementById('btn-advance-filter').addEventListener('click', function () {
+      document.getElementById('prospector-fold').classList.toggle('active');
+      document.getElementById('companyOverviewFilter').classList.remove('show');
+      document.getElementById('companyAdvanced').classList.add('show');
     });
   </script>
   <!-- /Collapse Filter Prospector -->
