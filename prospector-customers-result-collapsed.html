@@ -383,8 +383,9 @@
                     <!-- OVERVIEW/filter-->
                     <div class="mt-4 text-center">
                       <a class="d-flex align-items-center justify-content-center text-reset text-decoration-none mb-3 custom-link"
-                        href="prospector-customers-result.html" role="button">
-                        <div class=" font-weight-bold lead me-auto"><i class="fe fe-filter h4"></i></div>
+                        href="prospector-customers-result.html" role="button" data-bs-toggle="tooltip"
+                        data-bs-placement="right" title="Search by company name">
+                        <div class=" font-weight-bold lead me-auto"><i class="fe fe-search h4"></i></div>
                       </a>
                     </div>
                   </div>
@@ -857,27 +858,32 @@
     }
   </script>
 
-  <script src="script-all-checkbox.js"></script>
+  <!-- Import Jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Import Theme JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="./assets/js/theme.bundle.js"></script>
+
+  <!-- Import Font Awesome 5 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 
-
-  <!-- Map JS -->
+  <!-- Import Map JS -->
   <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 
-  <!-- Vendor JS -->
+  <!-- Import Vendor JS -->
   <script src="./assets/js/vendor.bundle.js"></script>
 
-  <!-- Theme JS
-  <script src="./assets/js/theme.bundle.js"></script>
-  -->
-
-  <!-- Search Autocomplete JS-->
+  <!-- Import Search Autocomplete JS-->
   <script src="search-autocomplete.js"></script>
 
+  <!-- Import Script All Checkbox -->
+  <script src="script-all-checkbox.js"></script>
+
   <!-- POPOVER CONTENT REMAIN VISIBLE JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script> -->
+
   <script>
     var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
     var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
