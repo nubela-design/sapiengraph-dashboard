@@ -303,11 +303,11 @@
                       class="neu neu-user-2"></i> People</a>
                 </li>
                 <li class="nav-item text-left text-md-center">
-                  <a class="nav-link text-success custom-link" href="prospector-companies-result.html"><i
+                  <a class="nav-link text-success custom-link" href="prospector-companies-result-collapsed.html"><i
                       class="neu neu-company"></i> Companies</a>
                 </li>
                 <li class="nav-item text-left text-md-center">
-                  <a class="nav-link text-muted custom-link" href="prospector-customers-result.html"><i
+                  <a class="nav-link text-muted custom-link" href="prospector-customers-result-collapsed.html"><i
                       class="neu neu-groups"></i> Customers</a>
                 </li>
               </ul>
@@ -338,25 +338,26 @@
                     </a>
                   </div>
 
-                  <!-- OVERVIEW/filter-->
+                  <!-- Company Filter Section-->
                   <div class="">
-                    <div class="accordion" id="companyOverviewAccordion">
+                    <div class="accordion" id="companyFilterAccordion">
                       <div class="card border-0 pb-0 mb-0">
 
+                        <!-- Overview Filter -->
                         <div class="mb-3">
                           <div class="card-body bg-lighter border rounded">
                             <!-- toggle-->
                             <a class="d-flex align-items-center text-reset text-decoration-none"
                               data-bs-toggle="collapse" href="#companyOverviewFilter" role="button"
                               aria-expanded="false" aria-controls="companyOverviewFilter">
-                              <div class="  me-auto"><i class="fe fe-grid me-3"></i>Overview</div>
+                              <div class="  me-auto"><i class="neu neu-company me-3"></i>Overview</div>
                               <!-- chevron-->
                               <span class="collapse-chevron text-muted ms-4 mb-n1">
                                 <i class="fe fe-lg fe-chevron-up"></i>
                               </span>
                             </a>
 
-                            <div class="collapse show" id="companyOverviewFilter">
+                            <div class="collapse show" id="companyOverviewFilter" aria-labelledby="sectionOne" data-bs-parent="#companyFilterAccordion">
                               <form class="pt-4 mt-4 border-top">
                                 <div class="mb-4">
                                   <label for="exampleInputIndustry" class="form-label ">Industry</label>
@@ -420,21 +421,21 @@
                           </div>
                         </div>
 
-                        <!-- ADVANCED FILTER-->
+                        <!-- Advance Filter -->
                         <div class="">
                           <div class="card-body bg-lighter border rounded">
                             <!-- toggle-->
                             <a class="d-flex align-items-center text-reset text-decoration-none"
                               data-bs-toggle="collapse" href="#companyAdvanced" role="button" aria-expanded="false"
                               aria-controls="companyAdvanced">
-                              <div class="me-auto"><i class="fe fe-filter me-3"></i>Advanced filter</div>
+                              <div class="me-auto"><i class="fe fe-settings me-3"></i>Advanced filter</div>
                               <!-- chevron-->
                               <span class="collapse-chevron text-muted ms-4 mb-n1">
                                 <i class="fe fe-lg fe-chevron-down"></i>
                               </span>
                             </a>
 
-                            <div class="collapse hide" id="companyAdvanced">
+                            <div class="collapse" id="companyAdvanced" aria-labelledby="sectionTwo" data-bs-parent="#companyFilterAccordion">
                               <form class="pt-4 mt-4 border-top">
                                 <div class="mb-4">
                                   <label for="exampleInputCompany" class="form-label ">Employee Count</label>
