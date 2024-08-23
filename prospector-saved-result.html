@@ -1,37 +1,39 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc." />
-    
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon"/>
-    
-    <!-- Map CSS -->
-    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
-    
-    <!-- Libs CSS -->
-    <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
-    
-    <!-- Theme CSS -->
-    <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
-    <link rel="stylesheet" href="style-custom.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neuicons@1.9.0/css/neu.min.css">
-    
-    <!-- Title -->
-    <title>Saved Result - Sapiengraph Prospector - Dashboard</title>
-    <style>
 
-      th.active-header {
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc." />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon" />
+
+  <!-- Map CSS -->
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
+
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+  <link rel="stylesheet" href="style-custom.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neuicons@1.9.0/css/neu.min.css">
+
+  <!-- Title -->
+  <title>Saved Result - Sapiengraph Prospector - Dashboard</title>
+  <style>
+    th.active-header {
       color: black !important;
     }
+
     th:hover {
       cursor: pointer;
     }
-    </style>
-  </head>
-  <body>
+  </style>
+</head>
+
+<body>
 
   <!-- NAVIGATION -->
   <nav class="navbar navbar-vertical fixed-start navbar-expand-md navbar-light" id="sidebar">
@@ -81,7 +83,8 @@
 
             <label class="mb-2 text-gray-700">
               Credits
-              <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 100,000</code><code class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/125,000 </code>
+              <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 100,000</code><code
+                class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/125,000 </code>
             </label>
 
             <div class="progress">
@@ -94,10 +97,11 @@
           </div>
 
           <div class="col-12 mb-3">
-            
+
             <label class="mb-2 text-gray-700">
               Fresh profiles
-              <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 7,500</code><code class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/12,500 </code>
+              <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 7,500</code><code
+                class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/12,500 </code>
             </label>
 
             <div class="progress">
@@ -130,46 +134,48 @@
           <div class="row text-center text-md-left">
 
             <div class="col-12 mb-4">
-  
+
               <label class="mb-2 text-gray-700">
                 Credits
-                <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 100,000</code><code class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/125,000 </code>
+                <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 100,000</code><code
+                  class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/125,000 </code>
               </label>
-  
+
               <div class="progress">
                 <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%;" aria-valuenow="80"
                   aria-valuemin="0" aria-valuemax="100">
                   100,000/125,000
                 </div>
               </div>
-  
+
             </div>
-  
+
             <div class="col-12 mb-3">
-              
+
               <label class="mb-2 text-gray-700">
                 Fresh profiles
-                <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 7,500</code><code class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/12,500 </code>
+                <code class="h2 text-black" style="font-family: Cerebri Sans,sans-serif;"> 7,500</code><code
+                  class="small text-gray-700" style="font-family: Cerebri Sans,sans-serif;">/12,500 </code>
               </label>
-  
+
               <div class="progress">
                 <div class="progress-bar bg-secondary" role="progressbar" style="width: 60%;" aria-valuenow="60"
                   aria-valuemin="0" aria-valuemax="100">
                   7,500/12,500
                 </div>
               </div>
-  
+
             </div>
-  
+
             <div class="col-12">
-  
+
               <a class="btn btn-outline-success rounded-pill w-100 mt-3" href="index.html">
                 Buy credits
               </a>
-  
+
             </div>
-  
-            </div>
+
+          </div>
 
         </div>
 
@@ -254,222 +260,404 @@
 
     </div>
   </nav>
-  
+
+  <!--MODAL Delete-->
+  <div class="modal fade" id="modalDeleteSaved" tabindex="-1" aria-labelledby="modalDeleteLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="">
+          <h3 class="modal-title" id="modalTopupLabel"></h3>
+          <div class="me-4 mt-4"><button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button></div>
+        </div>
+
+        <div class="modal-body">
+
+          <div class="row justify-content-center pb-md-5">
+
+            <div class="col-12 col-md-10 text-center mb-3">
+              <div class="avatar avatar-lg mb-2">
+                <div class="avatar-title fs-lg bg-danger rounded-circle text-primary">
+                  <i class="neu neu-so-delete text-white display-4"></i>
+                </div>
+              </div>
+
+              <h1 class="fw-bold mb-4 mt-4">
+                Delete saved query?
+              </h1>
+
+              <p class="lead">
+                <span class="">Senior Software Engineer (Google, Apple. Past Company: Meta, Amazon, Netflix.
+                  London)</span> will be permanently deleted.
+              </p>
+              <p class="lead">Are you sure you want to delete this saved query?</p>
+            </div>
+
+            <div class="col-12 col-md-10">
+
+
+              <div class="row align-items-center justify-content-center mt-3">
+
+                <button class="btn btn-lg btn-success w-100 mb-3" data-bs-dismiss="modal" aria-label="Close">
+                  No, don't delete this saved query
+                </button>
+                <button class="btn btn-lg btn-outline-danger w-100" data-bs-toggle="modal"
+                  data-bs-target="#modalDeleteLoading">
+                  Yes, delete this saved query
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--MODAL Delete-->
+  <div class="modal fade" id="modalDeleteLoading" tabindex="-1" aria-labelledby="modalDeleteLabelLoading"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="">
+          <h3 class="modal-title" id="modalTopupLabel"></h3>
+          <div class="me-4 mt-4"><button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button></div>
+        </div>
+
+        <div class="modal-body">
+
+          <div class="row justify-content-center pb-md-5">
+
+            <div class="col-12 col-md-10 text-center mb-3">
+              <div class="avatar avatar-lg mb-2">
+                <div class="avatar-title fs-lg bg-danger rounded-circle text-primary">
+                  <i class="neu neu-so-delete text-white display-4"></i>
+                </div>
+              </div>
+
+              <h1 class="fw-bold mb-4 mt-4">
+                Delete saved query?
+              </h1>
+
+              <p class="lead">
+                <span class="">Senior Software Engineer (Google, Apple. Past Company: Meta, Amazon, Netflix.
+                  London)</span> will be permanently deleted.
+              </p>
+              <p class="lead">Are you sure you want to delete this saved query?</p>
+            </div>
+
+            <div class="col-12 col-md-10">
+
+
+              <div class="row align-items-center justify-content-center mt-3">
+
+                <button class="btn btn-lg btn-success w-100 mb-3" data-bs-dismiss="modal" aria-label="Close">
+                  No, don't delete this saved query
+                </button>
+                <button class="btn btn-lg btn-danger w-100" style="background-color: #F28193; border: none;"
+                  data-bs-toggle="modal" data-bs-target="#modalDeleteSavedsuccess">
+                  <span class="spinner-border spinner-border-sm me-1 mt-1" role="status" aria-hidden="true"></span>
+                  Deleting saved query
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--MODAL Delete Success-->
+  <div class="modal fade" id="modalDeleteSavedsuccess" tabindex="-1" aria-labelledby="modalDeleteLabelSuccess"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="">
+          <h3 class="modal-title" id="modalTopupLabel"></h3>
+          <div class="me-4 mt-4"><button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button></div>
+        </div>
+
+        <div class="modal-body">
+
+          <div class="row justify-content-center pb-md-5">
+
+            <div class="col-12 col-md-10 text-center mb-3">
+              <div class="avatar avatar-lg mb-2">
+                <div class="avatar-title fs-lg bg-danger rounded-circle text-primary">
+                  <i class="neu neu-so-delete text-white display-4"></i>
+                </div>
+              </div>
+
+              <h1 class="fw-bold mb-4 mt-4">
+                Saved query deleted!
+              </h1>
+
+              <p class="lead">
+                Senior Software Engineer (Google, Apple. Past Company: Meta, Amazon, Netflix.
+                London) has been deleted from your saved list.
+              </p>
+            </div>
+
+            <div class="col-12 col-md-10">
+
+
+              <div class="row align-items-center justify-content-center mt-3">
+
+                <button class="btn btn-lg btn-success w-100" data-bs-dismiss="modal" aria-label="Close">
+                  Go to saved list
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <!-- MAIN CONTENT -->
   <div class="main-content">
-  
+
     <div class="container-fluid">
       <div class="row justify-content-center">
         <div class="col-12 main-content-prospector">
-            <!-- PEOPLE TAB-->
-              <!-- Header -->
-              <div class="header mt-5">
-                <div class="">
-        
-                  <div class="row align-items-end d-flex">
-                    <div class="col-7">
-        
-                      <!-- Pretitle -->
-                      <h6 class="header-pretitle">
-                        Prospector
-                      </h6>
-        
-                      <!-- Title -->
-                      <h1 class="header-title">
-                        Saved Prospector
-                      </h1>
-        
-                    </div>
-                  </div> <!-- / .row -->
-                </div>
-              </div>
-        
-              <!-- NAVS-->
-              <div class="col-12 mb-3">
-                <div class="card card-body custom-rounded border py-3">
-                  <ul class="nav">
-                    <li class="nav-item text-left text-md-center">
-                      <a class="nav-link text-success custom-link" href="prospector-saved-result.html"><i class="neu neu-bookmark"></i> Saved</a>
-                    </li>
-                    <li class="nav-item text-left text-md-center">
-                      <a class="nav-link text-muted custom-link" href="prospector-people-result.html"><i class="neu neu-user-2"></i> People</a>
-                    </li>
-                    <li class="nav-item text-left text-md-center">
-                      <a class="nav-link text-muted custom-link" href="prospector-companies-result.html"><i class="neu neu-company"></i> Companies</a>
-                    </li>
-                    <li class="nav-item text-left text-md-center">
-                      <a class="nav-link text-muted custom-link" href="prospector-customers-result.html"><i class="neu neu-groups"></i> Customers</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-        
-              <div>
-                <!-- SAVED TAB-->
-                <div class="row">
-        
-                  <!-- RESULT-->
-                  <div class="col-12">
-                    <div class="card card-body custom-rounded bg-white text-left shadow-light border">
-        
-                      <div class="table-responsive">
-                        <table class="table table-sm rounded-table table-hover table-nowrap custom-table">
-                          <thead style="background-color: #F9FAFB;">
-                            <tr class="text-muted small text-uppercase">
-                              <th scope="col">Name</th>
-                              <th scope="col">Type</th>
-                              <th scope="col">Result</th>
-                              <th scope="col">Time</th>
-                              <th scope="col">Action</th>
-                            </tr>
-                          </thead>
-                          <tbody class="fs-base">
-                            <!-- 1 -->
-                            <tr class="align-middle">
-                              <td class="align-middle">
-                                <a class="h4 text-black custom-link" href="prospector-people-result.html">Senior Software
-                                  Engineer (Google, Apple. Past Company: Meta, Amazon, Netflix. London)</a>
-                              </td>
-                              <td class="align-middle"><i class="neu neu-user-2 me-2"></i>People</td>
-                              <td class="align-middle">
-                                2,345,678
-                              </td>
-                              <td class="align-middle">
-                                30 April 2024
-                              </td>
-                              <td class="align-middle">
-                                <a class="btn btn-sm rounded-pill btn-outline-success me-1" href="prospector-people-result.html"><i
-                                    class="neu neu-so-find"></i>
-                                  Go to query</a>
-                                <button class="btn btn-sm rounded-pill btn-outline-secondary me-1"><i
-                                    class="neu neu-so-pencil"></i>
-                                  Edit name</button>
-                                <button class="btn btn-sm rounded-pill btn-outline-secondary"><i class="neu neu-so-delete"></i>
-                                  Delete</button>
-                              </td>
-                            </tr>
-        
-                            <!-- 2 -->
-                            <tr class="align-middle">
-                              <td class="align-middle">
-                                <a class="h4 text-black custom-link" href="prospector-companies-result.html">Sales &
-                                  Marketing (Revenue 2M+, >48 employees, Developed markets)</a>
-                              </td>
-                              <td class="align-middle"><i class="neu neu-company me-2"></i>Companies</td>
-                              <td class="align-middle">
-                                378
-                              </td>
-                              <td class="align-middle">
-                                25 April 2024
-                              </td>
-                              <td class="align-middle">
-                                <a class="btn btn-sm rounded-pill btn-outline-success me-1" href="prospector-companies-result.html"><i
-                                  class="neu neu-so-find"></i>
-                                Go to query</a>
-                                <button class="btn btn-sm rounded-pill btn-outline-secondary me-1"><i
-                                    class="neu neu-so-pencil"></i>
-                                  Edit name</button>
-                                <button class="btn btn-sm rounded-pill btn-outline-secondary"><i class="neu neu-so-delete"></i>
-                                  Delete</button>
-                              </td>
-                            </tr>
-        
-                            <!-- 3 -->
-                            <tr class="align-middle">
-                              <td class="align-middle">
-                                <a class="h4 text-black custom-link" href="prospector-people-result.html">Social Media
-                                  Specialist (Netflix, Google. Past Company: Twitter, Facebook. Japan)</a>
-                              </td>
-                              <td class="align-middle"><i class="neu neu-user-2 me-2"></i>People</td>
-                              <td class="align-middle">
-                                345,678
-                              </td>
-                              <td class="align-middle">
-                                20 April 2024
-                              </td>
-                              <td class="align-middle">
-                                <a class="btn btn-sm rounded-pill btn-outline-success me-1" href="prospector-people-result.html"><i
-                                  class="neu neu-so-find"></i>
-                                Go to query</a>
-                                <button class="btn btn-sm rounded-pill btn-outline-secondary me-1"><i
-                                    class="neu neu-so-pencil"></i>
-                                  Edit name</button>
-                                <button class="btn btn-sm rounded-pill btn-outline-secondary"><i class="neu neu-so-delete"></i>
-                                  Delete</button>
-                              </td>
-                            </tr>
-        
-                            <!-- 4 -->
-                            <tr class="align-middle">
-                              <td class="align-middle">
-                                <a class="h4 text-black custom-link" href="prospector-people-result.html">Director of
-                                  Marketing (California)</a>
-                              </td>
-                              <td class="align-middle"><i class="neu neu-user-2 me-2"></i>People</td>
-                              <td class="align-middle">
-                                45,678
-                              </td>
-                              <td class="align-middle">
-                                10 April 2024
-                              </td>
-                              <td class="align-middle">
-                                <a class="btn btn-sm rounded-pill btn-outline-success me-1" href="prospector-people-result.html"><i
-                                  class="neu neu-so-find"></i>
-                                Go to query</a>
-                                <button class="btn btn-sm rounded-pill btn-outline-secondary me-1"><i
-                                    class="neu neu-so-pencil"></i>
-                                  Edit name</button>
-                                <button class="btn btn-sm rounded-pill btn-outline-secondary"><i class="neu neu-so-delete"></i>
-                                  Delete</button>
-                              </td>
-                            </tr>
+          <!-- PEOPLE TAB-->
+          <!-- Header -->
+          <div class="header mt-5">
+            <div class="">
 
-                            <!-- 5 -->
-                            <tr class="align-middle">
-                              <td class="align-middle">
-                                <a class="h4 text-black custom-link" href="prospector-customers-result.html">Customers of Google</a>
-                              </td>
-                              <td class="align-middle"><i class="neu neu-groups me-2"></i>Customers</td>
-                              <td class="align-middle">
-                                5,678
-                              </td>
-                              <td class="align-middle">
-                                05 April 2024
-                              </td>
-                              <td class="align-middle">
-                                <a class="btn btn-sm rounded-pill btn-outline-success me-1" href="prospector-customers-result.html"><i
-                                  class="neu neu-so-find"></i>
-                                Go to query</a>
-                                <button class="btn btn-sm rounded-pill btn-outline-secondary me-1"><i
-                                    class="neu neu-so-pencil"></i>
-                                  Edit name</button>
-                                <button class="btn btn-sm rounded-pill btn-outline-secondary"><i class="neu neu-so-delete"></i>
-                                  Delete</button>
-                              </td>
-                            </tr>                            
-        
-                          </tbody>
-                        </table>
-                      </div>
-        
-                    </div>
-        
+              <div class="row align-items-end d-flex">
+                <div class="col-7">
+
+                  <!-- Pretitle -->
+                  <h6 class="header-pretitle">
+                    Prospector
+                  </h6>
+
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    Saved Prospector
+                  </h1>
+
+                </div>
+              </div> <!-- / .row -->
+            </div>
+          </div>
+
+          <!-- NAVS-->
+          <div class="col-12 mb-3">
+            <div class="card card-body custom-rounded border py-3">
+              <ul class="nav">
+                <li class="nav-item text-left text-md-center">
+                  <a class="nav-link text-success custom-link" href="prospector-saved-result.html"><i
+                      class="neu neu-bookmark"></i> Saved</a>
+                </li>
+                <li class="nav-item text-left text-md-center">
+                  <a class="nav-link text-muted custom-link" href="prospector-people-result.html"><i
+                      class="neu neu-user-2"></i> People</a>
+                </li>
+                <li class="nav-item text-left text-md-center">
+                  <a class="nav-link text-muted custom-link" href="prospector-companies-result.html"><i
+                      class="neu neu-company"></i> Companies</a>
+                </li>
+                <li class="nav-item text-left text-md-center">
+                  <a class="nav-link text-muted custom-link" href="prospector-customers-result.html"><i
+                      class="neu neu-groups"></i> Customers</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <!-- SAVED TAB-->
+            <div class="row">
+
+              <!-- RESULT-->
+              <div class="col-12">
+                <div class="card card-body custom-rounded bg-white text-left shadow-light border">
+
+                  <div class="table-responsive">
+                    <table class="table table-sm rounded-table table-hover table-nowrap custom-table">
+                      <thead style="background-color: #F9FAFB;">
+                        <tr class="text-muted small text-uppercase">
+                          <th scope="col">Name</th>
+                          <th scope="col">Type</th>
+                          <th scope="col">Result</th>
+                          <th scope="col">Time</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody class="fs-base">
+                        <!-- 1 -->
+                        <tr class="align-middle">
+                          <td class="align-middle">
+                            <a class="h4 text-black custom-link" href="prospector-people-result.html">Senior Software
+                              Engineer (Google, Apple. Past Company: Meta, Amazon, Netflix. London)</a>
+                          </td>
+                          <td class="align-middle"><i class="neu neu-user-2 me-2"></i>People</td>
+                          <td class="align-middle">
+                            2,345,678
+                          </td>
+                          <td class="align-middle">
+                            30 April 2024
+                          </td>
+                          <td class="align-middle">
+                            <a class="btn btn-sm rounded-pill btn-outline-success me-1"
+                              href="prospector-people-result.html"><i class="neu neu-so-find"></i>
+                              Go to query</a>
+                            <button class="btn btn-sm rounded-pill btn-outline-secondary me-1"><i
+                                class="neu neu-so-pencil"></i>
+                              Edit name</button>
+                            <button class="btn btn-sm rounded-pill btn-outline-secondary" data-bs-toggle="modal"
+                              data-bs-target="#modalDeleteSaved" a><i class="neu neu-so-delete"></i>
+                              Delete</button>
+                          </td>
+                        </tr>
+
+                        <!-- 2 -->
+                        <tr class="align-middle">
+                          <td class="align-middle">
+                            <a class="h4 text-black custom-link" href="prospector-companies-result.html">Sales &
+                              Marketing (Revenue 2M+, >48 employees, Developed markets)</a>
+                          </td>
+                          <td class="align-middle"><i class="neu neu-company me-2"></i>Companies</td>
+                          <td class="align-middle">
+                            378
+                          </td>
+                          <td class="align-middle">
+                            25 April 2024
+                          </td>
+                          <td class="align-middle">
+                            <a class="btn btn-sm rounded-pill btn-outline-success me-1"
+                              href="prospector-companies-result.html"><i class="neu neu-so-find"></i>
+                              Go to query</a>
+                            <button class="btn btn-sm rounded-pill btn-outline-secondary me-1"><i
+                                class="neu neu-so-pencil"></i>
+                              Edit name</button>
+                            <button class="btn btn-sm rounded-pill btn-outline-secondary" data-bs-toggle="modal"
+                              data-bs-target="#modalDeleteSaved" a><i class="neu neu-so-delete"></i>
+                              Delete</button>
+                          </td>
+                        </tr>
+
+                        <!-- 3 -->
+                        <tr class="align-middle">
+                          <td class="align-middle">
+                            <a class="h4 text-black custom-link" href="prospector-people-result.html">Social Media
+                              Specialist (Netflix, Google. Past Company: Twitter, Facebook. Japan)</a>
+                          </td>
+                          <td class="align-middle"><i class="neu neu-user-2 me-2"></i>People</td>
+                          <td class="align-middle">
+                            345,678
+                          </td>
+                          <td class="align-middle">
+                            20 April 2024
+                          </td>
+                          <td class="align-middle">
+                            <a class="btn btn-sm rounded-pill btn-outline-success me-1"
+                              href="prospector-people-result.html"><i class="neu neu-so-find"></i>
+                              Go to query</a>
+                            <button class="btn btn-sm rounded-pill btn-outline-secondary me-1"><i
+                                class="neu neu-so-pencil"></i>
+                              Edit name</button>
+                            <button class="btn btn-sm rounded-pill btn-outline-secondary" data-bs-toggle="modal"
+                              data-bs-target="#modalDeleteSaved" a><i class="neu neu-so-delete"></i>
+                              Delete</button>
+                          </td>
+                        </tr>
+
+                        <!-- 4 -->
+                        <tr class="align-middle">
+                          <td class="align-middle">
+                            <a class="h4 text-black custom-link" href="prospector-people-result.html">Director of
+                              Marketing (California)</a>
+                          </td>
+                          <td class="align-middle"><i class="neu neu-user-2 me-2"></i>People</td>
+                          <td class="align-middle">
+                            45,678
+                          </td>
+                          <td class="align-middle">
+                            10 April 2024
+                          </td>
+                          <td class="align-middle">
+                            <a class="btn btn-sm rounded-pill btn-outline-success me-1"
+                              href="prospector-people-result.html"><i class="neu neu-so-find"></i>
+                              Go to query</a>
+                            <button class="btn btn-sm rounded-pill btn-outline-secondary me-1"><i
+                                class="neu neu-so-pencil"></i>
+                              Edit name</button>
+                            <button class="btn btn-sm rounded-pill btn-outline-secondary" data-bs-toggle="modal"
+                              data-bs-target="#modalDeleteSaved" a><i class="neu neu-so-delete"></i>
+                              Delete</button>
+                          </td>
+                        </tr>
+
+                        <!-- 5 -->
+                        <tr class="align-middle">
+                          <td class="align-middle">
+                            <a class="h4 text-black custom-link" href="prospector-customers-result.html">Customers of
+                              Google</a>
+                          </td>
+                          <td class="align-middle"><i class="neu neu-groups me-2"></i>Customers</td>
+                          <td class="align-middle">
+                            5,678
+                          </td>
+                          <td class="align-middle">
+                            05 April 2024
+                          </td>
+                          <td class="align-middle">
+                            <a class="btn btn-sm rounded-pill btn-outline-success me-1"
+                              href="prospector-customers-result.html"><i class="neu neu-so-find"></i>
+                              Go to query</a>
+                            <button class="btn btn-sm rounded-pill btn-outline-secondary me-1"><i
+                                class="neu neu-so-pencil"></i>
+                              Edit name</button>
+                            <button class="btn btn-sm rounded-pill btn-outline-secondary" data-bs-toggle="modal"
+                              data-bs-target="#modalDeleteSaved" a><i class="neu neu-so-delete"></i>
+                              Delete</button>
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
                   </div>
-        
-                </div>
-              </div>
-        
-              <br>
 
-  
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <br>
+
+
         </div>
       </div> <!-- / .row -->
     </div>
-  
+
   </div> <!-- / .main-content -->
-  
+
   <!-- JAVASCRIPT -->
-  
+
   <!-- Table sorting JS-->
   <script>
     let currentColumn = 3; // Set Last checked as the default sorted column
@@ -535,20 +723,21 @@
       clickedHeaderIcon.classList.add('fas', 'fa-sort');
     }
   </script>
-  
+
   <script src="script-custom.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
-  
-  
+
+
   <!-- Map JS -->
   <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-  
+
   <!-- Vendor JS -->
   <script src="./assets/js/vendor.bundle.js"></script>
-  
+
   <!-- Theme JS -->
   <script src="./assets/js/theme.bundle.js"></script>
 
-  </body>
+</body>
+
 </html>
