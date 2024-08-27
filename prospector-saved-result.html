@@ -496,7 +496,7 @@
           <div class="row justify-content-center">
   
             <div class="col-12">
-    
+  
               <h1 class="fw-bold mb-3">
                 Edit name
               </h1>
@@ -506,7 +506,8 @@
               </p>
   
               <div class="form-group">
-                <input type="text" class="form-control form-control-lg" id="editQueryName" placeholder="Enter new name here">
+                <input type="text" class="form-control form-control-lg" id="editQueryName"
+                  placeholder="Enter new name here">
               </div>
   
               <button class="btn btn-lg btn-success w-100 mb-3" id="saveChangesBtn" disabled data-bs-toggle="modal"
@@ -523,51 +524,53 @@
       </div>
     </div>
   </div>
-
-    <!--MODAL Edit Loading-->
-    <div class="modal fade" id="modalEditNameLoading" tabindex="-1" aria-labelledby="modalEditNameLoadingLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-    
-          <div class="">
-            <h3 class="modal-title" id="modalEditNameLoadingLabel"></h3>
-            <div class="me-4 mt-4"><button type="button" class="btn-close" data-bs-dismiss="modal"
-                aria-label="Close"></button></div>
-          </div>
-    
-          <div class="modal-body pt-3">
-    
-            <div class="row justify-content-center">
-    
-              <div class="col-12">
-      
-                <h1 class="fw-bold mb-3">
-                  Edit name
-                </h1>
-    
-                <p class="mb-4 fs-lg text-gray-700">
-                  Provide a new name for your saved query.
-                </p>
-    
-                <div class="form-group">
-                  <input type="text" class="form-control form-control-lg" id="editQueryName" placeholder="Enter new name here">
-                </div>
-    
-                <button class="btn btn-lg btn-danger w-100" style="background-color: #7BD4BA; border: none;"
-                  data-bs-toggle="modal"  data-bs-dismiss="modal">
-                  <span class="spinner-border spinner-border-sm me-1 mt-1" role="status" aria-hidden="true"></span>
-                  Saving changes
-                </button>
-    
-              </div>
-    
-            </div>
-    
-          </div>
-    
+  
+  <!--MODAL Edit Loading-->
+  <div class="modal fade" id="modalEditNameLoading" tabindex="-1" aria-labelledby="modalEditNameLoadingLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+  
+        <div class="">
+          <h3 class="modal-title" id="modalEditNameLoadingLabel"></h3>
+          <div class="me-4 mt-4"><button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button></div>
         </div>
+  
+        <div class="modal-body pt-3">
+  
+          <div class="row justify-content-center">
+  
+            <div class="col-12">
+  
+              <h1 class="fw-bold mb-3">
+                Edit name
+              </h1>
+  
+              <p class="mb-4 fs-lg text-gray-700">
+                Provide a new name for your saved query.
+              </p>
+  
+              <div class="form-group">
+                <input type="text" class="form-control form-control-lg" id="editQueryName"
+                  placeholder="Enter new name here">
+              </div>
+  
+              <button class="btn btn-lg btn-danger w-100" style="background-color: #7BD4BA; border: none;"
+                data-bs-toggle="modal" data-bs-dismiss="modal">
+                <span class="spinner-border spinner-border-sm me-1 mt-1" role="status" aria-hidden="true"></span>
+                Saving changes
+              </button>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+  
       </div>
     </div>
+  </div>
 
   <!-- MAIN CONTENT -->
   <div class="main-content">
@@ -625,11 +628,11 @@
           <div>
             <!-- SAVED TAB-->
             <div class="row">
-
+            
               <!-- RESULT-->
               <div class="col-12">
                 <div class="card card-body custom-rounded bg-white text-left shadow-light border">
-
+            
                   <div class="table-responsive">
                     <table class="table table-sm rounded-table table-hover table-nowrap custom-table">
                       <thead style="background-color: #F9FAFB;">
@@ -656,18 +659,18 @@
                             30 April 2024
                           </td>
                           <td class="align-middle">
-                            <a class="btn btn-sm rounded-pill btn-outline-success me-1"
-                              href="prospector-people-result.html"><i class="neu neu-so-find"></i>
+                            <a class="btn btn-sm rounded-pill btn-outline-success me-1" href="prospector-people-result.html"><i
+                                class="neu neu-so-find"></i>
                               Go to query</a>
-                            <button class="btn btn-sm rounded-pill btn-outline-secondary me-1"><i
-                                class="neu neu-so-pencil"></i>
+                            <button class="btn btn-sm rounded-pill btn-outline-secondary me-1" data-bs-toggle="modal"
+                              data-bs-target="#modalEditName" a><i class="neu neu-so-pencil"></i>
                               Edit name</button>
                             <button class="btn btn-sm rounded-pill btn-outline-secondary" data-bs-toggle="modal"
                               data-bs-target="#modalDeleteSaved" a><i class="neu neu-so-delete"></i>
                               Delete</button>
                           </td>
                         </tr>
-
+            
                         <!-- 2 -->
                         <tr class="align-middle">
                           <td class="align-middle">
@@ -682,19 +685,18 @@
                             25 April 2024
                           </td>
                           <td class="align-middle">
-                            <a class="btn btn-sm rounded-pill btn-outline-success me-1"
-                              href="prospector-companies-result.html"><i class="neu neu-so-find"></i>
+                            <a class="btn btn-sm rounded-pill btn-outline-success me-1" href="prospector-companies-result.html"><i
+                                class="neu neu-so-find"></i>
                               Go to query</a>
-                              <button class="btn btn-sm rounded-pill btn-outline-secondary me-1" data-bs-toggle="modal"
-                              data-bs-target="#modalEditName" a><i
-                                class="neu neu-so-pencil"></i>
+                            <button class="btn btn-sm rounded-pill btn-outline-secondary me-1" data-bs-toggle="modal"
+                              data-bs-target="#modalEditName" a><i class="neu neu-so-pencil"></i>
                               Edit name</button>
                             <button class="btn btn-sm rounded-pill btn-outline-secondary" data-bs-toggle="modal"
                               data-bs-target="#modalDeleteSaved" a><i class="neu neu-so-delete"></i>
                               Delete</button>
                           </td>
                         </tr>
-
+            
                         <!-- 3 -->
                         <tr class="align-middle">
                           <td class="align-middle">
@@ -709,18 +711,18 @@
                             20 April 2024
                           </td>
                           <td class="align-middle">
-                            <a class="btn btn-sm rounded-pill btn-outline-success me-1"
-                              href="prospector-people-result.html"><i class="neu neu-so-find"></i>
+                            <a class="btn btn-sm rounded-pill btn-outline-success me-1" href="prospector-people-result.html"><i
+                                class="neu neu-so-find"></i>
                               Go to query</a>
-                            <button class="btn btn-sm rounded-pill btn-outline-secondary me-1"><i
-                                class="neu neu-so-pencil"></i>
+                            <button class="btn btn-sm rounded-pill btn-outline-secondary me-1" data-bs-toggle="modal"
+                              data-bs-target="#modalEditName" a><i class="neu neu-so-pencil"></i>
                               Edit name</button>
                             <button class="btn btn-sm rounded-pill btn-outline-secondary" data-bs-toggle="modal"
                               data-bs-target="#modalDeleteSaved" a><i class="neu neu-so-delete"></i>
                               Delete</button>
                           </td>
                         </tr>
-
+            
                         <!-- 4 -->
                         <tr class="align-middle">
                           <td class="align-middle">
@@ -735,18 +737,18 @@
                             10 April 2024
                           </td>
                           <td class="align-middle">
-                            <a class="btn btn-sm rounded-pill btn-outline-success me-1"
-                              href="prospector-people-result.html"><i class="neu neu-so-find"></i>
+                            <a class="btn btn-sm rounded-pill btn-outline-success me-1" href="prospector-people-result.html"><i
+                                class="neu neu-so-find"></i>
                               Go to query</a>
-                            <button class="btn btn-sm rounded-pill btn-outline-secondary me-1"><i
-                                class="neu neu-so-pencil"></i>
+                            <button class="btn btn-sm rounded-pill btn-outline-secondary me-1" data-bs-toggle="modal"
+                              data-bs-target="#modalEditName" a><i class="neu neu-so-pencil"></i>
                               Edit name</button>
                             <button class="btn btn-sm rounded-pill btn-outline-secondary" data-bs-toggle="modal"
                               data-bs-target="#modalDeleteSaved" a><i class="neu neu-so-delete"></i>
                               Delete</button>
                           </td>
                         </tr>
-
+            
                         <!-- 5 -->
                         <tr class="align-middle">
                           <td class="align-middle">
@@ -761,26 +763,26 @@
                             05 April 2024
                           </td>
                           <td class="align-middle">
-                            <a class="btn btn-sm rounded-pill btn-outline-success me-1"
-                              href="prospector-customers-result.html"><i class="neu neu-so-find"></i>
+                            <a class="btn btn-sm rounded-pill btn-outline-success me-1" href="prospector-customers-result.html"><i
+                                class="neu neu-so-find"></i>
                               Go to query</a>
-                            <button class="btn btn-sm rounded-pill btn-outline-secondary me-1"><i
-                                class="neu neu-so-pencil"></i>
+                            <button class="btn btn-sm rounded-pill btn-outline-secondary me-1" data-bs-toggle="modal"
+                              data-bs-target="#modalEditName" a><i class="neu neu-so-pencil"></i>
                               Edit name</button>
                             <button class="btn btn-sm rounded-pill btn-outline-secondary" data-bs-toggle="modal"
                               data-bs-target="#modalDeleteSaved" a><i class="neu neu-so-delete"></i>
                               Delete</button>
                           </td>
                         </tr>
-
+            
                       </tbody>
                     </table>
                   </div>
-
+            
                 </div>
-
+            
               </div>
-
+            
             </div>
           </div>
 
