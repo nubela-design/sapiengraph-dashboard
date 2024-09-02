@@ -272,40 +272,139 @@
   
           <div class="row justify-content-center">
   
-            <div class="col-12 mb-4">
+            <div class="col-12 border-bottom mb-4 pb-3">
   
               <h1 class="fw-bold mb-3">
                 Unlock all results
               </h1>
   
-              <p class="lead mb-4">
+              <p class="lead">
                 This action will consume up to <span class="fw-bold font-monospace badge bg-light">300,000</span> credits. Are
                 you sure you want to proceed?
               </p>
-
-              <p class="small text-gray-700 mb-3 border rounded p-3 bg-lighter">
-               <i class="neu neu-info"></i> The system will unlock as many results as your credits cover.
-              </p>
   
+            </div>
+  
+            <div class="col-12 border-bottom pb-2 mb-4 d-flex">
+              <div class="col-6">
+                <p class="lead">
+                  Result unlocked
+                </p>
+              </div>
+  
+              <div class="col-6 text-end">
+                <p class="lead">
+                  <span class="fw-bold me-2">2,345,678</span>
+                </p>
+              </div>
+            </div>
+  
+            <div class="col-12 border-bottom pb-2 mb-5 d-flex">
+              <div class="col-6">
+                <p class="lead">
+                  Credits needed
+                </p>
+              </div>
+  
+              <div class="col-6 text-end">
+                <p class="lead">
+                  <span class="fw-bold me-2">300,000</span>
+                </p>
+              </div>
             </div>
   
           </div>
   
           <div class="row align-items-center justify-content-center">
-
-            <div class="col-12 col-md-6 mb-3 mb-md-0">
-              <button class="btn btn-lg btn-link text-success w-100" data-bs-dismiss="modal" aria-label="Close">
-                Cancel
-              </button>
-            </div>
-
-            <div class="col-12 col-md-6">
-              <button class="btn btn-lg btn-success w-100" data-bs-dismiss="modal">
+            <div class="col-12 col-md-12 mb-3">
+              <button class="btn btn-lg btn-success w-100" data-bs-toggle="modal" data-bs-target="#modalNotEnoughCredits">
                 Unlock all results
               </button>
             </div>
   
-
+            <div class="col-12 col-md-12">
+              <button class="btn btn-lg btn-link text-success w-100" data-bs-dismiss="modal" aria-label="Close">
+                Cancel
+              </button>
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+  <!-- MODAL Not Enough Credits -->
+  <div class="modal fade" id="modalNotEnoughCredits" tabindex="-1" aria-labelledby="modalNotEnoughCreditsLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+  
+        <div class="">
+          <h3 class="modal-title" id="modalNotEnoughCreditsLabel"></h3>
+          <div class="me-4 mt-4"><button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button></div>
+        </div>
+  
+        <div class="modal-body pt-3">
+  
+          <div class="row justify-content-center">
+  
+            <div class="col-12 border-bottom mb-4 pb-3">
+  
+              <h1 class="fw-bold mb-3 text-danger">
+                Not Enough Credits
+              </h1>
+  
+              <p class="lead">
+                You need <span class="fw-bold font-monospace badge bg-light">300,000</span> credits to unlock all results.
+              </p>
+  
+            </div>
+  
+            <div class="col-12 border-bottom pb-2 mb-4 d-flex">
+              <div class="col-6">
+                <p class="lead">
+                  Your current credits
+                </p>
+              </div>
+  
+              <div class="col-6 text-end">
+                <p class="lead">
+                  <span class="fw-bold me-2">100,000</span>
+                </p>
+              </div>
+            </div>
+  
+            <div class="col-12 border-bottom pb-2 mb-5 d-flex">
+              <div class="col-6">
+                <p class="lead">
+                  Credits needed
+                </p>
+              </div>
+  
+              <div class="col-6 text-end">
+                <p class="lead">
+                  <span class="fw-bold me-2">300,000</span>
+                </p>
+              </div>
+            </div>
+  
+          </div>
+  
+          <div class="row align-items-center justify-content-center">
+            <div class="col-12 col-md-12 mb-3">
+              <a href="index.html" class="btn btn-lg btn-success w-100">
+                Buy more credits
+              </a>
+            </div>
+  
+            <div class="col-12 col-md-12">
+              <button class="btn btn-lg btn-link text-success w-100" data-bs-dismiss="modal">
+                Cancel
+              </button>
+            </div>
           </div>
   
         </div>
@@ -330,39 +429,140 @@
   
           <div class="row justify-content-center">
   
-            <div class="col-12 mb-4">
+            <div class="col-12 border-bottom mb-4 pb-3 ">
   
               <h1 class="fw-bold mb-3">
                 Unlock this page
               </h1>
   
-              <p class="lead mb-5">
-                This action will consume up to <span class="fw-bold font-monospace badge bg-light">300</span> credits. Are
-                you sure you want to proceed?
+              <p class="lead">
+                This action will consume <span class="fw-bold font-monospace badge bg-light">100,000</span> credits. Are
+                you sure you want to unlock this page?
               </p>
-
-              <p class="small text-gray-700 mb-4">
-                <i class="neu neu-info"></i> The system will unlock as many results as your credits cover.
-               </p>
   
+            </div>
+  
+            <div class="col-12 border-bottom pb-2 mb-4 d-flex">
+              <div class="col-6">
+                <p class="lead">
+                  Result unlocked
+                </p>
+              </div>
+  
+              <div class="col-6 text-end">
+                <p class="lead">
+                  <span class="fw-bold me-2">10</span>
+                </p>
+              </div>
+            </div>
+  
+            <div class="col-12 border-bottom pb-2 mb-5 d-flex">
+              <div class="col-6">
+                <p class="lead">
+                  Credits needed
+                </p>
+              </div>
+  
+              <div class="col-6 text-end">
+                <p class="lead">
+                  <span class="fw-bold me-2">100,000</span>
+                </p>
+              </div>
             </div>
   
           </div>
   
           <div class="row align-items-center justify-content-center">
-
-            <div class="col-12 col-md-6 mb-3 mb-md-0">
+            <div class="col-12 col-md-12 mb-3">
+              <button class="btn btn-lg btn-success w-100" data-bs-toggle="modal"
+                data-bs-target="#modalNotEnoughCredits2">
+                Unlock this page
+              </button>
+            </div>
+  
+            <div class="col-12 col-md-12">
               <button class="btn btn-lg btn-link text-success w-100" data-bs-dismiss="modal" aria-label="Close">
                 Cancel
               </button>
             </div>
-
-            <div class="col-12 col-md-6 ">
-              <button class="btn btn-lg btn-success w-100" data-bs-dismiss="modal">
-                Unlock this page
+          </div>
+  
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+  <!-- MODAL Not Enough Credits -->
+  <div class="modal fade" id="modalNotEnoughCredits2" tabindex="-1" aria-labelledby="modalNotEnoughCredits2Label"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+  
+        <div class="">
+          <h3 class="modal-title" id="modalNotEnoughCreditsLabel"></h3>
+          <div class="me-4 mt-4"><button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button></div>
+        </div>
+  
+        <div class="modal-body pt-3">
+  
+          <div class="row justify-content-center">
+  
+            <div class="col-12 border-bottom mb-4 pb-3">
+  
+              <h1 class="fw-bold mb-3 text-danger">
+                Not Enough Credits
+              </h1>
+  
+              <p class="lead">
+                You need <span class="fw-bold font-monospace badge bg-light">100,000</span> credits to unlock this page.
+              </p>
+  
+            </div>
+  
+            <div class="col-12 border-bottom pb-2 mb-4 d-flex">
+              <div class="col-6">
+                <p class="lead">
+                  Your current credits
+                </p>
+              </div>
+  
+              <div class="col-6 text-end">
+                <p class="lead">
+                  <span class="fw-bold me-2">50,000</span>
+                </p>
+              </div>
+            </div>
+  
+            <div class="col-12 border-bottom pb-2 mb-5 d-flex">
+              <div class="col-6">
+                <p class="lead">
+                  Credits needed
+                </p>
+              </div>
+  
+              <div class="col-6 text-end">
+                <p class="lead">
+                  <span class="fw-bold me-2">100,000</span>
+                </p>
+              </div>
+            </div>
+  
+          </div>
+  
+          <div class="row align-items-center justify-content-center">
+            <div class="col-12 col-md-12 mb-3">
+              <a href="index.html" class="btn btn-lg btn-success w-100">
+                Buy more credits
+              </a>
+            </div>
+  
+            <div class="col-12 col-md-12">
+              <button class="btn btn-lg btn-link text-success w-100" data-bs-dismiss="modal">
+                Cancel
               </button>
             </div>
-
           </div>
   
         </div>
