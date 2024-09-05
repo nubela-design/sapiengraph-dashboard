@@ -8,7 +8,7 @@
 
   <!-- Title -->
   <title>Sapiengraph - Dashboard</title>
-  
+
   <!-- Favicon -->
   <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon" />
 
@@ -31,9 +31,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <style>
-    #collapse-direct-1-icon, #collapse-direct-2-icon, #collapse-direct-3-icon {
+    #collapse-direct-1-icon,
+    #collapse-direct-2-icon,
+    #collapse-direct-3-icon {
       transition: transform 0.3s ease-in-out;
     }
+
     .icon-rotate {
       transform: rotate(-180deg);
       transition: transform 0.3s ease-in-out;
@@ -373,7 +376,8 @@
               </h2>
 
               <div class="form-check mb-4">
-                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1" checked onclick="handleCheckbox(this)">
+                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1" checked
+                  onclick="handleCheckbox(this)">
                 <label class="form-check-label small text-muted" for="flexRadioDefault1">
                   By ticking this checkbox, I agree to a 12-month service contract with Sapiengraph as detailed in the
                   <a class="text-success" href="#!" target="_blank">sales agreement</a>. I understand that this contract
@@ -385,7 +389,8 @@
               </div>
 
               <div class="form-check mb-4">
-                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" onclick="handleCheckbox(this)">
+                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2"
+                  onclick="handleCheckbox(this)">
                 <label class="form-check-label small text-muted" for="flexRadioDefault2">
                   I do not want a 12 month contract, and I accept an additional 100% increase in the price for my casual
                   use of Sapiengraph.
@@ -574,15 +579,21 @@
       <div class="row justify-content-center">
         <div class="col-12 col-lg-8">
 
-          <h1 class="text-center mb-2">Welcome example@nubela.co!</h1>
-          <small class="text-center text-secondary d-block mb-5">Let's find out what magical things can you do on sapiengraph before you explore it.</small>
+          <div class="px-4">
+            <h1 class="text-center mb-2">Welcome example@nubela.co!</h1>
+            <small class="text-center text-secondary d-block mb-5">
+              Let's find out what magical things you can do on sapiengraph with a few steps before you explore it.
+            </small>
+          </div>
 
           <div class="mb-4">
 
             <div class="card">
               <div class="card-header" id="collapse-direct-1">
                 <h5 class="mb-0">
-                  <button class="btn btn-link w-100 px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-direct-1-content" aria-expanded="true" aria-controls="collapse-direct-1-content">
+                  <button class="btn btn-link w-100 px-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse-direct-1-content" aria-expanded="true"
+                    aria-controls="collapse-direct-1-content">
                     <div class="row justify-content-between align-items-center">
                       <div class="col">
                         <h4 class="card-header-title text-start text-success">
@@ -633,9 +644,11 @@
                         <div class="col-auto text-end">
 
                           <!-- Success button link -->
-                          <a href="#" class="btn btn-sm btn-success rounded-circle d-inline-flex align-items-center">
-                            <i class="fe fe-check text-white bg-success rounded-circle p-1"></i>
-                          </a>
+                          <div class="avatar avatar-sm">
+                            <div class="avatar-title fs-lg bg-success text-white rounded-circle">
+                              <i class="fe fe-check"></i>
+                            </div>
+                          </div>
 
                         </div>
                       </div>
@@ -671,9 +684,11 @@
                         <div class="col-auto text-end">
 
                           <!-- Success button link -->
-                          <a href="#" class="btn btn-sm btn-success rounded-circle d-inline-flex align-items-center">
-                            <i class="fe fe-check text-white bg-success rounded-circle p-1"></i>
-                          </a>
+                          <div class="avatar avatar-sm">
+                            <div class="avatar-title fs-lg bg-success text-white rounded-circle">
+                              <i class="fe fe-check"></i>
+                            </div>
+                          </div>
 
                         </div>
                       </div>
@@ -709,14 +724,38 @@
                         <div class="col-12 col-lg-4 col-xl-4 mt-3 mt-lg-0 text-end">
 
                           <!-- Success button link -->
-                          <a href="#" class="btn btn-sm btn-success d-block">
+                          <button class="btn btn-success d-block fs-sm w-100" data-bs-toggle="modal"
+                            data-bs-target="#playEnrichProfileVideoModal">
                             Play Video
-                          </a>
+                          </button>
+
+                          <!-- Modal -->
+                          <div class="modal fade" id="playEnrichProfileVideoModal" tabindex="-1"
+                            aria-labelledby="playEnrichProfileVideoModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h3 class="modal-title text-start" id="playEnrichProfileVideoModalLabel">
+                                    How to enrich your first profile in sapiengraph
+                                  </h3>
+                                  <button type="button" class="btn-close m-0" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <iframe width="100%" height="415"
+                                    src="https://www.youtube.com/embed/WUmP4jM6NP0?si=iqj46JmAGuSJPmZV"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
 
                         </div>
                       </div>
                     </div>
-                    
+
                   </div>
 
                 </div>
@@ -730,7 +769,9 @@
             <div class="card">
               <div class="card-header" id="collapse-direct-2">
                 <h5 class="mb-0">
-                  <button class="btn btn-link w-100 px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-direct-2-content" aria-expanded="false" aria-controls="collapse-direct-2-content">
+                  <button class="btn btn-link w-100 px-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse-direct-2-content" aria-expanded="false"
+                    aria-controls="collapse-direct-2-content">
                     <div class="row justify-content-between align-items-center">
                       <div class="col">
                         <h4 class="card-header-title text-start text-success">
@@ -778,12 +819,37 @@
                           </small>
 
                         </div>
-                        <div class="col-12 col-lg-4 col-xl-4 mt-3 mt-lg-0 text-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Finish the previous step">
+                        <div class="col-12 col-lg-4 col-xl-4 mt-3 mt-lg-0 text-end" data-bs-toggle="tooltip"
+                          data-bs-placement="top" title="Finish the previous step">
 
                           <!-- Success button link -->
-                          <a href="#" class="btn btn-sm btn-success d-block disabled">
+                          <button class="btn btn-success d-block fs-sm w-100 disabled" data-bs-toggle="modal"
+                            data-bs-target="#playBuildPeopleLeadVideoModal">
                             Play Video
-                          </a>
+                          </button>
+
+                          <!-- Modal -->
+                          <div class="modal fade" id="playBuildPeopleLeadVideoModal" tabindex="-1"
+                            aria-labelledby="playBuildPeopleLeadVideoModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h3 class="modal-title text-start" id="playBuildPeopleLeadVideoModalLabel">
+                                    How to build your first people lead list with sapiengraph
+                                  </h3>
+                                  <button type="button" class="btn-close m-0" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <iframe width="100%" height="415"
+                                    src="https://www.youtube.com/embed/WUmP4jM6NP0?si=iqj46JmAGuSJPmZV"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
 
                         </div>
                       </div>
@@ -816,12 +882,37 @@
                           </small>
 
                         </div>
-                        <div class="col-12 col-lg-4 col-xl-4 mt-3 mt-lg-0 text-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Finish the previous step">
+                        <div class="col-12 col-lg-4 col-xl-4 mt-3 mt-lg-0 text-end" data-bs-toggle="tooltip"
+                          data-bs-placement="top" title="Finish the previous step">
 
                           <!-- Success button link -->
-                          <a href="#" class="btn btn-sm btn-success d-block disabled">
+                          <button class="btn btn-success d-block fs-sm w-100 disabled" data-bs-toggle="modal"
+                            data-bs-target="#playBuildCompanyLeadVideoModal">
                             Play Video
-                          </a>
+                          </button>
+
+                          <!-- Modal -->
+                          <div class="modal fade" id="playBuildCompanyLeadVideoModal" tabindex="-1"
+                            aria-labelledby="playBuildCompanyLeadVideoModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h3 class="modal-title text-start" id="playBuildCompanyLeadVideoModalLabel">
+                                    How to build your first company lead list with sapiengraph
+                                  </h3>
+                                  <button type="button" class="btn-close m-0" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <iframe width="100%" height="415"
+                                    src="https://www.youtube.com/embed/WUmP4jM6NP0?si=iqj46JmAGuSJPmZV"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
 
                         </div>
                       </div>
@@ -854,17 +945,42 @@
                           </small>
 
                         </div>
-                        <div class="col-12 col-lg-4 col-xl-4 mt-3 mt-lg-0 text-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Finish the previous step">
+                        <div class="col-12 col-lg-4 col-xl-4 mt-3 mt-lg-0 text-end" data-bs-toggle="tooltip"
+                          data-bs-placement="top" title="Finish the previous step">
 
                           <!-- Success button link -->
-                          <a href="#" class="btn btn-sm btn-success d-block disabled">
+                          <button class="btn btn-success d-block fs-sm w-100 disabled" data-bs-toggle="modal"
+                            data-bs-target="#playProspectCustomersVideoModal">
                             Play Video
-                          </a>
+                          </button>
+
+                          <!-- Modal -->
+                          <div class="modal fade" id="playProspectCustomersVideoModal" tabindex="-1"
+                            aria-labelledby="playProspectCustomersVideoModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h3 class="modal-title text-start" id="playProspectCustomersVideoModalLabel">
+                                    How to prospect customers of companies with sapiengraph
+                                  </h3>
+                                  <button type="button" class="btn-close m-0" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <iframe width="100%" height="415"
+                                    src="https://www.youtube.com/embed/WUmP4jM6NP0?si=iqj46JmAGuSJPmZV"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
 
                         </div>
                       </div>
                     </div>
-                    
+
                   </div>
 
                 </div>
@@ -878,7 +994,9 @@
             <div class="card">
               <div class="card-header" id="collapse-direct-3">
                 <h5 class="mb-0">
-                  <button class="btn btn-link w-100 px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-direct-3-content" aria-expanded="false" aria-controls="collapse-direct-3-content">
+                  <button class="btn btn-link w-100 px-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse-direct-3-content" aria-expanded="false"
+                    aria-controls="collapse-direct-3-content">
                     <div class="row justify-content-between align-items-center">
                       <div class="col">
                         <h4 class="card-header-title text-start text-success">
@@ -926,10 +1044,11 @@
                           </small>
 
                         </div>
-                        <div class="col-12 col-lg-4 col-xl-4 mt-3 mt-lg-0 text-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Finish the previous step">
+                        <div class="col-12 col-lg-4 col-xl-4 mt-3 mt-lg-0 text-end" data-bs-toggle="tooltip"
+                          data-bs-placement="top" title="Finish the previous step">
 
                           <!-- Success button link -->
-                          <a href="#" class="btn btn-sm btn-success d-block disabled">
+                          <a href="javascript:void(0)" class="btn btn-success d-block fs-sm disabled">
                             Install Extension
                           </a>
 
@@ -964,12 +1083,37 @@
                           </small>
 
                         </div>
-                        <div class="col-12 col-lg-4 col-xl-4 mt-3 mt-lg-0 text-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Finish the previous step">
+                        <div class="col-12 col-lg-4 col-xl-4 mt-3 mt-lg-0 text-end" data-bs-toggle="tooltip"
+                          data-bs-placement="top" title="Finish the previous step">
 
                           <!-- Success button link -->
-                          <a href="#" class="btn btn-sm btn-success d-block disabled">
+                          <button class="btn btn-success d-block fs-sm w-100 disabled" data-bs-toggle="modal"
+                            data-bs-target="#playMonitorProfileVideoModal">
                             Play Video
-                          </a>
+                          </button>
+
+                          <!-- Modal -->
+                          <div class="modal fade" id="playMonitorProfileVideoModal" tabindex="-1"
+                            aria-labelledby="playMonitorProfileVideoModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h3 class="modal-title text-start" id="playMonitorProfileVideoModalLabel">
+                                    How to monitor your first profile in sapiengraph
+                                  </h3>
+                                  <button type="button" class="btn-close m-0" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <iframe width="100%" height="415"
+                                    src="https://www.youtube.com/embed/WUmP4jM6NP0?si=iqj46JmAGuSJPmZV"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
 
                         </div>
                       </div>
@@ -1002,17 +1146,18 @@
                           </small>
 
                         </div>
-                        <div class="col-12 col-lg-4 col-xl-4 mt-3 mt-lg-0 text-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Finish the previous step">
+                        <div class="col-12 col-lg-4 col-xl-4 mt-3 mt-lg-0 text-end" data-bs-toggle="tooltip"
+                          data-bs-placement="top" title="Finish the previous step">
 
                           <!-- Success button link -->
-                          <a href="#" class="btn btn-sm btn-success d-block disabled">
+                          <a href="job-change-monitor.html" target="_blank" class="btn btn-success d-block fs-sm disabled">
                             Go to dashboard <i class="fe fe-arrow-right"></i>
                           </a>
 
                         </div>
                       </div>
                     </div>
-                    
+
                   </div>
 
                 </div>
@@ -1198,7 +1343,7 @@
   <script src="./assets/js/theme.bundle.js"></script>
 
   <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
       $('#collapse-direct-1-content').on('show.bs.collapse hide.bs.collapse', function () {
         $('#collapse-direct-1-icon').toggleClass('icon-rotate');
       });
