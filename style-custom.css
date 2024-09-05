@@ -200,3 +200,12 @@ td,th {
   -o-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
 }
+
+/* Rifki */
+/* Color */
+.bg-success-soft-2 {
+  background-color: #edfaf5 !important;
+}
+.border-success-soft-2 {
+  border: 1px solid #00bd94 !important;
+}
