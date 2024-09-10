@@ -195,38 +195,71 @@
         <ul class="navbar-nav">
 
           <li class="nav-item">
-            <a class="nav-link" href="#sidebarBilling" data-bs-toggle="collapse" role="button" aria-expanded="true"
-              aria-controls="sidebarBilling">
-              <i class="fe fe-dollar-sign"></i> Billing
+            <a class="nav-link" href="#sidebarLeadList" data-bs-toggle="collapse" role="button" aria-expanded="false"
+              aria-controls="sidebarLeadList">
+              <i class="neu neu-stars-profile me-2"></i> Lead List
             </a>
-            <div class="collapse show" id="sidebarBilling">
+            <div class="collapse show" id="sidebarLeadList">
               <ul class="nav nav-sm flex-column">
                 <li class="nav-item">
-                  <a href="./account-plans-and-payments.html" class="nav-link">
-                    <span class="border-start border-2 ps-3">Plan and payments</span>
+                  <a href="#" class="nav-link">
+                    <span class="border-start border-2 ps-3">Buy ready-made lead lists</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="./index.html" class="nav-link fw-bold">
-                    <span class="border-start border-2 ps-3 text-success border-success">Buy credits</span>
+                  <a href="./prospector.html" class="nav-link">
+                    <span class="border-start border-2 ps-3">Prospector</span>
                   </a>
                 </li>
               </ul>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="prospector.html">
-              <i class="fe fe-target"></i> Prospector
+            <a class="nav-link" href="#sidebarProfileEnrichment" data-bs-toggle="collapse" role="button" aria-expanded="false"
+              aria-controls="sidebarProfileEnrichment">
+              <i class="fe fe-user"></i> Profile Enrichment
             </a>
+            <div class="collapse show" id="sidebarProfileEnrichment">
+              <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <span class="border-start border-2 ps-3">Profile Enrichment in Google Sheets</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <span class="border-start border-2 ps-3">Sheets Documentation</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="job-change-monitor.html">
-              <i class="fe fe-briefcase"></i> Job Change Monitor
+              <i class="fe fe-eye"></i> Job Change Monitor
             </a>
           </li>
-          <li class="nav-item mb-4">
-            <a class="nav-link" href="#!">
-              <i class="fe fe-file"></i> Docs
+
+          <hr/>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#sidebarBilling" data-bs-toggle="collapse" role="button" aria-expanded="false"
+              aria-controls="sidebarBilling">
+              <i class="fe fe-dollar-sign"></i> Billing
+            </a>
+            <div class="collapse show" id="sidebarBilling">
+              <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                  <a href="./index.html" class="nav-link">
+                    <span class="border-start border-2 ps-3">Buy credits</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item mb-3">
+            <a class="nav-link" href="account-plans-and-payments.html">
+              <i class="fe fe-credit-card"></i> Plan and payments
             </a>
           </li>
 
@@ -244,6 +277,15 @@
 
         <div class="mt-md-auto"></div>
 
+        <ul class="navbar-nav">
+          <hr>
+          <li class="nav-item mb-3">
+            <a class="nav-link fw-bold text-success" href="account-plans-and-payments.html">
+              <i class="fe fe-info"></i> Onboarding
+            </a>
+          </li>
+        </ul>
+
         <!-- User (md) -->
         <div class="navbar-user d-none d-md-flex" id="sidebarUser">
 
@@ -255,7 +297,6 @@
             </button>
 
             <div class="dropdown-menu dropdown-menu-center shadow-lg w-100" aria-labelledby="dropdownMenuButton">
-
 
               <div class="row align-items-center">
                 <a class="text-center text-secondary nav-link mt-3 mb-1" href="index.html">
@@ -578,127 +619,19 @@
     <div class="container py-5">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-10 col-xl-8">
-          <div class="px-4">
-            <h1 class="text-center mb-2">Welcome example@nubela.co!</h1>
-            <small class="text-center text-secondary d-block mb-5">Let's find out what magical things you can do on
-              sapiengraph with a few steps before you explore it.</small>
-          </div>
+
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-12 col-lg-1">
-          <div class="card sticky-top">
-            <ul class="list-unstyled d-flex flex-column p-3 justify-content-center mb-0">
-              <li class="mb-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Install Google Sheets add-on">
 
-                <a href="#" target="_blank" rel="noopener noreferrer" class="d-block btn p-0">
-                  <div class="avatar avatar-sm">
-                    <div class="avatar-title fs-lg bg-success-soft-2 border-success-soft-2 text-success rounded-2">
-                      <i class="neu neu-add-bracket"></i>
-                    </div>
-                  </div>
-                </a>
-
-              </li>
-              <li class="mb-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Install browser extension">
-
-                <a href="#" target="_blank" rel="noopener noreferrer" class="d-block btn p-0">
-                  <div class="avatar avatar-sm">
-                    <div class="avatar-title fs-lg bg-success-soft-2 border-success-soft-2 text-success rounded-2">
-                      <i class="neu neu-extension"></i>
-                    </div>
-                  </div>
-                </a>
-
-              </li>
-              <li class="" data-bs-toggle="tooltip" data-bs-placement="top" title="Play enrich your first profile video">
-
-                <a href="#" target="_blank" rel="noopener noreferrer" class="d-block btn p-0">
-                  <div class="avatar avatar-sm">
-                    <div class="avatar-title fs-lg bg-success-soft-2 border-success-soft-2 text-success rounded-2">
-                      <i class="fe fe-user"></i>
-                    </div>
-                  </div>
-                </a>
-
-              </li>
-
-              <hr>
-
-              <li class="mb-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Play build your first people lead list video">
-
-                <a href="#" target="_blank" rel="noopener noreferrer" class="d-block btn p-0">
-                  <div class="avatar avatar-sm">
-                    <div class="avatar-title fs-lg bg-success-soft-2 border-success-soft-2 text-success rounded-2">
-                      <i class="neu neu-stars-profile"></i>
-                    </div>
-                  </div>
-                </a>
-
-              </li>
-              <li class="mb-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Play build your first company lead list video">
-
-                <a href="#" target="_blank" rel="noopener noreferrer" class="d-block btn p-0">
-                  <div class="avatar avatar-sm">
-                    <div class="avatar-title fs-lg bg-success-soft-2 border-success-soft-2 text-success rounded-2">
-                      <i class="neu neu-groups"></i>
-                    </div>
-                  </div>
-                </a>
-
-              </li>
-              <li class="" data-bs-toggle="tooltip" data-bs-placement="top" title="Play prospect customers of companies video">
-
-                <a href="#" target="_blank" rel="noopener noreferrer" class="d-block btn p-0">
-                  <div class="avatar avatar-sm">
-                    <div class="avatar-title fs-lg bg-success-soft-2 border-success-soft-2 text-success rounded-2">
-                      <i class="neu neu-idea"></i>
-                    </div>
-                  </div>
-                </a>
-
-              </li>
-
-              <hr>
-
-              <li class="mb-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Install browser extension">
-
-                <a href="#" target="_blank" rel="noopener noreferrer" class="d-block btn p-0">
-                  <div class="avatar avatar-sm">
-                    <div class="avatar-title fs-lg bg-success-soft-2 border-success-soft-2 text-success rounded-2">
-                      <i class="neu neu-extension"></i>
-                    </div>
-                  </div>
-                </a>
-
-              </li>
-              <li class="mb-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Play monitor your first profile video">
-
-                <a href="#" target="_blank" rel="noopener noreferrer" class="d-block btn p-0">
-                  <div class="avatar avatar-sm">
-                    <div class="avatar-title fs-lg bg-success-soft-2 border-success-soft-2 text-success rounded-2">
-                      <i class="neu neu-eye"></i>
-                    </div>
-                  </div>
-                </a>
-
-              </li>
-              <li class="" data-bs-toggle="tooltip" data-bs-placement="top" title="See your monitoring dashboard">
-
-                <a href="#" target="_blank" rel="noopener noreferrer" class="d-block btn p-0">
-                  <div class="avatar avatar-sm">
-                    <div class="avatar-title fs-lg bg-success-soft-2 border-success-soft-2 text-success rounded-2">
-                      <i class="neu neu-website-dashboard"></i>
-                    </div>
-                  </div>
-                </a>
-
-              </li>
-
-            </ul>
-          </div>
-        </div>
         <div class="col-12 col-lg-10 col-xl-8">
+
+          <div class="mb-5 px-4">
+            <h1 class="text-center mb-2">Welcome example@nubela.co!</h1>
+            <small class="text-center text-secondary d-block">
+              Let's find out what magical things you can do on sapiengraph with a few steps before you explore it.
+            </small>
+          </div>
 
           <div class="mb-4">
 
