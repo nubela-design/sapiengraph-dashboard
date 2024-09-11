@@ -1,3 +1,33 @@
+/* Roy - 11 sep 2024 */
+@media (min-width: 992px) {
+  .fixed-bottom-desktop {
+    position: sticky;
+    bottom: 20px;
+    z-index: 1000;
+    width: calc(100% - 40px); /* Adjust based on your card's padding */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Aji - moved from prospector-people-result.html by Roy - 11 sep 2024 */
+th.active-header {
+  color: black !important;
+}
+th:hover {
+  cursor: pointer;
+}
+
+/* Roy - 11 sep 2024 */
+#searchCriteriaBtn.fixed {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: calc(33.333% - 40px); /* Adjust based on your layout */
+}
+
 /* Text to white */
 .text-change .text-muted, 
 .text-change .text-info {

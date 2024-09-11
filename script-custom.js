@@ -89,4 +89,106 @@ function handleCheckbox(clickedCheckbox) {
       checkbox.checked = false;
     }
   });
-} 
+}
+
+// Function to handle the search criteria button
+function handleSearchCriteriaButton() {
+  const searchCriteriaBtn = document.getElementById('searchCriteriaBtn');
+  const filterContent = document.querySelector('.card.card-body.custom-rounded.border.py-3').nextElementSibling;
+
+  if (!searchCriteriaBtn || !filterContent) return;
+
+  function checkButtonPosition() {
+    const filterContentRect = filterContent.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    
+    if (filterContentRect.bottom > windowHeight) {
+      searchCriteriaBtn.classList.add('fixed');
+    } else {
+      searchCriteriaBtn.classList.remove('fixed');
+    }
+  }
+
+  // Check button position on scroll
+  window.addEventListener('scroll', checkButtonPosition);
+
+  // Check button position when filter content expands/collapses
+  const collapseElements = filterContent.querySelectorAll('.collapse');
+  collapseElements.forEach(element => {
+    element.addEventListener('shown.bs.collapse', checkButtonPosition);
+    element.addEventListener('hidden.bs.collapse', checkButtonPosition);
+  });
+
+  // Initial check
+  checkButtonPosition();
+}
+
+// Call the function when the DOM is loaded
+document.addEventListener('DOMContentLoaded', handleSearchCriteriaButton);
+
+// Aji - moved from prospector-people-result.html by Roy - 11 sep 2024
+// Table sorting functionality
+let currentColumn = 3; // Set Last checked as the default sorted column
+let lastCheckedColumnSorted = true;
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  // Simulate click on "Last checked" header after the page loads (default sort)
+  sortTable(currentColumn);
+  lastCheckedColumnSorted = false;
+});
+
+function sortTable(columnIndex) {
+  const table = document.getElementById('myTable');
+  if (!table) return;
+  
+  const tbody = table.querySelector('tbody');
+  const rows = Array.from(tbody.querySelectorAll('tr'));
+
+  rows.sort((a, b) => {
+    let cellA = a.getElementsByTagName('td')[columnIndex].innerText.trim().toLowerCase();
+    let cellB = b.getElementsByTagName('td')[columnIndex].innerText.trim().toLowerCase();
+
+    if (columnIndex === 3) { // For Last checked column, reverse sorting
+      [cellA, cellB] = [cellB, cellA];
+    }
+
+    return cellA.localeCompare(cellB);
+  });
+
+  tbody.innerHTML = '';
+  rows.forEach(row => {
+    tbody.appendChild(row);
+  });
+
+  resetHeaders();
+  const clickedHeader = document.getElementById(`header${columnIndex}`);
+
+  if (!lastCheckedColumnSorted && columnIndex === 3) {
+    clickedHeader.classList.add('active-header');
+    lastCheckedColumnSorted = true;
+  } else {
+    clickedHeader.classList.add('active-header');
+  }
+
+  currentColumn = columnIndex;
+  resetSortIcons(columnIndex);
+}
+
+function resetHeaders() {
+  const headers = document.querySelectorAll('th');
+  headers.forEach(header => {
+    header.classList.remove('active-header');
+  });
+}
+
+function resetSortIcons(exceptIndex) {
+  const icons = document.querySelectorAll('.fa-sort');
+  icons.forEach(icon => {
+    icon.classList.remove('fa-sort-up', 'fa-sort-down');
+    icon.classList.add('fa-sort');
+  });
+
+  const clickedHeaderIcon = document.getElementById(`header${exceptIndex}`).getElementsByTagName('i')[0];
+  clickedHeaderIcon.classList.remove('fa-sort');
+  clickedHeaderIcon.classList.add('fas', 'fa-sort');
+}

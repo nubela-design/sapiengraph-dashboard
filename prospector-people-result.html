@@ -22,15 +22,6 @@
     <!-- Title -->
     <title>People Result - Sapiengraph Prospector - Dashboard</title>
 
-    <style>
-
-      th.active-header {
-      color: black !important;
-    }
-    th:hover {
-      cursor: pointer;
-    }
-    </style>
   </head>
   <body>
 
@@ -378,31 +369,9 @@
         <div class="col-12 main-content-prospector">
 
             <!-- PEOPLE TAB-->
-              <!-- Header -->
-              <div class="header mt-5">
-                <div>
-        
-                  <div class="row align-items-end d-flex">
-                    <div class="col-7">
-        
-                      <!-- Pretitle -->
-                      <h6 class="header-pretitle">
-                        Prospector
-                      </h6>
-        
-                      <!-- Title -->
-                      <h1 class="header-title">
-                        Person Prospector
-                      </h1>
-        
-                    </div>
-                  </div> <!-- / .row -->
 
-                </div>
-              </div>
-        
               <!-- NAVS-->
-              <div class="col-12 mb-3">
+              <div class="col-12 mb-3 pt-5 sticky-top">
                 <div class="card card-body custom-rounded border py-3">
                   <ul class="nav">
                     <li class="nav-item text-left text-md-center">
@@ -425,7 +394,7 @@
             
                 <!-- FILTER-->
                 <div class="col-12 col-lg-12 col-xl-4 mb-2 mb-lg-0">
-                  <div class="card card-body custom-rounded shadow-light border">
+                  <div class="card card-body custom-rounded shadow-light border" style="position: relative;">
                     <div class="d-flex align-items-center mt-1 mb-3">
                       <div class=" h3"><span class="mr-1">Filter Criteria</span>
                         <span id="tooltip-target" data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true"
@@ -763,14 +732,17 @@
                     
                       </div>                                 
                     </div>
-            
-                    <div class="btn btn-outline-success rounded-pill btn-block lift mt-4"><i class="neu neu-search"></i> Search criteria</div>
+                    <div class="fixed-bottom-desktop bg-white w-100 py-4" id="searchCriteriaContainer">
+                      <div class="container-fluid">
+                        <div class="btn btn-success rounded-pill w-100 lift mb-0" id="searchCriteriaBtn"><i class="neu neu-search"></i> Search criteria</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
             
                 <!-- RESULT-->
                 <div class="col-lg-12 col-xl-8">
-                  <div class="card card-body custom-rounded bg-white text-left shadow-light border">
+                  <div class="card card-body custom-rounded bg-white text-left shadow-light border" style="position: relative;">
             
                     <div class="row mb-3">
                       <div class="col-12 col-lg-5">
@@ -1124,6 +1096,7 @@
                                     alt="company logo">
                                 </div>
                                 <div class="ms-3">***</div>
+                              </a>
                             </td>
                             <td class="align-middle">Marketing Specialist</td>
                             <td class="align-middle">** *** *** ****</td>
@@ -1275,73 +1248,8 @@
   
   <!-- JAVASCRIPT -->
   
-  <!-- Table sorting JS-->
-  <script>
-    let currentColumn = 3; // Set Last checked as the default sorted column
-    let lastCheckedColumnSorted = true;
-
-    document.addEventListener("DOMContentLoaded", function (event) {
-      // Simulate click on "Last checked" header after the page loads (default sort)
-      sortTable(currentColumn);
-      lastCheckedColumnSorted = false;
-    });
-
-    function sortTable(columnIndex) {
-      const table = document.getElementById('myTable');
-      const tbody = table.querySelector('tbody');
-      const rows = Array.from(tbody.querySelectorAll('tr'));
-
-      rows.sort((a, b) => {
-        let cellA = a.getElementsByTagName('td')[columnIndex].innerText.trim().toLowerCase();
-        let cellB = b.getElementsByTagName('td')[columnIndex].innerText.trim().toLowerCase();
-
-        if (columnIndex === 3) { // For Last checked column, reverse sorting
-          [cellA, cellB] = [cellB, cellA];
-        }
-
-        return cellA.localeCompare(cellB);
-      });
-
-      tbody.innerHTML = '';
-      rows.forEach(row => {
-        tbody.appendChild(row);
-      });
-
-      resetHeaders();
-      const clickedHeader = document.getElementById(`header${columnIndex}`);
-
-      if (!lastCheckedColumnSorted && columnIndex === 3) {
-        clickedHeader.classList.add('active-header');
-        lastCheckedColumnSorted = true;
-      } else {
-        clickedHeader.classList.add('active-header');
-      }
-
-      currentColumn = columnIndex;
-      resetSortIcons(columnIndex);
-    }
-
-    function resetHeaders() {
-      const headers = document.querySelectorAll('th');
-      headers.forEach(header => {
-        header.classList.remove('active-header');
-      });
-    }
-
-    function resetSortIcons(exceptIndex) {
-      const icons = document.querySelectorAll('.fa-sort');
-      icons.forEach(icon => {
-        icon.classList.remove('fa-sort-up', 'fa-sort-down');
-        icon.classList.add('fa-sort');
-      });
-
-      const clickedHeaderIcon = document.getElementById(`header${exceptIndex}`).getElementsByTagName('i')[0];
-      clickedHeaderIcon.classList.remove('fa-sort');
-      clickedHeaderIcon.classList.add('fas', 'fa-sort');
-    }
-  </script>
-  
   <script src="script-all-checkbox.js"></script>  
+  <script src="script-custom.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
   
