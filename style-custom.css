@@ -1,3 +1,18 @@
+/* Aji - 13 sep 2024 */
+.sticky-top-gradient {
+  background: linear-gradient(to bottom, rgba(249, 251, 253, 1) 80%, rgba(249, 251, 253, 0) 100%) !important;
+  padding-bottom: 24px !important;
+}
+/* 
+.sticky-bottom {
+  background-color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 30px;
+  z-index: 1020;
+} */
+
+
 /* Roy - 12 sep 2024 */
 td.sticky-action {
   background-color: #fff; /* Default background color is white */
@@ -17,6 +32,7 @@ tr:hover td.sticky-action {
 
 .table-responsive {
   overflow-x: auto;
+  overflow-y: auto;
 }
 
 th.sticky-action {
@@ -249,7 +265,7 @@ td,th {
 /* FOR SEARCH AUTOCOMPLETE */
 
 .scrollable-div {
-  max-height: 645px; /* Adjust the height as needed */
+  max-height: 530px; /* Adjust the height as needed */
   overflow-y: auto;
 }
 
