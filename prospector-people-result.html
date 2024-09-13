@@ -394,7 +394,7 @@
             
                 <!-- FILTER-->
                 <div class="col-12 col-lg-12 col-xl-4 mb-2 mb-lg-0">
-                  <div class="card card-body custom-rounded shadow-light border" style="position: relative;">
+                  <div class="card card-body custom-rounded shadow-light border">
                     <div class="d-flex align-items-center mt-1 mb-3">
                       <div class=" h3"><span class="mr-1">Filter Criteria</span>
                         <span id="tooltip-target" data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true"
@@ -734,7 +734,7 @@
                     </div>
                     <div class="fixed-bottom-desktop bg-white w-100 py-4" id="searchCriteriaContainer">
                       <div class="container-fluid">
-                        <div class="btn btn-success rounded-pill w-100 lift mb-0" id="searchCriteriaBtn"><i class="neu neu-search"></i> Search criteria</div>
+                        <div class="btn btn-success rounded-pill w-100 lift" id="searchCriteriaBtn"><i class="neu neu-search"></i> Search criteria</div>
                       </div>
                     </div>
                   </div>
@@ -798,7 +798,7 @@
                             <th scope="col">Job Title</th>
                             <th scope="col">Phone Number</th>
                             <th scope="col">Personal Email</th>
-                            <th scope="col">Action</th>
+                            <th scope="col" class="sticky-action">Action</th>
                           </tr>
                         </thead>
                         <tbody class="fs-base">
@@ -836,7 +836,7 @@
                             <td class="align-middle">Founder</td>
                             <td class="align-middle">+1 555 123 1234</td>
                             <td class="align-middle">bill.gates@gatesfoundation.org</td>
-                            <td class="align-middle"> <!-- Add your button here -->
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
                               <small class=""><i class="neu neu-so-tick-circle text-success"></i>
                                 Row unlocked</small>
                             </td>
@@ -875,7 +875,7 @@
                             <td class="align-middle">CEO</td>
                             <td class="align-middle">+1 555 123 1234</td>
                             <td class="align-middle">jeff@amazon.com</td>
-                            <td class="align-middle"> <!-- Add your button here -->
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
                               <small class=""><i class="neu neu-so-tick-circle text-success"></i>
                                 Row unlocked</small>
                             </td>
@@ -912,7 +912,7 @@
                             <td class="align-middle">Software Engineer</td>
                             <td class="align-middle">** *** *** ****</td>
                             <td class="align-middle">*****************</td>
-                            <td class="align-middle"> <!-- Add your button here -->
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
                               <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
                                 Unlock
                                 this
@@ -951,7 +951,7 @@
                             <td class="align-middle">Marketing Specialist</td>
                             <td class="align-middle">None found</td>
                             <td class="align-middle">kokorose@netflix.com</td>
-                            <td class="align-middle"> <!-- Add your button here -->
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
                               <small class=""><i class="neu neu-so-tick-circle text-success"></i>
                                 Row unlocked</small>
                             </td>
@@ -987,7 +987,7 @@
                             <td class="align-middle">CTO</td>
                             <td class="align-middle">** *** *** ****</td>
                             <td class="align-middle">None found</td>
-                            <td class="align-middle"> <!-- Add your button here -->
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
                               <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
                                 Unlock
                                 this
@@ -1025,7 +1025,7 @@
                             <td class="align-middle">CEO</td>
                             <td class="align-middle">** *** *** ****</td>
                             <td class="align-middle">*************</td>
-                            <td class="align-middle"> <!-- Add your button here -->
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
                               <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
                                 Unlock
                                 this
@@ -1062,7 +1062,7 @@
                             <td class="align-middle">Senior Designer</td>
                             <td class="align-middle">None found</td>
                             <td class="align-middle">**************</td>
-                            <td class="align-middle"> <!-- Add your button here -->
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
                               <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
                                 Unlock
                                 this
@@ -1101,7 +1101,7 @@
                             <td class="align-middle">Marketing Specialist</td>
                             <td class="align-middle">** *** *** ****</td>
                             <td class="align-middle">*****************</td>
-                            <td class="align-middle"> <!-- Add your button here -->
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
                               <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
                                 Unlock
                                 this
@@ -1138,7 +1138,7 @@
                             <td class="align-middle">Strategic Partner</td>
                             <td class="align-middle">None found</td>
                             <td class="align-middle">***********</td>
-                            <td class="align-middle"> <!-- Add your button here -->
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
                               <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
                                 Unlock
                                 this
@@ -1176,7 +1176,7 @@
                             <td class="align-middle">Senior Software Engineer</td>
                             <td class="align-middle">** *** *** ****</td>
                             <td class="align-middle">None found</td>
-                            <td class="align-middle"> <!-- Add your button here -->
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
                               <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
                                 Unlock
                                 this
@@ -1213,7 +1213,7 @@
                         <button class="btn btn-outline-success w-100 rounded-pill btn-block btn-pill lift mb-3 mb-lg-0 d-lg-none"><i
                             class="neu neu-todo-done"></i> Unlock 3 selected rows</button>
                       </div>
-                      <div class="col-12 col-lg-12 col-xl-12">
+                      <div class="col-12 col-lg-12 col-xl-12 fixed-bottom-desktop w-100 bg-white py-4">
                         <nav aria-label="pagination">
                           <ul class="pagination pagination justify-content-center mb-0">
                             <li class="page-item disabled">
