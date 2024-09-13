@@ -623,40 +623,41 @@
 
               <!-- RESULT-->
               <div class="col-lg-12 col-xl-8 mb-0">
-                <div class="card card-body custom-rounded bg-white text-left shadow-light border mb-0">
+                <div class="card custom-rounded bg-white text-left shadow-light border mb-0">
 
-                  <div class="row mb-3">
-                    <div class="col-12 col-lg-5">
-                      <p class=" mt-2"><i class="neu neu-so-structure me-1 text-success"></i>345,678 <span
-                          class="font-weight-normal text-muted">results found</span></p>
-                    </div>
-                    <div class="col-12 col-lg-7 d-md-flex justify-content-lg-end mt-4 mt-md-1">
-                      <div class=" text-muted small text-right me-md-2 mb-3 mb-md-0 mt-n3 d-flex align-items-center">
-                        <!-- Added d-flex and align-items-center -->
-                        <span class="flex-grow-1">Displaying</span> <!-- Displaying text with flex-grow-1 -->
-                        <div class="btn-group ms-3 ms-md-2 w-100"> <!-- Button group -->
-                          <button type="button"
-                            class="btn btn-sm rounded-pill px-3 btn-outline-secondary dropdown-toggle btn-mobile-full-width"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            10 results
-                          </button>
-                          <div class="dropdown-menu me-3">
-                            <a class="dropdown-item nav-link custom-link text-gray-700" href="#">15 results</a>
-                            <a class="dropdown-item nav-link custom-link text-gray-700" href="#">20 results</a>
-                            <a class="dropdown-item nav-link custom-link text-gray-700" href="#">25 results</a>
+                  <div class="card-body border-bottom pb-3 mb-0">
+                    <div class="row">
+                      <div class="col-12 col-lg-5">
+                        <p class=" mt-2"><i class="neu neu-so-structure me-1 text-success"></i>345,678 <span
+                            class="font-weight-normal text-muted">results found</span></p>
+                      </div>
+                      <div class="col-12 col-lg-7 d-md-flex justify-content-lg-end mt-4 mt-md-1">
+                        <div class=" text-muted small text-right me-md-2 mb-3 mb-md-0 mt-n3 d-flex align-items-center">
+                          <!-- Added d-flex and align-items-center -->
+                          <span class="flex-grow-1">Displaying</span> <!-- Displaying text with flex-grow-1 -->
+                          <div class="btn-group ms-3 ms-md-2 w-100"> <!-- Button group -->
+                            <button type="button"
+                              class="btn btn-sm rounded-pill px-3 btn-outline-secondary dropdown-toggle btn-mobile-full-width"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              10 results
+                            </button>
+                            <div class="dropdown-menu me-3">
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">15 results</a>
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">20 results</a>
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">25 results</a>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class=" text-muted small text-right mb-3 mb-lg-0">
-                        <div class="btn-group w-100">
-                          <button type="button"
-                            class="btn btn-sm rounded-pill px-3 btn-outline-success dropdown-toggle ms-1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Export to .CSV
-                          </button>
-                          <div class="dropdown-menu me-3">
-                            <a class="dropdown-item nav-link custom-link text-gray-700" href="#">Export to .CSV</a>
-                            <a class="dropdown-item nav-link custom-link text-gray-700" href="#">Export to .XLSX</a>
+                        <div class=" text-muted small text-right mb-3 mb-lg-0">
+                          <div class="btn-group w-100">
+                            <button type="button" class="btn btn-sm rounded-pill px-3 btn-outline-success dropdown-toggle ms-1"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              Export to .CSV
+                            </button>
+                            <div class="dropdown-menu me-3">
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">Export to .CSV</a>
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">Export to .XLSX</a>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -665,14 +666,14 @@
 
                   <div class="table-responsive" style="max-height: 445px;">
                     <table class="table table-sm rounded-table table-hover table-nowrap custom-table">
-                      <thead style="background-color: #F9FAFB;">
+                      <thead style="background-color: #F9FAFB;" class="sticky-thead">
                         <tr class="text-muted small text-uppercase">
                           <th scope="col" class="small custom-control custom-checkbox mt-n1">
                             <input class="form-check-input" type="checkbox" name="flexRadioCompanies"
                               id="selectAllCompaniesCheckbox" onclick="handleSelectAllCompaniesCheckbox()">
                             <label class="form-check-label small text-muted" for="selectAllCheckbox"></label>
                           </th>
-                          <th scope="col">Company Name</th>
+                          <th scope="col" class="ps-0">Company Name</th>
                           <th scope="col">LinkedIn</th>
                           <th scope="col">Employees</th>
                           <th scope="col">Industries</th>
@@ -691,7 +692,7 @@
                               id="flexRadioCompanies1" checked onclick="handleCheckbox(this)">
                             <label class="form-check-label small text-muted" for="flexRadioCompanies1"></label>
                           </td>
-                          <td class="align-middle">
+                          <td class="align-middle ps-0">
                             <a class="d-flex custom-link text-black" href="prospector-companies-detail.html">
                               <div class="avatar avatar-xs">
                                 <img class="img" width="22" height="auto" src="assets/img/logo/Microsoft.svg"
@@ -722,7 +723,7 @@
                               id="flexRadioCompanies2" checked onclick="handleCheckbox(this)">
                             <label class="form-check-label small text-muted" for="flexRadioCompanies2"></label>
                           </td>
-                          <td class="align-middle">
+                          <td class="align-middle ps-0">
                             <a class="d-flex custom-link text-black" href="prospector-companies-detail.html">
                               <div class="avatar avatar-xs">
                                 <img class="img" width="22" height="auto" src="assets/img/logo/Amazon logo.jpeg"
@@ -754,7 +755,7 @@
                               id="flexRadioCompanies3" onclick="handleCheckbox(this)">
                             <label class="form-check-label small text-muted" for="flexRadioCompanies3"></label>
                           </td>
-                          <td class="align-middle">
+                          <td class="align-middle ps-0">
                             <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
                               <div class="avatar avatar-xs">
                                 <img class="img" width="22" height="auto" src="assets/img/logo/Air.svg"
@@ -789,7 +790,7 @@
                               id="flexRadioCompanies4" onclick="handleCheckbox(this)">
                             <label class="form-check-label small text-muted" for="flexRadioCompanies4"></label>
                           </td>
-                          <td class="align-middle">
+                          <td class="align-middle ps-0">
                             <a class="d-flex custom-link text-black">
                               <div class="avatar avatar-xs">
                                 <img class="img" width="22" height="auto" src="assets/img/logo/Spotify logo.svg"
@@ -823,7 +824,7 @@
                               id="flexRadioCompanies5" checked onclick="handleCheckbox(this)">
                             <label class="form-check-label small text-muted" for="flexRadioCompanies5"></label>
                           </td>
-                          <td class="align-middle">
+                          <td class="align-middle ps-0">
                             <a class="d-flex custom-link text-black" href="prospector-companies-detail.html">
                               <div class="avatar avatar-xs">
                                 <img class="img" width="22" height="auto" src="assets/img/logo/Google-logoicon.svg"
@@ -855,7 +856,7 @@
                               id="flexRadioCompanies6" onclick="handleCheckbox(this)">
                             <label class="form-check-label small text-muted" for="flexRadioCompanies6"></label>
                           </td>
-                          <td class="align-middle">
+                          <td class="align-middle ps-0">
                             <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
                               <div class="avatar avatar-xs">
                                 <img class="img" width="23" height="auto" src="assets/img/logo/adobe.svg"
@@ -890,7 +891,7 @@
                               id="flexRadioCompanies7" onclick="handleCheckbox(this)">
                             <label class="form-check-label small text-muted" for="flexRadioCompanies7"></label>
                           </td>
-                          <td class="align-middle">
+                          <td class="align-middle ps-0">
                             <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
                               <div class="avatar avatar-xs">
                                 <img class="img mt-2" width="22" height="auto" src="assets/img/logo/IBM logo.svg"
@@ -925,7 +926,7 @@
                               id="flexRadioCompanies8" onclick="handleCheckbox(this)">
                             <label class="form-check-label small text-muted" for="flexRadioCompanies8"></label>
                           </td>
-                          <td class="align-middle">
+                          <td class="align-middle ps-0">
                             <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
                               <div class="avatar avatar-xs">
                                 <img class="img" width="22" height="auto" src="assets/img/logo/netflix.jpeg"
@@ -960,7 +961,7 @@
                               id="flexRadioCompanies9" onclick="handleCheckbox(this)">
                             <label class="form-check-label small text-muted" for="flexRadioCompanies9"></label>
                           </td>
-                          <td class="align-middle">
+                          <td class="align-middle ps-0">
                             <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
                               <div class="avatar avatar-xs">
                                 <img class="img mt-n1" width="22" height="auto" src="assets/img/logo/Apple 14.svg"
@@ -995,7 +996,7 @@
                               id="flexRadioCompanies10" onclick="handleCheckbox(this)">
                             <label class="form-check-label small text-muted" for="flexRadioCompanies10"></label>
                           </td>
-                          <td class="align-middle">
+                          <td class="align-middle ps-0">
                             <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
                               <div class="avatar avatar-xs">
                                 <img class="img mt-2" width="23" height="auto" src="assets/img/logo/Meta 1.svg"
@@ -1026,8 +1027,8 @@
                     </table>
                   </div>
 
-                  <div class="row border-top pt-4 sticky-bottom">
-                    <div class="col-12 col-md-12 col-lg-12 mb-4 d-lg-flex justify-content-md-center border-bottom pb-4">
+                  <div class="row card-body mt-0 pt-0">
+                    <div class="col-12 col-md-12 col-lg-12 mb-4 d-lg-flex justify-content-md-center border-top pt-4 border-bottom pb-4">
                       <!---->
                       <button class="btn btn-success btn rounded-pill me-3 mb-3 mb-lg-0 lift d-none d-lg-block text-nowrap"
                         data-bs-toggle="modal" data-bs-target="#modalUnlockAllResults"><i class="neu neu-so-lock-square"></i> Unlock all

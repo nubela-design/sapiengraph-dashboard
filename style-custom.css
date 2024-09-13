@@ -3,14 +3,18 @@
   background: linear-gradient(to bottom, rgba(249, 251, 253, 1) 80%, rgba(249, 251, 253, 0) 100%) !important;
   padding-bottom: 24px !important;
 }
-/* 
-.sticky-bottom {
-  background-color: #fff;
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 30px;
-  z-index: 1020;
-} */
+
+.sticky-thead {
+  position: sticky; 
+  top: 0; 
+  z-index: 10;
+  background-color: white; /* Ensure background color is set */
+}
+
+.sticky-thead th {
+border-top: none;
+
+}
 
 
 /* Roy - 12 sep 2024 */
