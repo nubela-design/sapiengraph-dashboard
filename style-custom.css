@@ -1,8 +1,10 @@
-/* Aji - 13 sep 2024 */
+/* Aji - 16 sep 2024 */
 .sticky-top-gradient {
   background: linear-gradient(to bottom, rgba(249, 251, 253, 1) 80%, rgba(249, 251, 253, 0) 100%) !important;
-  padding-bottom: 24px !important;
+  padding-bottom: 24px;
 }
+
+/* Aji - 13 sep 2024 */
 
 .sticky-thead {
   position: sticky; 
@@ -269,7 +271,7 @@ td,th {
 /* FOR SEARCH AUTOCOMPLETE */
 
 .scrollable-div {
-  max-height: 530px; /* Adjust the height as needed */
+  max-height: 540px; /* Adjust the height as needed */
   overflow-y: auto;
 }
 

@@ -268,31 +268,10 @@
       <div class="row justify-content-center">
         <div class="col-12 main-content-prospector">
           <!-- COMPANIES TAB-->
-          <!-- Header -->
-          <div class="header mt-5">
-            <div class="">
-
-              <div class="row align-items-end d-flex">
-                <div class="col-7">
-
-                  <!-- Pretitle -->
-                  <h6 class="header-pretitle">
-                    Prospector
-                  </h6>
-
-                  <!-- Title -->
-                  <h1 class="header-title">
-                    Companies Prospector
-                  </h1>
-
-                </div>
-              </div> <!-- / .row -->
-            </div>
-          </div>
 
           <!-- NAVS-->
-          <div class="col-12 mb-3">
-            <div class="card card-body custom-rounded border py-3">
+          <div class="col-12 pt-4 pt-md-4 pb-3 pb-md-4 sticky-top sticky-top-gradient">
+            <div class="card card-body custom-rounded border py-3 mb-0">
               <ul class="nav">
                 <li class="nav-item text-left text-md-center">
                   <a class="nav-link text-muted custom-link" href="prospector-saved-result.html"><i
@@ -303,24 +282,24 @@
                       class="neu neu-user-2"></i> People</a>
                 </li>
                 <li class="nav-item text-left text-md-center">
-                  <a class="nav-link text-success custom-link" href="prospector-companies-result-collapsed.html"><i
+                  <a class="nav-link text-success custom-link" href="prospector-companies-result.html"><i
                       class="neu neu-company"></i> Companies</a>
                 </li>
                 <li class="nav-item text-left text-md-center">
-                  <a class="nav-link text-muted custom-link" href="prospector-customers-result-collapsed.html"><i
+                  <a class="nav-link text-muted custom-link" href="prospector-customers-result.html"><i
                       class="neu neu-groups"></i> Customers</a>
                 </li>
               </ul>
             </div>
-          </div>
+          </div>          
 
           <div>
             <!-- COMPANIES TAB-->
             <div class="row">
 
               <!-- FILTER-->
-              <div class="col-12 col-lg-12 col-xl-4 mb-2 mb-lg-0">
-                <div class="card card-body custom-rounded shadow-light border">
+              <div class="col-12 col-lg-12 col-xl-4 mb-3 mb-md-4 mb-xl-0">
+                <div class="card card-body custom-rounded shadow-light border mb-0">
 
                   <div class="d-flex align-items-center mt-1 mb-3">
                     <div class=" h3"><span class="mr-1">Filter Criteria</span>
@@ -333,14 +312,13 @@
                     <a class="btn btn-link text-success rounded-pill btn-sm  h3 ms-n1" href="#!">
                       <i class="neu neu-so-save d-none d-md-inline-block"></i> Save search
                     </a>
-                    <a href="prospector-companies-result-collapsed.html"
-                      class="btn btn-sm btn-success rounded-pill lift  ms-auto d-none d-xl-block mt-n3"><i
+                    <a href="prospector-companies-result-collapsed.html" class="btn btn-sm btn-success rounded-pill lift  ms-auto d-none d-xl-block mt-n3"><i
                         class="fe fe-chevron-left"></i>
                     </a>
                   </div>
 
                   <!-- Company Filter Section-->
-                  <div class="">
+                  <div class="scrollable-div">
                     <div class="accordion" id="companyFilterAccordion">
                       <div class="card border-0 pb-0 mb-0">
 
@@ -358,8 +336,7 @@
                               </span>
                             </a>
 
-                            <div class="collapse show" id="companyOverviewFilter" aria-labelledby="sectionOne"
-                              data-bs-parent="#companyFilterAccordion">
+                            <div class="collapse" id="companyOverviewFilter" aria-labelledby="sectionOne" data-bs-parent="#companyFilterAccordion">
                               <form class="pt-4 mt-4 border-top">
                                 <div class="mb-4">
                                   <label for="exampleInputIndustry" class="form-label ">Industry</label>
@@ -409,8 +386,8 @@
                                     <hr style="height: 2px; width: 2%; margin-top: 14px;">
                                     <div class="input-group">
                                       <span class="input-group-text">$</span>
-                                      <input type="text" class="form-control form-control-sm" placeholder="Max revenue"
-                                        id="exampleInputCompany" aria-describedby="emailHelp">
+                                      <input type="text" class="form-control form-control-sm"
+                                        placeholder="Max revenue" id="exampleInputCompany" aria-describedby="emailHelp">
                                     </div>
                                   </div>
                                   <div class="mt-3">
@@ -430,25 +407,21 @@
                             <a class="d-flex align-items-center text-reset text-decoration-none"
                               data-bs-toggle="collapse" href="#companyAdvanced" role="button" aria-expanded="false"
                               aria-controls="companyAdvanced">
-                              <div class="me-auto">
-                                <div class="d-inline-flex me-3 rotate-90deg"><i class="fe fe-sliders"></i></div>Advanced
-                                filter
-                              </div>
+                              <div class="me-auto"><div class="d-inline-flex me-3 rotate-90deg"><i class="fe fe-sliders"></i></div>Advanced filter</div>
                               <!-- chevron-->
                               <span class="collapse-chevron text-muted ms-4 mb-n1">
                                 <i class="fe fe-lg fe-chevron-down"></i>
                               </span>
                             </a>
 
-                            <div class="collapse" id="companyAdvanced" aria-labelledby="sectionTwo"
-                              data-bs-parent="#companyFilterAccordion">
+                            <div class="collapse" id="companyAdvanced" aria-labelledby="sectionTwo" data-bs-parent="#companyFilterAccordion">
                               <form class="pt-4 mt-4 border-top">
                                 <div class="mb-4">
                                   <label for="exampleInputCompany" class="form-label ">Employee Count</label>
                                   <div class="d-flex justify-content-between gap-2">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Min"
-                                      id="exampleInputCompany" aria-describedby="emailHelp">
-                                    <hr style="height: 2px; width: 2%; margin-top: 14px;">
+                                    <input type="text" class="form-control form-control-sm"
+                                      placeholder="Min" id="exampleInputCompany" aria-describedby="emailHelp">
+                                    <hr style="height: 2px; width: 2%; margin-top: 14px;"> 
                                     <input type="text" class="form-control form-control-sm" placeholder="Max"
                                       id="exampleInputCompany" aria-describedby="emailHelp">
                                   </div>
@@ -456,10 +429,11 @@
                                 <div class="mb-4">
                                   <label for="exampleInputCompany" class="form-label ">Year Founded</label>
                                   <div class="d-flex justify-content-between gap-2">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Min"
-                                      id="exampleInputCompany" aria-describedby="emailHelp">
-                                    <hr style="height: 2px; width: 2%; margin-top: 14px;">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Max"
+                                    <input type="text" class="form-control form-control-sm"
+                                      placeholder="Min" id="exampleInputCompany" aria-describedby="emailHelp">
+                                    <hr style="height: 2px; width: 2%; margin-top: 14px;"> 
+                                    <input
+                                      type="text" class="form-control form-control-sm" placeholder="Max"
                                       id="exampleInputCompany" aria-describedby="emailHelp">
                                   </div>
                                 </div>
@@ -483,10 +457,11 @@
                                 <div class="mb-4">
                                   <label for="exampleInputCompany" class="form-label ">Follower Count</label>
                                   <div class="d-flex justify-content-between gap-2">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Min"
-                                      id="exampleInputCompany" aria-describedby="emailHelp">
-                                    <hr style="height: 2px; width: 2%; margin-top: 14px;">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Max"
+                                    <input type="text" class="form-control form-control-sm"
+                                      placeholder="Min" id="exampleInputCompany" aria-describedby="emailHelp">
+                                    <hr style="height: 2px; width: 2%; margin-top: 14px;"> 
+                                    <input
+                                      type="text" class="form-control form-control-sm" placeholder="Max"
                                       id="exampleInputCompany" aria-describedby="emailHelp">
                                   </div>
                                 </div>
@@ -501,18 +476,20 @@
                                     <hr style="height: 2px; width: 2%; margin-top: 14px;">
                                     <div class="input-group">
                                       <span class="input-group-text">$</span>
-                                      <input type="text" class="form-control form-control-sm" placeholder="Max"
-                                        id="exampleInputCompany" aria-describedby="emailHelp">
+                                      <input type="text" class="form-control form-control-sm"
+                                        placeholder="Max" id="exampleInputCompany" aria-describedby="emailHelp">
                                     </div>
                                   </div>
                                 </div>
                                 <div class="mb-2">
                                   <label for="exampleInputCompany" class="form-label ">Funding Raised</label>
                                   <div class="d-flex justify-content-between gap-2">
-                                    <input type="date" class="form-control form-control-sm text-muted" placeholder="Min"
+                                    <input type="date"
+                                      class="form-control form-control-sm text-muted" placeholder="Min"
                                       id="exampleInputCompany" aria-describedby="emailHelp">
                                     <hr style="height: 2px; width: 2%; margin-top: 14px;">
-                                    <input type="date" class="form-control form-control-sm text-muted" placeholder="Max"
+                                    <input type="date"
+                                      class="form-control form-control-sm text-muted" placeholder="Max"
                                       id="exampleInputCompany" aria-describedby="emailHelp">
                                   </div>
                                 </div>
@@ -525,7 +502,7 @@
                     </div>
                   </div>
 
-                  <div class="btn btn-outline-success rounded-pill btn-block lift mt-4"><i class="neu neu-search"></i>
+                  <div class="btn btn-success rounded-pill btn-block lift mt-4"><i class="neu neu-search"></i>
                     Search criteria
                   </div>
                 </div>
@@ -533,11 +510,11 @@
 
               <!-- RESULT-->
               <div class="col-12 col-xl-8">
-                <div class="card custom-rounded bg-white text-center pb-lg-5 pt-lg-5">
-                  <div class="card-body">
+                <div class="card custom-rounded bg-white text-center pb-lg-3 mb-0">
+                  <div class="card-body py-md-5 pb-md-4 pb-xl-8 pt-md-4 pt-xl-7" style="max-height: 698px;">
                     <div class="row justify-content-center">
                       <div class="col-12 col-md-11 col-lg-6 ">
-                        <img class="img-fluid mt-md-4 mb-3 mb-xl-4" alt="Prospector search illustration"
+                        <img class="img-fluid mt-md-5 mb-3 mb-xl-4" alt="Prospector search illustration"
                           src="assets/img/illustrations/no-match.png">
                       </div>
                     </div>
@@ -659,6 +636,24 @@
       })
     })
   </script>
+
+  <!-- // AJI - 16 Sep 2024 - Show collapse when xl screen //-->
+  <script>
+    // JavaScript to handle the visibility based on screen size
+    function handleResize() {
+      const filter = document.getElementById('companyOverviewFilter');
+      if (window.innerWidth >= 1199) { // md breakpoint
+        filter.classList.add('show');
+        filter.classList.remove('collapse');
+      } else {
+        filter.classList.remove('show');
+        filter.classList.add('collapse');
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('load', handleResize);
+  </script>  
 
 </body>
 
