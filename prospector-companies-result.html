@@ -383,7 +383,7 @@
         <div class="col-12 main-content-prospector">
 
           <!-- NAVS-->
-          <div class="col-12 pt-5 sticky-top sticky-top-gradient">
+          <div class="col-12 pt-4 pt-md-4 pb-3 pb-md-4 sticky-top sticky-top-gradient">
             <div class="card card-body custom-rounded border py-3 mb-0">
               <ul class="nav">
                 <li class="nav-item text-left text-md-center">
@@ -406,12 +406,12 @@
             </div>
           </div>
 
-          <div class="mb-0">
+          <div>
             <!-- COMPANIES TAB-->
-            <div class="row mb-0">
+            <div class="row">
 
               <!-- FILTER-->
-              <div class="col-12 col-lg-12 col-xl-4 mb-2 mb-lg-0">
+              <div class="col-12 col-lg-12 col-xl-4 mb-3 mb-md-4 mb-xl-0">
                 <div class="card card-body custom-rounded shadow-light border mb-0">
 
                   <div class="d-flex align-items-center mt-1 mb-3">
@@ -449,7 +449,7 @@
                               </span>
                             </a>
 
-                            <div class="collapse show" id="companyOverviewFilter" aria-labelledby="sectionOne" data-bs-parent="#companyFilterAccordion">
+                            <div class="collapse" id="companyOverviewFilter" aria-labelledby="sectionOne" data-bs-parent="#companyFilterAccordion">
                               <form class="pt-4 mt-4 border-top">
                                 <div class="mb-4">
                                   <label for="exampleInputIndustry" class="form-label ">Industry</label>
@@ -664,7 +664,7 @@
                     </div>
                   </div>
 
-                  <div class="table-responsive" style="max-height: 445px;">
+                  <div class="table-responsive" style="max-height: 453px;">
                     <table class="table table-sm rounded-table table-hover table-nowrap custom-table">
                       <thead style="background-color: #F9FAFB;" class="sticky-thead">
                         <tr class="text-muted small text-uppercase">
@@ -1028,7 +1028,7 @@
                   </div>
 
                   <div class="row card-body mt-0 pt-0">
-                    <div class="col-12 col-md-12 col-lg-12 mb-4 d-lg-flex justify-content-md-center border-top pt-4 border-bottom pb-4">
+                    <div class="col-12 col-md-12 col-lg-12 mb-4 d-lg-flex justify-content-md-center border-top pt-4 border-bottom pb-3 pb-lg-4">
                       <!---->
                       <button class="btn btn-success btn rounded-pill me-3 mb-3 mb-lg-0 lift d-none d-lg-block text-nowrap"
                         data-bs-toggle="modal" data-bs-target="#modalUnlockAllResults"><i class="neu neu-so-lock-square"></i> Unlock all
@@ -1174,10 +1174,12 @@
 
   <!-- Search Autocomplete JS-->
   <script src="search-autocomplete.js"></script>
+  <script src="script-custom.js"></script>
 
   <!-- POPOVER CONTENT REMAIN VISIBLE JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+  
   <script>
     var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
     var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
@@ -1186,6 +1188,25 @@
         delay: { show: 0, hide: 1200 } // Add a delay when hiding the popover
       })
     })
+  </script>
+
+
+  <!-- // AJI - 16 Sep 2024 - Show collapse when xl screen //-->
+  <script>
+    // JavaScript to handle the visibility based on screen size
+    function handleResize() {
+      const filter = document.getElementById('companyOverviewFilter');
+      if (window.innerWidth >= 1199) { // md breakpoint
+        filter.classList.add('show');
+        filter.classList.remove('collapse');
+      } else {
+        filter.classList.remove('show');
+        filter.classList.add('collapse');
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('load', handleResize);
   </script>
 
 </body>

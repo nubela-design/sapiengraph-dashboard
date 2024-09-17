@@ -262,47 +262,25 @@
         <div class="row justify-content-center">
           <div class="col-12 main-content-prospector">
     
-            <!-- Header -->
-            <div class="header mt-5">
-              <div class="">
-    
-                <div class="row align-items-end d-flex">
-                  <div class="col-7">
-    
-                    <!-- Pretitle -->
-                    <h6 class="header-pretitle">
-                      Prospector
-                    </h6>
-    
-                    <!-- Title -->
-                    <h1 class="header-title">
-                      Companies Prospector
-                    </h1>
-    
-                  </div>
-                </div> <!-- / .row -->
-              </div>
-            </div>
-            
-            
+
             <!-- NAVS-->
-            <div class="col-12 mb-3">
-              <div class="card card-body custom-rounded border py-3">
+            <div class="col-12 pt-4 pt-md-4 pb-3 pb-md-4 sticky-top sticky-top-gradient">
+              <div class="card card-body custom-rounded border py-3 mb-0">
                 <ul class="nav">
                   <li class="nav-item text-left text-md-center">
-                    <a class="nav-link text-muted custom-link" href="prospector-saved-result.html"><i
+                    <a class="nav-link text-muted custom-link" href="prospector-saved.html"><i
                         class="neu neu-bookmark"></i> Saved</a>
                   </li>
                   <li class="nav-item text-left text-md-center">
-                    <a class="nav-link text-muted custom-link" href="prospector-people-result.html"><i
+                    <a class="nav-link text-muted custom-link" href="prospector.html"><i
                         class="neu neu-user-2"></i> People</a>
                   </li>
                   <li class="nav-item text-left text-md-center">
-                    <a class="nav-link text-success custom-link" href="prospector-companies-result-collapsed.html"><i
+                    <a class="nav-link text-success custom-link" href="prospector-companies.html"><i
                         class="neu neu-company"></i> Companies</a>
                   </li>
                   <li class="nav-item text-left text-md-center">
-                    <a class="nav-link text-muted custom-link" href="prospector-customers-result-collapsed.html"><i
+                    <a class="nav-link text-muted custom-link" href="prospector-customers.html"><i
                         class="neu neu-groups"></i> Customers</a>
                   </li>
                 </ul>
@@ -311,8 +289,9 @@
             
             <div class="row">
               <!-- FILTER-->
-              <div class="col-12 col-lg-12 col-xl-4 mb-2 mb-lg-0">
-                <div class="card card-body custom-rounded shadow-light border">
+              <div class="col-12 col-lg-12 col-xl-4 mb-3 mb-md-4 mb-xl-0">
+                <div class="card card-body custom-rounded shadow-light border mb-0">
+
                   <div class="d-flex align-items-center mt-1 mb-3">
                     <div class=" h3"><span class="mr-1">Filter Criteria</span>
                       <span id="tooltip-target" data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true"
@@ -324,153 +303,168 @@
                         class="neu neu-so-save d-none d-md-inline-block"></i> Save search</a>
                   </div>
                   
-                  <!-- OVERVIEW/filter-->
-                  <div class="">
+                  <!-- Company Filter Section-->
+                  <div class="scrollable-div">
                     <div class="accordion" id="companyOverviewAccordion">
                       <div class="card border-0 pb-0 mb-0">
                   
+                        <!-- Overview Filter -->
                         <div class="mb-3">
                           <div class="card-body bg-lighter border rounded">
                             <!-- toggle-->
-                            <a class="d-flex align-items-center text-reset text-decoration-none" data-bs-toggle="collapse"
-                              href="#companyOverviewFilter" role="button" aria-expanded="false" aria-controls="companyOverviewFilter">
-                              <div class="  me-auto"><i class="fe fe-zap me-3"></i>Overview</div>
+                            <a class="d-flex align-items-center text-reset text-decoration-none"
+                              data-bs-toggle="collapse" href="#companyOverviewFilter" role="button"
+                              aria-expanded="false" aria-controls="companyOverviewFilter">
+                              <div class="  me-auto"><i class="neu neu-company me-3"></i>Overview</div>
                               <!-- chevron-->
                               <span class="collapse-chevron text-muted ms-4 mb-n1">
                                 <i class="fe fe-lg fe-chevron-up"></i>
                               </span>
                             </a>
 
-                            <div class="collapse show" id="companyOverviewFilter">
+                            <div class="collapse" id="companyOverviewFilter" aria-labelledby="sectionOne" data-bs-parent="#companyFilterAccordion">
                               <form class="pt-4 mt-4 border-top">
                                 <div class="mb-4">
                                   <label for="exampleInputIndustry" class="form-label ">Industry</label>
-                                  <input type="text" class="form-control form-control-sm" placeholder="E.g. Technology, Software, Entertainment"
-                                    id="exampleInputIndustry" aria-describedby="emailHelp">
+                                  <input type="text" class="form-control form-control-sm"
+                                    placeholder="E.g. Technology, Software, Entertainment" id="exampleInputIndustry"
+                                    aria-describedby="emailHelp">
                                 </div>
                                 <div class="mb-4">
                                   <label for="exampleInputCompany" class="form-label ">Company Name</label>
-                                  <input type="text" class="form-control form-control-sm" placeholder="E.g. Google, Apple, Microsoft"
-                                    id="exampleInputCompany" aria-describedby="emailHelp">
+                                  <input type="text" class="form-control form-control-sm"
+                                    placeholder="E.g. Google, Apple, Microsoft" id="exampleInputCompany"
+                                    aria-describedby="emailHelp">
                                   <ul class="list-group suggestions" id="companySuggestions"></ul>
                                 </div>
                                 <div class="mb-4">
                                   <label for="exampleInputCompany" class="form-label  ">Country</label>
-                                  <input type="text" class="form-control form-control-sm" placeholder="E.g. United States, Singapore, Japan"
-                                    id="exampleInputCompany" aria-describedby="emailHelp">
+                                  <input type="text" class="form-control form-control-sm"
+                                    placeholder="E.g. United States, Singapore, Japan" id="exampleInputCompany"
+                                    aria-describedby="emailHelp">
                                 </div>
                                 <div class="mb-4">
                                   <label for="exampleInputCompany" class="form-label ">Company Type</label>
                                   <input type="text" class="form-control form-control-sm"
-                                    placeholder="E.g. Public Company, Non Profit, Privately Held" id="exampleInputCompany"
-                                    aria-describedby="emailHelp">
+                                    placeholder="E.g. Public Company, Non Profit, Privately Held"
+                                    id="exampleInputCompany" aria-describedby="emailHelp">
+                                  <div class="mt-3">
+                                  </div>
                                 </div>
                                 <div class="mb-2">
                                   <label for="exampleInputCompany" class="form-label ">Revenue</label>
-                                  <div class="d-flex justify-content-between">
-                                    <div class="input-group" style="width: 45%;">
+                                  <div class="d-flex justify-content-between gap-2">
+                                    <div class="input-group">
                                       <span class="input-group-text">$</span>
-                                      <input type="text" class="form-control form-control-sm" placeholder="Min revenue" id="exampleInputCompany"
-                                        aria-describedby="emailHelp">
-                                    </div>
-                                    <hr style="height: 2px; width: 2%; margin-top: 14px;">
-                                    <div class="input-group" style="width: 45%;">
-                                      <span class="input-group-text">$</span>
-                                      <input style="width: 45%;" type="text" class="form-control form-control-sm" placeholder="Max revenue"
+                                      <input type="text" class="form-control form-control-sm" placeholder="Min revenue"
                                         id="exampleInputCompany" aria-describedby="emailHelp">
                                     </div>
+                                    <hr style="height: 2px; width: 2%; margin-top: 14px;">
+                                    <div class="input-group">
+                                      <span class="input-group-text">$</span>
+                                      <input type="text" class="form-control form-control-sm"
+                                        placeholder="Max revenue" id="exampleInputCompany" aria-describedby="emailHelp">
+                                    </div>
+                                  </div>
+                                  <div class="mt-3">
                                   </div>
                                 </div>
                               </form>
                             </div>
                           </div>
-                  
                         </div>
-                  
-                        <!-- ADVANCED FILTER-->
+
+                        <!-- Advance Filter -->
                         <div class="">
                           <div class="card-body bg-lighter border rounded">
                             <!-- toggle-->
-                            <a class="d-flex align-items-center text-reset text-decoration-none" data-bs-toggle="collapse"
-                              href="#companyAdvanced" role="button" aria-expanded="false" aria-controls="companyAdvanced">
-                              <div class="  me-auto"><i class="neu neu-company me-2"></i>Advanced filter</div>
+                            <a class="d-flex align-items-center text-reset text-decoration-none"
+                              data-bs-toggle="collapse" href="#companyAdvanced" role="button" aria-expanded="false"
+                              aria-controls="companyAdvanced">
+                              <div class="me-auto"><div class="d-inline-flex me-3 rotate-90deg"><i class="fe fe-sliders"></i></div>Advanced filter</div>
                               <!-- chevron-->
                               <span class="collapse-chevron text-muted ms-4 mb-n1">
                                 <i class="fe fe-lg fe-chevron-down"></i>
                               </span>
                             </a>
-                  
-                            <div class="collapse hide" id="companyAdvanced">
+
+                            <div class="collapse" id="companyAdvanced" aria-labelledby="sectionTwo" data-bs-parent="#companyFilterAccordion">
                               <form class="pt-4 mt-4 border-top">
                                 <div class="mb-4">
                                   <label for="exampleInputCompany" class="form-label ">Employee Count</label>
-                                  <div class="d-flex justify-content-between">
-                                    <input style="width: 45%;" type="text" class="form-control form-control-sm" placeholder="Min"
+                                  <div class="d-flex justify-content-between gap-2">
+                                    <input type="text" class="form-control form-control-sm"
+                                      placeholder="Min" id="exampleInputCompany" aria-describedby="emailHelp">
+                                    <hr style="height: 2px; width: 2%; margin-top: 14px;"> 
+                                    <input type="text" class="form-control form-control-sm" placeholder="Max"
                                       id="exampleInputCompany" aria-describedby="emailHelp">
-                                    <hr style="height: 2px; width: 2%; margin-top: 14px;"> <input style="width: 45%;" type="text"
-                                      class="form-control form-control-sm" placeholder="Max" id="exampleInputCompany"
-                                      aria-describedby="emailHelp">
                                   </div>
                                 </div>
                                 <div class="mb-4">
                                   <label for="exampleInputCompany" class="form-label ">Year Founded</label>
-                                  <div class="d-flex justify-content-between">
-                                    <input style="width: 45%;" type="text" class="form-control form-control-sm" placeholder="Min"
+                                  <div class="d-flex justify-content-between gap-2">
+                                    <input type="text" class="form-control form-control-sm"
+                                      placeholder="Min" id="exampleInputCompany" aria-describedby="emailHelp">
+                                    <hr style="height: 2px; width: 2%; margin-top: 14px;"> 
+                                    <input
+                                      type="text" class="form-control form-control-sm" placeholder="Max"
                                       id="exampleInputCompany" aria-describedby="emailHelp">
-                                    <hr style="height: 2px; width: 2%; margin-top: 14px;"> <input style="width: 45%;" type="text"
-                                      class="form-control form-control-sm" placeholder="Max" id="exampleInputCompany"
-                                      aria-describedby="emailHelp">
                                   </div>
                                 </div>
                                 <div class="mb-4">
                                   <label for="exampleInputCompany" class="form-label ">Description</label>
-                                  <input type="text" class="form-control form-control-sm" placeholder="E.g. Medical Device"
-                                    id="exampleInputCompany" aria-describedby="emailHelp">
-                                </div>
-                                <div class="mb-4">
-                                  <label for="exampleInputCompany" class="form-label ">Region</label>
-                                  <input type="text" class="form-control form-control-sm" placeholder="E.g. California" id="exampleInputCompany"
+                                  <input type="text" class="form-control form-control-sm"
+                                    placeholder="E.g. Medical Device" id="exampleInputCompany"
                                     aria-describedby="emailHelp">
                                 </div>
                                 <div class="mb-4">
-                                  <label for="exampleInputCompany" class="form-label ">City</label>
-                                  <input type="text" class="form-control form-control-sm" placeholder="E.g. Seattle, Los Angeles"
+                                  <label for="exampleInputCompany" class="form-label ">Region</label>
+                                  <input type="text" class="form-control form-control-sm" placeholder="E.g. California"
                                     id="exampleInputCompany" aria-describedby="emailHelp">
                                 </div>
                                 <div class="mb-4">
+                                  <label for="exampleInputCompany" class="form-label ">City</label>
+                                  <input type="text" class="form-control form-control-sm"
+                                    placeholder="E.g. Seattle, Los Angeles" id="exampleInputCompany"
+                                    aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-4">
                                   <label for="exampleInputCompany" class="form-label ">Follower Count</label>
-                                  <div class="d-flex justify-content-between">
-                                    <input style="width: 45%;" type="text" class="form-control form-control-sm" placeholder="Min"
+                                  <div class="d-flex justify-content-between gap-2">
+                                    <input type="text" class="form-control form-control-sm"
+                                      placeholder="Min" id="exampleInputCompany" aria-describedby="emailHelp">
+                                    <hr style="height: 2px; width: 2%; margin-top: 14px;"> 
+                                    <input
+                                      type="text" class="form-control form-control-sm" placeholder="Max"
                                       id="exampleInputCompany" aria-describedby="emailHelp">
-                                    <hr style="height: 2px; width: 2%; margin-top: 14px;"> <input style="width: 45%;" type="text"
-                                      class="form-control form-control-sm" placeholder="Max" id="exampleInputCompany"
-                                      aria-describedby="emailHelp">
                                   </div>
                                 </div>
                                 <div class="mb-4">
                                   <label for="exampleInputCompany" class="form-label ">Funding Amount</label>
-                                  <div class="d-flex justify-content-between">
-                                    <div class="input-group" style="width: 45%;">
+                                  <div class="d-flex justify-content-between gap-2">
+                                    <div class="input-group">
                                       <span class="input-group-text">$</span>
-                                      <input type="text" class="form-control form-control-sm" placeholder="Min" id="exampleInputCompany"
-                                        aria-describedby="emailHelp">
+                                      <input type="text" class="form-control form-control-sm" placeholder="Min"
+                                        id="exampleInputCompany" aria-describedby="emailHelp">
                                     </div>
                                     <hr style="height: 2px; width: 2%; margin-top: 14px;">
-                                    <div class="input-group" style="width: 45%;">
+                                    <div class="input-group">
                                       <span class="input-group-text">$</span>
-                                      <input style="width: 45%;" type="text" class="form-control form-control-sm" placeholder="Max"
-                                        id="exampleInputCompany" aria-describedby="emailHelp">
+                                      <input type="text" class="form-control form-control-sm"
+                                        placeholder="Max" id="exampleInputCompany" aria-describedby="emailHelp">
                                     </div>
                                   </div>
                                 </div>
                                 <div class="mb-2">
                                   <label for="exampleInputCompany" class="form-label ">Funding Raised</label>
-                                  <div class="d-flex justify-content-between">
-                                    <input style="width: 45%;" type="date" class="form-control form-control-sm text-muted"
-                                      placeholder="Min" id="exampleInputCompany" aria-describedby="emailHelp">
+                                  <div class="d-flex justify-content-between gap-2">
+                                    <input type="date"
+                                      class="form-control form-control-sm text-muted" placeholder="Min"
+                                      id="exampleInputCompany" aria-describedby="emailHelp">
                                     <hr style="height: 2px; width: 2%; margin-top: 14px;">
-                                    <input style="width: 45%;" type="date" class="form-control form-control-sm text-muted"
-                                      placeholder="Max" id="exampleInputCompany" aria-describedby="emailHelp">
+                                    <input type="date"
+                                      class="form-control form-control-sm text-muted" placeholder="Max"
+                                      id="exampleInputCompany" aria-describedby="emailHelp">
                                   </div>
                                 </div>
                               </form>
@@ -482,14 +476,14 @@
                     </div>
                   </div>
             
-                  <a class="btn btn-outline-success rounded-pill btn-block lift mt-4" href="prospector-companies-loading.html"><i class="neu neu-search"></i> Search criteria</a>
+                  <a class="btn btn-success rounded-pill btn-block lift mt-4" href="prospector-companies-loading.html"><i class="neu neu-search"></i> Search criteria</a>
                 </div>
               </div>
             
               <!-- RESULT-->
               <div class="col-12 col-lg-12 col-xl-8">
-                <div class="card custom-rounded bg-white text-center pb-lg-3">
-                  <div class="card-body">
+                <div class="card custom-rounded bg-white text-center pb-lg-3 mb-0">
+                  <div class="card-body py-md-5 pb-md-4 pb-xl-8 pt-md-4 pt-xl-7" style="max-height: 698px;">
                     <p class="pt-4 pt-lg-3 text-gray-400 d-none d-xl-block"><i class="fe fe-arrow-left me-2"></i> Filter and search
                       your criteria to show the result</p>
                     <div class="pt-4 pt-lg-3 text-gray-400 d-block d-xl-none"><i class="fe fe-arrow-up me-1"></i> <span
@@ -617,6 +611,24 @@
         })
       })
     </script>
+
+    <!-- // AJI - 16 Sep 2024 - Show collapse when xl screen //-->
+    <script>
+      // JavaScript to handle the visibility based on screen size
+      function handleResize() {
+        const filter = document.getElementById('companyOverviewFilter');
+        if (window.innerWidth >= 1199) { // md breakpoint
+          filter.classList.add('show');
+          filter.classList.remove('collapse');
+        } else {
+          filter.classList.remove('show');
+          filter.classList.add('collapse');
+        }
+      }
+
+      window.addEventListener('resize', handleResize);
+      window.addEventListener('load', handleResize);
+    </script>      
     
 
   </body>
