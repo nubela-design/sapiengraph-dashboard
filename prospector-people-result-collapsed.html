@@ -377,50 +377,31 @@
       <div class="row justify-content-center">
         <div class="col-12 main-content-prospector">
 
-            <!-- PEOPLE TAB-->
-              <!-- Header -->
-              <div class="header mt-5">
-                <div>
-        
-                  <div class="row align-items-end d-flex">
-                    <div class="col-7">
-        
-                      <!-- Pretitle -->
-                      <h6 class="header-pretitle">
-                        Prospector
-                      </h6>
-        
-                      <!-- Title -->
-                      <h1 class="header-title">
-                        Person Prospector
-                      </h1>
-        
-                    </div>
-                  </div> <!-- / .row -->
-
-                </div>
-              </div>
-        
               <!-- NAVS-->
-              <div class="col-12 mb-3">
+              <div class="col-12 pt-4 pt-md-4 pb-3 pb-md-4 sticky-top sticky-top-gradient">
                 <div class="card card-body custom-rounded border py-3">
                   <ul class="nav">
                     <li class="nav-item text-left text-md-center">
-                      <a class="nav-link text-muted custom-link" href="prospector-saved-result.html"><i class="neu neu-bookmark"></i> Saved</a>
+                      <a class="nav-link text-muted custom-link" href="prospector-saved-result.html"><i
+                          class="neu neu-bookmark"></i> Saved</a>
                     </li>
                     <li class="nav-item text-left text-md-center">
-                      <a class="nav-link text-success custom-link" href="prospector-people-result-collapsed.html"><i class="neu neu-user-2"></i> People</a>
+                      <a class="nav-link text-success custom-link" href="prospector-people-result.html"><i
+                          class="neu neu-user-2"></i> People</a>
                     </li>
                     <li class="nav-item text-left text-md-center">
-                      <a class="nav-link text-muted custom-link" href="prospector-companies-result-collapsed.html"><i class="neu neu-company"></i> Companies</a>
+                      <a class="nav-link text-muted custom-link" href="prospector-companies-result.html"><i
+                          class="neu neu-company"></i> Companies</a>
                     </li>
                     <li class="nav-item text-left text-md-center">
-                      <a class="nav-link text-muted custom-link" href="prospector-customers-result-collapsed.html"><i class="neu neu-groups"></i> Customers</a>
+                      <a class="nav-link text-muted custom-link" href="prospector-customers-result.html"><i
+                          class="neu neu-groups"></i> Customers</a>
                     </li>
                   </ul>
                 </div>
               </div>
         
+              <!-- PEOPLE TAB-->
               <div class="row">
             
                 <!-- FILTER SM-LG view-->
@@ -781,8 +762,7 @@
                         <a class="btn btn-sm btn-success rounded-pill lift font-weight-bold ms-auto d-none d-lg-block" href="prospector-people-result.html"><i
                             class="fe fe-chevron-right"></i></a>
                       </div>
-                
-                
+                  
                       <!-- OVERVIEW/filter-->
                       <div class="mt-4 text-center">
                         <a class="d-flex align-items-center justify-content-center text-reset text-decoration-none mb-5 custom-link"
@@ -806,26 +786,28 @@
                 </div>
             
                 <!-- RESULT-->
-                <div class="col-12 col-xl-11">
-                  <div class="card card-body custom-rounded bg-white text-left shadow-light border">
+                <div class="col-lg-12 col-xl-11">
+                  <div class="card custom-rounded bg-white text-left shadow-light border" style="position: relative;">
             
-                    <div class="row mb-3">
+                    <div class="row card-body pb-2">
+            
                       <div class="col-12 col-lg-5">
                         <p class=" mt-2"><i class="neu neu-so-structure me-1 text-success"></i>2,345,678 <span
                             class="font-weight-normal text-muted">results found</span></p>
                       </div>
+            
                       <div class="col-12 col-lg-7 d-md-flex justify-content-lg-end mt-4 mt-md-1">
-                        <div
-                          class=" text-muted small text-right me-md-2 mb-3 mb-md-0 mt-n3 d-flex align-items-center">
+                        <div class=" text-muted small text-right me-md-2 mb-3 mb-md-0 mt-n3 d-flex align-items-center">
                           <!-- Added d-flex and align-items-center -->
                           <span class="flex-grow-1">Displaying</span> <!-- Displaying text with flex-grow-1 -->
                           <div class="btn-group ms-3 ms-md-2 w-100"> <!-- Button group -->
                             <button type="button"
                               class="btn btn-sm rounded-pill px-3 btn-outline-secondary dropdown-toggle btn-mobile-full-width"
                               data-bs-toggle="dropdown" aria-expanded="false">
-                              10 results
+                              20 results
                             </button>
                             <div class="dropdown-menu me-3">
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">10 results</a>
                               <a class="dropdown-item nav-link custom-link text-gray-700" href="#">15 results</a>
                               <a class="dropdown-item nav-link custom-link text-gray-700" href="#">20 results</a>
                               <a class="dropdown-item nav-link custom-link text-gray-700" href="#">25 results</a>
@@ -845,25 +827,25 @@
                           </div>
                         </div>
                       </div>
+            
                     </div>
             
-                    <div class="table-responsive">
+                    <div class="table-responsive" style="max-height: 460px;">
                       <table class="table table-sm rounded-table table-hover table-nowrap custom-table">
-                        <thead style="background-color: #F9FAFB;">
+                        <thead class="sticky-thead" style="background-color: #F9FAFB;">
                           <tr class="text-muted small text-uppercase">
                             <th scope="col" class="small custom-control custom-checkbox mt-n1">
                               <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="selectAllCheckbox"
                                 onclick="handleSelectAllCheckbox()">
                               <label class="form-check-label small text-muted" for="selectAllCheckbox"></label>
                             </th>
-                            <th scope="col">Full Name</th>
+                            <th scope="col" class="ps-0">Full Name</th>
                             <th scope="col"></th>
                             <th scope="col">Followers</th>
                             <th scope="col">Company</th>
-                            <th scope="col">Job Title</th>
                             <th scope="col">Phone Number</th>
                             <th scope="col">Personal Email</th>
-                            <th scope="col">Action</th>
+                            <th scope="col" class="sticky-action">Action</th>
                           </tr>
                         </thead>
                         <tbody class="fs-base">
@@ -874,13 +856,12 @@
                                 onclick="handleCheckbox(this)">
                               <label class="form-check-label small text-muted" for="flexRadioDefault1"></label>
                             </td>
-                            <td class="align-middle">
+                            <td class="align-middle ps-0">
                               <div class="d-flex">
                                 <div class="avatar avatar-xs">
-                                  <img class="avatar-img rounded-circle" src="assets/img/photos/bill gates photo.jpeg"
-                                    alt="person picture">
+                                  <img class="avatar-img rounded-circle" src="assets/img/photos/bill gates photo.jpeg" alt="person picture">
                                 </div>
-                                <div class="ms-3">Bill Gates                                 
+                                <div class="ms-3">Bill Gates
                                 </div>
                               </div>
                             </td>
@@ -895,13 +876,12 @@
                                 <div class="avatar avatar-xs">
                                   <img class="img" width="22" height="auto" src="assets/img/logo/Microsoft.svg" alt="company logo">
                                 </div>
-                                <div class="ms-3 ">Microsoft</div>
+                                <div class="ms-3 ">Microsoft, Founder</div>
                               </a>
                             </td>
-                            <td class="align-middle">Founder</td>
                             <td class="align-middle">+1 555 123 1234</td>
                             <td class="align-middle">bill.gates@gatesfoundation.org</td>
-                            <td class="align-middle"> <!-- Add your button here -->
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
                               <small class=""><i class="neu neu-so-tick-circle text-success"></i>
                                 Row unlocked</small>
                             </td>
@@ -913,7 +893,7 @@
                                 onclick="handleCheckbox(this)">
                               <label class="form-check-label small text-muted" for="flexRadioDefault2"></label>
                             </td>
-                            <td class="align-middle">
+                            <td class="align-middle ps-0">
                               <div class="d-flex">
                                 <div class="avatar avatar-xs">
                                   <img class="avatar-img rounded-circle" src="assets/img/photos/bezos.png" alt="person picture">
@@ -931,16 +911,14 @@
                             <td class="align-middle">
                               <a class="d-flex custom-link text-black" href="prospector-companies-detail.html">
                                 <div class="avatar avatar-xs">
-                                  <img class="img" width="22" height="auto" src="assets/img/logo/Amazon logo.jpeg"
-                                    alt="company logo">
+                                  <img class="img" width="22" height="auto" src="assets/img/logo/Amazon logo.jpeg" alt="company logo">
                                 </div>
-                                <div class="ms-3">Amazon</div>
+                                <div class="ms-3">Amazon, CEO</div>
                               </a>
                             </td>
-                            <td class="align-middle">CEO</td>
                             <td class="align-middle">+1 555 123 1234</td>
                             <td class="align-middle">jeff@amazon.com</td>
-                            <td class="align-middle"> <!-- Add your button here -->
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
                               <small class=""><i class="neu neu-so-tick-circle text-success"></i>
                                 Row unlocked</small>
                             </td>
@@ -952,32 +930,29 @@
                                 onclick="handleCheckbox(this)">
                               <label class="form-check-label small text-muted" for="flexRadioDefault3"></label>
                             </td>
-                            <td class="align-middle">
+                            <td class="align-middle ps-0">
                               <div class="d-flex">
                                 <div class="avatar avatar-xs">
-                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-2.jpg"
-                                    alt="person picture">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-2.jpg" alt="person picture">
                                 </div>
                                 <div class="ms-3">D**** K***</div>
                               </div>
                             </td>
                             <td>
-
+                        
                             </td>
                             <td class="align-middle">567,891</td>
                             <td class="align-middle">
                               <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
                                 <div class="avatar avatar-xs">
-                                  <img class="img mt-2" width="22" height="auto" src="assets/img/logo/IBM logo.svg"
-                                    alt="company logo">
+                                  <img class="img mt-2" width="22" height="auto" src="assets/img/logo/IBM logo.svg" alt="company logo">
                                 </div>
-                                <div class="ms-3">***</div>
+                                <div class="ms-3">***, Software Engineer</div>
                               </a>
                             </td>
-                            <td class="align-middle">Software Engineer</td>
                             <td class="align-middle">** *** *** ****</td>
                             <td class="align-middle">*****************</td>
-                            <td class="align-middle"> <!-- Add your button here -->
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
                               <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
                                 Unlock
                                 this
@@ -991,11 +966,10 @@
                                 onclick="handleCheckbox(this)">
                               <label class="form-check-label small text-muted" for="flexRadioDefault4"></label>
                             </td>
-                            <td class="align-middle">
+                            <td class="align-middle ps-0">
                               <div class="d-flex">
                                 <div class="avatar avatar-xs">
-                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-5.jpg"
-                                    alt="person picture">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-5.jpg" alt="person picture">
                                 </div>
                                 <div class="ms-3">Kokoro Rose</div>
                               </div>
@@ -1010,13 +984,12 @@
                                 <div class="avatar avatar-xs">
                                   <img class="img" width="22" height="auto" src="assets/img/logo/netflix.jpeg" alt="company logo">
                                 </div>
-                                <div class="ms-3">Netflix</div>
+                                <div class="ms-3">Netflix, Marketing Specialist</div>
                               </a>
                             </td>
-                            <td class="align-middle">Marketing Specialist</td>
                             <td class="align-middle">None found</td>
                             <td class="align-middle">kokorose@netflix.com</td>
-                            <td class="align-middle"> <!-- Add your button here -->
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
                               <small class=""><i class="neu neu-so-tick-circle text-success"></i>
                                 Row unlocked</small>
                             </td>
@@ -1028,31 +1001,28 @@
                                 onclick="handleCheckbox(this)">
                               <label class="form-check-label small text-muted" for="flexRadioDefault5"></label>
                             </td>
-                            <td class="align-middle">
+                            <td class="align-middle ps-0">
                               <div class="d-flex">
                                 <div class="avatar avatar-xs">
-                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-3.jpg"
-                                    alt="person picture">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-3.jpg" alt="person picture">
                                 </div>
                                 <div class="ms-3">K**** P***</div>
                               </div>
                             </td>
                             <td>
-
+                        
                             </td>
                             <td class="align-middle">891,234</td>
                             <td class="align-middle">
                               <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
                                 <div class="avatar avatar-xs">
-                                  <img class="img" width="22" height="auto" src="assets/img/logo/Google-logoicon.svg"
-                                    alt="company logo">
+                                  <img class="img" width="22" height="auto" src="assets/img/logo/Google-logoicon.svg" alt="company logo">
                                 </div>
-                                <div class="ms-3">******</div>
+                                <div class="ms-3">******, CTO</div>
                             </td>
-                            <td class="align-middle">CTO</td>
                             <td class="align-middle">** *** *** ****</td>
                             <td class="align-middle">None found</td>
-                            <td class="align-middle"> <!-- Add your button here -->
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
                               <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
                                 Unlock
                                 this
@@ -1066,31 +1036,28 @@
                                 onclick="handleCheckbox(this)">
                               <label class="form-check-label small text-muted" for="flexRadioDefault6"></label>
                             </td>
-                            <td class="align-middle">
+                            <td class="align-middle ps-0">
                               <div class="d-flex">
                                 <div class="avatar avatar-xs">
-                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-4.jpg"
-                                    alt="person picture">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-4.jpg" alt="person picture">
                                 </div>
                                 <div class="ms-3">J*** M***</div>
                               </div>
                             </td>
                             <td>
-                              
+                        
                             </td>
                             <td class="align-middle">2,345,678</td>
                             <td class="align-middle">
                               <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
                                 <div class="avatar avatar-xs">
-                                  <img class="img" width="22" height="auto" src="assets/img/logo/Spotify logo.svg"
-                                    alt="company logo">
+                                  <img class="img" width="22" height="auto" src="assets/img/logo/Spotify logo.svg" alt="company logo">
                                 </div>
-                                <div class="ms-3">*******</div>
+                                <div class="ms-3">*******, CEO</div>
                             </td>
-                            <td class="align-middle">CEO</td>
                             <td class="align-middle">** *** *** ****</td>
                             <td class="align-middle">*************</td>
-                            <td class="align-middle"> <!-- Add your button here -->
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
                               <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
                                 Unlock
                                 this
@@ -1104,17 +1071,16 @@
                                 onclick="handleCheckbox(this)">
                               <label class="form-check-label small text-muted" for="flexRadioDefault7"></label>
                             </td>
-                            <td class="align-middle">
+                            <td class="align-middle ps-0">
                               <div class="d-flex">
                                 <div class="avatar avatar-xs">
-                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-6.jpg"
-                                    alt="person picture">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-6.jpg" alt="person picture">
                                 </div>
                                 <div class="ms-3">A*** R**</div>
                               </div>
                             </td>
                             <td>
-                              
+                        
                             </td>
                             <td class="align-middle">912,345</td>
                             <td class="align-middle">
@@ -1122,12 +1088,11 @@
                                 <div class="avatar avatar-xs">
                                   <img class="img" width="22" height="auto" src="assets/img/logo/Apple 14.svg" alt="company logo">
                                 </div>
-                                <div class="ms-3">*****</div>
+                                <div class="ms-3">*****, Senior Designer</div>
                             </td>
-                            <td class="align-middle">Senior Designer</td>
                             <td class="align-middle">None found</td>
                             <td class="align-middle">**************</td>
-                            <td class="align-middle"> <!-- Add your button here -->
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
                               <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
                                 Unlock
                                 this
@@ -1141,31 +1106,29 @@
                                 onclick="handleCheckbox(this)">
                               <label class="form-check-label small text-muted" for="flexRadioDefault8"></label>
                             </td>
-                            <td class="align-middle">
+                            <td class="align-middle ps-0">
                               <div class="d-flex">
                                 <div class="avatar avatar-xs">
-                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-8.jpg"
-                                    alt="person picture">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-8.jpg" alt="person picture">
                                 </div>
                                 <div class="ms-3">M*** J***</div>
                               </div>
                             </td>
                             <td>
-                              
+                        
                             </td>
                             <td class="align-middle">678,910</td>
                             <td class="align-middle">
                               <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
                                 <div class="avatar avatar-xs">
-                                  <img class="img mt-2" width="22" height="auto" src="assets/img/logo/IBM logo.svg"
-                                    alt="company logo">
+                                  <img class="img mt-2" width="22" height="auto" src="assets/img/logo/IBM logo.svg" alt="company logo">
                                 </div>
-                                <div class="ms-3">***</div>
+                                <div class="ms-3">***, Marketing Specialist</div>
+                              </a>
                             </td>
-                            <td class="align-middle">Marketing Specialist</td>
                             <td class="align-middle">** *** *** ****</td>
                             <td class="align-middle">*****************</td>
-                            <td class="align-middle"> <!-- Add your button here -->
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
                               <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
                                 Unlock
                                 this
@@ -1179,17 +1142,16 @@
                                 onclick="handleCheckbox(this)">
                               <label class="form-check-label small text-muted" for="flexRadioDefault9"></label>
                             </td>
-                            <td class="align-middle">
+                            <td class="align-middle ps-0">
                               <div class="d-flex">
                                 <div class="avatar avatar-xs">
-                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg"
-                                    alt="person picture">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="person picture">
                                 </div>
                                 <div class="ms-3">S**** G****</div>
                               </div>
                             </td>
                             <td>
-                              
+                        
                             </td>
                             <td class="align-middle">4,567,891</td>
                             <td class="align-middle">
@@ -1197,12 +1159,11 @@
                                 <div class="avatar avatar-xs">
                                   <img class="img" width="22" height="auto" src="assets/img/logo/Air.svg" alt="company logo">
                                 </div>
-                                <div class="ms-3">*******</div>
+                                <div class="ms-3">*******, Strategic Partner</div>
                             </td>
-                            <td class="align-middle">Strategic Partner</td>
                             <td class="align-middle">None found</td>
                             <td class="align-middle">***********</td>
-                            <td class="align-middle"> <!-- Add your button here -->
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
                               <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
                                 Unlock
                                 this
@@ -1216,31 +1177,384 @@
                                 onclick="handleCheckbox(this)">
                               <label class="form-check-label small text-muted" for="flexRadioDefault10"></label>
                             </td>
-                            <td class="align-middle">
+                            <td class="align-middle ps-0">
                               <div class="d-flex">
                                 <div class="avatar avatar-xs">
-                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-7.jpg"
-                                    alt="person picture">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-7.jpg" alt="person picture">
                                 </div>
                                 <div class="ms-3">J*** D**</div>
                               </div>
                             </td>
                             <td>
-                              
+                        
                             </td>
                             <td class="align-middle">891,234</td>
                             <td class="align-middle">
                               <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
                                 <div class="avatar avatar-xs">
-                                  <img class="img" width="22" height="auto" src="assets/img/logo/Google-logoicon.svg"
-                                    alt="company logo">
+                                  <img class="img" width="22" height="auto" src="assets/img/logo/Google-logoicon.svg" alt="company logo">
                                 </div>
-                                <div class="ms-3">******</div>
+                                <div class="ms-3">******, Senior Software Engineer</div>
                             </td>
-                            <td class="align-middle">Senior Software Engineer</td>
                             <td class="align-middle">** *** *** ****</td>
                             <td class="align-middle">None found</td>
-                            <td class="align-middle"> <!-- Add your button here -->
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
+                              <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
+                                Unlock
+                                this
+                                row</button>
+                            </td>
+                          </tr>
+                          <!-- 11 -->
+                          <tr class="align-middle">
+                            <td class="custom-control custom-checkbox" style="border-bottom: 0 !important;">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1" checked
+                                onclick="handleCheckbox(this)">
+                              <label class="form-check-label small text-muted" for="flexRadioDefault1"></label>
+                            </td>
+                            <td class="align-middle ps-0">
+                              <div class="d-flex">
+                                <div class="avatar avatar-xs">
+                                  <img class="avatar-img rounded-circle" src="assets/img/photos/bill gates photo.jpeg" alt="person picture">
+                                </div>
+                                <div class="ms-3">Bill Gates
+                                </div>
+                              </div>
+                            </td>
+                            <td class="align-middle">
+                              <a class="custom-link text-muted" href="#!"><i class="neu neu-br-linkedin ms-n3"></i></a>
+                              <a class="custom-link text-muted" href="#!"><i class="neu neu-br-twitter ms-n1"></i></a>
+                              <a class="custom-link text-muted" href="#!"><i class="neu neu-br-fb-sq ms-n1"></i></a>
+                            </td>
+                            <td class="align-middle">12,345,678</td>
+                            <td class="align-middle">
+                              <a class="d-flex custom-link text-black" href="prospector-companies-detail.html">
+                                <div class="avatar avatar-xs">
+                                  <img class="img" width="22" height="auto" src="assets/img/logo/Microsoft.svg" alt="company logo">
+                                </div>
+                                <div class="ms-3 ">Microsoft, Founder</div>
+                              </a>
+                            </td>
+                            <td class="align-middle">+1 555 123 1234</td>
+                            <td class="align-middle">bill.gates@gatesfoundation.org</td>
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
+                              <small class=""><i class="neu neu-so-tick-circle text-success"></i>
+                                Row unlocked</small>
+                            </td>
+                          </tr>
+                          <!-- 12 -->
+                          <tr class="align-middle">
+                            <td class="custom-control custom-checkbox" style="border-bottom: 0 !important;">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" checked
+                                onclick="handleCheckbox(this)">
+                              <label class="form-check-label small text-muted" for="flexRadioDefault2"></label>
+                            </td>
+                            <td class="align-middle ps-0">
+                              <div class="d-flex">
+                                <div class="avatar avatar-xs">
+                                  <img class="avatar-img rounded-circle" src="assets/img/photos/bezos.png" alt="person picture">
+                                </div>
+                                <div class="ms-3">Jeff Bezos
+                                </div>
+                              </div>
+                            </td>
+                            <td class="align-middle">
+                              <a class="custom-link text-muted" href="#!"><i class="neu neu-br-linkedin ms-n3"></i></a>
+                              <a class="custom-link text-muted" href="#!"><i class="neu neu-br-twitter ms-n1"></i></a>
+                              <a class="custom-link text-muted" href="#!"><i class="neu neu-br-fb-sq ms-n1"></i></a>
+                            </td>
+                            <td class="align-middle">8,912,345</td>
+                            <td class="align-middle">
+                              <a class="d-flex custom-link text-black" href="prospector-companies-detail.html">
+                                <div class="avatar avatar-xs">
+                                  <img class="img" width="22" height="auto" src="assets/img/logo/Amazon logo.jpeg" alt="company logo">
+                                </div>
+                                <div class="ms-3">Amazon, CEO</div>
+                              </a>
+                            </td>
+                            <td class="align-middle">+1 555 123 1234</td>
+                            <td class="align-middle">jeff@amazon.com</td>
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
+                              <small class=""><i class="neu neu-so-tick-circle text-success"></i>
+                                Row unlocked</small>
+                            </td>
+                          </tr>
+                          <!-- 13 -->
+                          <tr class="align-middle">
+                            <td class="custom-control custom-checkbox" style="border-bottom: 0 !important;">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault3"
+                                onclick="handleCheckbox(this)">
+                              <label class="form-check-label small text-muted" for="flexRadioDefault3"></label>
+                            </td>
+                            <td class="align-middle ps-0">
+                              <div class="d-flex">
+                                <div class="avatar avatar-xs">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-2.jpg" alt="person picture">
+                                </div>
+                                <div class="ms-3">D**** K***</div>
+                              </div>
+                            </td>
+                            <td>
+                        
+                            </td>
+                            <td class="align-middle">567,891</td>
+                            <td class="align-middle">
+                              <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
+                                <div class="avatar avatar-xs">
+                                  <img class="img mt-2" width="22" height="auto" src="assets/img/logo/IBM logo.svg" alt="company logo">
+                                </div>
+                                <div class="ms-3">***, Software Engineer</div>
+                              </a>
+                            </td>
+                            <td class="align-middle">** *** *** ****</td>
+                            <td class="align-middle">*****************</td>
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
+                              <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
+                                Unlock
+                                this
+                                row</button>
+                            </td>
+                          </tr>
+                          <!-- 14 -->
+                          <tr class="align-middle">
+                            <td class="custom-control custom-checkbox" style="border-bottom: 0 !important;">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault4" checked
+                                onclick="handleCheckbox(this)">
+                              <label class="form-check-label small text-muted" for="flexRadioDefault4"></label>
+                            </td>
+                            <td class="align-middle ps-0">
+                              <div class="d-flex">
+                                <div class="avatar avatar-xs">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-5.jpg" alt="person picture">
+                                </div>
+                                <div class="ms-3">Kokoro Rose</div>
+                              </div>
+                            </td>
+                            <td class="align-middle">
+                              <a class="custom-link text-muted" href="#!"><i class="neu neu-br-linkedin ms-n3"></i></a>
+                              <a class="custom-link text-muted" href="#!"><i class="neu neu-br-twitter ms-n1"></i></a>
+                            </td>
+                            <td class="align-middle">4,567,891</td>
+                            <td class="align-middle">
+                              <a class="d-flex custom-link text-black" href="#!">
+                                <div class="avatar avatar-xs">
+                                  <img class="img" width="22" height="auto" src="assets/img/logo/netflix.jpeg" alt="company logo">
+                                </div>
+                                <div class="ms-3">Netflix, Marketing Specialist</div>
+                              </a>
+                            </td>
+                            <td class="align-middle">None found</td>
+                            <td class="align-middle">kokorose@netflix.com</td>
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
+                              <small class=""><i class="neu neu-so-tick-circle text-success"></i>
+                                Row unlocked</small>
+                            </td>
+                          </tr>
+                          <!-- 15 -->
+                          <tr class="align-middle">
+                            <td class="custom-control custom-checkbox" style="border-bottom: 0 !important;">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault5"
+                                onclick="handleCheckbox(this)">
+                              <label class="form-check-label small text-muted" for="flexRadioDefault5"></label>
+                            </td>
+                            <td class="align-middle ps-0">
+                              <div class="d-flex">
+                                <div class="avatar avatar-xs">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-3.jpg" alt="person picture">
+                                </div>
+                                <div class="ms-3">K**** P***</div>
+                              </div>
+                            </td>
+                            <td>
+                        
+                            </td>
+                            <td class="align-middle">891,234</td>
+                            <td class="align-middle">
+                              <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
+                                <div class="avatar avatar-xs">
+                                  <img class="img" width="22" height="auto" src="assets/img/logo/Google-logoicon.svg" alt="company logo">
+                                </div>
+                                <div class="ms-3">******, CTO</div>
+                            </td>
+                            <td class="align-middle">** *** *** ****</td>
+                            <td class="align-middle">None found</td>
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
+                              <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
+                                Unlock
+                                this
+                                row</button>
+                            </td>
+                          </tr>
+                          <!-- 16 -->
+                          <tr class="align-middle">
+                            <td class="custom-control custom-checkbox" style="border-bottom: 0 !important;">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault6"
+                                onclick="handleCheckbox(this)">
+                              <label class="form-check-label small text-muted" for="flexRadioDefault6"></label>
+                            </td>
+                            <td class="align-middle ps-0">
+                              <div class="d-flex">
+                                <div class="avatar avatar-xs">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-4.jpg" alt="person picture">
+                                </div>
+                                <div class="ms-3">J*** M***</div>
+                              </div>
+                            </td>
+                            <td>
+                        
+                            </td>
+                            <td class="align-middle">2,345,678</td>
+                            <td class="align-middle">
+                              <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
+                                <div class="avatar avatar-xs">
+                                  <img class="img" width="22" height="auto" src="assets/img/logo/Spotify logo.svg" alt="company logo">
+                                </div>
+                                <div class="ms-3">*******, CEO</div>
+                            </td>
+                            <td class="align-middle">** *** *** ****</td>
+                            <td class="align-middle">*************</td>
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
+                              <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
+                                Unlock
+                                this
+                                row</button>
+                            </td>
+                          </tr>
+                          <!-- 17 -->
+                          <tr class="align-middle">
+                            <td class="custom-control custom-checkbox" style="border-bottom: 0 !important;">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault7"
+                                onclick="handleCheckbox(this)">
+                              <label class="form-check-label small text-muted" for="flexRadioDefault7"></label>
+                            </td>
+                            <td class="align-middle ps-0">
+                              <div class="d-flex">
+                                <div class="avatar avatar-xs">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-6.jpg" alt="person picture">
+                                </div>
+                                <div class="ms-3">A*** R**</div>
+                              </div>
+                            </td>
+                            <td>
+                        
+                            </td>
+                            <td class="align-middle">912,345</td>
+                            <td class="align-middle">
+                              <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
+                                <div class="avatar avatar-xs">
+                                  <img class="img" width="22" height="auto" src="assets/img/logo/Apple 14.svg" alt="company logo">
+                                </div>
+                                <div class="ms-3">*****, Senior Designer</div>
+                            </td>
+                            <td class="align-middle">None found</td>
+                            <td class="align-middle">**************</td>
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
+                              <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
+                                Unlock
+                                this
+                                row</button>
+                            </td>
+                          </tr>
+                          <!-- 18 -->
+                          <tr class="align-middle">
+                            <td class="custom-control custom-checkbox" style="border-bottom: 0 !important;">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault8"
+                                onclick="handleCheckbox(this)">
+                              <label class="form-check-label small text-muted" for="flexRadioDefault8"></label>
+                            </td>
+                            <td class="align-middle ps-0">
+                              <div class="d-flex">
+                                <div class="avatar avatar-xs">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-8.jpg" alt="person picture">
+                                </div>
+                                <div class="ms-3">M*** J***</div>
+                              </div>
+                            </td>
+                            <td>
+                        
+                            </td>
+                            <td class="align-middle">678,910</td>
+                            <td class="align-middle">
+                              <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
+                                <div class="avatar avatar-xs">
+                                  <img class="img mt-2" width="22" height="auto" src="assets/img/logo/IBM logo.svg" alt="company logo">
+                                </div>
+                                <div class="ms-3">***, Marketing Specialist</div>
+                              </a>
+                            </td>
+                            <td class="align-middle">** *** *** ****</td>
+                            <td class="align-middle">*****************</td>
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
+                              <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
+                                Unlock
+                                this
+                                row</button>
+                            </td>
+                          </tr>
+                          <!-- 19 -->
+                          <tr class="align-middle">
+                            <td class="custom-control custom-checkbox" style="border-bottom: 0 !important;">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault9"
+                                onclick="handleCheckbox(this)">
+                              <label class="form-check-label small text-muted" for="flexRadioDefault9"></label>
+                            </td>
+                            <td class="align-middle ps-0">
+                              <div class="d-flex">
+                                <div class="avatar avatar-xs">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="person picture">
+                                </div>
+                                <div class="ms-3">S**** G****</div>
+                              </div>
+                            </td>
+                            <td>
+                        
+                            </td>
+                            <td class="align-middle">4,567,891</td>
+                            <td class="align-middle">
+                              <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
+                                <div class="avatar avatar-xs">
+                                  <img class="img" width="22" height="auto" src="assets/img/logo/Air.svg" alt="company logo">
+                                </div>
+                                <div class="ms-3">*******, Strategic Partner</div>
+                            </td>
+                            <td class="align-middle">None found</td>
+                            <td class="align-middle">***********</td>
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
+                              <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
+                                Unlock
+                                this
+                                row</button>
+                            </td>
+                          </tr>
+                          <!-- 20 -->
+                          <tr class="align-middle">
+                            <td class="custom-control custom-checkbox" style="border-bottom: 0 !important;">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault10"
+                                onclick="handleCheckbox(this)">
+                              <label class="form-check-label small text-muted" for="flexRadioDefault10"></label>
+                            </td>
+                            <td class="align-middle ps-0">
+                              <div class="d-flex">
+                                <div class="avatar avatar-xs">
+                                  <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-7.jpg" alt="person picture">
+                                </div>
+                                <div class="ms-3">J*** D**</div>
+                              </div>
+                            </td>
+                            <td>
+                        
+                            </td>
+                            <td class="align-middle">891,234</td>
+                            <td class="align-middle">
+                              <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
+                                <div class="avatar avatar-xs">
+                                  <img class="img" width="22" height="auto" src="assets/img/logo/Google-logoicon.svg" alt="company logo">
+                                </div>
+                                <div class="ms-3">******, Senior Software Engineer</div>
+                            </td>
+                            <td class="align-middle">** *** *** ****</td>
+                            <td class="align-middle">None found</td>
+                            <td class="align-middle sticky-action"> <!-- Add your button here -->
                               <button class="btn btn-sm rounded-pill btn-outline-success"><i class="neu neu-so-lock-square"></i>
                                 Unlock
                                 this
@@ -1251,24 +1565,29 @@
                       </table>
                     </div>
             
-                    <div class="row border-top pt-4">
+                    <div class="row card-body border-top pt-4">
                       <div class="col-12 col-md-12 col-lg-12 mb-4 d-lg-flex justify-content-md-center border-bottom pb-4">
-                      <!---->
-                      <button class="btn btn-success btn rounded-pill me-3 mb-3 mb-lg-0 lift d-none d-lg-block text-nowrap"
-                        data-bs-toggle="modal" data-bs-target="#modalUnlockAllResults"><i class="neu neu-so-lock-square"></i> Unlock all
-                        results</button>
-                      <!-- Mobile-->
-                      <button class="btn btn-success w-100 rounded-pill btn-pill me-3 mb-3 mb-lg-0 lift d-lg-none" data-bs-toggle="modal"
-                        data-bs-target="#modalUnlockAllResults"><i class="neu neu-so-lock-square"></i> Unlock all
-                        results</button>
-                      <!---->
-                      <button class="btn btn-outline-success btn rounded-pill lift me-3 mb-3 mb-lg-0 d-none d-lg-block text-nowrap"
-                        data-bs-toggle="modal" data-bs-target="#modalUnlockThisPage"><i class="neu neu-document-ui"></i> Unlock this
-                        page</button>
-                      <!-- Mobile-->
-                      <button class="btn btn-outline-success w-100 rounded-pill btn-pill lift me-3 mb-3 mb-lg-0 d-lg-none"
-                        data-bs-toggle="modal" data-bs-target="#modalUnlockThisPage"><i class="neu neu-document-ui"></i> Unlock this
-                        page</button>
+                        <!---->
+                        <button class="btn btn-success btn rounded-pill me-3 mb-3 mb-lg-0 lift d-none d-lg-block text-nowrap"
+                          data-bs-toggle="modal" data-bs-target="#modalUnlockAllResults"><i class="neu neu-so-lock-square"></i>
+                          Unlock all
+                          results</button>
+                        <!-- Mobile-->
+                        <button class="btn btn-success w-100 rounded-pill btn-pill me-3 mb-3 mb-lg-0 lift d-lg-none"
+                          data-bs-toggle="modal" data-bs-target="#modalUnlockAllResults"><i class="neu neu-so-lock-square"></i>
+                          Unlock all
+                          results</button>
+                        <!---->
+                        <button
+                          class="btn btn-outline-success btn rounded-pill lift me-3 mb-3 mb-lg-0 d-none d-lg-block text-nowrap"
+                          data-bs-toggle="modal" data-bs-target="#modalUnlockThisPage"><i class="neu neu-document-ui"></i> Unlock
+                          this
+                          page</button>
+                        <!-- Mobile-->
+                        <button class="btn btn-outline-success w-100 rounded-pill btn-pill lift me-3 mb-3 mb-lg-0 d-lg-none"
+                          data-bs-toggle="modal" data-bs-target="#modalUnlockThisPage"><i class="neu neu-document-ui"></i> Unlock
+                          this
+                          page</button>
                         <!---->
                         <button class="btn btn-outline-success btn rounded-pill lift mb-3 mb-lg-0 d-none d-lg-block text-nowrap"><i
                             class="neu neu-todo-done"></i> Unlock 3 selected rows</button>
@@ -1276,6 +1595,7 @@
                         <button class="btn btn-outline-success w-100 rounded-pill btn-block btn-pill lift mb-3 mb-lg-0 d-lg-none"><i
                             class="neu neu-todo-done"></i> Unlock 3 selected rows</button>
                       </div>
+            
                       <div class="col-12 col-lg-12 col-xl-12">
                         <nav aria-label="pagination">
                           <ul class="pagination pagination justify-content-center mb-0">
@@ -1294,6 +1614,7 @@
                           </ul>
                         </nav>
                       </div>
+            
                     </div>
             
                   </div>
@@ -1302,7 +1623,6 @@
             
               </div><!-- PEOPLE TAB-->
         
-              <br>
         </div>
       </div> <!-- / .row -->
     </div>

@@ -270,32 +270,10 @@
         <div class="col-12 main-content-prospector">
 
           <!-- PEOPLE TAB-->
-          <!-- Header -->
-          <div class="header mt-5">
-            <div>
-
-              <div class="row align-items-end d-flex">
-                <div class="col-7">
-
-                  <!-- Pretitle -->
-                  <h6 class="header-pretitle">
-                    Prospector
-                  </h6>
-
-                  <!-- Title -->
-                  <h1 class="header-title">
-                    Person Prospector
-                  </h1>
-
-                </div>
-              </div> <!-- / .row -->
-
-            </div>
-          </div>
 
           <!-- NAVS-->
-          <div class="col-12 mb-3">
-            <div class="card card-body custom-rounded border py-3">
+          <div class="col-12 pt-4 pt-md-4 pb-3 pb-md-4 sticky-top sticky-top-gradient">
+            <div class="card card-body custom-rounded border py-3 mb-0">
               <ul class="nav">
                 <li class="nav-item text-left text-md-center">
                   <a class="nav-link text-muted custom-link" href="prospector-saved-result.html"><i
@@ -331,15 +309,15 @@
                   <a class="btn btn-outline-success rounded-pill btn-sm  h3 ms-4" href="prospector.html">Reset</a>
                   <a class="btn btn-link text-success rounded-pill btn-sm  h3 ms-n1" href="#!"><i
                       class="neu neu-so-save d-none d-md-inline-block"></i> Save search</a>
-
+        
                   <a class="btn btn-sm btn-success rounded-pill lift  ms-auto d-none d-xl-block mt-n3"
                     href="prospector-people-result-collapsed.html"><i class="fe fe-chevron-left"></i></a>
                 </div>
-
+        
                 <!-- OVERVIEW/filter-->
-                <div class="">
+                <div class="scrollable-div">
                   <div class="card border-0 pb-0 mb-0">
-
+        
                     <!-- FILTER-->
                     <div class="mb-3" id="peopleOverview">
                       <div class="card-body bg-lighter border rounded">
@@ -374,15 +352,13 @@
                             </div>
                             <div class="mb-4">
                               <label for="exampleInputPeople" class="form-label ">School Name</label>
-                              <input type="text" class="form-control form-control-sm"
-                                placeholder="E.g. University of Cambridge" id="exampleInputPeople"
-                                aria-describedby="emailHelp">
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. University of Cambridge"
+                                id="exampleInputPeople" aria-describedby="emailHelp">
                             </div>
                             <div class="mb-4">
                               <label for="exampleInputPeople" class="form-label ">Field Of Study</label>
-                              <input type="text" class="form-control form-control-sm"
-                                placeholder="E.g. Computer Science" id="exampleInputPeople"
-                                aria-describedby="emailHelp">
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. Computer Science"
+                                id="exampleInputPeople" aria-describedby="emailHelp">
                             </div>
                             <div class="mb-4">
                               <label for="exampleInputPeople" class="form-label ">Degree Name</label>
@@ -392,8 +368,8 @@
                             <div class="mb-4">
                               <label for="exampleInputPeople" class="form-label ">School LinkedIn URL</label>
                               <input type="text" class="form-control form-control-sm"
-                                placeholder="www.linkedin.com/school/national-university-of-singapore/"
-                                id="exampleInputPeople" aria-describedby="emailHelp">
+                                placeholder="www.linkedin.com/school/national-university-of-singapore/" id="exampleInputPeople"
+                                aria-describedby="emailHelp">
                             </div>
                             <div class="mb-4">
                               <label for="exampleInputPeople" class="form-label ">Languages</label>
@@ -408,9 +384,8 @@
                             </div>
                             <div class="mb-4">
                               <label for="exampleInputPeople" class="form-label ">City</label>
-                              <input type="text" class="form-control form-control-sm"
-                                placeholder="E.g. Seattle, Los Angeles" id="exampleInputPeople"
-                                aria-describedby="emailHelp">
+                              <input type="text" class="form-control form-control-sm" placeholder="E.g. Seattle, Los Angeles"
+                                id="exampleInputPeople" aria-describedby="emailHelp">
                             </div>
                             <div class="mb-4">
                               <label for="exampleInputPeople" class="form-label ">Headline</label>
@@ -442,21 +417,21 @@
                                 id="exampleInputPeople" aria-describedby="emailHelp">
                             </div>
                             <div class="custom-control custom-checkbox mb-4">
-                              <input class="form-check-input" type="checkbox" name="flexRadioDefault"
-                                id="flexRadioDefault1" checked onclick="handleCheckbox(this)">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1"
+                                checked onclick="handleCheckbox(this)">
                               <label class="form-check-label ms-2" for="flexRadioDefault1"> Has Phone Numbers</label>
                             </div>
                             <div class="custom-control custom-checkbox mb-2">
-                              <input class="form-check-input" type="checkbox" name="flexRadioDefault"
-                                id="flexRadioDefault2" onclick="handleCheckbox(this)">
+                              <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2"
+                                onclick="handleCheckbox(this)">
                               <label class="form-check-label ms-2" for="flexRadioDefault2"> Has Email</label>
                             </div>
                           </form>
                         </div>
-
+        
                       </div>
                     </div>
-
+        
                     <!-- CURRENT EMPLOYMENT FILTER-->
                     <div class="card-body bg-lighter border rounded mb-3">
                       <!-- toggle-->
@@ -473,9 +448,8 @@
                         <form class="pt-4 mt-4 border-top">
                           <div class="mb-4">
                             <label for="exampleInputCompany" class="form-label ">Company Name</label>
-                            <input type="text" class="form-control form-control-sm"
-                              placeholder="E.g. Apple, Amazon, Microsoft" id="exampleInputCompany"
-                              aria-describedby="emailHelp">
+                            <input type="text" class="form-control form-control-sm" placeholder="E.g. Apple, Amazon, Microsoft"
+                              id="exampleInputCompany" aria-describedby="emailHelp">
                             <ul class="list-group suggestions" id="companySuggestions"></ul>
                             <div class="mt-2">
                               <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> IBM <i
@@ -496,9 +470,8 @@
                           </div>
                           <div class="mb-4">
                             <label for="exampleInputPeople" class="form-label ">Job Description</label>
-                            <input type="text" class="form-control form-control-sm"
-                              placeholder="E.g. Technology, Education" id="exampleInputPeople"
-                              aria-describedby="emailHelp">
+                            <input type="text" class="form-control form-control-sm" placeholder="E.g. Technology, Education"
+                              id="exampleInputPeople" aria-describedby="emailHelp">
                           </div>
                           <div class="mb-4">
                             <label for="exampleInputPeople" class="form-label ">Current Role Date</label>
@@ -512,16 +485,14 @@
                           </div>
                           <div class="mb-4">
                             <label for="exampleInputPeople" class="form-label ">Company Description</label>
-                            <input type="text" class="form-control form-control-sm"
-                              placeholder="E.g Technology, Medical Device" id="exampleInputPeople"
-                              aria-describedby="emailHelp">
+                            <input type="text" class="form-control form-control-sm" placeholder="E.g Technology, Medical Device"
+                              id="exampleInputPeople" aria-describedby="emailHelp">
                             <ul class="list-group suggestions" id="companySuggestions"></ul>
                           </div>
                           <div class="mb-4">
                             <label for="exampleInputPeople" class="form-label ">Company Industry</label>
-                            <input type="text" class="form-control form-control-sm"
-                              placeholder="E.g. Higher and Education" id="exampleInputPeople"
-                              aria-describedby="emailHelp">
+                            <input type="text" class="form-control form-control-sm" placeholder="E.g. Higher and Education"
+                              id="exampleInputPeople" aria-describedby="emailHelp">
                           </div>
                           <div class="mb-4">
                             <label for="exampleInputPeople" class="form-label ">Company Type</label>
@@ -531,8 +502,8 @@
                           <div class="mb-4">
                             <label for="exampleInputPeople" class="form-label ">Employee Count</label>
                             <div class="d-flex justify-content-between gap-2">
-                              <input type="text" class="form-control form-control-sm" placeholder="Min"
-                                id="exampleInputPeople" aria-describedby="emailHelp">
+                              <input type="text" class="form-control form-control-sm" placeholder="Min" id="exampleInputPeople"
+                                aria-describedby="emailHelp">
                               <hr style="height: 2px; width: 2%; margin-top: 14px;"> <input type="text"
                                 class="form-control form-control-sm" placeholder="Max" id="exampleInputPeople"
                                 aria-describedby="emailHelp">
@@ -541,8 +512,8 @@
                           <div class="mb-4">
                             <label for="exampleInputPeople" class="form-label ">Follower Count</label>
                             <div class="d-flex justify-content-between gap-2">
-                              <input type="text" class="form-control form-control-sm" placeholder="Min"
-                                id="exampleInputPeople" aria-describedby="emailHelp">
+                              <input type="text" class="form-control form-control-sm" placeholder="Min" id="exampleInputPeople"
+                                aria-describedby="emailHelp">
                               <hr style="height: 2px; width: 2%; margin-top: 14px;"> <input type="text"
                                 class="form-control form-control-sm" placeholder="Max" id="exampleInputPeople"
                                 aria-describedby="emailHelp">
@@ -551,8 +522,8 @@
                           <div class="mb-4">
                             <label for="exampleInputPeople" class="form-label ">Year Founded</label>
                             <div class="d-flex justify-content-between gap-2">
-                              <input type="text" class="form-control form-control-sm" placeholder="Min"
-                                id="exampleInputPeople" aria-describedby="emailHelp">
+                              <input type="text" class="form-control form-control-sm" placeholder="Min" id="exampleInputPeople"
+                                aria-describedby="emailHelp">
                               <hr style="height: 2px; width: 2%; margin-top: 14px;"> <input type="text"
                                 class="form-control form-control-sm" placeholder="Max" id="exampleInputPeople"
                                 aria-describedby="emailHelp">
@@ -571,9 +542,8 @@
                           </div>
                           <div class="mb-4">
                             <label for="exampleInputPeople" class="form-label ">Company City</label>
-                            <input type="text" class="form-control form-control-sm"
-                              placeholder="E.g. Seattle, Los Angeles" id="exampleInputPeople"
-                              aria-describedby="emailHelp">
+                            <input type="text" class="form-control form-control-sm" placeholder="E.g. Seattle, Los Angeles"
+                              id="exampleInputPeople" aria-describedby="emailHelp">
                           </div>
                           <div class="mb-4">
                             <label for="exampleInputPeople" class="form-label ">Funding Amount</label>
@@ -608,20 +578,18 @@
                           </div>
                           <div class="mb-2">
                             <label for="exampleInputPeople" class="form-label ">Company LinkedIn URL</label>
-                            <input type="text" class="form-control form-control-sm"
-                              placeholder="www.linkedin.com/company/apple" id="exampleInputPeople"
-                              aria-describedby="emailHelp">
+                            <input type="text" class="form-control form-control-sm" placeholder="www.linkedin.com/company/apple"
+                              id="exampleInputPeople" aria-describedby="emailHelp">
                           </div>
                         </form>
                       </div>
                     </div>
-
+        
                     <!-- PAST EMPLOYMENT FILTER-->
                     <div class="card-body bg-lighter border rounded">
                       <!-- toggle-->
                       <a class="d-flex align-items-center text-reset text-decoration-none" data-bs-toggle="collapse"
-                        href="#peoplePastEmployment" role="button" aria-expanded="false"
-                        aria-controls="peoplePastEmployment">
+                        href="#peoplePastEmployment" role="button" aria-expanded="false" aria-controls="peoplePastEmployment">
                         <div class="  me-auto"><i class="neu neu-working-bag-3 me-2"></i>Past Employment</div>
                         <!-- chevron-->
                         <span class="collapse-chevron text-muted ms-4 mb-n1">
@@ -632,9 +600,8 @@
                         <form class="pt-4 mt-4 border-top">
                           <div class="mb-4">
                             <label for="exampleInputCompany2" class="form-label ">Past Company</label>
-                            <input type="text" class="form-control form-control-sm"
-                              placeholder="E.g. Google, IBM, Twitter" id="exampleInputCompany2"
-                              aria-describedby="emailHelp">
+                            <input type="text" class="form-control form-control-sm" placeholder="E.g. Google, IBM, Twitter"
+                              id="exampleInputCompany2" aria-describedby="emailHelp">
                             <ul class="list-group suggestions" id="companySuggestions2"></ul>
                             <div class="mt-2">
                               <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Apple <i
@@ -663,32 +630,31 @@
                           </div>
                           <div class="mb-4">
                             <label for="exampleInputPeople" class="form-label ">Past Job Description</label>
-                            <input type="text" class="form-control form-control-sm"
-                              placeholder="E.g. Technology, Education" id="exampleInputPeople"
-                              aria-describedby="emailHelp">
+                            <input type="text" class="form-control form-control-sm" placeholder="E.g. Technology, Education"
+                              id="exampleInputPeople" aria-describedby="emailHelp">
                           </div>
                           <div class="mb-2">
                             <label for="exampleInputCompany" class="form-label ">Past Company LinkedIn URL</label>
-                            <input type="text" class="form-control form-control-sm"
-                              placeholder="www.linkedin.com/company/apple" id="exampleInputCompany"
-                              aria-describedby="emailHelp">
+                            <input type="text" class="form-control form-control-sm" placeholder="www.linkedin.com/company/apple"
+                              id="exampleInputCompany" aria-describedby="emailHelp">
                           </div>
                         </form>
                       </div>
                     </div>
-
+        
                   </div>
                 </div>
-
-                <div class="btn btn-outline-success rounded-pill btn-block lift mt-4"><i class="neu neu-search"></i>
-                  Search criteria</div>
+        
+                <div class="btn btn-success rounded-pill btn-block lift mt-4"><i class="neu neu-search"></i>
+                  Search criteria
+                </div>
               </div>
             </div>
 
             <!-- RESULT-->
             <div class="col-12 col-xl-8">
-              <div class="card custom-rounded bg-white text-center pb-lg-5 pt-lg-5">
-                <div class="card-body">
+              <div class="card custom-rounded bg-white text-center pb-lg-3 mb-0">
+                <div class="card-body py-md-5 pb-md-4 pb-xl-8 pt-md-4 pt-xl-7" style="max-height: 698px;"">
                   <div class="row justify-content-center">
                     <div class="col-12 col-md-11 col-lg-6 ">
                       <img class="img-fluid mt-md-4 mb-3 mb-xl-4" alt="Prospector search illustration"

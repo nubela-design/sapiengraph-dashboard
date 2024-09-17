@@ -5,7 +5,6 @@
 }
 
 /* Aji - 13 sep 2024 */
-
 .sticky-thead {
   position: sticky; 
   top: 0; 
@@ -14,8 +13,7 @@
 }
 
 .sticky-thead th {
-border-top: none;
-
+  border-top: none;
 }
 
 
