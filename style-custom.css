@@ -18,6 +18,32 @@ tr:hover td.sticky-left {
   background-color: #f8f9fa !important; /* Match hover color of sticky-action */
 }
 
+/* Aji - 18 sep 2024 */
+.sticky-checkbox {
+  position: sticky;
+  left: 0;
+  background-color: #fff;
+  z-index: 3;
+}
+
+td.sticky-checkbox {
+  background-color: #fff; /* Default background color is white */
+}
+
+tr:hover td.sticky-checkbox {
+  background-color: #f8f9fa; /* Bootstrap's default table hover color on hover */
+}
+
+.max-height-table {
+  max-height: 65.7vh;
+}
+
+@media (min-width: 1440px) and (max-width: 1620px) {
+  .max-height-table {
+    max-height: 69.3vh !important;
+  }   
+}
+
 /* Aji - 16 sep 2024 */
 .sticky-top-gradient {
   background: linear-gradient(to bottom, rgba(249, 251, 253, 1) 80%, rgba(249, 251, 253, 0) 100%) !important;
@@ -289,8 +315,14 @@ td,th {
 /* FOR SEARCH AUTOCOMPLETE */
 
 .scrollable-div {
-  max-height: 540px; /* Adjust the height as needed */
+  max-height: 65.3vh; /* Adjust the height as needed */
   overflow-y: auto;
+}
+
+@media (min-width: 1440px) and (max-width: 1620px) {
+  .scrollable-div {
+    max-height: 69vh !important;
+  }   
 }
 
 .rotate-90deg {
