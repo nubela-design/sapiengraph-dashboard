@@ -1,3 +1,23 @@
+/* Roy - 18 sep 2024 */
+.sticky-left {
+  position: sticky;
+  left: 0;
+  z-index: 1; /* Ensure it stays above other elements */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.sticky-left-color {
+  background-color: white !important; /* Ensure background is white */
+}
+
+.sticky-left + .sticky-left {
+  left: 50px; /* Adjust this value based on the width of the first sticky column */
+}
+
+tr:hover td.sticky-left {
+  background-color: #f8f9fa !important; /* Match hover color of sticky-action */
+}
+
 /* Aji - 16 sep 2024 */
 .sticky-top-gradient {
   background: linear-gradient(to bottom, rgba(249, 251, 253, 1) 80%, rgba(249, 251, 253, 0) 100%) !important;
