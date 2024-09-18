@@ -44,6 +44,16 @@ tr:hover td.sticky-checkbox {
   }   
 }
 
+@media (min-width: 1024px) {
+  .sticky-bottom-action {
+    position: sticky;
+    bottom: 0;
+    z-index: 999;
+    background-color: #fff;
+    border-radius: 0px 0px 8px 8px;
+  }
+}
+
 /* Aji - 16 sep 2024 */
 .sticky-top-gradient {
   background: linear-gradient(to bottom, rgba(249, 251, 253, 1) 80%, rgba(249, 251, 253, 0) 100%) !important;
