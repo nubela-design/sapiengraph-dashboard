@@ -1,22 +1,25 @@
 /* Roy - 18 sep 2024 */
-.sticky-left {
-  position: sticky;
-  left: 0;
-  z-index: 1; /* Ensure it stays above other elements */
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+@media (min-width: 992px) {
+  .sticky-left {
+    position: sticky;
+    left: 0;
+    z-index: 1; /* Ensure it stays above other elements */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  }
+
+  .sticky-left-color {
+    background-color: white !important; /* Ensure background is white */
+  }
+
+  .sticky-left + .sticky-left {
+    left: 50px; /* Adjust this value based on the width of the first sticky column */
+  }
+
+  tr:hover td.sticky-left {
+    background-color: #f8f9fa !important; /* Match hover color of sticky-action */
+  }
 }
 
-.sticky-left-color {
-  background-color: white !important; /* Ensure background is white */
-}
-
-.sticky-left + .sticky-left {
-  left: 50px; /* Adjust this value based on the width of the first sticky column */
-}
-
-tr:hover td.sticky-left {
-  background-color: #f8f9fa !important; /* Match hover color of sticky-action */
-}
 
 /* Aji - 18 sep 2024 */
 .sticky-checkbox {
@@ -349,4 +352,21 @@ td,th {
 }
 .border-success-soft-2 {
   border: 1px solid #ccf7e5 !important;
+}
+
+@media (min-width: 992px) {
+  .sticky-left {
+    position: sticky;
+    left: 0;
+    z-index: 1; /* Ensure it stays above other elements */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  }
+
+  .sticky-left-color {
+    background-color: white !important; /* Ensure background is white */
+  }
+
+  .sticky-left + .sticky-left {
+    left: 50px; /* Adjust this value based on the width of the first sticky column */
+  }
 }

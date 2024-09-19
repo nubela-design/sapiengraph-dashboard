@@ -364,15 +364,16 @@
   <!-- MAIN CONTENT -->
   <div class="main-content">
   
-    <div class="container-fluid">
+    <div class="container-fluid" style="padding-left: 14px !important; padding-right: 14px !important;">
       
       <div class="row justify-content-center">
         <div class="col-12 main-content-prospector">
         
           <!-- NAVS-->
-          <div class="col-12 pt-4 pt-md-4 pb-3 pb-md-4 sticky-top sticky-top-gradient">
+          <div class="col-12 pt-4 pt-md-4 pb-3 pb-md-3 sticky-top sticky-top-gradient">
             <div class="card card-body custom-rounded border py-3 mb-0">
-              <ul class="nav">
+              <ul class="nav align-items-center">
+                <li class="nav-link h2 text-black mb-0 mt-n1 ps-0 ">Prospector <span class="ps-2 h3 text-gray-400">/</span></li>
                 <li class="nav-item text-left text-md-center">
                   <a class="nav-link text-muted custom-link" href="prospector-saved-result.html"><i
                       class="neu neu-bookmark"></i> Saved</a>
@@ -744,8 +745,10 @@
                   </div>
                 </div>
         
-                <div class="btn btn-success rounded-pill btn-block lift mt-4"><i class="neu neu-search"></i>
-                  Search criteria
+                <div class="row sticky-bottom-action pt-4">
+                  <div class="btn btn-success rounded-pill w-100 lift"><i class="neu neu-search"></i>
+                    Search criteria
+                  </div>
                 </div>
               </div>
             </div>
@@ -795,7 +798,7 @@
         
                 </div>
         
-                <div class="table-responsive" style="max-height: 460px;">
+                <div class="table-responsive max-height-table">
                   <table class="table table-sm rounded-table table-hover table-nowrap custom-table">
                     <thead class="sticky-thead" style="background-color: #F9FAFB;">
                       <tr class="text-muted small text-uppercase">
@@ -1225,44 +1228,50 @@
                   </table>
                 </div>
         
-                <div class="row card-body border-top pt-4">
-                  <div class="col-12 col-md-12 col-lg-12 mb-4 d-lg-flex justify-content-md-center border-bottom pb-4">
-                    <!---->
-                    <button class="btn btn-success btn rounded-pill me-3 mb-3 mb-lg-0 lift d-none d-lg-block text-nowrap"
-                      data-bs-toggle="modal" data-bs-target="#modalUnlockAllResults"><i class="neu neu-so-lock-square"></i>
-                      Unlock all
-                      results</button>
-                    <!-- Mobile-->
-                    <button class="btn btn-success w-100 rounded-pill btn-pill me-3 mb-3 mb-lg-0 lift d-lg-none"
-                      data-bs-toggle="modal" data-bs-target="#modalUnlockAllResults"><i class="neu neu-so-lock-square"></i>
-                      Unlock all
-                      results</button>
+                <div class="row card-body mt-0 pt-4 mx-0 border-top align-items-center sticky-bottom-action">
+                  <div class="col-12 col-md-12 col-lg-9 d-lg-flex justify-content-md-end order-xl-2">
+                  
                     <!---->
                     <button
-                      class="btn btn-outline-success btn rounded-pill lift me-3 mb-3 mb-lg-0 d-none d-lg-block text-nowrap"
-                      data-bs-toggle="modal" data-bs-target="#modalUnlockThisPage"><i class="neu neu-document-ui"></i> Unlock
-                      this
-                      page</button>
+                      class="btn btn-outline-success btn-sm py-lg-2 rounded-pill lift me-3 mb-3 mb-lg-0 d-none d-lg-block text-nowrap">
+                      <i class="neu neu-todo-done"></i> Unlock 3 selected rows
+                    </button>
+                    <!-- Mobile-->
+                    <button class="btn btn-outline-success w-100 rounded-pill btn-block btn-pill lift me-3 mb-3 mb-lg-0 d-lg-none">
+                      <i class="neu neu-todo-done"></i> Unlock 3 selected rows
+                    </button>
+                  
+                    <!---->
+                    <button class="btn btn-outline-success btn-sm rounded-pill lift me-3 mb-3 mb-lg-0 d-none d-lg-block text-nowrap"
+                      data-bs-toggle="modal" data-bs-target="#modalUnlockThisPage">
+                      <i class="neu neu-document-ui"></i> Unlock this page
+                    </button>
                     <!-- Mobile-->
                     <button class="btn btn-outline-success w-100 rounded-pill btn-pill lift me-3 mb-3 mb-lg-0 d-lg-none"
-                      data-bs-toggle="modal" data-bs-target="#modalUnlockThisPage"><i class="neu neu-document-ui"></i> Unlock
-                      this
-                      page</button>
+                      data-bs-toggle="modal" data-bs-target="#modalUnlockThisPage">
+                      <i class="neu neu-document-ui"></i> Unlock this page
+                    </button>
+                  
                     <!---->
-                    <button class="btn btn-outline-success btn rounded-pill lift mb-3 mb-lg-0 d-none d-lg-block text-nowrap"><i
-                        class="neu neu-todo-done"></i> Unlock 3 selected rows</button>
+                    <button class="btn btn-success btn-sm rounded-pill mb-3 mb-lg-0 lift d-none d-lg-block text-nowrap"
+                      data-bs-toggle="modal" data-bs-target="#modalUnlockAllResults">
+                      <i class="neu neu-so-lock-square"></i> Unlock all results
+                    </button>
                     <!-- Mobile-->
-                    <button class="btn btn-outline-success w-100 rounded-pill btn-block btn-pill lift mb-3 mb-lg-0 d-lg-none"><i
-                        class="neu neu-todo-done"></i> Unlock 3 selected rows</button>
+                    <button class="btn btn-success w-100 rounded-pill btn-pill mb-4 lift d-lg-none" data-bs-toggle="modal"
+                      data-bs-target="#modalUnlockAllResults">
+                      <i class="neu neu-so-lock-square"></i> Unlock all results
+                    </button>
+                  
                   </div>
-        
-                  <div class="col-12 col-lg-12 col-xl-12">
+                  <div class="col-12 col-md-12 col-lg-3 order-xl-1">
                     <nav aria-label="pagination">
-                      <ul class="pagination pagination justify-content-center mb-0">
+                      <ul class="pagination pagination-md justify-content-center justify-content-lg-start mb-0">
                         <li class="page-item disabled">
                           <a class="page-link" href="#" tabindex="-1">Previous</a>
                         </li>
-                        <li class="page-item active"><a class="page-link" href="#">1<span class="sr-only">(current)</span></a>
+                        <li class="page-item active"><a class="page-link" href="#">1<span
+                              class="sr-only">(current)</span></a>
                         </li>
                         <li class="page-item">
                           <a class="page-link" href="#">2 </a>
@@ -1274,7 +1283,6 @@
                       </ul>
                     </nav>
                   </div>
-        
                 </div>
         
               </div>
