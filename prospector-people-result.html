@@ -22,44 +22,6 @@
     <!-- Title -->
     <title>People Result - Sapiengraph Prospector - Dashboard</title>
 
-    <style>
-      .filter-container {
-        height: calc(100vh - 100px); /* Adjust 100px based on your layout */
-        display: flex;
-        flex-direction: column;
-      }
-
-      .card.card-body {
-        height: 100%;
-        overflow: hidden;
-      }
-
-      .filter-header {
-        flex-shrink: 0;
-      }
-
-      .filter-content {
-        flex-grow: 1;
-        overflow-y: auto;
-        padding-right: 10px; /* Add some padding for the scrollbar */
-      }
-
-      .filter-footer {
-        flex-shrink: 0;
-      }
-
-      /* Hide scrollbar for Chrome, Safari and Opera */
-      .filter-content::-webkit-scrollbar {
-        display: none;
-      }
-
-      /* Hide scrollbar for IE, Edge and Firefox */
-      .filter-content {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
-      }
-    </style>
-
   </head>
   <body>
 
@@ -398,6 +360,209 @@
       </div>
     </div>
   </div>
+
+  <!-- MODAL All Filters -->
+  <div class="modal fade" id="modalAllFilters" tabindex="-1" aria-labelledby="modalAllFilterLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header pb-0">
+                <h2 class="modal-title" id="modalAllFilterLabel">All filters for Companies 
+                  <p class="small fw-normal text-gray-700">Change and apply your filter to show the new result.</p>
+                </h2>
+                <button type="button" class="btn-close pe-6 mt-n5" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="card card-body bg-lighter border mb-0">
+              <!-- Overview Filter -->
+              <div class="mb-3 mt-2">
+
+                  <!-- toggle-->
+                  <a class="d-flex align-items-center text-reset text-decoration-none" data-bs-toggle="collapse"
+                    href="#companyOverviewModal" role="button" aria-expanded="false" aria-controls="companyAdvanced">
+                    <div class="me-auto h4">
+                      <div class="d-inline-flex me-3"><i class="neu neu-company"></i></div>Overview
+                    </div>
+                    <!-- chevron-->
+                    <span class="collapse-chevron text-muted ms-4 mb-n1">
+                      <i class="fe fe-lg fe-chevron-up"></i>
+                    </span>
+                  </a>
+            
+                  <div class="collapse show" id="companyOverviewModal" aria-labelledby="sectionOne" data-bs-parent="#companyFilterAccordion">
+                    <form class="mt-4">
+                      <div class="mb-4">
+                        <label for="exampleInputIndustry" class="form-label ">Industry</label>
+                        <input type="text" class="form-control form-control-sm"
+                          placeholder="E.g. Technology, Software, Entertainment" id="exampleInputIndustry"
+                          aria-describedby="emailHelp">
+                        <div class="mt-2">
+                          <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Software
+                            Development <i class="neu neu-so-close-circle ms-1"></i></div>
+                          <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Technology
+                            <i class="neu neu-so-close-circle ms-1"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-4">
+                        <label for="exampleInputCompany" class="form-label ">Company Name</label>
+                        <input type="text" class="form-control form-control-sm"
+                          placeholder="E.g. Google, Apple, Microsoft" id="exampleInputCompany"
+                          aria-describedby="emailHelp">
+                        <ul class="list-group suggestions" id="companySuggestions"></ul>
+                      </div>
+                      <div class="mb-4">
+                        <label for="exampleInputCompany" class="form-label  ">Country</label>
+                        <input type="text" class="form-control form-control-sm"
+                          placeholder="E.g. United States, Singapore, Japan" id="exampleInputCompany"
+                          aria-describedby="emailHelp">
+                      </div>
+                      <div class="mb-4">
+                        <label for="exampleInputCompany" class="form-label ">Company Type</label>
+                        <input type="text" class="form-control form-control-sm"
+                          placeholder="E.g. Public Company, Non Profit, Privately Held"
+                          id="exampleInputCompany" aria-describedby="emailHelp">
+                        <div class="mt-3">
+                          <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3"> Public Company
+                            <i class="neu neu-so-close-circle ms-1"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-2">
+                        <label for="exampleInputCompany" class="form-label ">Revenue</label>
+                        <div class="d-flex justify-content-between gap-2">
+                          <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="text" class="form-control form-control-sm" placeholder="Min revenue"
+                              id="exampleInputCompany" aria-describedby="emailHelp">
+                          </div>
+                          <hr style="height: 2px; width: 2%; margin-top: 14px;">
+                          <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="text" class="form-control form-control-sm"
+                              placeholder="Max revenue" id="exampleInputCompany" aria-describedby="emailHelp">
+                          </div>
+                        </div>
+                        <div class="mt-3">
+                          <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3"> $750M - $2B <i
+                              class="neu neu-so-close-circle ms-1"></i></div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+              </div>
+            
+              <hr>
+
+              <!-- Advance Filter -->
+              <div class="mt-3">
+
+                  <!-- toggle-->
+                  <a class="d-flex align-items-center text-reset text-decoration-none" data-bs-toggle="collapse"
+                    href="#companyAdvancedModal" role="button" aria-expanded="false" aria-controls="companyAdvanced">
+                    <div class="me-auto h4">
+                      <div class="d-inline-flex me-3 rotate-90deg"><i class="fe fe-sliders"></i></div>Advanced filter
+                    </div>
+                    <!-- chevron-->
+                    <span class="collapse-chevron text-muted ms-4 mb-n1">
+                      <i class="fe fe-lg fe-chevron-down"></i>
+                    </span>
+                  </a>
+            
+                  <div class="collapse" id="companyAdvancedModal" aria-labelledby="sectionTwo" data-bs-parent="#companyFilterAccordion">
+                    <form class="mt-4">
+                      <div class="mb-4">
+                        <label for="exampleInputCompany" class="form-label ">Employee Count</label>
+                        <div class="d-flex justify-content-between gap-2">
+                          <input type="text" class="form-control form-control-sm" placeholder="Min" id="exampleInputCompany"
+                            aria-describedby="emailHelp">
+                          <hr style="height: 2px; width: 2%; margin-top: 14px;">
+                          <input type="text" class="form-control form-control-sm" placeholder="Max" id="exampleInputCompany"
+                            aria-describedby="emailHelp">
+                        </div>
+                      </div>
+                      <div class="mb-4">
+                        <label for="exampleInputCompany" class="form-label ">Year Founded</label>
+                        <div class="d-flex justify-content-between gap-2">
+                          <input type="text" class="form-control form-control-sm" placeholder="Min" id="exampleInputCompany"
+                            aria-describedby="emailHelp">
+                          <hr style="height: 2px; width: 2%; margin-top: 14px;">
+                          <input type="text" class="form-control form-control-sm" placeholder="Max" id="exampleInputCompany"
+                            aria-describedby="emailHelp">
+                        </div>
+                      </div>
+                      <div class="mb-4">
+                        <label for="exampleInputCompany" class="form-label ">Description</label>
+                        <input type="text" class="form-control form-control-sm" placeholder="E.g. Medical Device"
+                          id="exampleInputCompany" aria-describedby="emailHelp">
+                      </div>
+                      <div class="mb-4">
+                        <label for="exampleInputCompany" class="form-label ">Region</label>
+                        <input type="text" class="form-control form-control-sm" placeholder="E.g. California"
+                          id="exampleInputCompany" aria-describedby="emailHelp">
+                      </div>
+                      <div class="mb-4">
+                        <label for="exampleInputCompany" class="form-label ">City</label>
+                        <input type="text" class="form-control form-control-sm" placeholder="E.g. Seattle, Los Angeles"
+                          id="exampleInputCompany" aria-describedby="emailHelp">
+                      </div>
+                      <div class="mb-4">
+                        <label for="exampleInputCompany" class="form-label ">Follower Count</label>
+                        <div class="d-flex justify-content-between gap-2">
+                          <input type="text" class="form-control form-control-sm" placeholder="Min" id="exampleInputCompany"
+                            aria-describedby="emailHelp">
+                          <hr style="height: 2px; width: 2%; margin-top: 14px;">
+                          <input type="text" class="form-control form-control-sm" placeholder="Max" id="exampleInputCompany"
+                            aria-describedby="emailHelp">
+                        </div>
+                      </div>
+                      <div class="mb-4">
+                        <label for="exampleInputCompany" class="form-label ">Funding Amount</label>
+                        <div class="d-flex justify-content-between gap-2">
+                          <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="text" class="form-control form-control-sm" placeholder="Min" id="exampleInputCompany"
+                              aria-describedby="emailHelp">
+                          </div>
+                          <hr style="height: 2px; width: 2%; margin-top: 14px;">
+                          <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="text" class="form-control form-control-sm" placeholder="Max" id="exampleInputCompany"
+                              aria-describedby="emailHelp">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-2">
+                        <label for="exampleInputCompany" class="form-label ">Funding Raised</label>
+                        <div class="d-flex justify-content-between gap-2">
+                          <input type="date" class="form-control form-control-sm text-muted" placeholder="Min"
+                            id="exampleInputCompany" aria-describedby="emailHelp">
+                          <hr style="height: 2px; width: 2%; margin-top: 14px;">
+                          <input type="date" class="form-control form-control-sm text-muted" placeholder="Max"
+                            id="exampleInputCompany" aria-describedby="emailHelp">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+              </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="w-100 d-flex justify-content-between">
+                <div class="mt-3">
+                  <p><i class="neu neu-so-structure me-1 text-success"></i>345,678 <span
+                      class="font-weight-normal text-muted">results found</span></p>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-lg btn-link text-success" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-lg btn-success">Apply Filters</button>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>  
   
   <!-- MAIN CONTENT -->
   <div class="main-content">
@@ -802,14 +967,14 @@
             <!-- RESULT-->
             <div class="col-lg-12 col-xl-8">
               <div class="card custom-rounded bg-white text-left shadow-light border" style="position: relative;">
-        
+            
                 <div class="row card-body pb-2">
-        
+            
                   <div class="col-12 col-lg-5">
                     <p class=" mt-2"><i class="neu neu-so-structure me-1 text-success"></i>2,345,678 <span
                         class="font-weight-normal text-muted">results found</span></p>
                   </div>
-        
+            
                   <div class="col-12 col-lg-7 d-md-flex justify-content-lg-end mt-4 mt-md-1">
                     <div class=" text-muted small text-right me-md-2 mb-3 mb-md-0 mt-n3 d-flex align-items-center">
                       <!-- Added d-flex and align-items-center -->
@@ -841,9 +1006,57 @@
                       </div>
                     </div>
                   </div>
-        
+            
                 </div>
-        
+            
+                <!-- Filter feedback-->
+                <div class="card-body border-bottom pt-3 pb-3 pb-lg-2 px-3">
+                  <div class="row justify-content-between align-items-center">
+            
+                    <!--LG View-->
+                    <div class="col-12 col-md-12 col-lg-9 mt-2 mt-lg-0 mb-3 mb-lg-0">
+                      <button type="button" class=" btn btn-sm rounded-pill px-3 btn-outline-secondary me-2 mb-2">
+                        <span class="text-muted d-none d-xl-inline-block">First name:</span> Bill <i
+                          class="neu neu-so-close-circle text-muted ms-1"></i>
+                      </button>
+                      <button type="button" class="btn btn-sm rounded-pill px-3 btn-outline-secondary me-2 mb-2">
+                        <span class="text-muted d-none d-xl-inline-block">Last name:</span> Gates <i
+                          class="neu neu-so-close-circle text-muted ms-1"></i>
+                      </button>
+                      <button type="button" class=" btn btn-sm rounded-pill px-3 btn-outline-secondary me-2 mb-2">
+                        <span class="text-muted d-none d-xl-inline-block">Country:</span> United States <i
+                          class="neu neu-so-close-circle text-muted ms-1"></i>
+                      </button>
+                      <button type="button" class=" btn btn-sm rounded-pill px-3 btn-outline-secondary me-2 mb-2">
+                        <span class="text-muted d-none d-xl-inline-block">Company:</span> Microsoft <i
+                          class="neu neu-so-close-circle text-muted ms-1"></i>
+                      </button>
+                      <button type="button" class=" btn btn-sm rounded-pill px-3 btn-outline-secondary me-2 mb-2">
+                        <span class="text-muted d-none d-xl-inline-block">School name:</span> Harvard <i
+                          class="neu neu-so-close-circle text-muted ms-1"></i>
+                      </button>
+                      <button type="button" class=" btn btn-sm rounded-pill px-3 btn-outline-secondary me-2 mb-2">
+                        <span class="text-muted d-none d-xl-inline-block">Headline:</span> Founder <i
+                          class="neu neu-so-close-circle text-muted ms-1"></i>
+                      </button>
+                    </div>
+            
+                    <div class="col-lg-3 col-xl-auto d-grid gap-2 d-lg-flex justify-content-lg-end custom-border-height">
+                      <button type="button" class="btn btn-sm rounded-pill px-3 btn-outline-secondary" data-bs-toggle="modal"
+                        data-bs-target="#modalAllFilters">
+                        All filters
+                      </button>
+            
+                      <button type="button" class="btn btn-sm rounded-pill px-3 btn-outline-secondary">
+                        Clear all
+                      </button>
+                    </div>
+            
+                  </div>
+            
+            
+                </div>
+            
                 <div class="table-responsive max-height-table-people">
                   <table class="table table-sm rounded-table table-hover table-nowrap custom-table">
                     <thead class="sticky-thead" style="background-color: #F9FAFB;">
@@ -862,10 +1075,11 @@
                       </tr>
                     </thead>
                     <tbody class="fs-base">
-
+            
                       <!-- 1 -->
                       <tr class="align-middle">
-                        <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                        <td class="custom-control custom-checkbox sticky-left sticky-left-color"
+                          style="border-bottom: 0 !important;">
                           <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1" checked
                             onclick="handleCheckbox(this)">
                           <label class="form-check-label small text-muted" for="flexRadioDefault1"></label>
@@ -873,7 +1087,8 @@
                         <td class="align-middle ps-0 sticky-left sticky-left-color">
                           <div class="d-flex align-items-center">
                             <div class="avatar avatar-xs">
-                              <img class="avatar-img rounded-circle" src="assets/img/photos/bill gates photo.jpeg" alt="person picture">
+                              <img class="avatar-img rounded-circle" src="assets/img/photos/bill gates photo.jpeg"
+                                alt="person picture">
                             </div>
                             <div class="ms-3 d-flex align-items-center">
                               <div>
@@ -906,10 +1121,11 @@
                             Row unlocked</small>
                         </td>
                       </tr>
-
+            
                       <!-- 2 -->
                       <tr class="align-middle">
-                        <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                        <td class="custom-control custom-checkbox sticky-left sticky-left-color"
+                          style="border-bottom: 0 !important;">
                           <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" checked
                             onclick="handleCheckbox(this)">
                           <label class="form-check-label small text-muted" for="flexRadioDefault2"></label>
@@ -950,10 +1166,11 @@
                             Row unlocked</small>
                         </td>
                       </tr>
-
+            
                       <!-- 3 -->
                       <tr class="align-middle">
-                        <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                        <td class="custom-control custom-checkbox sticky-left sticky-left-color"
+                          style="border-bottom: 0 !important;">
                           <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault3"
                             onclick="handleCheckbox(this)">
                           <label class="form-check-label small text-muted" for="flexRadioDefault3"></label>
@@ -961,7 +1178,8 @@
                         <td class="align-middle ps-0 sticky-left sticky-left-color">
                           <div class="d-flex align-items-center">
                             <div class="avatar avatar-xs">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-2.jpg" alt="person picture">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-2.jpg"
+                                alt="person picture">
                             </div>
                             <div class="ms-3">
                               <div>
@@ -991,10 +1209,11 @@
                             row</button>
                         </td>
                       </tr>
-
+            
                       <!-- 4 -->
                       <tr class="align-middle">
-                        <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                        <td class="custom-control custom-checkbox sticky-left sticky-left-color"
+                          style="border-bottom: 0 !important;">
                           <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" checked
                             onclick="handleCheckbox(this)">
                           <label class="form-check-label small text-muted" for="flexRadioDefault2"></label>
@@ -1034,10 +1253,11 @@
                             Row unlocked</small>
                         </td>
                       </tr>
-
+            
                       <!-- 5 -->
                       <tr class="align-middle">
-                        <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                        <td class="custom-control custom-checkbox sticky-left sticky-left-color"
+                          style="border-bottom: 0 !important;">
                           <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault5"
                             onclick="handleCheckbox(this)">
                           <label class="form-check-label small text-muted" for="flexRadioDefault5"></label>
@@ -1045,7 +1265,8 @@
                         <td class="align-middle ps-0 sticky-left sticky-left-color">
                           <div class="d-flex align-items-center">
                             <div class="avatar avatar-xs">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-3.jpg" alt="person picture">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-3.jpg"
+                                alt="person picture">
                             </div>
                             <div class="ms-3 d-flex align-items-center">
                               <div>
@@ -1065,7 +1286,8 @@
                         <td class="align-middle">
                           <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
                             <div class="avatar avatar-xs">
-                              <img class="img" width="22" height="auto" src="assets/img/logo/Google-logoicon.svg" alt="company logo">
+                              <img class="img" width="22" height="auto" src="assets/img/logo/Google-logoicon.svg"
+                                alt="company logo">
                             </div>
                             <div class="ms-3">******</div>
                         </td>
@@ -1078,10 +1300,11 @@
                             row</button>
                         </td>
                       </tr>
-                      
+            
                       <!-- 6 -->
                       <tr class="align-middle">
-                        <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                        <td class="custom-control custom-checkbox sticky-left sticky-left-color"
+                          style="border-bottom: 0 !important;">
                           <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault6"
                             onclick="handleCheckbox(this)">
                           <label class="form-check-label small text-muted" for="flexRadioDefault6"></label>
@@ -1089,13 +1312,14 @@
                         <td class="align-middle ps-0 sticky-left sticky-left-color">
                           <div class="d-flex align-items-center">
                             <div class="avatar avatar-xs">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-4.jpg" alt="person picture">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-4.jpg"
+                                alt="person picture">
                             </div>
                             <div class="ms-3">
                               <span class="me-1">J**** M****</span>
-                                <p class="text-muted small mb-0">
-                                  CEO
-                                </p>
+                              <p class="text-muted small mb-0">
+                                CEO
+                              </p>
                             </div>
                           </div>
                         </td>
@@ -1116,10 +1340,11 @@
                             row</button>
                         </td>
                       </tr>
-                      
+            
                       <!-- 7 -->
                       <tr class="align-middle">
-                        <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                        <td class="custom-control custom-checkbox sticky-left sticky-left-color"
+                          style="border-bottom: 0 !important;">
                           <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault7"
                             onclick="handleCheckbox(this)">
                           <label class="form-check-label small text-muted" for="flexRadioDefault7"></label>
@@ -1127,13 +1352,14 @@
                         <td class="align-middle ps-0 sticky-left sticky-left-color">
                           <div class="d-flex align-items-center">
                             <div class="avatar avatar-xs">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-6.jpg" alt="person picture">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-6.jpg"
+                                alt="person picture">
                             </div>
                             <div class="ms-3">
                               <span class="me-1">K***** B***</span>
-                                <p class="text-muted small mb-0">
-                                  Senior Designer
-                                </p>
+                              <p class="text-muted small mb-0">
+                                Senior Designer
+                              </p>
                             </div>
                           </div>
                         </td>
@@ -1154,10 +1380,11 @@
                             row</button>
                         </td>
                       </tr>
-
+            
                       <!-- 8 -->
                       <tr class="align-middle">
-                        <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                        <td class="custom-control custom-checkbox sticky-left sticky-left-color"
+                          style="border-bottom: 0 !important;">
                           <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault8"
                             onclick="handleCheckbox(this)">
                           <label class="form-check-label small text-muted" for="flexRadioDefault8"></label>
@@ -1165,13 +1392,14 @@
                         <td class="align-middle ps-0 sticky-left sticky-left-color">
                           <div class="d-flex align-items-center">
                             <div class="avatar avatar-xs">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-8.jpg" alt="person picture">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-8.jpg"
+                                alt="person picture">
                             </div>
                             <div class="ms-3">
                               <span class="me-1">J***** J****</span>
-                                <p class="text-muted small mb-0">
-                                  Marketing Specialist
-                                </p>
+                              <p class="text-muted small mb-0">
+                                Marketing Specialist
+                              </p>
                             </div>
                           </div>
                         </td>
@@ -1193,10 +1421,11 @@
                             row</button>
                         </td>
                       </tr>
-
+            
                       <!-- 9 -->
                       <tr class="align-middle">
-                        <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                        <td class="custom-control custom-checkbox sticky-left sticky-left-color"
+                          style="border-bottom: 0 !important;">
                           <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault9"
                             onclick="handleCheckbox(this)">
                           <label class="form-check-label small text-muted" for="flexRadioDefault9"></label>
@@ -1204,13 +1433,14 @@
                         <td class="align-middle ps-0 sticky-left sticky-left-color">
                           <div class="d-flex align-items-center">
                             <div class="avatar avatar-xs">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="person picture">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg"
+                                alt="person picture">
                             </div>
                             <div class="ms-3">
                               <span class="me-1">S**** G****</span>
-                                <p class="text-muted small mb-0">
-                                  Strategic Partner
-                                </p>
+                              <p class="text-muted small mb-0">
+                                Strategic Partner
+                              </p>
                             </div>
                           </div>
                         </td>
@@ -1231,10 +1461,11 @@
                             row</button>
                         </td>
                       </tr>
-
+            
                       <!-- 10 -->
                       <tr class="align-middle">
-                        <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                        <td class="custom-control custom-checkbox sticky-left sticky-left-color"
+                          style="border-bottom: 0 !important;">
                           <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault10"
                             onclick="handleCheckbox(this)">
                           <label class="form-check-label small text-muted" for="flexRadioDefault10"></label>
@@ -1242,13 +1473,14 @@
                         <td class="align-middle ps-0 sticky-left sticky-left-color">
                           <div class="d-flex align-items-center">
                             <div class="avatar avatar-xs">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-7.jpg" alt="person picture">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-7.jpg"
+                                alt="person picture">
                             </div>
                             <div class="ms-3">
                               <span class="me-1">P**** G****</span>
-                                <p class="text-muted small mb-0">
-                                  Senior Software Engineer
-                                </p>
+                              <p class="text-muted small mb-0">
+                                Senior Software Engineer
+                              </p>
                             </div>
                           </div>
                         </td>
@@ -1256,7 +1488,8 @@
                         <td class="align-middle">
                           <a class="d-flex text-black custom-link" href="prospector-companies-detail-locked.html">
                             <div class="avatar avatar-xs">
-                              <img class="img" width="22" height="auto" src="assets/img/logo/Google-logoicon.svg" alt="company logo">
+                              <img class="img" width="22" height="auto" src="assets/img/logo/Google-logoicon.svg"
+                                alt="company logo">
                             </div>
                             <div class="ms-3">******</div>
                         </td>
@@ -1269,14 +1502,14 @@
                             row</button>
                         </td>
                       </tr>
-
+            
                     </tbody>
                   </table>
                 </div>
-        
+            
                 <div class="row card-body mt-0 pt-4 mx-0 border-top align-items-center sticky-bottom-action">
                   <div class="col-12 col-md-12 col-lg-9 d-lg-flex justify-content-md-start justify-content-xl-end order-xl-2">
-                  
+            
                     <!---->
                     <button
                       class="btn btn-outline-success btn-sm py-2 rounded-pill lift pe-3 me-2 mb-3 mb-lg-0 d-none d-lg-block text-nowrap"><i
@@ -1284,34 +1517,36 @@
                     <!-- Mobile-->
                     <button class="btn btn-outline-success w-100 rounded-pill btn-block btn-pill lift mb-3 mb-lg-0 d-lg-none"><i
                         class="neu neu-todo-done"></i> Unlock 3 selected rows</button>
-                  
+            
                     <!---->
-                    <button class="btn btn-outline-success btn-sm rounded-pill lift pe-3 me-2 mb-3 mb-lg-0 d-none d-lg-block text-nowrap"
+                    <button
+                      class="btn btn-outline-success btn-sm rounded-pill lift pe-3 me-2 mb-3 mb-lg-0 d-none d-lg-block text-nowrap"
                       data-bs-toggle="modal" data-bs-target="#modalUnlockThisPage"><i class="neu neu-document-ui"></i> Unlock this
                       page</button>
                     <!-- Mobile-->
                     <button class="btn btn-outline-success w-100 rounded-pill btn-pill lift mb-3 mb-lg-0 d-lg-none"
                       data-bs-toggle="modal" data-bs-target="#modalUnlockThisPage"><i class="neu neu-document-ui"></i> Unlock this
                       page</button>
-                  
+            
                     <!---->
                     <button class="btn btn-success btn-sm rounded-pill pe-3  mb-3 mb-lg-0 lift d-none d-lg-block text-nowrap"
-                      data-bs-toggle="modal" data-bs-target="#modalUnlockAllResults"><i class="neu neu-so-lock-square"></i> Unlock all
+                      data-bs-toggle="modal" data-bs-target="#modalUnlockAllResults"><i class="neu neu-so-lock-square"></i> Unlock
+                      all
                       results</button>
                     <!-- Mobile-->
                     <button class="btn btn-success w-100 rounded-pill btn-pill mb-3 mb-lg-0 lift d-lg-none" data-bs-toggle="modal"
                       data-bs-target="#modalUnlockAllResults"><i class="neu neu-so-lock-square"></i> Unlock all
                       results</button>
-
+            
                   </div>
                   <div class="col-12 col-md-12 col-lg-3 order-xl-1 mt-3 mt-lg-0">
                     <nav aria-label="pagination">
-                      <ul class="pagination pagination-sm justify-content-center justify-content-lg-center justify-content-xl-start mb-0">
+                      <ul
+                        class="pagination pagination-sm justify-content-center justify-content-lg-center justify-content-xl-start mb-0">
                         <li class="page-item disabled">
                           <a class="page-link" href="#" tabindex="-1">Previous</a>
                         </li>
-                        <li class="page-item active"><a class="page-link" href="#">1<span
-                              class="sr-only">(current)</span></a>
+                        <li class="page-item active"><a class="page-link" href="#">1<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="page-item">
                           <a class="page-link" href="#">2 </a>
@@ -1324,9 +1559,9 @@
                     </nav>
                   </div>
                 </div>
-        
+            
               </div>
-        
+            
             </div> <!-- RESULT-->
         
           </div>
