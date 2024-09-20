@@ -1,13 +1,62 @@
+/* Aji - 20 sep 2024 */
+@media (min-width: 2071px) {
+  .custom-border-height {
+    position: relative;
+    /* Position relative for the pseudo-element */
+  }
+
+  .custom-border-height::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    /* Align to the left */
+    top: -15px;
+    width: 1px;
+    /* Adjust the width as needed */
+    height: 60px;
+    /* Set your desired height */
+    background-color: #E2EBF6;
+    /* Use the current text color for the border */
+  }
+}
+
+@media (min-width: 1008px) and (max-width: 2070px) {
+  .custom-border-height {
+    position: relative;
+    /* Position relative for the pseudo-element */
+  }
+
+  .custom-border-height::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    /* Align to the left */
+    top: -33px;
+    width: 1px;
+    /* Adjust the width as needed */
+    height: 90px;
+    /* Set your desired height */
+    background-color: #E2EBF6;
+    /* Use the current text color for the border */
+  }
+}
+
+@media (min-width: 1024px) {
+  .sticky-bottom-action {
+    position: sticky;
+    bottom: 0;
+    z-index: 999;
+    background-color: #fff;
+    border-radius: 0px 0px 8px 8px;
+  }
+}
+
+
 /* Roy - 20 sep 2024 */
 .filter-container {
   height: calc(100vh - 100px); /* Adjust 100px based on your layout */
   display: flex;
   flex-direction: column;
-}
-
-.card.card-body {
-  height: 100%;
-  overflow: hidden;
 }
 
 .filter-header {
@@ -35,10 +84,22 @@
 }
 
 .max-height-table {
-  max-height: 55vh;
+  max-height: 55.2vh;
 }
 
 /* Media Queries */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .max-height-table {
+    max-height: 44.1vh !important;
+  }   
+}
+
+@media (min-width: 1440px) and (max-width: 1620px) {
+  .max-height-table {
+    max-height: 52.6vh !important;
+  }   
+}
+
 @media (min-width: 2071px) {
   .custom-border-height {
     position: relative;
@@ -69,12 +130,6 @@
     height: 90px;
     background-color: #E2EBF6;
   }
-}
-
-@media (min-width: 1440px) and (max-width: 1620px) {
-  .max-height-table {
-    max-height: 69.3vh !important;
-  }   
 }
 
 @media (max-width: 991.98px) {
@@ -113,16 +168,6 @@
   }
 }
 
-@media (min-width: 1024px) {
-  .sticky-bottom-action {
-    position: sticky;
-    bottom: 0;
-    z-index: 999;
-    background-color: #fff;
-    border-radius: 0px 0px 8px 8px;
-  }
-}
-
 @media (min-width: 1500px) {
   .main-content-dashboard {
     flex: 0 0 auto;
@@ -150,16 +195,24 @@
   }  
 }
 
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .scrollable-div {
+    max-height: 60vh !important;
+    min-height: 60vh !important;
+  }   
+}
+
 @media (min-width: 1620px) {
   .scrollable-div {
-    min-height: 65.3vh !important;
+    min-height: 48vh !important;
+    max-height: 48vh !important;
   }   
 }
 
 @media (min-width: 1440px) and (max-width: 1620px) {
   .scrollable-div {
-    max-height: 69vh !important;
-    min-height: 50.3vh !important;
+    max-height: 63.3vh !important;
+    min-height: 63.3vh !important;
   }   
 }
 
@@ -225,7 +278,13 @@ th.sticky-action {
 
 td.sticky-action {
   box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  background-color: #fff; /* Default background color is white */
 }
+
+tr:hover td.sticky-action {
+  background-color: #f8f9fa; /* Bootstrap's default table hover color on hover */
+}
+
 
 tr.noBorder td, thead {
   border-bottom-style: hidden;
