@@ -202,7 +202,14 @@
   }   
 }
 
-@media (min-width: 1620px) {
+@media (min-width: 1621px) and (max-width: 2559px) {
+  .scrollable-div {
+    max-height: 65.3vh !important;
+    min-height: 65.3vh !important;
+  }   
+}
+
+@media (min-width: 2560px) {
   .scrollable-div {
     min-height: 48vh !important;
     max-height: 48vh !important;
