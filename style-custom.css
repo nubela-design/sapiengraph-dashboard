@@ -1,3 +1,47 @@
+@media (min-width: 2071px) {
+  .custom-border-height {
+    position: relative;
+    /* Position relative for the pseudo-element */
+  }
+
+  .custom-border-height::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    /* Align to the left */
+    top: -15px;
+    width: 1px;
+    /* Adjust the width as needed */
+    height: 60px;
+    /* Set your desired height */
+    background-color: #E2EBF6;
+    /* Use the current text color for the border */
+  }
+}
+
+
+@media (min-width: 1008px) and (max-width: 2070px) {
+  .custom-border-height {
+    position: relative;
+    /* Position relative for the pseudo-element */
+  }
+
+  .custom-border-height::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    /* Align to the left */
+    top: -33px;
+    width: 1px;
+    /* Adjust the width as needed */
+    height: 90px;
+    /* Set your desired height */
+    background-color: #E2EBF6;
+    /* Use the current text color for the border */
+  }
+}
+
+/* Aji - 19 sep 2024 */
 @media (max-width: 991.98px) { /* Adjust based on your breakpoint for lg */
   .border-start-hide-md {
     border-left: none !important; /* Remove left border on smaller screens */
@@ -66,7 +110,7 @@ tr:hover td.sticky-checkbox {
 /* Aji - 16 sep 2024 */
 .sticky-top-gradient {
   background: linear-gradient(to bottom, rgba(249, 251, 253, 1) 80%, rgba(249, 251, 253, 0) 100%) !important;
-  padding-bottom: 24px;
+  padding-bottom: 24px !important;
 }
 
 /* Aji - 13 sep 2024 */
@@ -338,9 +382,16 @@ td,th {
   overflow-y: auto;
 }
 
+@media (min-width: 1620px) {
+  .scrollable-div {
+    min-height: 65.3vh !important;
+  }   
+}
+
 @media (min-width: 1440px) and (max-width: 1620px) {
   .scrollable-div {
     max-height: 69vh !important;
+    min-height: 50.3vh !important;
   }   
 }
 
