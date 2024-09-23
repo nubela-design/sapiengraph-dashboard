@@ -1,46 +1,12 @@
+.sticky-filter-arrow {
+  position: absolute;
+  right: 110px;
+  top: 93px;
+  background-color: #fff;
+  z-index: 1;
+}
+
 /* Aji - 20 sep 2024 */
-@media (min-width: 2071px) {
-  .custom-border-height {
-    position: relative;
-    /* Position relative for the pseudo-element */
-  }
-
-  .custom-border-height::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    /* Align to the left */
-    top: -15px;
-    width: 1px;
-    /* Adjust the width as needed */
-    height: 60px;
-    /* Set your desired height */
-    background-color: #E2EBF6;
-    /* Use the current text color for the border */
-  }
-}
-
-@media (min-width: 1008px) and (max-width: 2070px) {
-  .custom-border-height {
-    position: relative;
-    /* Position relative for the pseudo-element */
-  }
-
-  .custom-border-height::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    /* Align to the left */
-    top: -33px;
-    width: 1px;
-    /* Adjust the width as needed */
-    height: 90px;
-    /* Set your desired height */
-    background-color: #E2EBF6;
-    /* Use the current text color for the border */
-  }
-}
-
 @media (min-width: 1024px) {
   .sticky-bottom-action {
     position: sticky;
@@ -84,7 +50,7 @@
 }
 
 .max-height-table {
-  max-height: 55.2vh;
+  max-height: 59.3vh;
 }
 
 /* Media Queries */
@@ -96,7 +62,7 @@
 
 @media (min-width: 1440px) and (max-width: 1620px) {
   .max-height-table {
-    max-height: 52.6vh !important;
+    max-height: 57vh !important;
   }   
 }
 
@@ -116,7 +82,7 @@
   }
 }
 
-@media (min-width: 1008px) and (max-width: 2070px) {
+@media (min-width: 1376px) and (max-width: 2070px) {
   .custom-border-height {
     position: relative;
   }
@@ -125,9 +91,9 @@
     content: '';
     position: absolute;
     left: 0;
-    top: -33px;
+    top: -13px;
     width: 1px;
-    height: 90px;
+    height: 55px;
     background-color: #E2EBF6;
   }
 }

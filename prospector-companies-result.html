@@ -871,32 +871,43 @@
                   </div>
 
                   <!-- Filter feedback-->
-                  <div class="card-body border-bottom pt-3 pb-3 pb-lg-2 px-3">
+                  <div class="card-body border-bottom pt-3 pt-xl-3 pb-4 pb-md-2 px-3">
                     <div class="row justify-content-between align-items-center">
                       
-                      <!--LG View-->
-                      <div class="col-12 col-md-12 col-lg-9 col-xl-9 mt-2 mt-lg-0 mb-3 mb-lg-0">
-                        <button type="button" class=" btn btn-sm rounded-pill px-3 btn-outline-secondary me-2 mb-2">
-                          <span class="text-muted d-none d-xl-inline-block">Industry:</span> Software Development <i class="neu neu-so-close-circle text-muted ms-1"></i>
+
+                      <div class="col-10 col-md-10 col-lg-11 col-xl-10 mt-2 mt-md-0 mb-0 overflow-auto"  style="white-space: nowrap;">
+                        <button type="button" class=" btn btn-sm rounded-pill px-3 btn-outline-secondary me-md-2 mb-2">
+                          <span class="text-muted d-none d-lg-inline-block">Industry:</span> Software Development <i class="neu neu-so-close-circle text-muted ms-1"></i>
                         </button>
-                        <button type="button" class="btn btn-sm rounded-pill px-3 btn-outline-secondary me-2 mb-2">
-                          <span class="text-muted d-none d-xl-inline-block">Industry:</span> Technology <i class="neu neu-so-close-circle text-muted ms-1"></i>
+                        <button type="button" class="btn btn-sm rounded-pill px-3 btn-outline-secondary me-md-2 mb-2">
+                          <span class="text-muted d-none d-lg-inline-block">Industry:</span> Technology <i class="neu neu-so-close-circle text-muted ms-1"></i>
                         </button>
-                        <button type="button" class=" btn btn-sm rounded-pill px-3 btn-outline-secondary me-2 mb-2">
-                          <span class="text-muted d-none d-xl-inline-block">Company type:</span> Public Company <i class="neu neu-so-close-circle text-muted ms-1"></i>
+                        <button type="button" class=" btn btn-sm rounded-pill px-3 btn-outline-secondary me-md-2 mb-2">
+                          <span class="text-muted d-none d-lg-inline-block">Company type:</span> Public Company <i class="neu neu-so-close-circle text-muted ms-1"></i>
                         </button>
-                        <button type="button" class=" btn btn-sm rounded-pill px-3 btn-outline-secondary me-2 mb-2">
-                          <span class="text-muted d-none d-xl-inline-block">Revenue:</span> $750M - $2B <i class="neu neu-so-close-circle text-muted ms-1"></i>
+                        <button type="button" class=" btn btn-sm rounded-pill px-3 btn-outline-secondary me-md-2 mb-2">
+                          <span class="text-muted d-none d-lg-inline-block">Revenue:</span> $750M - $2B <i class="neu neu-so-close-circle text-muted ms-1"></i>
                         </button>
                       </div>
 
-                      <div class="col-lg-3 col-xl-auto d-grid gap-2 d-lg-flex justify-content-lg-end custom-border-height">
-                        <button type="button" class="btn btn-sm rounded-pill px-3 btn-outline-secondary"
+                      <div class="col-auto mt-md-0 mb-0 d-none d-xl-block">
+                        <a class="btn btn-sm btn-outline-secondary rounded-pill sticky-filter-arrow mb-2"><i
+                            class="fe fe-arrow-right"></i></a>
+                      </div>
+
+                      <!-- SM-LG-->
+                      <div class="col-auto mt-2 mt-md-0 mb-0 d-block d-xl-none">
+                        <a class="btn btn-sm btn-outline-secondary rounded-pill mb-2"><i
+                            class="fe fe-arrow-right"></i></a>
+                      </div>           
+
+                      <div class="col-12 col-xl-auto d-grid gap-2 d-md-flex justify-content-lg-end custom-border-height mt-3 mt-md-2 mt-xl-0">
+                        <button type="button" class="col-12 col-md-6 btn btn-sm rounded-pill px-3 btn-outline-secondary d-block d-xl-none mb-md-2"
                         data-bs-toggle="modal" data-bs-target="#modalAllFilters">
                           All filters
                         </button>
 
-                        <button type="button" class="btn btn-sm rounded-pill px-3 btn-outline-secondary">
+                        <button type="button" class="col-12 col-md-6 col-xl-12 btn btn-sm rounded-pill px-3 btn-outline-secondary mb-md-2">
                           Clear all
                         </button>
                       </div>
