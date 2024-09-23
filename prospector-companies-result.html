@@ -918,22 +918,22 @@
                   </div>
 
                   <div class="table-responsive max-height-table">
-                    <table class="table table-sm rounded-table table-hover table-nowrap custom-table">
+                    <table id="myTable" class="table table-sm rounded-table table-hover table-nowrap custom-table">
                       <thead style="background-color: #F9FAFB;" class="sticky-thead">
-                        <tr class="text-muted small text-uppercase">
-                          <th scope="col" class="small custom-control custom-checkbox sticky-left mt-n1">
+                        <tr class="small text-uppercase">
+                          <th scope="col" id="header0" class="small custom-control custom-checkbox sticky-left mt-n1"> <i class="d-none fas fa-sort"></i>
                             <input class="form-check-input" type="checkbox" name="flexRadioCompanies"
-                              id="selectAllCompaniesCheckbox" onclick="handleSelectAllCompaniesCheckbox()">
+                              onclick="sortTable(0)">
                             <label class="form-check-label small text-muted" for="selectAllCheckbox"></label>
                           </th>
-                          <th scope="col" class="ps-0 sticky-left">Company Name</th>
-                          <th scope="col">LinkedIn</th>
-                          <th scope="col">Employees</th>
-                          <th scope="col">Industries</th>
-                          <th scope="col">Revenue</th>
-                          <th scope="col">Company Type</th>
-                          <th scope="col">Company Location</th>
-                          <th scope="col">Email</th>
+                          <th scope="col" id="header1" class="ps-0 sticky-left" onclick="sortTable(1)">Company Name <i class="fas fa-sort"></i></th>
+                          <th scope="col" id="header2" onclick="sortTable(2)">LinkedIn <i class="fas fa-sort"></i></th>
+                          <th scope="col" id="header3" onclick="sortTable(3)">Employees <i class="fas fa-sort"></i></th>
+                          <th scope="col" id="header4" onclick="sortTable(4)">Industries <i class="fas fa-sort"></i></th>
+                          <th scope="col" id="header5" onclick="sortTable(5)">Revenue <i class="fas fa-sort"></i></th>
+                          <th scope="col" id="header6" onclick="sortTable(6)">Company Type <i class="fas fa-sort"></i></th>
+                          <th scope="col" id="header7" onclick="sortTable(7)">Company Location <i class="fas fa-sort"></i></th>
+                          <th scope="col" id="header8" onclick="sortTable(8)">Email <i class="fas fa-sort"></i></th>
                           <th scope="col" class="sticky-action">Action</th>
                         </tr>
                       </thead>
@@ -1349,12 +1349,13 @@
 
   <!-- JAVASCRIPT -->
 
-  <!-- Table sorting JS-->
+  <!-- Table sorting JS -->
   <script>
     let currentColumn = 3; // Set Last checked as the default sorted column
     let lastCheckedColumnSorted = true;
+    let sortDirection = 'desc'; // Track the sort direction
 
-    document.addEventListener("DOMContentLoaded", function (event) {
+    document.addEventListener("DOMContentLoaded", function () {
       // Simulate click on "Last checked" header after the page loads (default sort)
       sortTable(currentColumn);
       lastCheckedColumnSorted = false;
@@ -1365,6 +1366,13 @@
       const tbody = table.querySelector('tbody');
       const rows = Array.from(tbody.querySelectorAll('tr'));
 
+      // Toggle sort direction if the same column is clicked
+      if (currentColumn === columnIndex) {
+        sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+      } else {
+        sortDirection = 'asc'; // Default to ascending if a new column is clicked
+      }
+
       rows.sort((a, b) => {
         let cellA = a.getElementsByTagName('td')[columnIndex].innerText.trim().toLowerCase();
         let cellB = b.getElementsByTagName('td')[columnIndex].innerText.trim().toLowerCase();
@@ -1373,7 +1381,11 @@
           [cellA, cellB] = [cellB, cellA];
         }
 
-        return cellA.localeCompare(cellB);
+        if (sortDirection === 'asc') {
+          return cellA.localeCompare(cellB);
+        } else {
+          return cellB.localeCompare(cellA);
+        }
       });
 
       tbody.innerHTML = '';
@@ -1403,17 +1415,25 @@
     }
 
     function resetSortIcons(exceptIndex) {
-      const icons = document.querySelectorAll('.fa-sort');
-      icons.forEach(icon => {
-        icon.classList.remove('fa-sort-up', 'fa-sort-down');
-        icon.classList.add('fa-sort');
+      const icons = document.querySelectorAll('.fa-sort, .fa-sort-up, .fa-sort-down');
+      icons.forEach((icon, index) => {
+        if (index === exceptIndex) {
+          icon.classList.remove('fa-sort');
+          if (sortDirection === 'asc') {
+            icon.classList.add('fa-sort-up');
+            icon.classList.remove('fa-sort-down');
+          } else {
+            icon.classList.add('fa-sort-down');
+            icon.classList.remove('fa-sort-up');
+          }
+        } else {
+          icon.classList.remove('fa-sort-up', 'fa-sort-down');
+          icon.classList.add('fa-sort');
+        }
       });
-
-      const clickedHeaderIcon = document.getElementById(`header${exceptIndex}`).getElementsByTagName('i')[0];
-      clickedHeaderIcon.classList.remove('fa-sort');
-      clickedHeaderIcon.classList.add('fas', 'fa-sort');
     }
   </script>
+
 
   <script src="script-custom.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
