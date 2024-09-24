@@ -949,20 +949,21 @@
                     <table id="myTable" class="table table-sm rounded-table table-hover table-nowrap custom-table">
                       <thead style="background-color: #F9FAFB;" class="sticky-thead">
                         <tr class="small text-uppercase">
-                          <th scope="col" id="header0" class="small custom-control custom-checkbox sticky-left mt-n1"> <i class="d-none fas fa-sort"></i>
+                          <th scope="col" id="header0" class="small custom-control custom-checkbox sticky-left mt-n1"> 
                             <input class="form-check-input" type="checkbox" name="flexRadioCompanies"
                               onclick="sortTable(0)">
                             <label class="form-check-label small text-muted" for="selectAllCheckbox"></label>
+                            <i class="d-none custom-sort-icon"></i>
                           </th>
-                          <th scope="col" id="header1" class="ps-0 sticky-left" onclick="sortTable(1)">Company Name <i class="fas fa-sort"></i></th>
-                          <th scope="col" id="header2" onclick="sortTable(2)">LinkedIn <i class="fas fa-sort"></i></th>
-                          <th scope="col" id="header3" onclick="sortTable(3)">Employees <i class="fas fa-sort"></i></th>
-                          <th scope="col" id="header4" onclick="sortTable(4)">Industries <i class="fas fa-sort"></i></th>
-                          <th scope="col" id="header5" onclick="sortTable(5)">Revenue <i class="fas fa-sort"></i></th>
-                          <th scope="col" id="header6" onclick="sortTable(6)">Company Type <i class="fas fa-sort"></i></th>
-                          <th scope="col" id="header7" onclick="sortTable(7)">Company Location <i class="fas fa-sort"></i></th>
-                          <th scope="col" id="header8" onclick="sortTable(8)">Email <i class="fas fa-sort"></i></th>
-                          <th scope="col" class="sticky-action">Action</th>
+                          <th scope="col" id="header1" class="ps-0 sticky-left th-link" onclick="sortTable(1)">Company Name <i class="custom-sort-icon"></i></th>
+                          <th scope="col" id="header2" onclick="sortTable(2)" class="th-link">LinkedIn <i class="custom-sort-icon"></i></th>
+                          <th scope="col" id="header3" onclick="sortTable(3)" class="th-link">Employees <i class="custom-sort-icon"></i></th>
+                          <th scope="col" id="header4" onclick="sortTable(4)" class="th-link">Industries <i class="custom-sort-icon"></i></th>
+                          <th scope="col" id="header5" onclick="sortTable(5)" class="th-link">Revenue <i class="custom-sort-icon"></i></th>
+                          <th scope="col" id="header6" onclick="sortTable(6)" class="th-link">Company Type <i class="custom-sort-icon"></i></th>
+                          <th scope="col" id="header7" onclick="sortTable(7)" class="th-link">Company Location <i class="custom-sort-icon"></i></th>
+                          <th scope="col" id="header8" onclick="sortTable(8)" class="th-link">Email <i class="custom-sort-icon"></i></th>
+                          <th scope="col" id="header9" onclick="sortTable(9)" class="sticky-action th-link">Action <i class="custom-sort-icon"></i></th>
                         </tr>
                       </thead>
                       <tbody class="fs-base">
@@ -1380,93 +1381,91 @@
   <!-- Table sorting JS -->
   <script>
     let currentColumn = 3; // Set Last checked as the default sorted column
-    let lastCheckedColumnSorted = true;
-    let sortDirection = 'desc'; // Track the sort direction
-
+    let sortDirection = 'asc'; // Track the sort direction
+  
     document.addEventListener("DOMContentLoaded", function () {
       // Simulate click on "Last checked" header after the page loads (default sort)
       sortTable(currentColumn);
-      lastCheckedColumnSorted = false;
+      // Hide sort icon for header0 initially
+      document.querySelector('#header0 i').style.display = 'none';
     });
-
+  
     function sortTable(columnIndex) {
       const table = document.getElementById('myTable');
       const tbody = table.querySelector('tbody');
       const rows = Array.from(tbody.querySelectorAll('tr'));
-
+  
       // Toggle sort direction if the same column is clicked
       if (currentColumn === columnIndex) {
         sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
       } else {
         sortDirection = 'asc'; // Default to ascending if a new column is clicked
       }
-
+  
       rows.sort((a, b) => {
-        let cellA = a.getElementsByTagName('td')[columnIndex].innerText.trim().toLowerCase();
-        let cellB = b.getElementsByTagName('td')[columnIndex].innerText.trim().toLowerCase();
-
-        if (columnIndex === 3) { // For Last checked column, reverse sorting
-          [cellA, cellB] = [cellB, cellA];
-        }
-
-        if (sortDirection === 'asc') {
-          return cellA.localeCompare(cellB);
+        let cellA = a.getElementsByTagName('td')[columnIndex].innerText.trim();
+        let cellB = b.getElementsByTagName('td')[columnIndex].innerText.trim();
+  
+        // Special handling for the "Employees" column (index 3)
+        if (columnIndex === 3) {
+          cellA = parseInt(cellA.replace(/,/g, '')) || 0;
+          cellB = parseInt(cellB.replace(/,/g, '')) || 0;
         } else {
-          return cellB.localeCompare(cellA);
+          cellA = cellA.toLowerCase();
+          cellB = cellB.toLowerCase();
+        }
+  
+        if (columnIndex === 3) { // For Employees column, use numeric comparison
+          return sortDirection === 'asc' ? cellA - cellB : cellB - cellA;
+        } else {
+          if (sortDirection === 'asc') {
+            return cellA.localeCompare(cellB);
+          } else {
+            return cellB.localeCompare(cellA);
+          }
         }
       });
-
+  
       tbody.innerHTML = '';
       rows.forEach(row => {
         tbody.appendChild(row);
       });
-
+  
       resetHeaders();
       const clickedHeader = document.getElementById(`header${columnIndex}`);
-
-      if (!lastCheckedColumnSorted && columnIndex === 3) {
-        clickedHeader.classList.add('active-header');
-        lastCheckedColumnSorted = true;
-      } else {
-        clickedHeader.classList.add('active-header');
-      }
-
+      clickedHeader.classList.add('active-header');
+  
       currentColumn = columnIndex;
-      resetSortIcons(columnIndex);
+      updateSortIcon(columnIndex);
     }
-
+  
     function resetHeaders() {
       const headers = document.querySelectorAll('th');
       headers.forEach(header => {
         header.classList.remove('active-header');
       });
     }
-
-    function resetSortIcons(exceptIndex) {
-      const icons = document.querySelectorAll('.fa-sort, .fa-sort-up, .fa-sort-down');
-      icons.forEach((icon, index) => {
-        if (index === exceptIndex) {
-          icon.classList.remove('fa-sort');
-          if (sortDirection === 'asc') {
-            icon.classList.add('fa-sort-up');
-            icon.classList.remove('fa-sort-down');
-          } else {
-            icon.classList.add('fa-sort-down');
-            icon.classList.remove('fa-sort-up');
-          }
+  
+    function updateSortIcon(columnIndex) {
+      const headers = document.querySelectorAll('th');
+      headers.forEach((header, index) => {
+        const icon = header.querySelector('i');
+        if (index === 0) {
+          icon.style.display = 'none'; // Always hide icon for header0
+        } else if (index === columnIndex) {
+          icon.style.display = ''; // Show icon
+          icon.className = sortDirection === 'asc' ? 'custom-sort-icon-up' : 'custom-sort-icon-down';
         } else {
-          icon.classList.remove('fa-sort-up', 'fa-sort-down');
-          icon.classList.add('fa-sort');
+          icon.style.display = ''; // Show icon
+          icon.className = 'custom-sort-icon';
         }
       });
     }
   </script>
 
-
   <script src="script-custom.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
-
 
   <!-- Map JS -->
   <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
