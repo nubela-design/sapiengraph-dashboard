@@ -17,7 +17,7 @@
 
   <!-- Theme CSS -->
   <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
-  <link rel="stylesheet" href="style-custom.css" />
+  <link rel="stylesheet" href="style-custom--.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neuicons@1.9.0/css/neu.min.css">
 
   <!-- Title -->
@@ -187,7 +187,7 @@
               aria-controls="sidebarBilling">
               <i class="fe fe-dollar-sign"></i> Billing
             </a>
-            <div class="collapse" id="sidebarBilling">
+            <div class="collapse show" id="sidebarBilling">
               <ul class="nav nav-sm flex-column">
                 <li class="nav-item">
                   <a href="./account-plans-and-payments.html" class="nav-link">
@@ -211,34 +211,6 @@
             <a class="nav-link" href="job-change-monitor.html">
               <i class="fe fe-briefcase"></i> Job Change Monitor
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" data-bs-toggle="collapse" role="button" aria-expanded="true"
-              aria-controls="sidebarDataEnrichment">
-              <i class="fe fe-database"></i> Data Enrichment
-            </a>
-            <div class="collapse show" id="sidebarDataEnrichment">
-              <ul class="nav nav-sm flex-column">
-                <li class="nav-item">
-                  <a href="#" class="nav-link d-flex justify-content-between align-items-center" target="_blank">
-                    <span>Google Sheets Addon</span>
-                    <i class="fe fe-external-link text-muted"></i>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link d-flex justify-content-between align-items-center" target="_blank">
-                    <span>Formula Documentation</span>
-                    <i class="fe fe-external-link text-muted"></i>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link d-flex justify-content-between align-items-center" target="_blank">
-                    <span>Google Chrome Extension</span>
-                    <i class="fe fe-external-link text-muted"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
           </li>
           <li class="nav-item mb-4">
             <a class="nav-link" href="#!">
@@ -497,7 +469,7 @@
               <hr>
 
               <!-- Advance Filter -->
-              <div class="mt-3"> 
+              <div class="mt-3">
 
                   <!-- toggle-->
                   <a class="d-flex align-items-center text-reset text-decoration-none" data-bs-toggle="collapse"
@@ -604,17 +576,16 @@
             </div>
         </div>
     </div>
-  </div>  
+  </div>
 
   <!-- MAIN CONTENT -->
   <div class="main-content">
-
     <div class="container-fluid" style="padding-left: 14px !important; padding-right: 14px !important;">
       <div class="row justify-content-center">
         <div class="col-12 main-content-prospector">
 
           <!-- NAVS-->
-          <div class="col-12 pt-4 pt-md-4 pb-3 pb-md-3 sticky-top sticky-top-gradient">
+          <div class="col-12 pt-4 pt-md-4 pb-3 pb-md-3 sticky-top-gradient">
             <div class="card card-body custom-rounded border py-3 mb-0">
               <ul class="nav align-items-center">
                 <li class="nav-link h2 text-black mb-0 mt-n1 ps-0 ">Prospector <span class="ps-2 h3 text-gray-400">/</span></li>
@@ -638,15 +609,14 @@
             </div>
           </div>
 
-          <div class="mt-n3">
+          <div>
             <!-- COMPANIES TAB-->
             <div class="row main-content-prospector--tab">
 
               <!-- FILTER-->
               <div class="col-12 col-lg-12 col-xl-4 mb-3 mb-md-4 mb-xl-0">
                 <div class="card card-body custom-rounded shadow-light border mb-0 pb-0 filter-container">
-
-                  <div class="d-flex align-items-center mt-3 mb-7">
+                  <div class="d-flex align-items-center mt-1 mb-3">
                     <div class=" h3"><span class="mr-1">Filter Criteria</span>
                       <span id="tooltip-target" data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true"
                         title='We support <a class="fw-bold text-success link-hover" target="_blank" href="https://nubela.co/blog/ultimate-guide-to-boolean-search-syntax/">Boolean Search Syntax</a> in our search parameters.'>
@@ -665,8 +635,6 @@
                   <!-- Company Filter Section-->
                   <div class="filter-content">
                     <div class="accordion" id="companyFilterAccordion">
-
-
                         <!-- Overview Filter -->
                         <div class="mb-3">
                           <div class="card-body bg-lighter border rounded">
@@ -842,14 +810,13 @@
                             </div>
                           </div>
                         </div>
-
                     </div>
                   </div>
 
                   <div class="row card-body">
-                    <div class="btn btn-success rounded-pill w-100 lift"><i class="neu neu-search"></i>
-                      Search criteria
-                    </div>
+                  <div class="btn btn-success rounded-pill w-100 lift"><i class="neu neu-search"></i>
+                    Search criteria
+                  </div>
                   </div>
                 </div>
               </div>
@@ -857,7 +824,6 @@
               <!-- RESULT-->
               <div class="col-lg-12 col-xl-8 mb-0 ps-xl-0">
                 <div class="card custom-rounded bg-white text-left shadow-light border mb-0 result-container">
-
                   <div class="card-body border-bottom pb-3 mb-0">
                     <div class="row">
                       <div class="col-12 col-lg-5">
@@ -897,11 +863,9 @@
                     </div>
                   </div>
 
-                  <!-- Filter feedback-->
+                  <!-- Filter feedback -->
                   <div class="card-body border-bottom pt-3 pt-xl-3 pb-4 pb-md-2 px-3">
                     <div class="row justify-content-between align-items-center">
-                      
-
                       <div class="col-10 col-md-10 col-lg-11 col-xl-10 mt-2 mt-md-0 mb-0 overflow-auto"  style="white-space: nowrap;">
                         <button type="button" class=" btn btn-sm rounded-pill px-3 btn-outline-secondary me-md-2 mb-2">
                           <span class="text-muted d-none d-lg-inline-block">Industry:</span> Software Development <i class="neu neu-so-close-circle text-muted ms-1"></i>
@@ -944,25 +908,24 @@
 
                   </div>
 
-                  <div class="table-responsive max-height-table table-container mb-0 pb-0">
-                    <table id="myTable" class="table table-sm rounded-table table-hover table-nowrap custom-table">
+                  <div class="table-responsive max-height-table table-container">
+                    <table class="table table-sm rounded-table table-hover table-nowrap custom-table">
                       <thead style="background-color: #F9FAFB;" class="sticky-thead">
-                        <tr class="small text-uppercase">
-                          <th scope="col" id="header0" class="small custom-control custom-checkbox sticky-left mt-n1"> 
+                        <tr class="text-muted small text-uppercase">
+                          <th scope="col" class="small custom-control custom-checkbox sticky-left mt-n1">
                             <input class="form-check-input" type="checkbox" name="flexRadioCompanies"
-                              onclick="sortTable(0)">
+                              id="selectAllCompaniesCheckbox" onclick="handleSelectAllCompaniesCheckbox()">
                             <label class="form-check-label small text-muted" for="selectAllCheckbox"></label>
-                            <i class="d-none custom-sort-icon"></i>
                           </th>
-                          <th scope="col" id="header1" class="ps-0 sticky-left th-link" onclick="sortTable(1)">Company Name <i class="custom-sort-icon"></i></th>
-                          <th scope="col" id="header2" onclick="sortTable(2)" class="th-link">LinkedIn <i class="custom-sort-icon"></i></th>
-                          <th scope="col" id="header3" onclick="sortTable(3)" class="th-link">Employees <i class="custom-sort-icon"></i></th>
-                          <th scope="col" id="header4" onclick="sortTable(4)" class="th-link">Industries <i class="custom-sort-icon"></i></th>
-                          <th scope="col" id="header5" onclick="sortTable(5)" class="th-link">Revenue <i class="custom-sort-icon"></i></th>
-                          <th scope="col" id="header6" onclick="sortTable(6)" class="th-link">Company Type <i class="custom-sort-icon"></i></th>
-                          <th scope="col" id="header7" onclick="sortTable(7)" class="th-link">Company Location <i class="custom-sort-icon"></i></th>
-                          <th scope="col" id="header8" onclick="sortTable(8)" class="th-link">Email <i class="custom-sort-icon"></i></th>
-                          <th scope="col" id="header9" onclick="sortTable(9)" class="sticky-action th-link">Action <i class="custom-sort-icon"></i></th>
+                          <th scope="col" class="ps-0 sticky-left">Company Name</th>
+                          <th scope="col">LinkedIn</th>
+                          <th scope="col">Employees</th>
+                          <th scope="col">Industries</th>
+                          <th scope="col">Revenue</th>
+                          <th scope="col">Company Type</th>
+                          <th scope="col">Company Location</th>
+                          <th scope="col">Email</th>
+                          <th scope="col" class="sticky-action">Action</th>
                         </tr>
                       </thead>
                       <tbody class="fs-base">
@@ -1304,147 +1267,6 @@
                               row</button>
                           </td>
                         </tr>
-                        <!-- 6 -->
-                        <tr class="align-middle">
-                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
-                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
-                              id="flexRadioCompanies6" onclick="handleCheckbox(this)">
-                            <label class="form-check-label small text-muted" for="flexRadioCompanies6"></label>
-                          </td>
-                          <td class="align-middle ps-0 sticky-left sticky-left-color">
-                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
-                              <div class="avatar avatar-xs">
-                                <img class="img" width="23" height="auto" src="assets/img/logo/adobe.svg"
-                                  alt="company logo">
-                              </div>
-                              <div class="ms-3 ">Adobe</div>
-                            </a>
-                          </td>
-                          <td class="align-middle">*********************
-                          </td>
-                          <td class="align-middle">*******
-                          </td>
-                          <td class="align-middle custom-table-cell">Software Development, Digital Media, Creative
-                            Tools, Marketing and Advertising Technology, Content Creation and Publishing, Digital
-                            Experience Solutions.</td>
-                          <td class="align-middle"> ******* </td>
-                          <td class="align-middle">Public Company</td>
-                          <td class="align-middle"> San Jose, California, USA</td>
-                          <td class="align-middle">**************</td>
-                          <td class="align-middle sticky-action"> <!-- Add your button here -->
-                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
-                                class="neu neu-so-lock-square"></i>
-                              Unlock
-                              this
-                              row</button>
-                          </td>
-                        </tr>
-                        <!-- 7 -->
-                        <tr class="align-middle">
-                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
-                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
-                              id="flexRadioCompanies7" onclick="handleCheckbox(this)">
-                            <label class="form-check-label small text-muted" for="flexRadioCompanies7"></label>
-                          </td>
-                          <td class="align-middle ps-0 sticky-left sticky-left-color">
-                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
-                              <div class="avatar avatar-xs">
-                                <img class="img mt-2" width="22" height="auto" src="assets/img/logo/IBM logo.svg"
-                                  alt="company logo">
-                              </div>
-                              <div class="ms-3 ">***</div>
-                            </a>
-                          </td>
-                          <td class="align-middle">******************
-                          </td>
-                          <td class="align-middle">*****
-                          </td>
-                          <td class="align-middle custom-table-cell">Technology Solutions and Services, Software
-                            Development, Cloud Computing, Artificial Intelligence and Machine Learning, Consulting and
-                            Business Services, Hardware Manufacturing.</td>
-                          <td class="align-middle"> ******* </td>
-                          <td class="align-middle">Public Company</td>
-                          <td class="align-middle">Armonk, New York, USA</td>
-                          <td class="align-middle">*********************</td>
-                          <td class="align-middle sticky-action"> <!-- Add your button here -->
-                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
-                                class="neu neu-so-lock-square"></i>
-                              Unlock
-                              this
-                              row</button>
-                          </td>
-                        </tr>
-                        <!-- 8 -->
-                        <tr class="align-middle">
-                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
-                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
-                              id="flexRadioCompanies8" onclick="handleCheckbox(this)">
-                            <label class="form-check-label small text-muted" for="flexRadioCompanies8"></label>
-                          </td>
-                          <td class="align-middle ps-0 sticky-left sticky-left-color">
-                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
-                              <div class="avatar avatar-xs">
-                                <img class="img" width="22" height="auto" src="assets/img/logo/netflix.jpeg"
-                                  alt="company logo">
-                              </div>
-                              <div class="ms-3 ">*******</div>
-                            </a>
-                          </td>
-                          <td class="align-middle">***********************
-                          </td>
-                          <td class="align-middle">*********
-                          </td>
-                          <td class="align-middle custom-table-cell">Entertainment Streaming, Media Production and
-                            Distribution, Content Creation, Technology and Internet Services, Subscription-based
-                            Services, Original Programming.</td>
-                          <td class="align-middle"> ******** </td>
-                          <td class="align-middle">Public Company</td>
-                          <td class="align-middle"> Los Gatos, California, USA</td>
-                          <td class="align-middle">**************</td>
-                          <td class="align-middle sticky-action"> <!-- Add your button here -->
-                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
-                                class="neu neu-so-lock-square"></i>
-                              Unlock
-                              this
-                              row</button>
-                          </td>
-                        </tr>
-                        <!-- 9 -->
-                        <tr class="align-middle">
-                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
-                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
-                              id="flexRadioCompanies9" onclick="handleCheckbox(this)">
-                            <label class="form-check-label small text-muted" for="flexRadioCompanies9"></label>
-                          </td>
-                          <td class="align-middle ps-0 sticky-left sticky-left-color">
-                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
-                              <div class="avatar avatar-xs">
-                                <img class="img mt-n1" width="22" height="auto" src="assets/img/logo/Apple 14.svg"
-                                  alt="company logo">
-                              </div>
-                              <div class="ms-3 ">*****</div>
-                            </a>
-                          </td>
-                          <td class="align-middle">*********************
-                          </td>
-                          <td class="align-middle">**********
-                          </td>
-                          <td class="align-middle custom-table-cell">
-                            Technology Hardware, Software Development, Consumer Electronics, Mobile Devices, Digital
-                            Services, Artificial Intelligence.</td>
-                          <td class="align-middle"> ******** </td>
-                          <td class="align-middle">Public Company</td>
-                          <td class="align-middle">Cupertino, California, USA</td>
-                          <td class="align-middle">*******************</td>
-                          <td class="align-middle sticky-action"> <!-- Add your button here -->
-                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
-                                class="neu neu-so-lock-square"></i>
-                              Unlock
-                              this
-                              row</button>
-                          </td>
-                        </tr>
-                        <!-- 10 -->
                         <tr class="align-middle">
                           <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
                             <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
@@ -1477,148 +1299,7 @@
                               this
                               row</button>
                           </td>
-                        </tr>                        
-                        <!-- 6 -->
-                        <tr class="align-middle">
-                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
-                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
-                              id="flexRadioCompanies6" onclick="handleCheckbox(this)">
-                            <label class="form-check-label small text-muted" for="flexRadioCompanies6"></label>
-                          </td>
-                          <td class="align-middle ps-0 sticky-left sticky-left-color">
-                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
-                              <div class="avatar avatar-xs">
-                                <img class="img" width="23" height="auto" src="assets/img/logo/adobe.svg"
-                                  alt="company logo">
-                              </div>
-                              <div class="ms-3 ">Adobe</div>
-                            </a>
-                          </td>
-                          <td class="align-middle">*********************
-                          </td>
-                          <td class="align-middle">*******
-                          </td>
-                          <td class="align-middle custom-table-cell">Software Development, Digital Media, Creative
-                            Tools, Marketing and Advertising Technology, Content Creation and Publishing, Digital
-                            Experience Solutions.</td>
-                          <td class="align-middle"> ******* </td>
-                          <td class="align-middle">Public Company</td>
-                          <td class="align-middle"> San Jose, California, USA</td>
-                          <td class="align-middle">**************</td>
-                          <td class="align-middle sticky-action"> <!-- Add your button here -->
-                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
-                                class="neu neu-so-lock-square"></i>
-                              Unlock
-                              this
-                              row</button>
-                          </td>
                         </tr>
-                        <!-- 7 -->
-                        <tr class="align-middle">
-                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
-                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
-                              id="flexRadioCompanies7" onclick="handleCheckbox(this)">
-                            <label class="form-check-label small text-muted" for="flexRadioCompanies7"></label>
-                          </td>
-                          <td class="align-middle ps-0 sticky-left sticky-left-color">
-                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
-                              <div class="avatar avatar-xs">
-                                <img class="img mt-2" width="22" height="auto" src="assets/img/logo/IBM logo.svg"
-                                  alt="company logo">
-                              </div>
-                              <div class="ms-3 ">***</div>
-                            </a>
-                          </td>
-                          <td class="align-middle">******************
-                          </td>
-                          <td class="align-middle">*****
-                          </td>
-                          <td class="align-middle custom-table-cell">Technology Solutions and Services, Software
-                            Development, Cloud Computing, Artificial Intelligence and Machine Learning, Consulting and
-                            Business Services, Hardware Manufacturing.</td>
-                          <td class="align-middle"> ******* </td>
-                          <td class="align-middle">Public Company</td>
-                          <td class="align-middle">Armonk, New York, USA</td>
-                          <td class="align-middle">*********************</td>
-                          <td class="align-middle sticky-action"> <!-- Add your button here -->
-                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
-                                class="neu neu-so-lock-square"></i>
-                              Unlock
-                              this
-                              row</button>
-                          </td>
-                        </tr>
-                        <!-- 8 -->
-                        <tr class="align-middle">
-                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
-                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
-                              id="flexRadioCompanies8" onclick="handleCheckbox(this)">
-                            <label class="form-check-label small text-muted" for="flexRadioCompanies8"></label>
-                          </td>
-                          <td class="align-middle ps-0 sticky-left sticky-left-color">
-                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
-                              <div class="avatar avatar-xs">
-                                <img class="img" width="22" height="auto" src="assets/img/logo/netflix.jpeg"
-                                  alt="company logo">
-                              </div>
-                              <div class="ms-3 ">*******</div>
-                            </a>
-                          </td>
-                          <td class="align-middle">***********************
-                          </td>
-                          <td class="align-middle">*********
-                          </td>
-                          <td class="align-middle custom-table-cell">Entertainment Streaming, Media Production and
-                            Distribution, Content Creation, Technology and Internet Services, Subscription-based
-                            Services, Original Programming.</td>
-                          <td class="align-middle"> ******** </td>
-                          <td class="align-middle">Public Company</td>
-                          <td class="align-middle"> Los Gatos, California, USA</td>
-                          <td class="align-middle">**************</td>
-                          <td class="align-middle sticky-action"> <!-- Add your button here -->
-                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
-                                class="neu neu-so-lock-square"></i>
-                              Unlock
-                              this
-                              row</button>
-                          </td>
-                        </tr>
-                        <!-- 9 -->
-                        <tr class="align-middle">
-                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
-                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
-                              id="flexRadioCompanies9" onclick="handleCheckbox(this)">
-                            <label class="form-check-label small text-muted" for="flexRadioCompanies9"></label>
-                          </td>
-                          <td class="align-middle ps-0 sticky-left sticky-left-color">
-                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
-                              <div class="avatar avatar-xs">
-                                <img class="img mt-n1" width="22" height="auto" src="assets/img/logo/Apple 14.svg"
-                                  alt="company logo">
-                              </div>
-                              <div class="ms-3 ">*****</div>
-                            </a>
-                          </td>
-                          <td class="align-middle">*********************
-                          </td>
-                          <td class="align-middle">**********
-                          </td>
-                          <td class="align-middle custom-table-cell">
-                            Technology Hardware, Software Development, Consumer Electronics, Mobile Devices, Digital
-                            Services, Artificial Intelligence.</td>
-                          <td class="align-middle"> ******** </td>
-                          <td class="align-middle">Public Company</td>
-                          <td class="align-middle">Cupertino, California, USA</td>
-                          <td class="align-middle">*******************</td>
-                          <td class="align-middle sticky-action"> <!-- Add your button here -->
-                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
-                                class="neu neu-so-lock-square"></i>
-                              Unlock
-                              this
-                              row</button>
-                          </td>
-                        </tr>
-                        <!-- 10 -->
                         <tr class="align-middle">
                           <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
                             <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
@@ -1651,8 +1332,469 @@
                               this
                               row</button>
                           </td>
-                        </tr>          
-                        
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
+                              id="flexRadioCompanies10" onclick="handleCheckbox(this)">
+                            <label class="form-check-label small text-muted" for="flexRadioCompanies10"></label>
+                          </td>
+                          <td class="align-middle ps-0 sticky-left sticky-left-color">
+                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
+                              <div class="avatar avatar-xs">
+                                <img class="img mt-2" width="23" height="auto" src="assets/img/logo/Meta 1.svg"
+                                  alt="company logo">
+                              </div>
+                              <div class="ms-3 ">****</div>
+                            </a>
+                          </td>
+                          <td class="align-middle">********************
+                          </td>
+                          <td class="align-middle">*********
+                          </td>
+                          <td class="align-middle custom-table-cell">Technology, Social Media, Virtual Reality,
+                            Augmented Reality, Artificial Intelligence, and Digital Advertising industries.</td>
+                          <td class="align-middle"> ********</td>
+                          <td class="align-middle">Public Company</td>
+                          <td class="align-middle"> Menlo Park, California, USA</td>
+                          <td class="align-middle">***************</td>
+                          <td class="align-middle sticky-action"> <!-- Add your button here -->
+                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
+                                class="neu neu-so-lock-square"></i>
+                              Unlock
+                              this
+                              row</button>
+                          </td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
+                              id="flexRadioCompanies10" onclick="handleCheckbox(this)">
+                            <label class="form-check-label small text-muted" for="flexRadioCompanies10"></label>
+                          </td>
+                          <td class="align-middle ps-0 sticky-left sticky-left-color">
+                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
+                              <div class="avatar avatar-xs">
+                                <img class="img mt-2" width="23" height="auto" src="assets/img/logo/Meta 1.svg"
+                                  alt="company logo">
+                              </div>
+                              <div class="ms-3 ">****</div>
+                            </a>
+                          </td>
+                          <td class="align-middle">********************
+                          </td>
+                          <td class="align-middle">*********
+                          </td>
+                          <td class="align-middle custom-table-cell">Technology, Social Media, Virtual Reality,
+                            Augmented Reality, Artificial Intelligence, and Digital Advertising industries.</td>
+                          <td class="align-middle"> ********</td>
+                          <td class="align-middle">Public Company</td>
+                          <td class="align-middle"> Menlo Park, California, USA</td>
+                          <td class="align-middle">***************</td>
+                          <td class="align-middle sticky-action"> <!-- Add your button here -->
+                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
+                                class="neu neu-so-lock-square"></i>
+                              Unlock
+                              this
+                              row</button>
+                          </td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
+                              id="flexRadioCompanies10" onclick="handleCheckbox(this)">
+                            <label class="form-check-label small text-muted" for="flexRadioCompanies10"></label>
+                          </td>
+                          <td class="align-middle ps-0 sticky-left sticky-left-color">
+                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
+                              <div class="avatar avatar-xs">
+                                <img class="img mt-2" width="23" height="auto" src="assets/img/logo/Meta 1.svg"
+                                  alt="company logo">
+                              </div>
+                              <div class="ms-3 ">****</div>
+                            </a>
+                          </td>
+                          <td class="align-middle">********************
+                          </td>
+                          <td class="align-middle">*********
+                          </td>
+                          <td class="align-middle custom-table-cell">Technology, Social Media, Virtual Reality,
+                            Augmented Reality, Artificial Intelligence, and Digital Advertising industries.</td>
+                          <td class="align-middle"> ********</td>
+                          <td class="align-middle">Public Company</td>
+                          <td class="align-middle"> Menlo Park, California, USA</td>
+                          <td class="align-middle">***************</td>
+                          <td class="align-middle sticky-action"> <!-- Add your button here -->
+                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
+                                class="neu neu-so-lock-square"></i>
+                              Unlock
+                              this
+                              row</button>
+                          </td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
+                              id="flexRadioCompanies10" onclick="handleCheckbox(this)">
+                            <label class="form-check-label small text-muted" for="flexRadioCompanies10"></label>
+                          </td>
+                          <td class="align-middle ps-0 sticky-left sticky-left-color">
+                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
+                              <div class="avatar avatar-xs">
+                                <img class="img mt-2" width="23" height="auto" src="assets/img/logo/Meta 1.svg"
+                                  alt="company logo">
+                              </div>
+                              <div class="ms-3 ">****</div>
+                            </a>
+                          </td>
+                          <td class="align-middle">********************
+                          </td>
+                          <td class="align-middle">*********
+                          </td>
+                          <td class="align-middle custom-table-cell">Technology, Social Media, Virtual Reality,
+                            Augmented Reality, Artificial Intelligence, and Digital Advertising industries.</td>
+                          <td class="align-middle"> ********</td>
+                          <td class="align-middle">Public Company</td>
+                          <td class="align-middle"> Menlo Park, California, USA</td>
+                          <td class="align-middle">***************</td>
+                          <td class="align-middle sticky-action"> <!-- Add your button here -->
+                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
+                                class="neu neu-so-lock-square"></i>
+                              Unlock
+                              this
+                              row</button>
+                          </td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
+                              id="flexRadioCompanies10" onclick="handleCheckbox(this)">
+                            <label class="form-check-label small text-muted" for="flexRadioCompanies10"></label>
+                          </td>
+                          <td class="align-middle ps-0 sticky-left sticky-left-color">
+                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
+                              <div class="avatar avatar-xs">
+                                <img class="img mt-2" width="23" height="auto" src="assets/img/logo/Meta 1.svg"
+                                  alt="company logo">
+                              </div>
+                              <div class="ms-3 ">****</div>
+                            </a>
+                          </td>
+                          <td class="align-middle">********************
+                          </td>
+                          <td class="align-middle">*********
+                          </td>
+                          <td class="align-middle custom-table-cell">Technology, Social Media, Virtual Reality,
+                            Augmented Reality, Artificial Intelligence, and Digital Advertising industries.</td>
+                          <td class="align-middle"> ********</td>
+                          <td class="align-middle">Public Company</td>
+                          <td class="align-middle"> Menlo Park, California, USA</td>
+                          <td class="align-middle">***************</td>
+                          <td class="align-middle sticky-action"> <!-- Add your button here -->
+                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
+                                class="neu neu-so-lock-square"></i>
+                              Unlock
+                              this
+                              row</button>
+                          </td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
+                              id="flexRadioCompanies10" onclick="handleCheckbox(this)">
+                            <label class="form-check-label small text-muted" for="flexRadioCompanies10"></label>
+                          </td>
+                          <td class="align-middle ps-0 sticky-left sticky-left-color">
+                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
+                              <div class="avatar avatar-xs">
+                                <img class="img mt-2" width="23" height="auto" src="assets/img/logo/Meta 1.svg"
+                                  alt="company logo">
+                              </div>
+                              <div class="ms-3 ">****</div>
+                            </a>
+                          </td>
+                          <td class="align-middle">********************
+                          </td>
+                          <td class="align-middle">*********
+                          </td>
+                          <td class="align-middle custom-table-cell">Technology, Social Media, Virtual Reality,
+                            Augmented Reality, Artificial Intelligence, and Digital Advertising industries.</td>
+                          <td class="align-middle"> ********</td>
+                          <td class="align-middle">Public Company</td>
+                          <td class="align-middle"> Menlo Park, California, USA</td>
+                          <td class="align-middle">***************</td>
+                          <td class="align-middle sticky-action"> <!-- Add your button here -->
+                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
+                                class="neu neu-so-lock-square"></i>
+                              Unlock
+                              this
+                              row</button>
+                          </td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
+                              id="flexRadioCompanies10" onclick="handleCheckbox(this)">
+                            <label class="form-check-label small text-muted" for="flexRadioCompanies10"></label>
+                          </td>
+                          <td class="align-middle ps-0 sticky-left sticky-left-color">
+                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
+                              <div class="avatar avatar-xs">
+                                <img class="img mt-2" width="23" height="auto" src="assets/img/logo/Meta 1.svg"
+                                  alt="company logo">
+                              </div>
+                              <div class="ms-3 ">****</div>
+                            </a>
+                          </td>
+                          <td class="align-middle">********************
+                          </td>
+                          <td class="align-middle">*********
+                          </td>
+                          <td class="align-middle custom-table-cell">Technology, Social Media, Virtual Reality,
+                            Augmented Reality, Artificial Intelligence, and Digital Advertising industries.</td>
+                          <td class="align-middle"> ********</td>
+                          <td class="align-middle">Public Company</td>
+                          <td class="align-middle"> Menlo Park, California, USA</td>
+                          <td class="align-middle">***************</td>
+                          <td class="align-middle sticky-action"> <!-- Add your button here -->
+                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
+                                class="neu neu-so-lock-square"></i>
+                              Unlock
+                              this
+                              row</button>
+                          </td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
+                              id="flexRadioCompanies10" onclick="handleCheckbox(this)">
+                            <label class="form-check-label small text-muted" for="flexRadioCompanies10"></label>
+                          </td>
+                          <td class="align-middle ps-0 sticky-left sticky-left-color">
+                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
+                              <div class="avatar avatar-xs">
+                                <img class="img mt-2" width="23" height="auto" src="assets/img/logo/Meta 1.svg"
+                                  alt="company logo">
+                              </div>
+                              <div class="ms-3 ">****</div>
+                            </a>
+                          </td>
+                          <td class="align-middle">********************
+                          </td>
+                          <td class="align-middle">*********
+                          </td>
+                          <td class="align-middle custom-table-cell">Technology, Social Media, Virtual Reality,
+                            Augmented Reality, Artificial Intelligence, and Digital Advertising industries.</td>
+                          <td class="align-middle"> ********</td>
+                          <td class="align-middle">Public Company</td>
+                          <td class="align-middle"> Menlo Park, California, USA</td>
+                          <td class="align-middle">***************</td>
+                          <td class="align-middle sticky-action"> <!-- Add your button here -->
+                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
+                                class="neu neu-so-lock-square"></i>
+                              Unlock
+                              this
+                              row</button>
+                          </td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
+                              id="flexRadioCompanies10" onclick="handleCheckbox(this)">
+                            <label class="form-check-label small text-muted" for="flexRadioCompanies10"></label>
+                          </td>
+                          <td class="align-middle ps-0 sticky-left sticky-left-color">
+                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
+                              <div class="avatar avatar-xs">
+                                <img class="img mt-2" width="23" height="auto" src="assets/img/logo/Meta 1.svg"
+                                  alt="company logo">
+                              </div>
+                              <div class="ms-3 ">****</div>
+                            </a>
+                          </td>
+                          <td class="align-middle">********************
+                          </td>
+                          <td class="align-middle">*********
+                          </td>
+                          <td class="align-middle custom-table-cell">Technology, Social Media, Virtual Reality,
+                            Augmented Reality, Artificial Intelligence, and Digital Advertising industries.</td>
+                          <td class="align-middle"> ********</td>
+                          <td class="align-middle">Public Company</td>
+                          <td class="align-middle"> Menlo Park, California, USA</td>
+                          <td class="align-middle">***************</td>
+                          <td class="align-middle sticky-action"> <!-- Add your button here -->
+                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
+                                class="neu neu-so-lock-square"></i>
+                              Unlock
+                              this
+                              row</button>
+                          </td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
+                              id="flexRadioCompanies10" onclick="handleCheckbox(this)">
+                            <label class="form-check-label small text-muted" for="flexRadioCompanies10"></label>
+                          </td>
+                          <td class="align-middle ps-0 sticky-left sticky-left-color">
+                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
+                              <div class="avatar avatar-xs">
+                                <img class="img mt-2" width="23" height="auto" src="assets/img/logo/Meta 1.svg"
+                                  alt="company logo">
+                              </div>
+                              <div class="ms-3 ">****</div>
+                            </a>
+                          </td>
+                          <td class="align-middle">********************
+                          </td>
+                          <td class="align-middle">*********
+                          </td>
+                          <td class="align-middle custom-table-cell">Technology, Social Media, Virtual Reality,
+                            Augmented Reality, Artificial Intelligence, and Digital Advertising industries.</td>
+                          <td class="align-middle"> ********</td>
+                          <td class="align-middle">Public Company</td>
+                          <td class="align-middle"> Menlo Park, California, USA</td>
+                          <td class="align-middle">***************</td>
+                          <td class="align-middle sticky-action"> <!-- Add your button here -->
+                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
+                                class="neu neu-so-lock-square"></i>
+                              Unlock
+                              this
+                              row</button>
+                          </td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
+                              id="flexRadioCompanies10" onclick="handleCheckbox(this)">
+                            <label class="form-check-label small text-muted" for="flexRadioCompanies10"></label>
+                          </td>
+                          <td class="align-middle ps-0 sticky-left sticky-left-color">
+                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
+                              <div class="avatar avatar-xs">
+                                <img class="img mt-2" width="23" height="auto" src="assets/img/logo/Meta 1.svg"
+                                  alt="company logo">
+                              </div>
+                              <div class="ms-3 ">****</div>
+                            </a>
+                          </td>
+                          <td class="align-middle">********************
+                          </td>
+                          <td class="align-middle">*********
+                          </td>
+                          <td class="align-middle custom-table-cell">Technology, Social Media, Virtual Reality,
+                            Augmented Reality, Artificial Intelligence, and Digital Advertising industries.</td>
+                          <td class="align-middle"> ********</td>
+                          <td class="align-middle">Public Company</td>
+                          <td class="align-middle"> Menlo Park, California, USA</td>
+                          <td class="align-middle">***************</td>
+                          <td class="align-middle sticky-action"> <!-- Add your button here -->
+                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
+                                class="neu neu-so-lock-square"></i>
+                              Unlock
+                              this
+                              row</button>
+                          </td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
+                              id="flexRadioCompanies10" onclick="handleCheckbox(this)">
+                            <label class="form-check-label small text-muted" for="flexRadioCompanies10"></label>
+                          </td>
+                          <td class="align-middle ps-0 sticky-left sticky-left-color">
+                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
+                              <div class="avatar avatar-xs">
+                                <img class="img mt-2" width="23" height="auto" src="assets/img/logo/Meta 1.svg"
+                                  alt="company logo">
+                              </div>
+                              <div class="ms-3 ">****</div>
+                            </a>
+                          </td>
+                          <td class="align-middle">********************
+                          </td>
+                          <td class="align-middle">*********
+                          </td>
+                          <td class="align-middle custom-table-cell">Technology, Social Media, Virtual Reality,
+                            Augmented Reality, Artificial Intelligence, and Digital Advertising industries.</td>
+                          <td class="align-middle"> ********</td>
+                          <td class="align-middle">Public Company</td>
+                          <td class="align-middle"> Menlo Park, California, USA</td>
+                          <td class="align-middle">***************</td>
+                          <td class="align-middle sticky-action"> <!-- Add your button here -->
+                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
+                                class="neu neu-so-lock-square"></i>
+                              Unlock
+                              this
+                              row</button>
+                          </td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
+                              id="flexRadioCompanies10" onclick="handleCheckbox(this)">
+                            <label class="form-check-label small text-muted" for="flexRadioCompanies10"></label>
+                          </td>
+                          <td class="align-middle ps-0 sticky-left sticky-left-color">
+                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
+                              <div class="avatar avatar-xs">
+                                <img class="img mt-2" width="23" height="auto" src="assets/img/logo/Meta 1.svg"
+                                  alt="company logo">
+                              </div>
+                              <div class="ms-3 ">****</div>
+                            </a>
+                          </td>
+                          <td class="align-middle">********************
+                          </td>
+                          <td class="align-middle">*********
+                          </td>
+                          <td class="align-middle custom-table-cell">Technology, Social Media, Virtual Reality,
+                            Augmented Reality, Artificial Intelligence, and Digital Advertising industries.</td>
+                          <td class="align-middle"> ********</td>
+                          <td class="align-middle">Public Company</td>
+                          <td class="align-middle"> Menlo Park, California, USA</td>
+                          <td class="align-middle">***************</td>
+                          <td class="align-middle sticky-action"> <!-- Add your button here -->
+                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
+                                class="neu neu-so-lock-square"></i>
+                              Unlock
+                              this
+                              row</button>
+                          </td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="custom-control custom-checkbox sticky-left sticky-left-color" style="border-bottom: 0 !important;">
+                            <input class="form-check-input mb-2" type="checkbox" name="flexRadioCompanies"
+                              id="flexRadioCompanies10" onclick="handleCheckbox(this)">
+                            <label class="form-check-label small text-muted" for="flexRadioCompanies10"></label>
+                          </td>
+                          <td class="align-middle ps-0 sticky-left sticky-left-color">
+                            <a class="d-flex custom-link text-black" href="prospector-companies-detail-locked.html">
+                              <div class="avatar avatar-xs">
+                                <img class="img mt-2" width="23" height="auto" src="assets/img/logo/Meta 1.svg"
+                                  alt="company logo">
+                              </div>
+                              <div class="ms-3 ">****</div>
+                            </a>
+                          </td>
+                          <td class="align-middle">********************
+                          </td>
+                          <td class="align-middle">*********
+                          </td>
+                          <td class="align-middle custom-table-cell">Technology, Social Media, Virtual Reality,
+                            Augmented Reality, Artificial Intelligence, and Digital Advertising industries.</td>
+                          <td class="align-middle"> ********</td>
+                          <td class="align-middle">Public Company</td>
+                          <td class="align-middle"> Menlo Park, California, USA</td>
+                          <td class="align-middle">***************</td>
+                          <td class="align-middle sticky-action"> <!-- Add your button here -->
+                            <button class="btn btn-sm rounded-pill btn-outline-success"><i
+                                class="neu neu-so-lock-square"></i>
+                              Unlock
+                              this
+                              row</button>
+                          </td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>
@@ -1726,94 +1868,76 @@
 
   <!-- JAVASCRIPT -->
 
-  <!-- Table sorting JS -->
+  <!-- Table sorting JS-->
   <script>
     let currentColumn = 3; // Set Last checked as the default sorted column
-    let sortDirection = 'asc'; // Track the sort direction
-  
-    document.addEventListener("DOMContentLoaded", function () {
+    let lastCheckedColumnSorted = true;
+
+    document.addEventListener("DOMContentLoaded", function (event) {
       // Simulate click on "Last checked" header after the page loads (default sort)
       sortTable(currentColumn);
-      // Hide sort icon for header0 initially
-      document.querySelector('#header0 i').style.display = 'none';
+      lastCheckedColumnSorted = false;
     });
-  
+
     function sortTable(columnIndex) {
       const table = document.getElementById('myTable');
       const tbody = table.querySelector('tbody');
       const rows = Array.from(tbody.querySelectorAll('tr'));
-  
-      // Toggle sort direction if the same column is clicked
-      if (currentColumn === columnIndex) {
-        sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
-      } else {
-        sortDirection = 'asc'; // Default to ascending if a new column is clicked
-      }
-  
+
       rows.sort((a, b) => {
-        let cellA = a.getElementsByTagName('td')[columnIndex].innerText.trim();
-        let cellB = b.getElementsByTagName('td')[columnIndex].innerText.trim();
-  
-        // Special handling for the "Employees" column (index 3)
-        if (columnIndex === 3) {
-          cellA = parseInt(cellA.replace(/,/g, '')) || 0;
-          cellB = parseInt(cellB.replace(/,/g, '')) || 0;
-        } else {
-          cellA = cellA.toLowerCase();
-          cellB = cellB.toLowerCase();
+        let cellA = a.getElementsByTagName('td')[columnIndex].innerText.trim().toLowerCase();
+        let cellB = b.getElementsByTagName('td')[columnIndex].innerText.trim().toLowerCase();
+
+        if (columnIndex === 3) { // For Last checked column, reverse sorting
+          [cellA, cellB] = [cellB, cellA];
         }
-  
-        if (columnIndex === 3) { // For Employees column, use numeric comparison
-          return sortDirection === 'asc' ? cellA - cellB : cellB - cellA;
-        } else {
-          if (sortDirection === 'asc') {
-            return cellA.localeCompare(cellB);
-          } else {
-            return cellB.localeCompare(cellA);
-          }
-        }
+
+        return cellA.localeCompare(cellB);
       });
-  
+
       tbody.innerHTML = '';
       rows.forEach(row => {
         tbody.appendChild(row);
       });
-  
+
       resetHeaders();
       const clickedHeader = document.getElementById(`header${columnIndex}`);
-      clickedHeader.classList.add('active-header');
-  
+
+      if (!lastCheckedColumnSorted && columnIndex === 3) {
+        clickedHeader.classList.add('active-header');
+        lastCheckedColumnSorted = true;
+      } else {
+        clickedHeader.classList.add('active-header');
+      }
+
       currentColumn = columnIndex;
-      updateSortIcon(columnIndex);
+      resetSortIcons(columnIndex);
     }
-  
+
     function resetHeaders() {
       const headers = document.querySelectorAll('th');
       headers.forEach(header => {
         header.classList.remove('active-header');
       });
     }
-  
-    function updateSortIcon(columnIndex) {
-      const headers = document.querySelectorAll('th');
-      headers.forEach((header, index) => {
-        const icon = header.querySelector('i');
-        if (index === 0) {
-          icon.style.display = 'none'; // Always hide icon for header0
-        } else if (index === columnIndex) {
-          icon.style.display = ''; // Show icon
-          icon.className = sortDirection === 'asc' ? 'custom-sort-icon-up' : 'custom-sort-icon-down';
-        } else {
-          icon.style.display = ''; // Show icon
-          icon.className = 'custom-sort-icon';
-        }
+
+    function resetSortIcons(exceptIndex) {
+      const icons = document.querySelectorAll('.fa-sort');
+      icons.forEach(icon => {
+        icon.classList.remove('fa-sort-up', 'fa-sort-down');
+        icon.classList.add('fa-sort');
       });
+
+      const clickedHeaderIcon = document.getElementById(`header${exceptIndex}`).getElementsByTagName('i')[0];
+      clickedHeaderIcon.classList.remove('fa-sort');
+      clickedHeaderIcon.classList.add('fas', 'fa-sort');
     }
   </script>
 
   <script src="script-custom.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
 
   <!-- Map JS -->
   <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
