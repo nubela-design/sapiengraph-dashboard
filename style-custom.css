@@ -138,6 +138,27 @@
   z-index: 1;
 }
 
+@media (min-width: 1200px) and (max-width:1375px) {
+  .col-xl-filter-custom {
+    flex: 0 0 auto;
+    width: 78%;
+  }
+
+  .custom-border-height {
+    position: relative;
+  }
+
+  .custom-border-height::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -13px;
+    width: 1px;
+    height: 55px;
+    background-color: #E2EBF6;
+  }
+}
+
 /* Aji - 20 sep 2024 */
 @media (min-width: 1024px) {
   .sticky-bottom-action {
@@ -186,17 +207,17 @@
 }
 
 /* Media Queries */
-@media (min-width: 1200px) and (max-width: 1439px) {
+/* @media (min-width: 1200px) and (max-width: 1439px) {
   .max-height-table {
     max-height: 44.1vh !important;
   }   
-}
+} */
 
-@media (min-width: 1440px) and (max-width: 1620px) {
+/* @media (min-width: 1440px) and (max-width: 1620px) {
   .max-height-table {
     max-height: 57vh !important;
   }   
-}
+} */
 
 @media (min-width: 2071px) {
   .custom-border-height {
