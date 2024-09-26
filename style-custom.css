@@ -1,3 +1,14 @@
+.form-check-sm {
+  margin-top: -10px !important;
+}
+
+.form-check-sm .form-check-input {
+  width: 35px;
+  height: 18px;
+  margin-top: 3px;
+}
+
+/* From Hammas, modify by Aji - 25 sep 2024 */
 @media (min-width: 1621px) {
   .main-content-dashboard {
     flex: 0 0 auto;
@@ -30,9 +41,7 @@
     display: grid;
     grid-template-rows: 81.5px 53.75px 1fr 85.75px;
     height: calc(100vh - 112.5px);
-    width: 100%;
-    max-width: 100%;
-    overflow-x: scroll;
+    grid-template-columns: 100%;
   }
 
   .main-content-prospector--tab .table-container {
