@@ -1,3 +1,10 @@
+.sticky-row {
+  position: sticky;
+  left: 0; /* Adjust as needed */
+  background-color: white; /* Ensure it stands out */
+  z-index: 10; /* Keep it above other content */
+}
+
 .form-check-sm {
   margin-top: -10px !important;
 }
