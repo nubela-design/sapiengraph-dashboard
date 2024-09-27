@@ -1178,11 +1178,46 @@
 
                   <div class="card-body border-bottom pb-3 mb-0">
                     <div class="row">
-                      <div class="col-12 col-lg-12 d-flex align-items-center">
-                        <p class=" mt-2 pe-3 pe-md-3 me-md-3 me-3"><i
+                      <div class="col-12 col-lg-7 d-flex align-items-center">
+                        <p class=" mt-2 pe-3 pe-md-3 me-md-3 me-3 border-end"><i
                             class="neu neu-so-structure me-1 text-success"></i>0 <span
                             class="font-weight-normal text-muted">results <span
                               class="d-none d-md-inline-block">found</span></span></p>
+                        <div class="mt-n3 form-check form-switch form-check-sm text-muted">
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" disabled>
+                          <label class="form-check-label ms-n3" for="flexSwitchCheckDefault">Unlocked only</label>
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-5 d-md-flex justify-content-lg-end mt-4 mt-md-1">
+                        <div class=" text-muted small text-right me-md-2 mb-3 mb-md-0 mt-n3 d-flex align-items-center">
+                          <!-- Added d-flex and align-items-center -->
+                          <span class="flex-grow-1">Displaying</span> <!-- Displaying text with flex-grow-1 -->
+                          <div class="btn-group ms-3 ms-md-2 w-100"> <!-- Button group -->
+                            <button type="button"
+                              class="disabled btn btn-sm rounded-pill px-3 btn-outline-secondary dropdown-toggle btn-mobile-full-width"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              10 results
+                            </button>
+                            <div class="dropdown-menu me-3">
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">15 results</a>
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">20 results</a>
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">25 results</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" text-muted small text-right mb-3 mb-lg-0">
+                          <div class="btn-group w-100">
+                            <button type="button"
+                              class="disabled btn btn-sm rounded-pill px-3 btn-outline-success dropdown-toggle ms-1"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              Export to .CSV
+                            </button>
+                            <div class="dropdown-menu me-3">
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">Export to .CSV</a>
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">Export to .XLSX</a>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1231,7 +1266,7 @@
 
                   </div>
 
-                  <div class="d-flex align-items-center justify-content-center py-5 py-xl-0"> <!-- Adjusted Flexbox classes -->
+                  <div class="d-flex align-items-center py-5 py-xl-0"> <!-- Adjusted Flexbox classes -->
 
                     <div class="text-center"> <!-- Added text-center for centering text -->
                       <div class="row justify-content-center">
@@ -1249,39 +1284,39 @@
                   
                   </div>
 
-                  <div class="row card-body mt-0 pt-4 mx-0 border-top align-items-center sticky-bottom-action d-none">
+                  <div class="row card-body mt-0 pt-4 mx-0 border-top align-items-center sticky-bottom-action">
                     <div
                       class="col-12 col-md-12 col-lg-9 d-lg-flex justify-content-md-start justify-content-lg-end order-lg-2 pe-lg-0 pe-xl-2 ps-lg-0 ps-xl-2">
 
                       <!---->
                       <button
-                        class="btn btn-outline-success btn-sm py-2 rounded-pill lift pe-3 me-2 mb-3 mb-lg-0 d-none d-lg-block text-nowrap"><i
+                        class="disabled btn btn-outline-success btn-sm py-2 rounded-pill lift pe-3 me-2 mb-3 mb-lg-0 d-none d-lg-block text-nowrap"><i
                           class="neu neu-todo-done"></i> Unlock 3 selected rows</button>
                       <!-- Mobile-->
                       <button
-                        class="btn btn-outline-success w-100 rounded-pill btn-block btn-pill lift mb-3 mb-lg-0 d-lg-none"><i
+                        class="disabled btn btn-outline-success w-100 rounded-pill btn-block btn-pill lift mb-3 mb-lg-0 d-lg-none"><i
                           class="neu neu-todo-done"></i> Unlock 3 selected rows</button>
 
                       <!---->
                       <button
-                        class="btn btn-outline-success btn-sm rounded-pill lift pe-3 me-2 mb-3 mb-lg-0 d-none d-lg-block text-nowrap"
+                        class="disabled btn btn-outline-success btn-sm rounded-pill lift pe-3 me-2 mb-3 mb-lg-0 d-none d-lg-block text-nowrap"
                         data-bs-toggle="modal" data-bs-target="#modalUnlockThisPage"><i class="neu neu-document-ui"></i>
                         Unlock this
                         page</button>
                       <!-- Mobile-->
-                      <button class="btn btn-outline-success w-100 rounded-pill btn-pill lift mb-3 mb-lg-0 d-lg-none"
+                      <button class="disabled btn btn-outline-success w-100 rounded-pill btn-pill lift mb-3 mb-lg-0 d-lg-none"
                         data-bs-toggle="modal" data-bs-target="#modalUnlockThisPage"><i class="neu neu-document-ui"></i>
                         Unlock this
                         page</button>
 
                       <!---->
                       <button
-                        class="btn btn-success btn-sm rounded-pill pe-3  mb-3 mb-lg-0 lift d-none d-lg-block text-nowrap"
+                        class="disabled btn btn-success btn-sm rounded-pill pe-3  mb-3 mb-lg-0 lift d-none d-lg-block text-nowrap"
                         data-bs-toggle="modal" data-bs-target="#modalUnlockAllResults"><i
                           class="neu neu-so-lock-square"></i> Unlock all
                         results</button>
                       <!-- Mobile-->
-                      <button class="btn btn-success w-100 rounded-pill btn-pill mb-3 mb-lg-0 lift d-lg-none"
+                      <button class="disabled btn btn-success w-100 rounded-pill btn-pill mb-3 mb-lg-0 lift d-lg-none"
                         data-bs-toggle="modal" data-bs-target="#modalUnlockAllResults"><i
                           class="neu neu-so-lock-square"></i> Unlock all
                         results</button>
@@ -1293,14 +1328,14 @@
                           <li class="page-item disabled">
                             <a class="page-link" href="#" tabindex="-1">Previous</a>
                           </li>
-                          <li class="page-item active"><a class="page-link" href="#">1<span
+                          <li class="page-item disabled"><a class="page-link" href="#">1<span
                                 class="sr-only">(current)</span></a>
                           </li>
-                          <li class="page-item">
+                          <li class="page-item disabled">
                             <a class="page-link" href="#">2 </a>
                           </li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item">
+                          <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item disabled">
                             <a class="page-link" href="#">Next</a>
                           </li>
                         </ul>
