@@ -168,9 +168,9 @@
     content: '';
     position: absolute;
     left: 0;
-    top: -13px;
+    top: -12px;
     width: 1px;
-    height: 55px;
+    height: 53px;
     background-color: #E2EBF6;
   }
 }
