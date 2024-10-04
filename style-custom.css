@@ -26,7 +26,9 @@
     flex: 0 0 auto;
     width: 100%;
     height: calc(100vh);
-    overflow-y: hidden;
+    /* Modify by Rifki - 4 oct 2024 (Prospector - Companies - Detail) */
+    overflow-y: auto;
+    /* End of Modify by Rifki - 4 oct 2024 (Prospector - Companies - Detail) */
   }
 
   .main-content-prospector--tab {
@@ -67,7 +69,9 @@
     flex: 0 0 auto;
     width: 100%;
     height: calc(100vh);
-    overflow-y: hidden;
+    /* Modify by Rifki - 4 oct 2024 (Prospector - Companies - Detail) */
+    overflow-y: auto;
+    /* End of Modify by Rifki - 4 oct 2024 (Prospector - Companies - Detail) */
   }
 
   .main-content-prospector--tab {
@@ -589,3 +593,13 @@ td, th {
   max-height: 65.3vh;
   overflow-y: auto;
 }
+
+/* Added by Rifki - 04 Oct 2024 (Prospector - Companies - Detail) */
+.sticky-filter-arrow-company-detail {
+  position: absolute;
+  right: 0;
+  top: -18px;
+  background-color: #fff;
+  z-index: 1;
+}
+/* End of Added by Rifki - 04 Oct 2024 (Prospector - Companies - Detail) */
