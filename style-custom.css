@@ -48,7 +48,7 @@
 
   .main-content-prospector--tab .result-container {
     display: grid;
-    grid-template-rows: 81.5px 53.75px 1fr 85.75px;
+    /* grid-template-rows: 81.5px 53.75px 1fr 85.75px; */
     height: calc(100vh - 112.5px);
     grid-template-columns: 100%;
   }
@@ -601,5 +601,91 @@ td, th {
   top: -18px;
   background-color: #fff;
   z-index: 1;
+}
+
+@media (min-width: 1621px) {
+  .main-content-dashboard {
+    flex: 0 0 auto;
+    width: 73.33333%;
+  }
+
+  .main-content-prospector {
+    flex: 0 0 auto;
+    width: 100%;
+    height: calc(100vh);
+    /* Modify by Rifki - 4 oct 2024 (Prospector - Companies - Detail) */
+    overflow-y: hidden;
+    /* End of Modify by Rifki - 4 oct 2024 (Prospector - Companies - Detail) */
+  }
+
+  .main-content-prospector-detail--tab {
+    height: calc(100vh - 100.5px);
+  }
+
+  .main-content-prospector-detail--tab .filter-container {
+    display: grid;
+    /* grid-template-rows: 55.5px 1fr 88.5px; */
+    height: calc(100vh - 112.5px);
+  }
+
+  .main-content-prospector-detail--tab .filter-content {
+    height: calc(100%);
+    overflow-y: auto;
+  }
+
+  .main-content-prospector-detail--tab .result-container {
+    display: grid;
+    /* grid-template-rows: 81.5px 53.75px 1fr 85.75px; */
+    height: calc(100vh - 112.5px);
+    grid-template-columns: 100%;
+  }
+
+  .main-content-prospector-detail--tab .table-container {
+    max-height: calc(100vh - 112.5px);
+    overflow-y: auto;
+  }
+}
+
+@media (min-width: 1200px) and (max-width:1620px) {
+  .main-content-dashboard {
+    flex: 0 0 auto;
+    width: 73.33333%;
+  }   
+
+  .main-content-prospector {
+    flex: 0 0 auto;
+    width: 100%;
+    height: calc(100vh);
+    /* Modify by Rifki - 4 oct 2024 (Prospector - Companies - Detail) */
+    overflow-y: hidden;
+    /* End of Modify by Rifki - 4 oct 2024 (Prospector - Companies - Detail) */
+  }
+
+  .main-content-prospector-detail--tab {
+    height: calc(100vh - 100.5px);
+  }
+
+  .main-content-prospector-detail--tab .filter-container {
+    display: grid;
+    /* grid-template-rows: 55.5px 1fr 88.5px; */
+    height: calc(100vh - 112.5px);
+  }
+
+  .main-content-prospector-detail--tab .filter-content {
+    height: calc(100%);
+    overflow-y: auto;
+  }
+
+  .main-content-prospector-detail--tab .result-container {
+    display: grid;
+    /* grid-template-rows: 81.5px 53.75px 1fr 85.75px; */
+    grid-template-columns: 100%;
+    height: calc(100vh - 112.5px);
+  }
+
+  .main-content-prospector-detail--tab .table-container {
+    max-height: calc(100vh - 112.5px);
+      overflow-y: auto;
+  }
 }
 /* End of Added by Rifki - 04 Oct 2024 (Prospector - Companies - Detail) */
