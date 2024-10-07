@@ -264,15 +264,18 @@
           <!-- /Success Export Result -->
 
           <!-- Modal for showing image -->
-          <div class="modal fade" id="imageExampleMonitorJobChangeModal" tabindex="-1" aria-labelledby="imageExampleMonitorJobChangeModalLabel" aria-hidden="true">
+          <div class="modal fade" id="imageExampleMonitorJobChangeModal" tabindex="-1"
+            aria-labelledby="imageExampleMonitorJobChangeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h3 class="modal-title" id="imageExampleMonitorJobChangeModalLabel">Click the "Monitor Job Change" button added to the profile.</h3>
+                  <h3 class="modal-title" id="imageExampleMonitorJobChangeModalLabel">Click the "Monitor Job Change"
+                    button added to the profile.</h3>
                   <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <img src="./assets/img/posts/sapiengraph-job-change-monitor-feature.png" class="img-fluid" alt="Example Image">
+                  <img src="./assets/img/posts/sapiengraph-job-change-monitor-feature.png" class="img-fluid"
+                    alt="Example Image">
                 </div>
               </div>
             </div>
@@ -293,7 +296,8 @@
                 <p class="fw-lighter lh-lg">
                   Install the sapiengraph chrome extension.
                   <a class="btn btn-sm btn-outline-dark mt-2 mt-lg-0 ms-lg-2 d-flex justify-content-between d-lg-inline-flex align-items-center"
-                    href="https://chromewebstore.google.com/detail/sapiengraph-fresh-b2b-dat/kifmbalmiephemignphdmcjdlhpbgpdi" target="_blank">
+                    href="https://chromewebstore.google.com/detail/sapiengraph-fresh-b2b-dat/kifmbalmiephemignphdmcjdlhpbgpdi"
+                    target="_blank">
                     Install Extension <i class="fe fe-arrow-right ms-2"></i>
                   </a>
                 </p>
@@ -320,7 +324,8 @@
             <h4 class="h4 fw-light mb-0">
               See blog post for more information.
               <a class="btn btn-sm btn-outline-dark mt-2 mt-lg-0 ms-lg-2 d-flex justify-content-between d-lg-inline-flex align-items-center"
-                href="https://sapiengraph.com/blog/sapiengraphs-job-change-monitor-feature-track-opportunities-in-sales-investment/" target="_blank">
+                href="https://sapiengraph.com/blog/sapiengraphs-job-change-monitor-feature-track-opportunities-in-sales-investment/"
+                target="_blank">
                 Go to Blog <i class="fe fe-arrow-right ms-2"></i>
               </a>
             </h4>
@@ -347,381 +352,18 @@
               </div>
             </div>
 
-            <div class="table-responsive-xxl">
-              <table id="myTable" class="table table-sm table-nowrap card-table">
-                <thead>
-                  <tr class="border-show">
-                    <th onclick="sortTable(0)" id="header0">
-                      Person <i class="fas fa-sort"></i>
-                    </th>
-                    <th onclick="sortTable(1)" id="header1">
-                      Previous job <i class="fas fa-sort"></i>
-                    </th>
-                    <th onclick="sortTable(2)" id="header2">
-                      Current job <i class="fas fa-sort"></i>
-                    </th>
-                    <th onclick="sortTable(3)" id="header3" class="active-header">
-                      Last checked <i class="fas fa-sort"></i>
-                    </th>
-                    <th onclick="sortTable(4)" class="text-end" id="header4">
-                      Status <i class="fas fa-sort"></i>
-                    </th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <!-- <tbody class="fs-base">
-                  <tr>
-                    <td class="skeleton">
-                      <div class="row align-items-center">
-                        <div class="col-3 col-lg-3">
-                          <div class="avatar avatar-sm">
-                            <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-8.jpg"
-                              alt="person picture" />
-                          </div>
-                        </div>
-                        <div class="col-9 col-lg-9 text-truncate">
-                          <p class="text-black mb-0">Jane Doe</p>
-                          <a class="text-primary small" href="#!" target="_blank">
-                            <i class="neu-br-linkedin-sq ml-n1"></i>
-                            linkedin.com/in/janedoe
-                          </a>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      Software Engineer,
-                      <br />Amazon
-                    </td>
-                    <td>
-                      Software Engineer,
-                      <br />Alibaba
-                    </td>
-                    <td>
-                      20 Jan 2022,
-                      <br />18:25
-                    </td>
-                    <td class="skeleton text-end">
-                      <label class="label-monitor-status gray d-inline-flex aling-items-center py-1 px-2 rounded">
-                        <i class="fe fe-clock me-2"></i>
-                        Scheduled
-                      </label>
-                    </td>
-                    <td class="r">
-                      <div class="dropdown">
-                        <a class="btn btn-sm btn-rounded-circle btn-white" href="#" role="button"
-                          data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fe fe-more-vertical text-black"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                          <a class="dropdown-item" href="#!"> Cancel </a>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <div class="row align-items-center">
-                        <div class="col-3 col-lg-3">
-                          <div class="avatar avatar-sm">
-                            <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-2.jpg"
-                              alt="person picture" />
-                          </div>
-                        </div>
-                        <div class="col-9 col-lg-9 text-truncate">
-                          <p class="text-black mb-0">David King</p>
-                          <a class="text-primary small" href="#!" target="_blank">
-                            <i class="neu-br-linkedin-sq ml-n1"></i>
-                            linkedin.com/in/davidking
-                          </a>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="skeleton">
-                      <div class="line"></div>
-                      <div class="line w-75 m10"></div>
-                    </td>
-                    <td class="skeleton">
-                      <div class="line"></div>
-                      <div class="line w-75 m10"></div>
-                    </td>
-                    <td class="skeleton">
-                      <div class="line w-75"></div>
-                      <div class="line w40 m10"></div>
-                    </td>
-                    <td class="text-end">
-                      <label class="label-monitor-status gray d-inline-flex aling-items-center py-1 px-2 rounded">
-                        <i class="fe fe-clock me-2"></i>
-                        Scheduled
-                      </label>
-                    </td>
-                    <td class="r">
-                      <div class="dropdown">
-                        <a class="btn btn-sm btn-rounded-circle btn-white" href="#" role="button"
-                          data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fe fe-more-vertical text-black"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                          <a class="dropdown-item" href="#!"> Cancel </a>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <div class="row align-items-center">
-                        <div class="col-3 col-lg-3">
-                          <div class="avatar avatar-sm">
-                            <div class="avatar avatar-sm">
-                              <div class="ava"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-9 col-lg-9 text-truncate">
-                          <p class="text-muted mb-0">No Data</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-muted">No Data</td>
-                    <td class="text-muted">No Data</td>
-                    <td class="text-muted">
-                      20 Jan 2022,
-                      <br />19:45
-                    </td>
-                    <td class="text-end">
-                      <label class="label-monitor-status red d-inline-flex aling-items-center py-1 px-2 rounded">
-                        <i class="fe fe-x-circle me-2"></i>
-                        Not Found
-                      </label>
-                    </td>
-                    <td class="">
-                      <div class="dropdown">
-                        <a class="btn btn-sm btn-rounded-circle btn-white" href="#" role="button"
-                          data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fe fe-more-vertical text-black"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                          <a class="dropdown-item text-danger" href="#!">
-                            Delete
-                          </a>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <div class="row align-items-center">
-                        <div class="col-3 col-lg-3">
-                          <div class="avatar avatar-sm">
-                            <img class="avatar-img rounded-circle opacity-50"
-                              src="assets/img/avatars/profiles/avatar-5.jpg" alt="person picture" />
-                          </div>
-                        </div>
-                        <div class="col-9 col-lg-9 text-truncate">
-                          <p class="text-muted mb-0">Kimberly Rose</p>
-                          <a class="text-muted small" href="#!" target="_blank">
-                            <i class="neu-br-linkedin-sq ml-n1"></i>
-                            linkedin.com/in/kimberlyse
-                          </a>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-muted">No Data</td>
-                    <td class="text-muted">No Data</td>
-                    <td class="text-muted">
-                      20 Jan 2022,
-                      <br />18:50
-                    </td>
-                    <td class="text-end">
-                      <label class="label-monitor-status red d-inline-flex aling-items-center py-1 px-2 rounded">
-                        <i class="fe fe-alert-circle me-2"></i>
-                        Failed
-                      </label>
-                    </td>
-                    <td class="">
-                      <div class="dropdown">
-                        <a class="btn btn-sm btn-rounded-circle btn-white" href="#" role="button"
-                          data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fe fe-more-vertical text-black"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                          <a class="dropdown-item text-danger" href="#!">
-                            Delete
-                          </a>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <div class="row align-items-center">
-                        <div class="col-3 col-lg-3">
-                          <div class="avatar avatar-sm">
-                            <div class="avatar avatar-sm">
-                              <div class="ava"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-9 col-lg-9 text-truncate">
-                          <p class="text-muted mb-0">No Data</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-muted">No Data</td>
-                    <td class="text-muted">No Data</td>
-                    <td class="text-muted">
-                      20 Jan 2022,
-                      <br />18:50
-                    </td>
-                    <td class="text-end">
-                      <label class="label-monitor-status red d-inline-flex aling-items-center py-1 px-2 rounded">
-                        <i class="fe fe-alert-circle me-2"></i>
-                        Error
-                      </label>
-                    </td>
-                    <td class="">
-                      <div class="dropdown">
-                        <a class="btn btn-sm btn-rounded-circle btn-white" href="#" role="button"
-                          data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fe fe-more-vertical text-black"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                          <a class="dropdown-item text-danger" href="#!">
-                            Delete
-                          </a>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <div class="row align-items-center">
-                        <div class="col-3 col-lg-3">
-                          <div class="avatar avatar-sm">
-                            <img class="avatar-img rounded-circle opacity-50"
-                              src="assets/img/avatars/profiles/avatar-7.jpg" alt="person picture" />
-                          </div>
-                        </div>
-                        <div class="col-9 col-lg-9 text-truncate">
-                          <p class="text-muted mb-0">John Takeshi</p>
-                          <a class="text-muted small" href="#!" target="_blank">
-                            <i class="neu-br-linkedin-sq ml-n1"></i>
-                            linkedin.com/in/takejo
-                          </a>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-muted">
-                      Software Engineer,
-                      <br />Google
-                    </td>
-                    <td class="text-muted">
-                      Junior Software Engineer,
-                      <br />Apple
-                    </td>
-                    <td class="text-muted">
-                      20 Jan 2022,
-                      <br />18:45
-                    </td>
-                    <td class="text-end">
-                      <label class="label-monitor-status muted d-inline-flex aling-items-center py-1 px-2 rounded">
-                        <i class="fe fe-eye-off me-2"></i>
-                        Not Monitoring
-                      </label>
-                    </td>
-                    <td class="">
-                      <div class="dropdown">
-                        <a class="btn btn-sm btn-rounded-circle btn-white" href="#" role="button"
-                          data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fe fe-more-vertical text-black"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                          <a class="dropdown-item" href="#!">
-                            Start monitor this profile
-                          </a>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <div class="row align-items-center">
-                        <div class="col-3 col-lg-3">
-                          <div class="avatar avatar-sm">
-                            <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-6.jpg"
-                              alt="person picture" />
-                          </div>
-                        </div>
-                        <div class="col-9 col-lg-9 text-truncate">
-                          <p class="text-black mb-0">Bim Samson</p>
-                          <a class="text-primary small" href="#!" target="_blank">
-                            <i class="neu-br-linkedin-sq ml-n1"></i>
-                            linkedin.com/in/bimsam
-                          </a>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      Software Engineer,
-                      <br />Apple
-                    </td>
-                    <td>
-                      Software Engineer,
-                      <br />Google
-                    </td>
-                    <td>
-                      20 Jan 2022,
-                      <br />18:25
-                    </td>
-                    <td class="text-end">
-                      <label class="label-monitor-status primary d-inline-flex aling-items-center py-1 px-2 rounded">
-                        <i class="fe fe-eye me-2"></i>
-                        Monitoring
-                      </label>
-                    </td>
-                    <td class="">
-                      <div class="dropdown">
-                        <a class="btn btn-sm btn-rounded-circle btn-white" href="#" role="button"
-                          data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fe fe-more-vertical text-black"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                          <a class="dropdown-item" href="#!">
-                            Stop monitoring this profile
-                          </a>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody> -->
-              </table>
-
-              <div class="row mt-4 mb-3 ms-3">
-                <div class="col-12 col-md-6">
-                  <nav aria-label="Page">
-                    <ul class="pagination">
-                      <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1">Previous</a>
-                      </li>
-                      <li class="page-item active">
-                        <a class="page-link" href="#">1</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
-                      </li>
-                    </ul>
-                  </nav>
+            <!-- Card -->
+            <div class="d-flex py-6 flex-column">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-10 col-md-6 col-lg-5 text-center">
+                  <img src="./assets/img/illustrations/no-profiles-monitored-2.png" alt="" srcset=""
+                    class="w-100 h-auto">
+                </div>
+              </div>
+              <div class="row justify-content-center align-items-center">
+                <div class="col-10 text-center">
+                  <p class="lead mb-2 fw-bold">No profiles monitored</p>
+                  <p class="text-gray-700 mb-4">Please add profiles to be monitored.</p>
                 </div>
               </div>
             </div>
