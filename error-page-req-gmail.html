@@ -263,45 +263,22 @@
   </nav>
 
   <!-- MAIN CONTENT -->
-  <div class="main-content">
+  <div class="main-content py-5">
     <div class="container-fluid">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center align-items-center">
         <div class="col-12">
-          <!-- Header -->
-          <div class="header mt-md-5">
-            <div class="header-body">
-              <div class="row align-items-center">
-                <div class="col">
-                  <!-- Pretitle -->
-                  <h6 class="header-pretitle">Overview</h6>
-
-                  <!-- Title -->
-                  <h1 class="header-title">Job Change Monitor</h1>
-                </div>
-              </div>
-              <!-- / .row -->
-            </div>
-          </div>
-
-          <!-- Success Export Result -->
-          <div id="alertSuccessExport" class="alert alert-success alert-dismissible fade show d-none" role="alert">
-            Successfully exported to Google Sheets
-
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-          <!-- /Success Export Result -->
 
           <!-- Card -->
           <div class="card py-6">
-            <div class="row justify-content-center align-items-center">
-              <div class="col-10 col-md-6 col-lg-4  text-center">
-                <img src="./assets/img/illustrations/no-profiles-monitored-2.png" alt="" srcset="" class="w-100 h-auto">
+            <div class="row justify-content-center align-items-center mb-4">
+              <div class="col-10 col-md-6 col-lg-4 text-center">
+                <img src="./assets/img/illustrations/error-gmail-req.png" alt="" srcset="" class="w-100 h-auto">
               </div>
             </div>
             <div class="row justify-content-center align-items-center">
-              <div class="col-10 text-center">
-                <p class="lead mb-2 fw-bold">No profiles monitored</p>
-                <p class="text-gray-700 mb-4">Please add profiles to be monitored.</p>
+              <div class="col-10 col-lg-7 text-center">
+                <h5 class="lead mb-3 fw-bold lh-base">Sorry. Our Google Sheets Addon requires a Gmail/Google Workspace account but you are currently logged in with an email that does not support that.</h5>
+                <p class="text-gray-700 mb-0">Suggestion: You can log out and sign in with a Gmail/Google Workspace account. If you have an active subscription in this account, please contact support at <a href="mailto:hello@sapiengraph.com">hello@sapiengraph.com</a>  and we will assist you with migrating your subscription to your new account.</p>
               </div>
             </div>
           </div>
