@@ -26,9 +26,7 @@
     flex: 0 0 auto;
     width: 100%;
     height: calc(100vh);
-    /* Modify by Rifki - 4 oct 2024 (Prospector - Companies - Detail) */
     overflow-y: hidden;
-    /* End of Modify by Rifki - 4 oct 2024 (Prospector - Companies - Detail) */
   }
 
   .main-content-prospector--tab {
