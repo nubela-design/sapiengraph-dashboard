@@ -408,362 +408,45 @@
   <!-- MODAL All Filters -->
   <div class="modal fade" id="modalAllFilters" tabindex="-1" aria-labelledby="modalAllFilterLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header pb-0">
-          <h2 class="modal-title" id="modalAllFilterLabel">All filters for People
-            <p class="small fw-normal text-gray-700">Change and apply your filter to show the new result.</p>
-          </h2>
-          <button type="button" class="btn-close pe-6 mt-n5" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="card card-body bg-lighter border mb-0">
-            <!-- Overview Filter -->
-            <div class="mb-3 mt-2">
-
-              <!-- toggle-->
-              <a class="d-flex align-items-center text-reset text-decoration-none" data-bs-toggle="collapse"
-                href="#peoplePersonalModal" role="button" aria-expanded="true" aria-controls="peoplePersonal">
-                <div class="   me-auto"><i class="neu neu-user-2 me-2"></i>Personal Filter</div>
-                <!-- chevron-->
-                <span class="collapse-chevron text-muted ms-4 mb-n1">
-                  <i class="fe fe-lg fe-chevron-up"></i>
-                </span>
-              </a>
-
-              <div class="collapse show" id="peoplePersonalModal">
-                <form class="pt-4 mt-4 border-top">
-                  <div class="mb-4 d-flex justify-content-between">
-                    <div class="col-6 pe-2">
-                      <label for="exampleInputPeople" class="form-label ">First Name</label>
-                      <input type="text" class="form-control form-control-sm" placeholder="Bill" id="exampleInputPeople"
-                        aria-describedby="emailHelp">
-                    </div>
-                    <div class="col-6 ps-2">
-                      <label for="exampleInputPeople" class="form-label ">Last Name</label>
-                      <input type="text" class="form-control form-control-sm" placeholder="Gates"
-                        id="exampleInputPeople" aria-describedby="emailHelp">
-                    </div>
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label  ">Country</label>
-                    <input type="text" class="form-control form-control-sm"
-                      placeholder="E.g. United States, Singapore, Japan" id="exampleInputPeople"
-                      aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">School Name</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="E.g. University of Cambridge"
-                      id="exampleInputPeople" aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Field Of Study</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="E.g. Computer Science"
-                      id="exampleInputPeople" aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Degree Name</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="E.g. MBA"
-                      id="exampleInputPeople" aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">School LinkedIn URL</label>
-                    <input type="text" class="form-control form-control-sm"
-                      placeholder="www.linkedin.com/school/national-university-of-singapore/" id="exampleInputPeople"
-                      aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Languages</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="E.g. English, Chinese, Spanish"
-                      id="exampleInputPeople" aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Region</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="E.g. California"
-                      id="exampleInputPeople" aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">City</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="E.g. Seattle, Los Angeles"
-                      id="exampleInputPeople" aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Headline</label>
-                    <input type="text" class="form-control form-control-sm"
-                      placeholder="E.g. CEO, CTO, Senior Software Engineer" id="exampleInputPeople"
-                      aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Summary</label>
-                    <input type="text" class="form-control form-control-sm"
-                      placeholder="E.g. CEO, CTO, Senior Software Engineer" id="exampleInputPeople"
-                      aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Industries</label>
-                    <input type="text" class="form-control form-control-sm"
-                      placeholder="E.g. Technology, Software, Accounting" id="exampleInputPeople"
-                      aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Skills</label>
-                    <input type="text" class="form-control form-control-sm"
-                      placeholder="E.g. Coding, Debugging, Testing" id="exampleInputPeople"
-                      aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-5">
-                    <label for="exampleInputPeople" class="form-label ">Interests</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="E.g. Technology"
-                      id="exampleInputPeople" aria-describedby="emailHelp">
-                  </div>
-                  <div class="custom-control custom-checkbox mb-4">
-                    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1"
-                      checked onclick="handleCheckbox(this)">
-                    <label class="form-check-label ms-2" for="flexRadioDefault1"> Has Phone Numbers</label>
-                  </div>
-                  <div class="custom-control custom-checkbox mb-2">
-                    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2"
-                      onclick="handleCheckbox(this)">
-                    <label class="form-check-label ms-2" for="flexRadioDefault2"> Has Email</label>
-                  </div>
-                </form>
-              </div>
-
+        <div class="modal-content">
+            <div class="modal-header pb-0">
+                <h2 class="modal-title" id="modalAllFilterLabel">All filters for People 
+                  <p class="small fw-normal text-gray-700">Change and apply your filter to show the new result.</p>
+                </h2>
+                <button type="button" class="btn-close pe-6 mt-n5" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <div class="modal-body">
+              <div class="card card-body bg-lighter border mb-0">
 
-            <hr>
-
-            <!-- Current Employment Filter -->
-            <div class="mt-3 mb-3">
-
-              <!-- toggle-->
-              <a class="d-flex align-items-center text-reset text-decoration-none" data-bs-toggle="collapse"
-                href="#peopleCurrentEmploymentModal" role="button" aria-expanded="false"
-                aria-controls="peopleCurrentEmployment">
-                <div class="  me-auto"><i class="neu neu-working-bag-4 me-2"></i>Current Employment</div>
-                <!-- chevron-->
-                <span class="collapse-chevron text-muted ms-4 mb-n1">
-                  <i class="fe fe-lg fe-chevron-down"></i>
-                </span>
-              </a>
-              <div class="collapse hide" id="peopleCurrentEmploymentModal">
-                <form class="pt-4 mt-4 border-top">
-                  <div class="mb-4">
+                <form>
+                  <div class="mb-2">
                     <label for="exampleInputCompany" class="form-label ">Company Name</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="E.g. Apple, Amazon, Microsoft"
-                      id="exampleInputCompany" aria-describedby="emailHelp">
+                    <input type="text" class="form-control form-control-sm"
+                      placeholder="E.g. Apple, Amazon, Microsoft" id="exampleInputCompany"
+                      aria-describedby="emailHelp">
                     <ul class="list-group suggestions" id="companySuggestions"></ul>
                     <div class="mt-2">
-                      <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> IBM <i
-                          class="neu neu-so-close-circle ms-1"></i></div>
-                      <div class="btn rounded-pill btn-sm btn-outline-success ps-3 mt-2"> Netflix <i
-                          class="neu neu-so-close-circle ms-1"></i></div>
-                    </div>
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Job Title</label>
-                    <input type="text" class="form-control form-control-sm"
-                      placeholder="E.g. CEO, CTO, Senior Software Engineer" id="exampleInputPeople"
-                      aria-describedby="emailHelp">
-                    <div class="mt-3">
-                      <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3"> Software Engineer <i
-                          class="neu neu-so-close-circle ms-1"></i></div>
-                    </div>
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Job Description</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="E.g. Technology, Education"
-                      id="exampleInputPeople" aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Current Role Date</label>
-                    <div class="d-flex justify-content-between gap-2">
-                      <input type="date" class="form-control form-control-sm text-muted" placeholder="Min"
-                        id="exampleInputPeople" aria-describedby="emailHelp">
-                      <hr style="height: 2px; width: 2%; margin-top: 14px;">
-                      <input type="date" class="form-control form-control-sm text-muted" placeholder="Max"
-                        id="exampleInputPeople" aria-describedby="emailHelp">
-                    </div>
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Company Description</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="E.g Technology, Medical Device"
-                      id="exampleInputPeople" aria-describedby="emailHelp">
-                    <ul class="list-group suggestions" id="companySuggestions"></ul>
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Company Industry</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="E.g. Higher and Education"
-                      id="exampleInputPeople" aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Company Type</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="E.g. Non Profit"
-                      id="exampleInputPeople" aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Employee Count</label>
-                    <div class="d-flex justify-content-between gap-2">
-                      <input type="text" class="form-control form-control-sm" placeholder="Min" id="exampleInputPeople"
-                        aria-describedby="emailHelp">
-                      <hr style="height: 2px; width: 2%; margin-top: 14px;"> <input type="text"
-                        class="form-control form-control-sm" placeholder="Max" id="exampleInputPeople"
-                        aria-describedby="emailHelp">
-                    </div>
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Follower Count</label>
-                    <div class="d-flex justify-content-between gap-2">
-                      <input type="text" class="form-control form-control-sm" placeholder="Min" id="exampleInputPeople"
-                        aria-describedby="emailHelp">
-                      <hr style="height: 2px; width: 2%; margin-top: 14px;"> <input type="text"
-                        class="form-control form-control-sm" placeholder="Max" id="exampleInputPeople"
-                        aria-describedby="emailHelp">
-                    </div>
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Year Founded</label>
-                    <div class="d-flex justify-content-between gap-2">
-                      <input type="text" class="form-control form-control-sm" placeholder="Min" id="exampleInputPeople"
-                        aria-describedby="emailHelp">
-                      <hr style="height: 2px; width: 2%; margin-top: 14px;"> <input type="text"
-                        class="form-control form-control-sm" placeholder="Max" id="exampleInputPeople"
-                        aria-describedby="emailHelp">
-                    </div>
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Company Country</label>
-                    <input type="text" class="form-control form-control-sm"
-                      placeholder="E.g. United States, Singapore, Japan" id="exampleInputPeople"
-                      aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Company Region</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="E.g. California"
-                      id="exampleInputPeople" aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Company City</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="E.g. Seattle, Los Angeles"
-                      id="exampleInputPeople" aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Funding Amount</label>
-                    <div class="d-flex justify-content-between gap-2">
-                      <div class="input-group">
-                        <span class="input-group-text">$</span>
-                        <input type="text" class="form-control form-control-sm" placeholder="Min"
-                          id="exampleInputPeople" aria-describedby="emailHelp">
-                      </div>
-                      <hr style="height: 2px; width: 2%; margin-top: 14px;">
-                      <div class="input-group">
-                        <span class="input-group-text">$</span>
-                        <input type="text" class="form-control form-control-sm" placeholder="Max"
-                          id="exampleInputPeople" aria-describedby="emailHelp">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Funding Raised</label>
-                    <div class="d-flex justify-content-between gap-2">
-                      <input type="date" class="form-control form-control-sm text-muted" placeholder="Min"
-                        id="exampleInputPeople" aria-describedby="emailHelp">
-                      <hr style="height: 2px; width: 2%; margin-top: 14px;">
-                      <input type="date" class="form-control form-control-sm text-muted" placeholder="Max"
-                        id="exampleInputPeople" aria-describedby="emailHelp">
-                    </div>
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">LinkedIn Groups</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="E.g Haskell"
-                      id="exampleInputPeople" aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-2">
-                    <label for="exampleInputPeople" class="form-label ">Company LinkedIn URL</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="www.linkedin.com/company/apple"
-                      id="exampleInputPeople" aria-describedby="emailHelp">
-                  </div>
-                </form>
-              </div>
-
-            </div>
-
-            <hr>
-
-            <!-- Past Employment Filter -->
-            <div class="mt-3">
-
-              <!-- toggle-->
-              <a class="d-flex align-items-center text-reset text-decoration-none" data-bs-toggle="collapse"
-                href="#peoplePastEmploymentModal" role="button" aria-expanded="false"
-                aria-controls="peoplePastEmployment">
-                <div class="  me-auto"><i class="neu neu-working-bag-3 me-2"></i>Past Employment</div>
-                <!-- chevron-->
-                <span class="collapse-chevron text-muted ms-4 mb-n1">
-                  <i class="fe fe-lg fe-chevron-down"></i>
-                </span>
-              </a>
-              <div class="collapse hide" id="peoplePastEmploymentModal">
-                <form class="pt-4 mt-4 border-top">
-                  <div class="mb-4">
-                    <label for="exampleInputCompany2" class="form-label ">Past Company</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="E.g. Google, IBM, Twitter"
-                      id="exampleInputCompany2" aria-describedby="emailHelp">
-                    <ul class="list-group suggestions" id="companySuggestions2"></ul>
-                    <div class="mt-2">
-                      <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Apple <i
-                          class="neu neu-so-close-circle ms-1"></i>
-                      </div>
                       <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Google <i
-                          class="neu neu-so-close-circle ms-1"></i>
-                      </div>
-                      <div class="btn rounded-pill btn-sm btn-outline-success ps-3 mt-2"> Amazon <i
-                          class="neu neu-so-close-circle ms-1"></i>
-                      </div>
-                      <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Twitter <i
-                          class="neu neu-so-close-circle ms-1"></i>
-                      </div>
-                      <div class="btn rounded-pill btn-sm btn-outline-success ps-3 mt-2"> Facebook <i
-                          class="neu neu-so-close-circle ms-1"></i>
-                      </div>
+                          class="neu neu-so-close-circle ms-1"></i></div>
                     </div>
                   </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Past Job Title</label>
-                    <input type="text" class="form-control form-control-sm"
-                      placeholder="E.g. CEO, CTO, Senior Software Engineer" id="exampleInputPeople"
-                      aria-describedby="emailHelp">
-                    <ul class="list-group suggestions" id="companySuggestions"></ul>
-                  </div>
-                  <div class="mb-4">
-                    <label for="exampleInputPeople" class="form-label ">Past Job Description</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="E.g. Technology, Education"
-                      id="exampleInputPeople" aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-2">
-                    <label for="exampleInputCompany" class="form-label ">Past Company LinkedIn URL</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="www.linkedin.com/company/apple"
-                      id="exampleInputCompany" aria-describedby="emailHelp">
-                  </div>
                 </form>
+
               </div>
-
             </div>
-
-          </div>
+            <div class="modal-footer">
+              <div class="w-100 d-flex justify-content-between">
+                <div class="mt-3">
+                  <p><i class="neu neu-so-structure me-1 text-success"></i>345,678 <span
+                      class="font-weight-normal text-muted">results found</span></p>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-lg btn-link text-success" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-lg btn-success">Apply Filters</button>
+                </div>
+              </div>
+            </div>
         </div>
-        <div class="modal-footer">
-          <div class="w-100 d-flex justify-content-between">
-            <div class="mt-3">
-              <p><i class="neu neu-so-structure me-1 text-success"></i>345,678 <span
-                  class="font-weight-normal text-muted">results found</span></p>
-            </div>
-            <div>
-              <button type="button" class="btn btn-lg btn-link text-success" data-bs-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-lg btn-success">Apply Filters</button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 

@@ -401,7 +401,7 @@
   
       </div>
     </div>
-  </div>
+  </div> 
 
   <!-- MAIN CONTENT -->
   <div class="main-content">
@@ -460,8 +460,8 @@
             <!-- CUSTOMERS TAB-->
             <div class="row">
 
-              <!-- FILTER-->
-              <div class="col-12 col-lg-12 col-xl-4 mb-2 mb-lg-0">
+              <!-- FILTER SM-LG view-->
+              <div class="col-12 d-block d-xl-none">
                 <div class="card card-body custom-rounded shadow-light border">
                   <div class="d-flex align-items-center mt-1 mb-3">
                     <div class=" h3"><span class="mr-1">Filter Criteria</span>
@@ -469,50 +469,74 @@
                         title='We support <a class="fw-bold text-success link-hover" target="_blank" href="https://nubela.co/blog/ultimate-guide-to-boolean-search-syntax/">Boolean Search Syntax</a> in our search parameters.'>
                         <i class="fe fe-info small"></i></span>
                     </div>
-                    <a class="btn btn-outline-success rounded-pill btn-sm  h3 ms-4" href="prospector-customers.html">
-                      Reset
-                    </a>
-                    <a class="btn btn-link text-success rounded-pill btn-sm h3 ms-n1" href="#!">
-                      <i class="neu neu-so-save d-none d-md-inline-block"></i> Save search
-                    </a>
+                    <a class="btn btn-outline-success rounded-pill btn-sm  h3 ms-4"
+                      href="prospector-collapes.html">Reset</a>
+                    <a class="btn btn-link text-success rounded-pill btn-sm  h3 ms-n1" href="#!"><i
+                        class="neu neu-so-save d-none d-md-inline-block"></i> Save search</a>
 
-                    <a href="prospector-customers-result-collapsed.html" class="btn btn-sm btn-success rounded-pill lift  ms-auto d-none d-xl-block mt-n3">
-                      <i class="fe fe-chevron-left"></i>
-                    </a>
+                    <button class="btn btn-sm btn-success rounded-pill lift  ms-auto d-none d-xl-block mt-n3"><i
+                        class="fe fe-chevron-left"></i></button>
                   </div>
 
                   <!-- OVERVIEW/filter-->
-                  <div class="accordion" id="peopleOverviewAccordion">
-                    <div class="card border-0">
-                      <!-- collapse-->
-                      <div class="collapse show" id="peopleOverview" data-bs-parent="#peopleOverviewAccordion">
-                        <div class="card-body bg-lighter border rounded">
-                          <form>
-                            <div class="mb-2">
-                              <label for="exampleInputCompany" class="form-label ">Company Name</label>
-                              <input type="text" class="form-control form-control-sm"
-                                placeholder="E.g. Apple, Amazon, Microsoft" id="exampleInputCompany"
-                                aria-describedby="emailHelp">
-                              <ul class="list-group suggestions" id="companySuggestions"></ul>
-                              <div class="mt-2">
-                                <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Google <i
-                                    class="neu neu-so-close-circle ms-1"></i></div>
+                  <div class="">
+                    <div class="accordion" id="customerOverviewAccordion">
+                      <div class="card border-0 pb-0 mb-0">
+                        <!-- collapse-->
+                        <div class="collapse show" id="customerOverview" data-bs-parent="#customerOverviewAccordion">
+                          <div class="card-body bg-lighter border rounded">
+                            <form>
+                              <div class="mb-2">
+                                <label for="exampleInputCompany" class="form-label ">Company Name</label>
+                                <input type="text" class="form-control form-control-sm"
+                                  placeholder="E.g. Apple, Amazon, Microsoft" id="exampleInputCompany"
+                                  aria-describedby="emailHelp">
+                                <ul class="list-group suggestions" id="companySuggestions"></ul>
+                                <div class="mt-2">
+                                  <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Google <i
+                                      class="neu neu-so-close-circle ms-1"></i></div>
+                                </div>
                               </div>
-                            </div>
-                          </form>
-                        </div>
+                            </form>
+                          </div>
 
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="btn btn-outline-success rounded-pill btn-block lift"><i class="neu neu-search"></i> Search
-                    criteria</div>
+                  <div class="btn btn-outline-success rounded-pill btn-block lift mt-4"><i class="neu neu-search"></i>
+                    Search criteria
+                  </div>
                 </div>
               </div>
 
+              <!-- FILTER-->
+              <div class="col-12 col-xl-1 mb-2 mb-xl-0 d-none d-xl-block">
+                <div class="card custom-rounded shadow-light border">
+                  <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <div class="pb-4 pt-1 border-bottom">
+                      <a class="btn btn-sm btn-success rounded-pill lift font-weight-bold ms-auto d-none d-lg-block"
+                        href="prospector-customers-result.html">
+                        <i class="fe fe-chevron-right"></i>
+                      </a>
+                    </div>
+
+                    <!-- OVERVIEW/filter-->
+                    <div class="mt-4 text-center">
+                      <a class="d-flex align-items-center justify-content-center text-reset text-decoration-none mb-3 custom-link"
+                        href="prospector-customers-result.html" role="button" data-bs-toggle="tooltip"
+                        data-bs-placement="right" title="Filter by company name">
+                        <div class=" font-weight-bold lead me-auto"><i class="neu neu-company h4"></i></div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
               <!-- RESULT-->
-              <div class="col-lg-12 col-xl-8">
+              <div class="col-lg-12 col-xl-11">
                 <div class="card card-body custom-rounded bg-white text-left shadow-light border">
 
                   <div class="row mb-3">
@@ -864,10 +888,12 @@
                         data-bs-toggle="modal" data-bs-target="#modalUnlockThisPage"><i class="neu neu-document-ui"></i> Unlock this
                         page</button>
                       <!---->
-                      <button class="btn btn-outline-success btn rounded-pill lift mb-3 mb-lg-0 d-none d-lg-block text-nowrap"><i
+                      <button
+                        class="btn btn-outline-success btn rounded-pill lift mb-3 mb-lg-0 d-none d-lg-block text-nowrap"><i
                           class="neu neu-todo-done"></i> Unlock 3 selected rows</button>
                       <!-- Mobile-->
-                      <button class="btn btn-outline-success w-100 rounded-pill btn-block btn-pill lift mb-3 mb-lg-0 d-lg-none"><i
+                      <button
+                        class="btn btn-outline-success w-100 rounded-pill btn-block btn-pill lift mb-3 mb-lg-0 d-lg-none"><i
                           class="neu neu-todo-done"></i> Unlock 3 selected rows</button>
                     </div>
                     <div class="col-12 col-lg-12 col-xl-12">
@@ -975,27 +1001,32 @@
     }
   </script>
 
-  <script src="script-all-checkbox.js"></script>
+  <!-- Import Jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Import Theme JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="./assets/js/theme.bundle.js"></script>
+
+  <!-- Import Font Awesome 5 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 
-
-  <!-- Map JS -->
+  <!-- Import Map JS -->
   <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 
-  <!-- Vendor JS -->
+  <!-- Import Vendor JS -->
   <script src="./assets/js/vendor.bundle.js"></script>
 
-  <!-- Theme JS
-  <script src="./assets/js/theme.bundle.js"></script>
-  -->
-
-  <!-- Search Autocomplete JS-->
+  <!-- Import Search Autocomplete JS-->
   <script src="search-autocomplete.js"></script>
 
+  <!-- Import Script All Checkbox -->
+  <script src="script-all-checkbox.js"></script>
+
   <!-- POPOVER CONTENT REMAIN VISIBLE JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script> -->
+
   <script>
     var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
     var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
