@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neuicons@1.9.0/css/neu.min.css">
 
   <!-- Title -->
-  <title>Customers Result - Sapiengraph Prospector - Dashboard</title>
+  <title>Customers Empty - Sapiengraph Prospector - Dashboard</title>
   <style>
     th.active-header {
       color: black !important;
@@ -187,7 +187,7 @@
               aria-controls="sidebarBilling">
               <i class="fe fe-dollar-sign"></i> Billing
             </a>
-            <div class="collapse show" id="sidebarBilling">
+            <div class="collapse" id="sidebarBilling">
               <ul class="nav nav-sm flex-column">
                 <li class="nav-item">
                   <a href="./account-plans-and-payments.html" class="nav-link">
@@ -289,87 +289,224 @@
     </div>
   </nav>
 
+  <!-- MODAL Unlock All Results -->
+  <div class="modal fade" id="modalUnlockAllResults" tabindex="-1" aria-labelledby="modalUnlockAllResultsLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="">
+          <h3 class="modal-title" id="modalTopupLabel"></h3>
+          <div class="me-4 mt-4"><button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button></div>
+        </div>
+
+        <div class="modal-body pt-3">
+
+          <div class="row justify-content-center">
+
+            <div class="col-12 mb-3 mb-md-4">
+
+              <h1 class="fw-bold mb-3">
+                Unlock all results
+              </h1>
+
+              <p class="lead mb-4">
+                This action will consume up to <span class="fw-bold font-monospace badge bg-light">300,000</span>
+                credits. Are
+                you sure you want to proceed?
+              </p>
+
+              <p class="small text-gray-700 mb-md-3 border rounded p-3 bg-lighter">
+                <i class="neu neu-info"></i> The system will unlock as many results as your credits cover.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="row align-items-center justify-content-center">
+
+            <div class="col-12 col-md-6 order-2 order-md-1">
+              <button class="btn btn-lg btn-link text-success w-100" data-bs-dismiss="modal" aria-label="Close">
+                Cancel
+              </button>
+            </div>
+
+            <div class="col-12 col-md-6 order-1 order-md-2 mb-3 mb-md-0 ">
+              <button class="btn btn-lg btn-success w-100" data-bs-dismiss="modal">
+                Unlock all results
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL Unlock This Page -->
+  <div class="modal fade" id="modalUnlockThisPage" tabindex="-1" aria-labelledby="modalUnlockThisPageLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="">
+          <h3 class="modal-title" id="modalTopupLabel"></h3>
+          <div class="me-4 mt-4"><button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button></div>
+        </div>
+
+        <div class="modal-body pt-3">
+
+          <div class="row justify-content-center">
+
+            <div class="col-12 mb-3 mb-md-4">
+
+              <h1 class="fw-bold mb-3">
+                Unlock this page
+              </h1>
+
+              <p class="lead mb-4">
+                This action will consume up to <span class="fw-bold font-monospace badge bg-light">300</span> credits.
+                Are
+                you sure you want to proceed?
+              </p>
+
+              <p class="small text-gray-700 mb-md-3 border rounded p-3 bg-lighter">
+                <i class="neu neu-info"></i> The system will unlock as many results as your credits cover.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="row align-items-center justify-content-center">
+
+            <div class="col-12 col-md-6 order-2 order-md-1">
+              <button class="btn btn-lg btn-link text-success w-100" data-bs-dismiss="modal" aria-label="Close">
+                Cancel
+              </button>
+            </div>
+
+            <div class="col-12 col-md-6 order-1 order-md-2 mb-3 mb-md-0 ">
+              <button class="btn btn-lg btn-success w-100" data-bs-dismiss="modal">
+                Unlock this page
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL All Filters -->
+  <div class="modal fade" id="modalAllFilters" tabindex="-1" aria-labelledby="modalAllFilterLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header pb-0">
+                <h2 class="modal-title" id="modalAllFilterLabel">All filters for People 
+                  <p class="small fw-normal text-gray-700">Change and apply your filter to show the new result.</p>
+                </h2>
+                <button type="button" class="btn-close pe-6 mt-n5" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="card card-body bg-lighter border mb-0">
+
+                <form>
+                  <div class="mb-2">
+                    <label for="exampleInputCompany" class="form-label ">Company Name</label>
+                    <input type="text" class="form-control form-control-sm"
+                      placeholder="E.g. Apple, Amazon, Microsoft" id="exampleInputCompany"
+                      aria-describedby="emailHelp">
+                    <ul class="list-group suggestions" id="companySuggestions"></ul>
+                    <div class="mt-2">
+                      <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Google <i
+                          class="neu neu-so-close-circle ms-1"></i></div>
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="w-100 d-flex justify-content-between">
+                <div class="mt-3">
+                  <p><i class="neu neu-so-structure me-1 text-success"></i>345,678 <span
+                      class="font-weight-normal text-muted">results found</span></p>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-lg btn-link text-success" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-lg btn-success">Apply Filters</button>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
   <!-- MAIN CONTENT -->
   <div class="main-content">
 
-    <div class="container-fluid">
+    <div class="container-fluid" style="padding-left: 14px !important; padding-right: 14px !important;">
+
       <div class="row justify-content-center">
         <div class="col-12 main-content-prospector">
-          <!-- PEOPLE TAB-->
-          <!-- Header -->
-          <div class="header mt-5">
-            <div class="">
-
-              <div class="row align-items-end d-flex">
-                <div class="col-7">
-
-                  <!-- Pretitle -->
-                  <h6 class="header-pretitle">
-                    Prospector
-                  </h6>
-
-                  <!-- Title -->
-                  <h1 class="header-title">
-                    Customer Prospector
-                  </h1>
-
-                </div>
-              </div> <!-- / .row -->
-            </div>
-          </div>
 
           <!-- NAVS-->
-          <div class="col-12 mb-3">
-            <div class="card card-body custom-rounded border py-3">
-              <ul class="nav">
+          <div class="col-12 pt-4 pt-md-4 pb-3 pb-md-3 sticky-top sticky-top-gradient">
+            <div class="card card-body custom-rounded border py-3 mb-0">
+              <ul class="nav align-items-center">
+                <li class="nav-link h2 text-black mb-0 mt-n1 ps-0 ">Prospector <span
+                    class="ps-2 h3 text-gray-400">/</span></li>
                 <li class="nav-item text-left text-md-center">
-                  <a class="nav-link text-muted custom-link" href="prospector-saved-result.html"><i
+                  <a class="nav-link text-muted custom-link" href="prospector-saved.html"><i
                       class="neu neu-bookmark"></i> Saved</a>
                 </li>
                 <li class="nav-item text-left text-md-center">
-                  <a class="nav-link text-muted custom-link" href="prospector-people-result.html"><i
+                  <a class="nav-link text-muted custom-link" href="prospector-people.html"><i
                       class="neu neu-user-2"></i> People</a>
                 </li>
                 <li class="nav-item text-left text-md-center">
-                  <a class="nav-link text-muted custom-link" href="prospector-companies-result-collapsed.html"><i
+                  <a class="nav-link text-muted custom-link" href="prospector-companies.html"><i
                       class="neu neu-company"></i> Companies</a>
                 </li>
                 <li class="nav-item text-left text-md-center">
-                  <a class="nav-link text-success custom-link" href="prospector-customers-result-collapsed.html"><i
+                  <a class="nav-link text-success custom-link" href="prospector-customers.html"><i
                       class="neu neu-groups"></i> Customers</a>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div>
-            <!-- CUSTOMERS TAB-->
-            <div class="row">
+          <div class="mt-n3">
+            <!-- PEOPLE TAB-->
+            <div class="row main-content-prospector--tab">
 
               <!-- FILTER-->
-              <div class="col-12 col-lg-12 col-xl-4 mb-2 mb-lg-0">
-                <div class="card card-body custom-rounded shadow-light border">
+              <div class="col-12 col-lg-12 col-xl-4 mb-2 mb-3 mb-xl-0">
+                <div class="card card-body custom-rounded shadow-light border filter-container mb-0 pb-0">
+
+                  <!-- Filter header -->
                   <div class="d-flex align-items-center mt-1 mb-3">
                     <div class=" h3"><span class="mr-1">Filter Criteria</span>
                       <span id="tooltip-target" data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true"
                         title='We support <a class="fw-bold text-success link-hover" target="_blank" href="https://nubela.co/blog/ultimate-guide-to-boolean-search-syntax/">Boolean Search Syntax</a> in our search parameters.'>
                         <i class="fe fe-info small"></i></span>
                     </div>
-                    <a class="btn btn-outline-success rounded-pill btn-sm  h3 ms-4" href="prospector-customers.html">
-                      Reset
-                    </a>
-                    <a class="btn btn-link text-success rounded-pill btn-sm  h3 ms-n1" href="#!">
-                      <i class="neu neu-so-save d-none d-md-inline-block"></i> Save search
-                    </a>
-
-                    <a href="prospector-customers-result-collapsed.html"
-                      class="btn btn-sm btn-success rounded-pill lift  ms-auto d-none d-xl-block mt-n3">
-                      <i class="fe fe-chevron-left"></i>
-                    </a>
+                    <a class="btn btn-outline-success rounded-pill btn-sm h3 ms-4 ms-xl-3"
+                      href="prospector-customers.html">Reset</a>
+                    <a class="btn btn-link text-secondary rounded-pill btn-sm disabled h3 ms-n1" href="#!"><i
+                        class="neu neu-so-save d-none d-md-inline-block"></i> Save search</a>
                   </div>
 
-                  <!-- OVERVIEW/filter-->
-                  <div class="accordion" id="peopleOverviewAccordion">
+                  <!-- Scrollable filter content -->
+                  <div class="filter-content">
                     <div class="card border-0">
                       <!-- collapse-->
                       <div class="collapse show" id="peopleOverview" data-bs-parent="#peopleOverviewAccordion">
@@ -384,122 +521,243 @@
                               <div class="mt-2">
                                 <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Google <i
                                     class="neu neu-so-close-circle ms-1"></i></div>
+                                <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Netflix <i
+                                    class="neu neu-so-close-circle ms-1"></i></div>
+                                <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Gojek <i
+                                    class="neu neu-so-close-circle ms-1"></i></div>
+                                <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Microsoft <i
+                                    class="neu neu-so-close-circle ms-1"></i></div>
+                                <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Polygon <i
+                                    class="neu neu-so-close-circle ms-1"></i></div>
+                                <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Meta <i
+                                    class="neu neu-so-close-circle ms-1"></i></div>
                               </div>
                             </div>
                           </form>
                         </div>
-
+  
                       </div>
                     </div>
                   </div>
 
-                  <div class="btn btn-outline-success rounded-pill btn-block lift"><i class="neu neu-search"></i> Search
-                    criteria</div>
+                  <div class="row card-body">
+                    <a class="btn btn-success rounded-pill btn-block lift"
+                    href="prospector-customers-loading.html"><i class="neu neu-search"></i> Search criteria</a>
+                  </div>
                 </div>
+
               </div>
 
               <!-- RESULT-->
-              <div class="col-12 col-xl-8">
-                <div class="card custom-rounded bg-white text-center pb-lg-5 pt-lg-5">
-                  <div class="card-body">
-                    <div class="row justify-content-center">
-                      <div class="col-12 col-md-11 col-lg-6 ">
-                        <img class="img-fluid mt-md-4 mb-3 mb-xl-4" alt="Prospector search illustration"
-                          src="assets/img/illustrations/no-match.png">
+              <div class="col-lg-12 col-xl-8 mb-0 ps-xl-0">
+                <div class="card custom-rounded bg-white text-left shadow-light border mb-0 result-container">
+
+                  <div class="card-body border-bottom pb-3 mb-0">
+                    <div class="row">
+                      <div class="col-12 col-lg-7 d-flex align-items-center">
+                        <p class=" mt-2 pe-3 pe-md-3 me-md-3 me-3 border-end"><i
+                            class="neu neu-so-structure me-1 text-success"></i>0 <span
+                            class="font-weight-normal text-muted">results <span
+                              class="d-none d-md-inline-block">found</span></span></p>
+                        <div class="mt-n3 form-check form-switch form-check-sm text-muted">
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" disabled>
+                          <label class="form-check-label ms-n3" for="flexSwitchCheckDefault">Unlocked only</label>
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-5 d-md-flex justify-content-lg-end mt-4 mt-md-1">
+                        <div class=" text-muted small text-right me-md-2 mb-3 mb-md-0 mt-n3 d-flex align-items-center">
+                          <!-- Added d-flex and align-items-center -->
+                          <span class="flex-grow-1">Displaying</span> <!-- Displaying text with flex-grow-1 -->
+                          <div class="btn-group ms-3 ms-md-2 w-100"> <!-- Button group -->
+                            <button type="button"
+                              class="disabled btn btn-sm rounded-pill px-3 btn-outline-secondary dropdown-toggle btn-mobile-full-width"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              10 results
+                            </button>
+                            <div class="dropdown-menu me-3">
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">15 results</a>
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">20 results</a>
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">25 results</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" text-muted small text-right mb-3 mb-lg-0">
+                          <div class="btn-group w-100">
+                            <button type="button"
+                              class="disabled btn btn-sm rounded-pill px-3 btn-outline-secondary dropdown-toggle ms-1"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              Export to .CSV
+                            </button>
+                            <div class="dropdown-menu me-3">
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">Export to .CSV</a>
+                              <a class="dropdown-item nav-link custom-link text-gray-700" href="#">Export to .XLSX</a>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
+                  </div>
 
-                    <p class="lead mb-2 fw-bold">No profiles match your search criteria</p>
-                    <p class="text-gray-700 mb-4 mb-xl-6">Please try adjusting your filters or keywords.</p>
+                  <!-- Filter feedback-->
+                  <div class="card-body border-bottom pt-3 pt-xl-3 pb-4 pb-md-2 px-3">
+                    <div class="row justify-content-between align-items-center">
+
+
+                      <div
+                        class="col-10 col-md-10 col-lg-11 col-xl-10 col-xl-filter-custom mt-2 mt-md-0 mb-0 overflow-auto"
+                        style="white-space: nowrap;">
+                        <button type="button" class=" btn btn-sm rounded-pill px-3 btn-outline-secondary me-md-2 mb-2">
+                          <span class="text-muted d-none d-lg-inline-block">Company name:</span> Google <i
+                            class="neu neu-so-close-circle text-muted ms-1"></i>
+                        </button>
+                        <button type="button" class=" btn btn-sm rounded-pill px-3 btn-outline-secondary me-md-2 mb-2">
+                          <span class="text-muted d-none d-lg-inline-block">Company name:</span> Netflix <i
+                            class="neu neu-so-close-circle text-muted ms-1"></i>
+                        </button>
+                        <button type="button" class=" btn btn-sm rounded-pill px-3 btn-outline-secondary me-md-2 mb-2">
+                          <span class="text-muted d-none d-lg-inline-block">Company name:</span> Gojek <i
+                            class="neu neu-so-close-circle text-muted ms-1"></i>
+                        </button>
+                        <button type="button" class=" btn btn-sm rounded-pill px-3 btn-outline-secondary me-md-2 mb-2">
+                          <span class="text-muted d-none d-lg-inline-block">Company name:</span> Microsoft <i
+                            class="neu neu-so-close-circle text-muted ms-1"></i>
+                        </button>
+                        <button type="button" class=" btn btn-sm rounded-pill px-3 btn-outline-secondary me-md-2 mb-2">
+                          <span class="text-muted d-none d-lg-inline-block">Company name:</span> Polygon <i
+                            class="neu neu-so-close-circle text-muted ms-1"></i>
+                        </button>
+                        <button type="button" class=" btn btn-sm rounded-pill px-3 btn-outline-secondary me-md-2 mb-2">
+                          <span class="text-muted d-none d-lg-inline-block">Company name:</span> Meta <i
+                            class="neu neu-so-close-circle text-muted ms-1"></i>
+                        </button>
+                      </div>
+
+                      <div class="col-auto mt-md-0 mb-0 d-none d-xl-block">
+                        <a class="btn btn-sm btn-outline-secondary rounded-pill sticky-filter-arrow mb-2"><i
+                            class="fe fe-arrow-right"></i></a>
+                      </div>
+
+                      <!-- SM-LG-->
+                      <div class="col-auto mt-2 mt-md-0 mb-0 d-block d-xl-none">
+                        <a class="btn btn-sm btn-outline-secondary rounded-pill mb-2"><i
+                            class="fe fe-arrow-right"></i></a>
+                      </div>
+
+                      <div
+                        class="col-12 col-xl-auto d-grid gap-2 d-md-flex justify-content-lg-end custom-border-height mt-3 mt-md-2 mt-xl-0">
+                        <button type="button"
+                          class="col-12 col-md-6 btn btn-sm rounded-pill px-3 btn-outline-secondary d-block d-xl-none mb-md-2"
+                          data-bs-toggle="modal" data-bs-target="#modalAllFilters">
+                          All filters
+                        </button>
+
+                        <a href="prospector-customers.html"  class="col-12 col-md-6 col-xl-12 btn btn-sm rounded-pill px-3 btn-outline-secondary mb-md-2">
+                          Clear all
+                        </a>
+                      </div>
+
+                    </div>
+
 
                   </div>
+
+                  <div class="d-flex align-items-center py-5 py-xl-0"> <!-- Adjusted Flexbox classes -->
+
+                    <div class="text-center"> <!-- Added text-center for centering text -->
+                      <div class="row justify-content-center">
+                        <div class="col-10 col-md-8 col-lg-6">
+                          <img class="img-fluid" alt="Prospector search illustration" src="assets/img/illustrations/no-match.png">
+                        </div>
+                      </div>
+                      <div class="row justify-content-center">
+                        <div class="col-12 col-md-12 col-lg-6">
+                          <p class="lead mb-2 fw-bold">No profiles match your search criteria</p>
+                          <p class="text-gray-700 mb-0">Please try adjusting your filters again.</p>
+                        </div>
+                      </div>
+                    </div>
+                  
+                  </div>
+
+                  <div class="row card-body mt-0 pt-4 mx-0 border-top align-items-center sticky-bottom-action">
+                    <div
+                      class="col-12 col-md-12 col-lg-9 d-lg-flex justify-content-md-start justify-content-lg-end order-lg-2 pe-lg-0 pe-xl-2 ps-lg-0 ps-xl-2">
+
+                      <!---->
+                      <button
+                        class="disabled btn btn-outline-secondary btn-sm py-2 rounded-pill lift pe-3 me-2 mb-3 mb-lg-0 d-none d-lg-block text-nowrap"><i
+                          class="neu neu-todo-done"></i> Unlock 3 selected rows</button>
+                      <!-- Mobile-->
+                      <button
+                        class="disabled btn btn-outline-secondary w-100 rounded-pill btn-block btn-pill lift mb-3 mb-lg-0 d-lg-none"><i
+                          class="neu neu-todo-done"></i> Unlock 3 selected rows</button>
+
+                      <!---->
+                      <button
+                        class="disabled btn btn-outline-secondary btn-sm rounded-pill lift pe-3 me-2 mb-3 mb-lg-0 d-none d-lg-block text-nowrap"
+                        data-bs-toggle="modal" data-bs-target="#modalUnlockThisPage"><i class="neu neu-document-ui"></i>
+                        Unlock this
+                        page</button>
+                      <!-- Mobile-->
+                      <button class="disabled btn btn-outline-secondary w-100 rounded-pill btn-pill lift mb-3 mb-lg-0 d-lg-none"
+                        data-bs-toggle="modal" data-bs-target="#modalUnlockThisPage"><i class="neu neu-document-ui"></i>
+                        Unlock this
+                        page</button>
+
+                      <!---->
+                      <button
+                        class="disabled btn btn-light text-secondary btn-sm rounded-pill pe-3  mb-3 mb-lg-0 lift d-none d-lg-block text-nowrap"
+                        data-bs-toggle="modal" data-bs-target="#modalUnlockAllResults"><i
+                          class="neu neu-so-lock-square"></i> Unlock all
+                        results</button>
+                      <!-- Mobile-->
+                      <button class="disabled btn btn-light w-100 rounded-pill btn-pill mb-3 mb-lg-0 lift d-lg-none"
+                        data-bs-toggle="modal" data-bs-target="#modalUnlockAllResults"><i
+                          class="neu neu-so-lock-square"></i> Unlock all
+                        results</button>
+
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-3 order-lg-1 mt-3 mt-lg-0 ps-lg-0 ps-xl-2 pe-lg-0 pe-xl-2">
+                      <nav aria-label="pagination">
+                        <ul class="pagination pagination-sm justify-content-center justify-content-lg-start mb-0">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                          </li>
+                          <li class="page-item disabled"><a class="page-link" href="#">1<span
+                                class="sr-only">(current)</span></a>
+                          </li>
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#">2 </a>
+                          </li>
+                          <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#">Next</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+
                 </div>
-              </div>
+
+              </div> <!-- RESULT-->
 
             </div>
           </div>
 
-          <br>
-
-
         </div>
       </div> <!-- / .row -->
+
     </div>
 
   </div> <!-- / .main-content -->
 
   <!-- JAVASCRIPT -->
 
-  <!-- Table sorting JS-->
-  <script>
-    let currentColumn = 3; // Set Last checked as the default sorted column
-    let lastCheckedColumnSorted = true;
-
-    document.addEventListener("DOMContentLoaded", function (event) {
-      // Simulate click on "Last checked" header after the page loads (default sort)
-      sortTable(currentColumn);
-      lastCheckedColumnSorted = false;
-    });
-
-    function sortTable(columnIndex) {
-      const table = document.getElementById('myTable');
-      const tbody = table.querySelector('tbody');
-      const rows = Array.from(tbody.querySelectorAll('tr'));
-
-      rows.sort((a, b) => {
-        let cellA = a.getElementsByTagName('td')[columnIndex].innerText.trim().toLowerCase();
-        let cellB = b.getElementsByTagName('td')[columnIndex].innerText.trim().toLowerCase();
-
-        if (columnIndex === 3) { // For Last checked column, reverse sorting
-          [cellA, cellB] = [cellB, cellA];
-        }
-
-        return cellA.localeCompare(cellB);
-      });
-
-      tbody.innerHTML = '';
-      rows.forEach(row => {
-        tbody.appendChild(row);
-      });
-
-      resetHeaders();
-      const clickedHeader = document.getElementById(`header${columnIndex}`);
-
-      if (!lastCheckedColumnSorted && columnIndex === 3) {
-        clickedHeader.classList.add('active-header');
-        lastCheckedColumnSorted = true;
-      } else {
-        clickedHeader.classList.add('active-header');
-      }
-
-      currentColumn = columnIndex;
-      resetSortIcons(columnIndex);
-    }
-
-    function resetHeaders() {
-      const headers = document.querySelectorAll('th');
-      headers.forEach(header => {
-        header.classList.remove('active-header');
-      });
-    }
-
-    function resetSortIcons(exceptIndex) {
-      const icons = document.querySelectorAll('.fa-sort');
-      icons.forEach(icon => {
-        icon.classList.remove('fa-sort-up', 'fa-sort-down');
-        icon.classList.add('fa-sort');
-      });
-
-      const clickedHeaderIcon = document.getElementById(`header${exceptIndex}`).getElementsByTagName('i')[0];
-      clickedHeaderIcon.classList.remove('fa-sort');
-      clickedHeaderIcon.classList.add('fas', 'fa-sort');
-    }
-  </script>
-
   <script src="script-all-checkbox.js"></script>
+  <script src="script-custom.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
-
 
   <!-- Map JS -->
   <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
@@ -525,6 +783,24 @@
         delay: { show: 0, hide: 1200 } // Add a delay when hiding the popover
       })
     })
+  </script>
+
+  <!-- // AJI - 16 Sep 2024 - Show collapse when xl screen //-->
+  <script>
+    // JavaScript to handle the visibility based on screen size
+    function handleResize() {
+      const filter = document.getElementById('peoplePersonal');
+      if (window.innerWidth >= 1199) { // md breakpoint
+        filter.classList.add('show');
+        filter.classList.remove('collapse');
+      } else {
+        filter.classList.remove('show');
+        filter.classList.add('collapse');
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('load', handleResize);
   </script>
 
 </body>
