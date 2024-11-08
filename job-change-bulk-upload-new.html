@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A fully featured admin theme which can be used to build CRM, CMS, etc."
+    />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon" />
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style-custom.css" />
+    <link rel="stylesheet" href="./assets/css/style-custom-2.css" />
+
+    <!-- Title -->
+    <title>Bulk Upload - Job Change Monitor</title>
+  </head>
+  <body>
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <!-- Header -->
+            <div class="header mt-md-5">
+              <div class="header-body">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <!-- Pretitle -->
+                    <h6 class="header-pretitle">Job Change Monitor</h6>
+
+                    <!-- Title -->
+                    <h1 class="header-title">Bulk Upload</h1>
+                  </div>
+                </div>
+
+                <!-- Nav -->
+                <div class="row align-items-center">
+                  <div class="col">
+                    <ul class="nav nav-tabs nav-overflow header-tabs">
+                      <li class="nav-item">
+                        <a href="job-change-monitor.html" class="nav-link">
+                          Job Change Monitor
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="job-change-bulk-upload.html" class="nav-link active">
+                          Bulk Upload
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Upload Methods -->
+            <div class="row">
+              <!-- CSV Upload -->
+              <div class="col-12 col-xl-6 mb-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h4 class="card-header-title">Upload CSV File</h4>
+                  </div>
+                  <div class="card-body">
+                    <form>
+                      <div class="mb-4">
+                        <p class="text-muted">
+                          Upload a CSV file containing LinkedIn profile URLs to monitor.
+                          Please use our template format for successful upload.
+                        </p>
+                        
+                        <div class="dropzone dropzone-single mb-3">
+                          <div class="dz-default dz-message">
+                            <button class="dz-button" type="button">
+                              Drop CSV file here or click to upload
+                            </button>
+                          </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center mt-3">
+                          <a href="#" class="btn btn-sm btn-outline-primary me-2">
+                            <i class="fe fe-download me-2"></i> Download Template
+                          </a>
+                          <small class="text-muted">
+                            Max file size: 5MB
+                          </small>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Text Input -->
+              <div class="col-12 col-xl-6 mb-4">
+                <div class="card">
+                  <div class="card-header">
+                    <h4 class="card-header-title">Paste LinkedIn URLs</h4>
+                  </div>
+                  <div class="card-body">
+                    <form>
+                      <div class="mb-4">
+                        <p class="text-muted">
+                          Paste LinkedIn profile URLs, one per line. 
+                          Example format: https://www.linkedin.com/in/username
+                        </p>
+                        
+                        <textarea 
+                          class="form-control" 
+                          rows="8" 
+                          placeholder="https://www.linkedin.com/in/username1&#10;https://www.linkedin.com/in/username2"
+                        ></textarea>
+                        
+                        <small class="text-muted d-block mt-2">
+                          Maximum 100 profiles per upload
+                        </small>
+                      </div>
+
+                      <button type="submit" class="btn btn-primary">
+                        Start Monitoring
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Instructions -->
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-header-title">Instructions</h4>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12 col-xl-6">
+                    <h5>CSV File Format</h5>
+                    <p class="text-muted">Your CSV file should contain the following columns:</p>
+                    <ul class="text-muted">
+                      <li>linkedin_url (required): Full LinkedIn profile URL</li>
+                      <li>name (optional): Person's name</li>
+                      <li>company (optional): Current company</li>
+                      <li>notes (optional): Additional notes</li>
+                    </ul>
+                  </div>
+                  <div class="col-12 col-xl-6">
+                    <h5>Important Notes</h5>
+                    <ul class="text-muted">
+                      <li>All URLs must be valid LinkedIn profile URLs</li>
+                      <li>Duplicate profiles will be ignored</li>
+                      <li>Processing may take a few minutes for large lists</li>
+                      <li>You will be notified by email when processing is complete</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vendor JS -->
+    <script src="./assets/js/vendor.bundle.js"></script>
+
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.bundle.js"></script>
+  </body>
+</html> 
