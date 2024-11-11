@@ -457,11 +457,13 @@
             <!-- Upload Methods -->
             <div class="row">
           
-              <!-- CSV Upload -->
+              <!-- LinkedIn URLs preview -->
               <div class="col-12 mb-4">
                 <div class="card">
                   <div class="card-header">
-                    <h4 class="card-header-title">Upload CSV</h4>
+                    <h4 class="card-header-title">
+                      LinkedIn URLs Preview
+                    </h4>
                   </div>
                   <div class="card-body">
 
@@ -469,80 +471,61 @@
 
                       <div class="col-12">
                         <p class="text-muted">
-                          Here is the example of the CSV format or you can download the <a href="#" class="text-success">sample CSV file</a> to use as a template.
+                          Here is all of the LinkedIn URLs you have uploaded.
                         </p>
-                        <div class="table-responsive table-sm">
-                          <table class="table table-bordered">
-                            <thead>
-                              <tr></tr>
-                                <th>linkedin_url</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>
+
+                        <div class="row">
+                          <div class="col-12">
+
+                            <div class="bg-lighter border p-3 rounded">
+                              <div>
+                                1.
+                                <span class="badge bg-secondary-soft fs-5">
                                   https://www.linkedin.com/in/williamhgates
-                                  <br />
+                                </span>
+                              </div>
+                              
+                              <div class="my-2">
+                                2.
+                                <span class="badge bg-secondary-soft fs-5">
                                   https://www.linkedin.com/in/jeff-klein
-                                  <br />
-                                  https://www.linkedin.com/in/mbahmu
-                                  <br />
+                                </span>
+                              </div>
+                              
+                              <div class="my-2">
+                                3.
+                                <span class="badge bg-danger-soft fs-5">
+                                  https://www.linkedin.com/in/mbahmu <i class="fe fe-x"></i>
+                                </span>
+                              </div>
+                              
+                              <div class="my-2">
+                                4.
+                                <span class="badge bg-secondary-soft fs-5">
                                   https://www.linkedin.com/in/mbahku
-                                  <br />
-                                  https://www.linkedin.com/in/mbah-kita-semua
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
+                                </span>
+                              </div>
+                              
+                              <div>
+                                5.
+                                <span class="badge bg-danger-soft fs-5">
+                                  https://www.linkedin.com/in/mbah-kita-semua <i class="fe fe-x"></i>
+                                </span>
+                              </div>
+                            </div>
+
+                          </div>
                         </div>
+
                       </div>
 
                       <div class="col-12">
-                        <div class="dropzone dropzone-single mb-3" data-toggle="dropzone" data-options='{"url": "api/upload"}'>
-                          <div class="dz-preview dz-preview-single"></div>
-                          <div class="dz-default dz-message">
-                            <button class="dz-button" type="button">
-                              <span class="dz-button-text">Drop CSV file here or click to upload</span>
-                              <span class="text-muted small d-block mt-2">Maximum file size: 100MB</span>
-                            </button>
-                          </div>
-                        </div>
-                        <a class="btn btn-success mt-3 lift" href="job-change-bulk-upload-preview.html">
-                          Upload CSV
+                        <a class="btn btn-success mt-3 lift" href="job-change-bulk-upload.html">
+                          Submit profiles to Job Change Monitor
                         </a>
                       </div>
 
                     </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Text Input -->
-              <div class="col-12 mb-4">
-                <div class="card">
-                  <div class="card-header">
-                    <h4 class="card-header-title">Paste LinkedIn URLs</h4>
-                  </div>
-                  <div class="card-body">
-                    <form>
-                      <div>
-                        <p class="text-muted">
-                          Paste LinkedIn profile URLs, one per line.
-                          Example format: https://www.linkedin.com/in/williamhgates
-                        </p>
-          
-                        <textarea class="form-control" rows="8" id="linkedinUrls"
-                          placeholder="1. https://www.linkedin.com/in/williamhgates"></textarea>
-          
-                        <small class="text-muted d-block mt-2">
-                          Maximum 500 profiles per upload
-                        </small>
-                      </div>
-          
-                      <a class="btn btn-success mt-3 lift" href="job-change-bulk-upload-preview.html">
-                        Start Monitoring
-                      </a>
-                    </form>
                   </div>
                 </div>
               </div>
