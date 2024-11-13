@@ -311,7 +311,9 @@
 
               <p class="mb-4 pb-4 border-bottom lead">
                 $49/month (<span class="fw-bold font-monospace badge bg-light">1,055,000</span> credits) + (<span
-                  class="fw-bold font-monospace badge bg-light">1,055,000</span> formulas) and (<span
+                  class="fw-bold font-monospace badge bg-light">1,055,000</span> formulas) + (<span
+                  class="fw-bold font-monospace badge bg-light">35,166</span> leads) + (<span
+                  class="fw-bold font-monospace badge bg-light">52,760</span> profiles) and (<span
                   class="fw-bold font-monospace badge bg-light">105,500</span> fresh profiles)?
               </p>
 
@@ -322,9 +324,11 @@
                   </h2>
                   <p class="lead">
                     <span class="fw-bold font-monospace badge bg-light">1,055,000</span> credits + <span
-                      class="fw-bold font-monospace badge bg-light">1,055,000</span> formulas
+                      class="fw-bold font-monospace badge bg-light">1,055,000</span> formulas + <span
+                      class="fw-bold font-monospace badge bg-light">35,166</span> leads + <span
+                      class="fw-bold font-monospace badge bg-light">52,760</span> profiles
                   </p>
-                  <p class="lead">
+                  <p class="lead mt-0">
                     <span class="fw-bold font-monospace badge bg-light">105,500</span> fresh profiles
                   </p>
                   <p class="small text-muted mb-4">
@@ -339,7 +343,7 @@
                   <p class="lead">
                     <span class="fw-bold">$1899</span>/month
                   </p>
-                  <p class="lead">
+                  <p class="lead mt-md-5 pt-md-3">
                     <span class="fw-bold">$1900</span>/month
                   </p>
                 </div>
@@ -774,6 +778,9 @@
                     <li>
                       <a class="border px-3 py-3 text-muted" href="index-pricing-monthly-annual.html" style="border-radius: 0px; border-color: #869ab8!important; border-left: none!important;">
                         Annual plans, billed monthly
+                        <span class="text-opacity-80">
+                          <span class="badge bg-secondary-soft h6 rounded-pill text-uppercase ms-1 py-2 mb-0">save 50%</span>
+                        </span>
                       </a>
                     </li>
                     <li>
@@ -798,6 +805,9 @@
     
                   <a class="btn btn-lg btn-light w-100 mb-3" href="index-pricing-monthly-annual.html">
                     Annual plans, billed monthly
+                    <span class="text-opacity-80">
+                      <span class="badge bg-warning h6 rounded-pill text-uppercase ms-1 py-2 mb-n1">save 50%</span>
+                    </span>
                   </a>
     
                   <a class="btn btn-lg btn-success w-100 pt-3" href="index.html">
@@ -827,17 +837,27 @@
                       Lite
                     </h2>
 
-                    <h3 id="litePrice" class="display-4 font-weight-bold mb-0">
-                      $<span>588</span>
+                    <h3 id="litePrice" class="display-4 font-weight-bold mb-2">
+                      $<span class="base-price">588</span><span class="h5">/yr</span>
                     </h3>
 
-                    <div class="mb-3">
+                    <div class="mb-2">
                       <p class="small text-muted billedText">
-                        /yr, billed annually
+                        Billed yearly · All credits issued upfront · Credits expire end of year
                       </p>
                     </div>
 
-                    <div class="mb-3">
+                    <p class="mb-4 d-flex align-items-start">
+                      <i class="fe fe-database text-success mt-1"></i>
+                      <span class="ms-2 me-1">150,000 credits
+                        <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
+                        data-bs-toggle="tooltip" data-bs-placement="right" title="These extra credits are part of the 2 months’ free offer">
+                          + Free 25,000 <i class="fe fe-info"></i> 
+                        </span>
+                      </span>
+                    </p>
+
+                    <div class="mb-3 mt-4">
                       <button type="submit" class="btn btn-outline-success rounded-pill w-100" data-bs-toggle="modal"
                         data-bs-target="#modalNext">
                         Upgrade plan
@@ -847,52 +867,80 @@
                     <hr class="mb-5">
 
                     <small class="h6 font-weight-bold text-uppercase text-muted">
-                      Features included
+                      Export leads for prospecting
                     </small>
 
-                    <div class="mt-2 mb-4">
-
-                      <p class="mb-2">
-                        <i class="fe fe-database text-success"></i> 150,000 + 25,000 credits
+                    <div class="mt-0 mb-2">
+                      <p class="d-flex">
+                        <i class="fe fe-star text-success"></i>
+                        <span class="ms-2">Up to 416 leads</span>
                       </p>
+                    </div>
 
-                      <p class="mb-3">
-                        <i class="fe fe-zap text-success"></i> 150,000 + 25,000 formulas
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Track job changes
+                    </small>
+
+                    <div class="mt-0 mb-2">
+                      <p class="d-flex">
+                        <i class="fe fe-user text-success mt-2"></i>
+                        <span class="ms-2">Up to 635 profiles 
+                          <span class="badge text-success rounded-pill h6 text-uppercase mt-2 ms-1" style="background-color: #EDF8F5;"
+                          data-bs-toggle="tooltip" data-bs-placement="right" title="Only for work emails. Not applicable to free emails (e.g. @gmail.com, @yahoo.com)">
+                            10 Free <i class="fe fe-info"></i> 
+                          </span>
+                        </span>
                       </p>
+                    </div>
 
-                      <p class="small text-muted mb-1">
-                        $0.336¢ / credit
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Enrich data in google sheets
+                    </small>
+
+                    <div class="mt-1 mb-3">
+                      <p class="d-flex">
+                        <i class="fe fe-zap text-success"></i>
+                        <span class="ms-2 me-1">Up to 150,000 formulas
+                          <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
+                          data-bs-toggle="tooltip" data-bs-placement="right" title="These extra formulas are part of the 2 months’ free offer">
+                            + Free 25,000 <i class="fe fe-info"></i> 
+                          </span>
+                        </span>
                       </p>
-
-                      <p class="small text-muted mb-0">
-                        12+2 months credits issued immediately, expire in a year
-                      </p>
-
                     </div>
 
                     <hr>
 
                     <div class="text-center mt-n4" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                      title="If added to a plan, we will provide fresh profile data &lt;29 days.">
+                      title="Available only on Data Enrichment Spreadsheets">
                       <span class="badge bg-white rounded-pill h6 text-info border border-info">
-                        <i class="fe fe-info"></i> Fresh add-on
+                        <i class="fe fe-info"></i> Fresh data add-on
                       </span>
                     </div>
 
                     <div class="mt-3">
 
-                      <p class="mb-2">
-                        <i class="fe fe-dollar-sign text-success"></i> +$600
-                        <span class="small text-muted d-block">/yr, billed annually</span>
+                      <p class="d-flex p-custom mb-0">
+                        <i class="fe fe-dollar-sign text-success mt-0"></i>
+                        <span class="ms-2">+$600/yr</span>
+                      </p>
+                      <p class="d-flex p-custom mt-0 mb-3">
+                        <small class="text-muted ms-4">Billed yearly</small>
                       </p>
 
-                      <p class="mb-5">
-                        <i class="fe fe-user text-success"></i> 15,000 + 2,500 fresh profiles
+                      <p class="d-flex mb-5">
+                        <i class="fe fe-user-check text-success"></i>
+                        <span class="ms-2 me-1">15,000 fresh profiles
+                          <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
+                          data-bs-toggle="tooltip" data-bs-placement="right" title="These extra fresh profiles are part of the 2 months’ free offer">
+                            + Free 2,500 <i class="fe fe-info"></i> 
+                          </span>
+                        </span>
                       </p>
 
                       <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="lite50">
-                        <label class="form-check-label" for="lite50">Enable fresh add-on </label>
+                        <input class="form-check-input" type="checkbox" role="switch" id="litefresh">
+                        <label class="form-check-label" for="litefresh">Add freshness </label>
                       </div>
 
                     </div>
@@ -917,15 +965,25 @@
                       Pro
                     </h2>
 
-                    <h3 id="proPrice" class="display-4 font-weight-bold mb-0">
-                      $<span>3,588</span>
+                    <h3 id="proPrice" class="display-4 font-weight-bold mb-2">
+                      $<span class="base-price">3588</span><span class="h5">/yr</span>
                     </h3>
 
-                    <div class="mb-3">
+                    <div class="mb-2">
                       <p class="small text-muted billedText">
-                        /yr, billed annually
+                        Billed yearly · All credits issued upfront · Credits expire end of year
                       </p>
                     </div>
+
+                    <p class="mb-4 d-flex align-items-start">
+                      <i class="fe fe-database text-success"></i>
+                      <span class="ms-2 me-1">1,500,000 credits
+                        <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
+                        data-bs-toggle="tooltip" data-bs-placement="right" title="These extra credits are part of the 2 months’ free offer">
+                          + Free 250,000 <i class="fe fe-info"></i> 
+                        </span>
+                      </span>
+                    </p>
 
                     <div class="mb-3">
                       <button type="submit" class="btn btn-outline-secondary rounded-pill w-100" data-bs-toggle="modal"
@@ -937,52 +995,80 @@
                     <hr class="mb-5">
 
                     <small class="h6 font-weight-bold text-uppercase text-muted">
-                      Features included
+                      Export leads for prospecting
                     </small>
 
-                    <div class="mt-2 mb-4">
-
-                      <p class="mb-2">
-                        <i class="fe fe-database text-success"></i> 1,500,000 + 250,000 credits
+                    <div class="mt-0 mb-2">
+                      <p class="d-flex">
+                        <i class="fe fe-star text-success"></i>
+                        <span class="ms-2">Up to 4,166 leads</span>
                       </p>
+                    </div>
 
-                      <p class="mb-3">
-                        <i class="fe fe-zap text-success"></i> 1,500,000 + 250,000 formulas
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Track job changes
+                    </small>
+
+                    <div class="mt-0 mb-2">
+                      <p class="d-flex">
+                        <i class="fe fe-user text-success mt-2"></i>
+                        <span class="ms-2">Up to 6,260 profiles 
+                          <span class="badge text-success rounded-pill h6 text-uppercase mt-2 ms-1" style="background-color: #EDF8F5;"
+                          data-bs-toggle="tooltip" data-bs-placement="right" title="Only for work emails. Not applicable to free emails (e.g. @gmail.com, @yahoo.com)">
+                            10 Free <i class="fe fe-info"></i> 
+                          </span>
+                        </span>
                       </p>
+                    </div>
 
-                      <p class="small text-muted mb-1">
-                        $0.205¢ / credit
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Enrich data in google sheets
+                    </small>
+
+                    <div class="mt-1 mb-3">
+                      <p class="d-flex">
+                        <i class="fe fe-zap text-success"></i>
+                        <span class="ms-2 me-1">Up to 1,500,000 formulas
+                          <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
+                          data-bs-toggle="tooltip" data-bs-placement="right" title="These extra formulas are part of the 2 months’ free offer">
+                            + Free 250,000 <i class="fe fe-info"></i> 
+                          </span>
+                        </span>
                       </p>
-
-                      <p class="small text-muted mb-0">
-                        12+2 months credits issued immediately, expire in a year
-                      </p>
-
                     </div>
 
                     <hr>
 
                     <div class="text-center mt-n4" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                      title="If added to a plan, we will provide fresh profile data &lt;29 days.">
+                      title="Available only on Data Enrichment Spreadsheets">
                       <span class="badge bg-white rounded-pill h6 text-info border border-info">
-                        <i class="fe fe-info"></i> Fresh add-on
+                        <i class="fe fe-info"></i> Fresh data add-on
                       </span>
                     </div>
 
                     <div class="mt-3">
 
-                      <p class="mb-2">
-                        <i class="fe fe-dollar-sign text-success"></i> +$3,600
-                        <span class="small text-muted d-block">/yr, billed annually</span>
+                      <p class="d-flex p-custom mb-0">
+                        <i class="fe fe-dollar-sign text-success mt-0"></i>
+                        <span class="ms-2">+$3,600/yr</span>
+                      </p>
+                      <p class="d-flex p-custom mt-0 mb-3">
+                        <small class="text-muted ms-4">Billed yearly</small>
                       </p>
 
-                      <p class="mb-5">
-                        <i class="fe fe-user text-success"></i> 150,000 + 25,000 fresh profiles
+                      <p class="d-flex mb-5">
+                        <i class="fe fe-user-check text-success"></i>
+                        <span class="ms-2 me-1">150,000 fresh profiles
+                          <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
+                          data-bs-toggle="tooltip" data-bs-placement="right" title="These extra fresh profiles are part of the 2 months’ free offer">
+                            + Free 25,000 <i class="fe fe-info"></i> 
+                          </span>
+                        </span>
                       </p>
 
-                      <div class="form-check form-switch" checked>
-                        <input class="form-check-input" type="checkbox" role="switch" id="pro300">
-                        <label class="form-check-label" for="pro300">Enable fresh add-on </label>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="profresh">
+                        <label class="form-check-label" for="profresh">Add freshness </label>
                       </div>
 
                     </div>
@@ -1003,15 +1089,25 @@
                       Pro+
                     </h2>
 
-                    <h3 id="proPlusPrice" class="display-4 font-weight-bold mb-0">
-                      $<span>10,788</span>
+                    <h3 id="proPlusPrice" class="display-4 font-weight-bold mb-2">
+                      $<span class="base-price">10788</span><span class="h5">/yr</span>
                     </h3>
 
-                    <div class="mb-3">
+                    <div class="mb-2">
                       <p class="small text-muted billedText">
-                        /yr, billed annually
+                        Billed yearly · All credits issued upfront · Credits expire end of year
                       </p>
                     </div>
+
+                    <p class="mb-4 d-flex align-items-start">
+                      <i class="fe fe-database text-success"></i>
+                      <span class="ms-2 me-1">5,394,000 credits
+                        <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
+                        data-bs-toggle="tooltip" data-bs-placement="right" title="These extra credits are part of the 2 months’ free offer">
+                          + Free 899,000 <i class="fe fe-info"></i> 
+                        </span>
+                      </span>
+                    </p>
 
                     <div class="mb-3">
                       <button type="submit" class="btn btn-outline-success rounded-pill w-100" data-bs-toggle="modal"
@@ -1023,52 +1119,80 @@
                     <hr class="mb-5">
 
                     <small class="h6 font-weight-bold text-uppercase text-muted">
-                      Features included
+                      Export leads for prospecting
                     </small>
 
-                    <div class="mt-2 mb-4">
-
-                      <p class="mb-2">
-                        <i class="fe fe-database text-success"></i> 5,394,000 + 899,000 credits
+                    <div class="mt-0 mb-2">
+                      <p class="d-flex">
+                        <i class="fe fe-star text-success"></i>
+                        <span class="ms-2">Up to 14,983 leads</span>
                       </p>
+                    </div>
 
-                      <p class="mb-3">
-                        <i class="fe fe-zap text-success"></i> 5,394,000 + 899,000 formulas
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Track job changes
+                    </small>
+
+                    <div class="mt-0 mb-2">
+                      <p class="d-flex">
+                        <i class="fe fe-user text-success mt-2"></i>
+                        <span class="ms-2">Up to 22,485 profiles 
+                          <span class="badge text-success rounded-pill h6 text-uppercase mt-2 ms-1" style="background-color: #EDF8F5;"
+                          data-bs-toggle="tooltip" data-bs-placement="right" title="Only for work emails. Not applicable to free emails (e.g. @gmail.com, @yahoo.com)">
+                            10 Free <i class="fe fe-info"></i> 
+                          </span>
+                        </span>
                       </p>
+                    </div>
 
-                      <p class="small text-muted mb-1">
-                        $0.171¢ / credit
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Enrich data in google sheets
+                    </small>
+
+                    <div class="mt-1 mb-3">
+                      <p class="d-flex">
+                        <i class="fe fe-zap text-success"></i>
+                        <span class="ms-2 me-1">Up to 5,394,000 formulas
+                          <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
+                          data-bs-toggle="tooltip" data-bs-placement="right" title="These extra formulas are part of the 2 months’ free offer">
+                            + Free 899,000 <i class="fe fe-info"></i> 
+                          </span>
+                        </span>
                       </p>
-
-                      <p class="small text-muted mb-0">
-                        12+2 months credits issued immediately, expire in a year
-                      </p>
-
                     </div>
 
                     <hr>
 
                     <div class="text-center mt-n4" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                      title="If added to a plan, we will provide fresh profile data &lt;29 days.">
+                      title="Available only on Data Enrichment Spreadsheets">
                       <span class="badge bg-white rounded-pill h6 text-info border border-info">
-                        <i class="fe fe-info"></i> Fresh add-on
+                        <i class="fe fe-info"></i> Fresh data add-on
                       </span>
                     </div>
 
                     <div class="mt-3">
 
-                      <p class="mb-2">
-                        <i class="fe fe-dollar-sign text-success"></i> +$10,800
-                        <span class="small text-muted d-block">/yr, billed annually</span>
+                      <p class="d-flex p-custom mb-0">
+                        <i class="fe fe-dollar-sign text-success mt-0"></i>
+                        <span class="ms-2">+$10,800/yr</span>
+                      </p>
+                      <p class="d-flex p-custom mt-0 mb-3">
+                        <small class="text-muted ms-4">Billed yearly</small>
                       </p>
 
-                      <p class="mb-5">
-                        <i class="fe fe-user text-success"></i> 539,400 + 89,900 fresh profiles
+                      <p class="d-flex mb-5">
+                        <i class="fe fe-user-check text-success"></i>
+                        <span class="ms-2 me-1">539,400 fresh profiles
+                          <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
+                          data-bs-toggle="tooltip" data-bs-placement="right" title="These extra fresh profiles are part of the 2 months’ free offer">
+                            + Free 89,900 <i class="fe fe-info"></i> 
+                          </span>
+                        </span>
                       </p>
 
                       <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="proplus900">
-                        <label class="form-check-label" for="proplus900">Enable fresh add-on </label>
+                        <input class="form-check-input" type="checkbox" role="switch" id="proplusfresh">
+                        <label class="form-check-label" for="proplusfresh">Add freshness </label>
                       </div>
 
                     </div>
@@ -1167,7 +1291,7 @@
                 <div class="col-12 mt-md-0">
 
                   <div class="card card-body bg-dark px-5 py-5 mb-0"
-                    style="background-image: url(assets/img/illustrations/Pricing\ background\ illustration.svg);">
+                  style="background-image: url(assets/img/illustrations/Pricing\ background\ illustration.svg); background-position: right; background-repeat: no-repeat;">
 
                     <div class="row justify-content-center align-items-center">
 
@@ -1188,7 +1312,7 @@
                         </p>
 
                         <button class="btn btn-lg btn-success rounded-pill w-50">
-                          Contact us
+                          Contact sales
                         </button>
 
                       </div>
@@ -1431,6 +1555,68 @@
 
   <!-- Theme JS -->
   <script src="./assets/js/theme.bundle.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Add number formatting function
+      function formatNumber(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      }
+
+      // Format initial prices
+      document.querySelectorAll('.base-price').forEach(price => {
+        if (price.textContent) {
+          price.textContent = formatNumber(parseInt(price.textContent));
+        }
+      });
+
+      // Existing select handler code
+      const selects = document.querySelectorAll('.fresh-profiles-select');
+
+      selects.forEach(select => {
+        const priceElement = select.closest('.card').querySelector('.base-price');
+        const initialBasePrice = parseInt(priceElement.textContent.replace(/,/g, ''));
+        priceElement.setAttribute('data-base-price', initialBasePrice);
+
+        select.addEventListener('change', function () {
+          const priceElement = this.closest('.card').querySelector('.base-price');
+          const basePrice = parseInt(priceElement.getAttribute('data-base-price'));
+          const priceAddon = parseInt(this.options[this.selectedIndex].getAttribute('data-price-addon'));
+          const newPrice = basePrice + priceAddon;
+
+          if (priceElement) {
+            priceElement.textContent = formatNumber(newPrice);
+          }
+        });
+      });
+
+      // Handler for checkboxes
+      const checkboxes = {
+        'litefresh': 600,
+        'profresh': 3600,
+        'proplusfresh': 10800,
+        'businessfresh': 22800
+      };
+
+      Object.entries(checkboxes).forEach(([id, additionalPrice]) => {
+        const checkbox = document.getElementById(id);
+        if (checkbox) {
+          const priceElement = checkbox.closest('.card').querySelector('.base-price');
+          const initialBasePrice = parseInt(priceElement.textContent.replace(/,/g, ''));
+          priceElement.setAttribute('data-base-price', initialBasePrice);
+
+          checkbox.addEventListener('change', function () {
+            const basePrice = parseInt(priceElement.getAttribute('data-base-price'));
+            if (this.checked) {
+              priceElement.textContent = formatNumber(basePrice + additionalPrice);
+            } else {
+              priceElement.textContent = formatNumber(basePrice);
+            }
+          });
+        }
+      });
+    });
+  </script>
 
 </body>
 
