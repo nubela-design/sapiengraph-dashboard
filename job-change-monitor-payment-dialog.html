@@ -771,10 +771,23 @@
           
             </div>
 
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <div class="d-none d-lg-block alert alert-warning alert-dismissible fade show" role="alert">
 
               Your Job Change Monitor is currently suspended. Select a plan to continue using this feature.
-              <a class="btn btn-sm btn-outline-dark ms-3" data-bs-toggle="modal"
+              <a class="btn btn-sm btn-outline-dark mt-1 mt-xl-0 ms-xl-3" data-bs-toggle="modal"
+              data-bs-target="#modalPlan">
+                Select plan
+              </a>
+  
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+              </button>
+  
+            </div>
+
+            <div class="d-block d-lg-none alert alert-warning alert-dismissible fade show" role="alert">
+
+              Your Job Change Monitor is currently suspended. Select a plan to continue using this feature.
+              <a class="btn btn-sm btn-outline-dark mt-3 w-100" data-bs-toggle="modal"
               data-bs-target="#modalPlan">
                 Select plan
               </a>
