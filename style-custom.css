@@ -685,3 +685,17 @@ td, th {
   }
 }
 /* End of Added by Rifki - 04 Oct 2024 (Prospector - Companies - Detail) */
+
+.card.bg-dark {
+  position: relative;
+  overflow: hidden;
+  background-position: center right !important;
+  background-size: auto 100% !important;
+}
+
+@media (max-width: 991.98px) {
+  .card.bg-dark {
+    background-size: cover !important;
+    background-position: center !important;
+  }
+}
