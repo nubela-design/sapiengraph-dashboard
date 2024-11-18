@@ -341,8 +341,8 @@
       </div>
     </nav>
     
-    <!--MODAL TOPUP-->
-    <div class="modal fade" id="modalNext" tabindex="-1" aria-labelledby="modalNextLabel" aria-hidden="true">
+    <!--MODAL PLAN-->
+    <div class="modal fade" id="modalPlan" tabindex="-1" aria-labelledby="modalPlanLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
     
@@ -510,6 +510,150 @@
 
               </div>
 
+            </div>
+    
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    
+    <!--MODAL TOPUP-->
+    <div class="modal fade" id="modalNext" tabindex="-1" aria-labelledby="modalNextLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+    
+          <a type="button" class="btn-close h1 ps-4 pt-4" data-bs-dismiss="modal" aria-label="Close">
+          </a>
+    
+          <div class="modal-body">
+    
+            <div class="row justify-content-center">
+    
+              <div class="col-12">
+    
+                <h1 class="fw-bold mb-3">
+                  Order confirmation
+                </h1>
+    
+                <p class="lead mb-1">
+                  Would you like to subscribe a plan for<br>
+                </p>
+    
+                <p class="mb-4 pb-4 border-bottom lead">
+                  $49/month (<span class="fw-bold font-monospace badge bg-light">1,055,000</span> credits) + (<span
+                    class="fw-bold font-monospace badge bg-light">1,055,000</span> formulas) + (<span
+                    class="fw-bold font-monospace badge bg-light">35,166</span> leads) + (<span
+                    class="fw-bold font-monospace badge bg-light">52,760</span> profiles) and (<span
+                    class="fw-bold font-monospace badge bg-light">105,500</span> fresh profiles)?
+                </p>
+    
+                <div class="row border-bottom pb-2 mb-4">
+                  <div class="col-12 col-md-8">
+                    <h2 class="h2 fw-bold">
+                      Credits
+                    </h2>
+                    <p class="lead">
+                      <span class="fw-bold font-monospace badge bg-light">1,055,000</span> credits + <span
+                        class="fw-bold font-monospace badge bg-light">1,055,000</span> formulas + <span
+                        class="fw-bold font-monospace badge bg-light">35,166</span> leads + <span
+                        class="fw-bold font-monospace badge bg-light">52,760</span> profiles
+                    </p>
+                    <p class="lead mt-0">
+                      <span class="fw-bold font-monospace badge bg-light">105,500</span> fresh profiles
+                    </p>
+                    <p class="small text-muted mb-4">
+                      Credits will expire at the end of every billing period
+                    </p>
+                  </div>
+    
+                  <div class="col-12 col-md-4 text-md-end">
+                    <h2 class="h2 fw-bold">
+                      Subtotal
+                    </h2>
+                    <p class="lead">
+                      <span class="fw-bold">$1899</span>/month
+                    </p>
+                    <p class="lead mt-md-5 pt-md-3">
+                      <span class="fw-bold">$1900</span>/month
+                    </p>
+                  </div>
+                </div>
+    
+                <div class="row border-bottom pb-2 mb-4">
+    
+                  <div class="col-12 col-md-4">
+                    <h2 class="h2 fw-bold">
+                      Total
+                    </h2>
+                  </div>
+    
+                  <div class="col-12 col-md-8 text-md-end">
+                    <p class="lead">
+                      <span class="fw-bold">$3799</span>/month
+                    </p>
+                  </div>
+    
+                </div>
+    
+                <div class="row border-bottom pb-2 mb-4">
+                  <div class="col-6">
+                    <p class="lead">
+                      Payment method
+                    </p>
+                  </div>
+    
+                  <div class="col-6 text-end">
+                    <p class="lead">
+                      Visa ending in <span class="fw-bold me-2">1234</span>
+                    </p>
+                  </div>
+                </div>
+    
+                <div class="row mb-4">
+                  <div class="col-12 text-md-end">
+                    <p class="text-muted small mb-0">
+                      All prices include VAT where applicable
+                    </p>
+                  </div>
+                </div>
+    
+                <h2 class="h3 mb-4">
+                  12-Month Contract
+                </h2>
+    
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1" checked
+                    onclick="handleCheckbox(this)">
+                  <label class="form-check-label small text-muted" for="flexRadioDefault1">
+                    By ticking this checkbox, I agree to a 12-month service contract with Sapiengraph as detailed in the
+                    <a class="text-success" href="#!" target="_blank">sales agreement</a>. I understand that this contract
+                    will automatically renew every 12 months unless I cancel it before the renewal date. If I cancel early
+                    before the end of the 12-month period, I acknowledge my obligation to pay the remaining balance of the
+                    contract term, and I agree that Sapiengraph may bill me for this amount. I have read and understood
+                    these terms.
+                  </label>
+                </div>
+    
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2"
+                    onclick="handleCheckbox(this)">
+                  <label class="form-check-label small text-muted" for="flexRadioDefault2">
+                    I do not want a 12 month contract, and I accept an additional 100% increase in the price for my casual
+                    use of Sapiengraph.
+                  </label>
+                </div>
+    
+                <a class="btn btn-lg btn-success w-100" href="account-buy-credits-after-stripe-prompt.html">
+                  Buy credits
+                </a>
+    
+                <button class="btn btn-lg btn-link text-success w-100 mt-3 close" data-bs-dismiss="modal">
+                  Cancel
+                </button>
+    
+              </div>
+    
             </div>
     
           </div>
@@ -1076,7 +1220,6 @@
         <!-- / .row -->
       </div>
 
-
     </div>
     <!-- / .main-content -->
 
@@ -1250,31 +1393,30 @@
     <script src="./assets/js/theme.bundle.js"></script>
 
     <script>
-      // Method 1: Using jQuery
-      $(document).ready(function(){
+      $(document).ready(function () {
         console.log('jQuery ready');
-        $('#modalNext').modal('show');
+        $('#modalPlan').modal('show');
       });    
     </script>
+    
+    <script>
+      // Method 1: Using jQuery (since jQuery is already included in your page)
+      $(document).ready(function () {
+        $('.base-price').each(function () {
+          const number = Number($(this).text().trim().replace(/,/g, ''));
+          $(this).text(number.toLocaleString());
+        });
+      });
 
-<script>
-  // Method 1: Using jQuery (since jQuery is already included in your page)
-  $(document).ready(function(){
-    $('.base-price').each(function() {
-      const number = Number($(this).text().trim().replace(/,/g, ''));
-      $(this).text(number.toLocaleString());
-    });
-  });
-
-  // Method 2: Pure JavaScript (as backup)
-  document.addEventListener('DOMContentLoaded', function() {
-    const basePrices = document.querySelectorAll('.base-price');
-    basePrices.forEach(element => {
-      const number = Number(element.textContent.trim().replace(/,/g, ''));
-      element.textContent = number.toLocaleString();
-    });
-  });
-</script>
+      // Method 2: Pure JavaScript (as backup)
+      document.addEventListener('DOMContentLoaded', function () {
+        const basePrices = document.querySelectorAll('.base-price');
+        basePrices.forEach(element => {
+          const number = Number(element.textContent.trim().replace(/,/g, ''));
+          element.textContent = number.toLocaleString();
+        });
+      });
+    </script>
     
     </body>
   </body>
