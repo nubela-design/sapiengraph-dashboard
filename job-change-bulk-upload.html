@@ -465,19 +465,65 @@
                       </div>
 
                       <div class="col-12">
-                        <div class="dropzone dropzone-single mb-3" data-toggle="dropzone" data-options='{"url": "api/upload"}'>
-                          <div class="dz-preview dz-preview-single"></div>
-                          <div class="dz-default dz-message">
-                            <button class="dz-button" type="button">
-                              <span class="dz-button-text">Drop CSV file here or click to upload</span>
-                              <span class="text-muted small d-block mt-2">Maximum file size: 100MB</span>
-                            </button>
+                        <!-- Dropzone -->
+                        <div class="dropzone " id="myDropzone" data-dropzone='{"url": "https://"}'>
+                      
+                          <!-- Fallback -->
+                          <div class="fallback">
+                            <div class="custom-file">
+                              <input type="file" class="form-control" id="customFileUploadMultiple" multiple>
+                              <label class="form-label" for="customFileUploadMultiple">Choose file</label>
+                            </div>
                           </div>
+                      
+                          <!-- Preview -->
+                          <ul class="dz-preview dz-preview-multiple list-group list-group-lg list-group-flush">
+                            <li class="list-group-item">
+                              <div class="row align-items-center">
+                                <div class="col-auto">
+                      
+                                  <!-- Image -->
+                                  <div class="avatar">
+                                    <i class="fe fe-file-text h1" alt="..." data-dz-thumbnail></i>
+                                  </div>
+                      
+                                </div>
+                                <div class="col ms-n5">
+                      
+                                  <!-- Heading -->
+                                  <h4 class="mb-1" data-dz-name>...</h4>
+                      
+                                  <!-- Text -->
+                                  <small class="text-body-secondary" data-dz-size>...</small>
+                      
+                                </div>
+                                <div class="col-auto">
+                      
+                                  <!-- Dropdown -->
+                                  <div class="dropdown">
+                                    <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                      aria-haspopup="true" aria-expanded="false">
+                                      <i class="fe fe-more-vertical"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                      <a href="#" class="dropdown-item text-danger" data-dz-remove>
+                                        <i class="fe fe-trash-2" style="margin-right: 4px !important;"></i>Remove
+                                      </a>
+                                    </div>
+                                  </div>
+                      
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                      
                         </div>
-                        <a class="btn btn-success mt-3 lift" href="job-change-bulk-upload-preview.html">
+                        <a class="btn btn-success mt-4 lift" href="job-change-bulk-upload-preview.html">
                           Upload CSV
                         </a>
                       </div>
+                      
+
 
                     </div>
                   </div>
@@ -592,5 +638,7 @@
         textarea.value = allLines.join('\n');
       });
     </script>
+
+    
   </body>
 </html>
