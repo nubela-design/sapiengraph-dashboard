@@ -464,29 +464,74 @@
                         </p>
                       </div>
 
-                      <div class="col-auto mt-3">
-                        <div class="card card-body d-flex pt-4 pb-4 pe-5">
-                          <div class="d-flex  text-black">
-                              <!-- Image -->
-                              <div class="avatar me-3 mt-n1">
-                                  <i class="fe fe-file-text" style="font-size: 40px;" alt="..."></i>
-                              </div>
-                  
-                              <div class="text-start">
-                                  <!-- Heading and delete button -->
-                                  <div class="d-flex align-items-center">
-                                      <h4 class="mb-0 me-3">Sample-file.csv</h4> 
-                                      <a href="#" class="text-black mt-1">
-                                          <i class="fe fe-x"></i>
-                                      </a>
-                                  </div>
-                  
-                                  <!-- Text -->
-                                  <small class="text-body-secondary text-start">0.2 KB</small>
-                              </div>
+                      <div class="col-12">
+                        <!-- Dropzone -->
+                        <div class="dropzone " id="myDropzone" data-dropzone='{"url": "https://", "maxFiles": 1}'>
+                          
+                          <button class="dz-message" onclick="window.location.href='job-change-bulk-upload.html'">
+                            <div class="d-flex align-items-center justify-content-center mt-n2">
+                                <div class="d-flex align-items-center text-black">
+                                    <!-- Image -->
+                                    <div class="avatar me-3">
+                                        <i class="fe fe-file-text" style="font-size: 40px;" alt="..."></i>
+                                    </div>
+                        
+                                    <div class="text-start mt-3">
+                                        <!-- Heading and delete button -->
+                                        <div class="d-flex align-items-center">
+                                            <h4 class="mb-0 me-3">Sample-file.csv</h4> 
+                                            <a href="#" class="text-black">
+                                                <i class="fe fe-x"></i>
+                                            </a>
+                                        </div>
+                        
+                                        <!-- Text -->
+                                        <small class="text-body-secondary text-start">0.2 KB</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                      
+                          <!-- Fallback -->
+                          <div class="fallback">
+                            <div class="custom-file">
+                              <input type="file" class="form-control" id="customFileUploadMultiple">
+                              <label class="form-label" for="customFileUploadMultiple">Choose file</label>
+                            </div>
                           </div>
-                      </div>
-                        <a class="btn btn-success mt-2 lift" href="job-change-bulk-upload-preview.html">
+                      
+                          <!-- Preview -->
+                          <ul class="dz-preview list-group list-group-lg list-group-flush">
+                            <li class="list-group-item">
+                              <div class="row align-items-center">
+                                <div class="col-auto">
+                      
+                                  <!-- Image -->
+                                  <div class="avatar mt-n1">
+                                    <i class="fe fe-file-text" style="font-size: 36px;" alt="..." data-dz-thumbnail></i>
+                                  </div>
+                      
+                                </div>
+                                <div class="col ms-n4">
+                      
+                                  <!-- Heading and delete button in a flex container -->
+                                  <div class="d-flex align-items-center">
+                                    <h4 class="mb-1 me-3" data-dz-name>...</h4> 
+                                    <a href="#" class="text-black" data-dz-remove>
+                                      <i class="fe fe-x"></i>
+                                    </a>
+                                  </div>
+                      
+                                  <!-- Text -->
+                                  <small class="text-body-secondary" data-dz-size>...</small>
+                      
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                      
+                        </div>
+                        <a class="btn btn-success mt-4 lift" href="job-change-bulk-upload-preview.html">
                           Upload CSV
                         </a>
                       </div>
