@@ -460,7 +460,7 @@
                   </div>
 
                   <p class="text-muted h4 fw-normal">Includes</p>
-                  <p class="mb-4 d-flex align-items-start">
+                  <p class="mb-5 d-flex align-items-start">
                     <i class="fe fe-database text-success"></i>
                     <span class="ms-2 me-1">12,500 credits <br>
                       <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
@@ -507,28 +507,25 @@
                   <hr class="mb-4">
 
                   <h3 id="proPrice" class="h1 font-weight-bold mb-2">
-                    $<span class="base-price">1899</span><span class="h5">/yr</span>
+                    +$<span class="base-price">1899</span><span class="h5">/yr</span>
                   </h3>
 
-                  <div class="mb-2">
-                    <p class="small text-muted billedText">
+                  <div class="mb-0">
+                    <p class="small text-muted billedText mb-3">
                       Billed yearly · All credits issued upfront · Credits expire end of year
                     </p>
                   </div>
 
-                  <p class="text-muted h4 fw-normal">Includes</p>
-                  <p class="mb-4 d-flex align-items-start">
-                    <i class="fe fe-database text-success"></i>
-                    <span class="ms-2 me-1">1,500,000 credits <br>
-                      <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
-                      data-bs-toggle="tooltip" data-bs-placement="right" title="These extra credits are part of the 2 months' free offer">
-                        + Free 250,000 <i class="fe fe-info"></i> 
-                      </span>
+                  <hr class="mb-4">
+
+                  <p class="mb-4 d-flex align-items-start mt-n2">
+                    <i class="fe fe-info text-success"></i>
+                    <span class="ms-2 me-1">Add extra profiles to track and monitor without adding your credits. <br>
                     </span>
                   </p>
 
                   <div class="mb-3">
-                    <button type="submit" class="btn btn-success rounded-pill w-100" data-bs-toggle="modal" data-bs-target="#modalNext">
+                    <button type="submit" class="btn btn-success rounded-pill w-100" data-bs-toggle="modal" data-bs-target="#modalNextCurrent">
                       Add extra profiles
                     </button>
                   </div>
@@ -571,7 +568,7 @@
                   </div>
 
                   <p class="text-muted h4 fw-normal">Includes</p>
-                  <p class="mb-4 d-flex align-items-start">
+                  <p class="mb-5 d-flex align-items-start">
                     <i class="fe fe-database text-success"></i>
                     <span class="ms-2 me-1">5,394,000 credits <br>
                       <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
@@ -625,7 +622,7 @@
                   </div>
 
                   <p class="text-muted h4 fw-normal">Includes</p>
-                  <p class="mb-4 d-flex align-items-start">
+                  <p class="mb-5 d-flex align-items-start">
                     <i class="fe fe-database text-success"></i>
                     <span class="ms-2 me-1">12,660,000 credits <br>
                       <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
@@ -780,6 +777,114 @@
                     use of Sapiengraph.
                   </label>
                 </div>
+    
+                <a class="btn btn-lg btn-success w-100" href="account-buy-credits-after-stripe-prompt.html">
+                  Buy credits
+                </a>
+    
+                <button class="btn btn-lg btn-link text-success w-100 mt-3 close" data-bs-dismiss="modal">
+                  Cancel
+                </button>
+    
+              </div>
+    
+            </div>
+    
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    
+    <!--MODAL TOPUP-->
+    <div class="modal fade" id="modalNextCurrent" tabindex="-1" aria-labelledby="modalNextCurrentLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+    
+          <a type="button" class="btn-close h1 ps-4 pt-4" data-bs-dismiss="modal" aria-label="Close">
+          </a>
+    
+          <div class="modal-body">
+    
+            <div class="row justify-content-center">
+    
+              <div class="col-12">
+    
+                <h1 class="fw-bold mb-3">
+                  Order confirmation
+                </h1>
+    
+                <p class="lead mb-1">
+                  Would you like to add extra profiles to monitor for<br>
+                </p>
+    
+                <p class="mb-4 pb-4 border-bottom lead">
+                  $1899/year (<span
+                    class="fw-bold font-monospace badge bg-light">6,260</span> profiles)?
+                </p>
+    
+                <div class="row border-bottom pb-2 mb-4">
+                  <div class="col-12 col-md-8">
+                    <h2 class="h2 fw-bold">
+                      Credits
+                    </h2>
+                    <p class="lead">
+                      <span 
+                        class="fw-bold font-monospace badge bg-light">6,260</span> profiles
+                    </p>
+                    <p class="small text-muted mb-4">
+                      Credits will expire at the end of every billing period
+                    </p>
+                  </div>
+    
+                  <div class="col-12 col-md-4 text-md-end">
+                    <h2 class="h2 fw-bold">
+                      Subtotal
+                    </h2>
+                    <p class="lead">
+                      <span class="fw-bold">$1899</span>/year
+                    </p>
+                  </div>
+                </div>
+    
+                <div class="row border-bottom pb-2 mb-4">
+    
+                  <div class="col-12 col-md-4">
+                    <h2 class="h2 fw-bold">
+                      Total
+                    </h2>
+                  </div>
+    
+                  <div class="col-12 col-md-8 text-md-end">
+                    <p class="lead">
+                      <span class="fw-bold">$1899</span>/year
+                    </p>
+                  </div>
+    
+                </div>
+    
+                <div class="row border-bottom pb-2 mb-4">
+                  <div class="col-6">
+                    <p class="lead">
+                      Payment method
+                    </p>
+                  </div>
+    
+                  <div class="col-6 text-end">
+                    <p class="lead">
+                      Visa ending in <span class="fw-bold me-2">1234</span>
+                    </p>
+                  </div>
+                </div>
+    
+                <div class="row mb-4">
+                  <div class="col-12 text-md-end">
+                    <p class="text-muted small mb-0">
+                      All prices include VAT where applicable
+                    </p>
+                  </div>
+                </div>
+  
     
                 <a class="btn btn-lg btn-success w-100" href="account-buy-credits-after-stripe-prompt.html">
                   Buy credits
