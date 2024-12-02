@@ -1,8 +1,159 @@
-// Initialize tooltip
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
-})
+// Wait for DOM to be loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize tooltips if Bootstrap is available
+  if (typeof bootstrap !== 'undefined') {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+  }
+
+  // Handle pricing toggle only if elements exist
+  const toggle = document.getElementById('planToggle');
+  if (toggle) {
+    // Radio button and textarea functionality
+    const radioButtons = document.querySelectorAll('input[name="radioCancel"]');
+    const textarea = document.getElementById('floatingTextarea2');
+
+    if (!radioButtons.length || !textarea) return;
+
+    radioButtons.forEach(radio => {
+      radio.addEventListener('change', function() {
+        const isOtherSelected = this.id === 'radioCancel8';
+        textarea.classList.toggle('d-none', !isOtherSelected);
+        
+        if (!isOtherSelected) {
+          textarea.value = '';
+        } else {
+          textarea.focus();
+        }
+      });
+    });
+
+    // Toggle handler
+    function handleToggle() {
+      // Loop through each text container and toggle classes
+      textContainers.forEach((textContainer) => {
+        textContainer.classList.toggle('text-change', !toggle.checked);
+      });
+
+      // Update billed text for each element
+      billedTexts.forEach((element) => {
+        element.textContent = toggle.checked ? '/mo, billed annually' : '/mo, billed monthly';
+      });
+
+      // Update pricing and show/hide elements
+      const targetPricing = toggle.checked ? pricing.annual : pricing.monthly;
+      updatePricing(targetPricing);
+      annually.forEach(el => el.classList.toggle('d-none', toggle.checked));
+      credits.forEach(el => el.classList.toggle('d-none', toggle.checked));
+
+      // Animate to new numbers
+      animateNumber(litePrice, !toggle.checked ? 40 : 49, !toggle.checked ? 49 : 40, 500);
+      animateNumber(proPrice, !toggle.checked ? 249 : 299, !toggle.checked ? 299 : 249, 500);
+      animateNumber(proPlusPrice, !toggle.checked ? 749 : 899, !toggle.checked ? 899 : 749, 500);
+      animateNumber(bizPrice, !toggle.checked ? 1582 : 1899, !toggle.checked ? 1899 : 1582, 500);
+    }
+
+    // Initially hide annually and credits using Bootstrap classes
+    annually.forEach(el => el.classList.add('d-none'));
+    credits.forEach(el => el.classList.add('d-none'));
+
+    // Attach the event listener
+    toggle.addEventListener('click', handleToggle);
+
+    // Trigger the toggle handler initially
+    handleToggle();
+  }
+
+  // Radio button and textarea functionality
+  const radioButtons = document.querySelectorAll('input[name="radioCancel"]');
+  
+  // Define radio options with their associated content
+  const radioConfig = {
+    'radioCancel2': {
+      id: 'needsTextarea',
+      placeholder: 'Tell us what you need',
+      type: 'textarea'
+    },
+    'radioCancel4': {
+      id: 'featuresTextarea',
+      placeholder: 'What features are you looking for?',
+      type: 'textarea'
+    },
+    'radioCancel5': {
+      id: 'technicalInfo',
+      type: 'text',
+      content: 'Contact us at <a class="text-success" href="mailto:hello@sapiengraph.com">hello@sapiengraph.com</a>.'
+    },
+    'radioCancel6': {
+      id: 'providerTextarea',
+      placeholder: 'Which provider are you switching to?',
+      type: 'textarea'
+    },
+    'radioCancel7': {
+      id: 'helpInfo',
+      type: 'text',
+      content: '<a class="text-success" href="https://sapiengraph.com/user-guide#sapiengraph-user-guide" target="_blank">Read our docs</a>, <a class="text-success" href="https://sapiengraph.com/blog/tag/faq/" target="_blank">read our FAQ</a>, or <a class="text-success" href="mailto:hello@sapiengraph.com">contact us</a>.'
+    },
+    'radioCancel8': {
+      id: 'floatingTextarea2',
+      placeholder: 'Tell us why',
+      type: 'textarea'
+    }
+  };
+
+  // Exit if elements don't exist
+  if (!radioButtons.length) return;
+
+  // Add change event listener to each radio button
+  radioButtons.forEach(radio => {
+    radio.addEventListener('change', function() {
+      // Hide all additional content first
+      Object.values(radioConfig).forEach(({id}) => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.classList.add('d-none');
+          if (element.tagName === 'TEXTAREA') {
+            element.value = '';
+          }
+        }
+      });
+
+      // Show content for selected radio if it exists
+      const selectedConfig = radioConfig[this.id];
+      if (selectedConfig) {
+        const element = document.getElementById(selectedConfig.id);
+        if (element) {
+          element.classList.remove('d-none');
+          if (selectedConfig.type === 'textarea') {
+            element.placeholder = selectedConfig.placeholder;
+            element.focus();
+          } else if (selectedConfig.type === 'text') {
+            element.innerHTML = selectedConfig.content;
+          }
+        }
+      }
+    });
+  });
+
+  // Handle modal reset
+  const cancelModal = document.getElementById('modalCancel');
+  if (cancelModal) {
+    cancelModal.addEventListener('show.bs.modal', function() {
+      radioButtons.forEach(radio => radio.checked = false);
+      Object.values(radioConfig).forEach(({id}) => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.classList.add('d-none');
+          if (element.tagName === 'TEXTAREA') {
+            element.value = '';
+          }
+        }
+      });
+    });
+  }
+});
 
 // Pricing data
 const pricing = {
@@ -37,41 +188,6 @@ function animateNumber(element, start, end, duration) {
   };
   window.requestAnimationFrame(step);
 }
-
-// Toggle handler
-function handleToggle() {
-  // Loop through each text container and toggle classes
-  textContainers.forEach((textContainer) => {
-    textContainer.classList.toggle('text-change', !toggle.checked);
-  });
-
-  // Update billed text for each element
-  billedTexts.forEach((element) => {
-    element.textContent = toggle.checked ? '/mo, billed annually' : '/mo, billed monthly';
-  });
-
-  // Update pricing and show/hide elements
-  const targetPricing = toggle.checked ? pricing.annual : pricing.monthly;
-  updatePricing(targetPricing);
-  annually.forEach(el => el.classList.toggle('d-none', toggle.checked));
-  credits.forEach(el => el.classList.toggle('d-none', toggle.checked));
-
-  // Animate to new numbers
-  animateNumber(litePrice, !toggle.checked ? 40 : 49, !toggle.checked ? 49 : 40, 500);
-  animateNumber(proPrice, !toggle.checked ? 249 : 299, !toggle.checked ? 299 : 249, 500);
-  animateNumber(proPlusPrice, !toggle.checked ? 749 : 899, !toggle.checked ? 899 : 749, 500);
-  animateNumber(bizPrice, !toggle.checked ? 1582 : 1899, !toggle.checked ? 1899 : 1582, 500);
-}
-
-// Initially hide annually and credits using Bootstrap classes
-annually.forEach(el => el.classList.add('d-none'));
-credits.forEach(el => el.classList.add('d-none'));
-
-// Attach the event listener
-toggle.addEventListener('click', handleToggle);
-
-// Trigger the toggle handler initially
-handleToggle();
 
 // Update pricing function
 function updatePricing(plan) {
@@ -192,3 +308,26 @@ function resetSortIcons(exceptIndex) {
   clickedHeaderIcon.classList.remove('fa-sort');
   clickedHeaderIcon.classList.add('fas', 'fa-sort');
 }
+
+// ------------------------------------------------------------------------------------------------
+
+// Roy - 02 dec 2024
+
+// Show/hide textarea based on "Other" radio selection
+document.addEventListener('DOMContentLoaded', function() {
+  const otherRadio = document.getElementById('radioCancel8');
+  const textarea = document.getElementById('floatingTextarea2');
+  
+  // Handle radio button changes
+  document.querySelectorAll('input[name="radioCancel"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+      // Show textarea only when "Other" is selected
+      textarea.classList.toggle('d-none', radio.id !== 'radioCancel8');
+      
+      // Clear textarea when switching away from "Other"
+      if (radio.id !== 'radioCancel8') {
+        textarea.value = '';
+      }
+    });
+  });
+});

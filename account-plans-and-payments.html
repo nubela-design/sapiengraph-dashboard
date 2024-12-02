@@ -88,7 +88,7 @@
               <i class="neu-so-faq text-success display-1"></i>
 
               <h1 class="fw-bold mb-3 mt-4">
-                Cancel your subscription plan?
+                Wait! Tell us, why the goodbye?
               </h1>
 
               <p class="mb-4 text-gray-700 fs-lg">
@@ -103,45 +103,59 @@
                 <div class="form-check mb-3">
                   <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel1">
                   <label class="form-check-label" for="radioCancel1">
-                    Too many bugs or technical issue
+                    My project stopped / ended
                   </label>
                 </div>
                 <div class="form-check mb-3">
                   <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel2">
                   <label class="form-check-label" for="radioCancel2">
-                    Could not get the data I needed
+                    Doesn't fit my needs
                   </label>
+                  <textarea class="form-control mt-2 d-none" placeholder="Tell us what you need" id="needsTextarea"
+                    style="height: 100px"></textarea>
                 </div>
                 <div class="form-check mb-3">
                   <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel3">
                   <label class="form-check-label" for="radioCancel3">
-                    Price too expensive
+                    Out of my budget
                   </label>
                 </div>
                 <div class="form-check mb-3">
                   <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel4">
                   <label class="form-check-label" for="radioCancel4">
-                    Temporarily taking a break or plan to return
+                    Missing features
                   </label>
+                  <textarea class="form-control mt-2 d-none" placeholder="What features are you looking for?" id="featuresTextarea"
+                    style="height: 100px"></textarea>
                 </div>
                 <div class="form-check mb-3">
                   <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel5">
                   <label class="form-check-label" for="radioCancel5">
-                    Financial issue
+                    Technical issues
                   </label>
+                  <p class="text-muted d-none" id="technicalInfo"></p>
                 </div>
                 <div class="form-check mb-3">
                   <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel6">
                   <label class="form-check-label" for="radioCancel6">
-                    Don't need the tool
+                    Switching to a different provider
                   </label>
+                  <textarea class="form-control mt-2 d-none" placeholder="Which provider are you switching to?" id="providerTextarea"
+                    style="height: 100px"></textarea>
                 </div>
                 <div class="form-check mb-3">
                   <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel7">
                   <label class="form-check-label" for="radioCancel7">
+                    Not sure how to use
+                  </label>
+                  <p class="text-muted d-none" id="helpInfo"></p>
+                </div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel8">
+                  <label class="form-check-label" for="radioCancel8">
                     Other
                   </label>
-                  <textarea class="form-control mt-2" placeholder="Tell us why" id="floatingTextarea2"
+                  <textarea class="form-control mt-2 d-none" placeholder="Tell us why" id="floatingTextarea2"
                     style="height: 100px"></textarea>
                 </div>
               </div>
