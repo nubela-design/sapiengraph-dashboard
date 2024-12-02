@@ -699,3 +699,8 @@ td, th {
     background-position: center !important;
   }
 }
+
+.input-group .form-control:focus {
+  border-color: #00bd94;
+  box-shadow: 0 0 0 0.2rem rgba(66, 186, 150, 0.25);
+}
