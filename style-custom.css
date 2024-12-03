@@ -585,6 +585,34 @@ td, th {
   color: #02BD94 !important;
 }
 
+/* New class for search autocomplete */
+.new-suggestions {
+  position: absolute;
+  width: 100%;  /* Changed from calc(100% - 3rem) */
+  top: 100%;    /* Position right below the input-group */
+  left: 0;      /* Align with left edge of input-group */
+  z-index: 1000;
+  margin-top: 2px;
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.new-suggestions .list-group-item {
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+}
+
+.new-suggestions .list-group-item:hover {
+  background-color: #F9FBFD;
+  color: #02BD94 !important;
+}
+
+/* Add this to handle input-group positioning */
+.input-group {
+  position: relative; /* Ensure proper positioning context */
+}
+
 .scrollable-div {
   max-height: 65.3vh;
   overflow-y: auto;
