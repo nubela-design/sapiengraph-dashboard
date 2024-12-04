@@ -134,6 +134,16 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         }
       }
+
+      // Update the Next button behavior
+      const nextButton = document.querySelector('[data-bs-target="#modalCancelNext"]');
+      if (nextButton) {
+        if (this.id === 'radioCancel3') { // Out of budget option
+          nextButton.setAttribute('data-bs-target', '#modalCancelOutOfMyBudgets');
+        } else {
+          nextButton.setAttribute('data-bs-target', '#modalCancelNext');
+        }
+      }
     });
   });
 
@@ -151,6 +161,12 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         }
       });
+      
+      // Reset the Next button to default modal
+      const nextButton = document.querySelector('[data-bs-target="#modalCancelNext"]');
+      if (nextButton) {
+        nextButton.setAttribute('data-bs-target', '#modalCancelNext');
+      }
     });
   }
 });
