@@ -22,7 +22,7 @@
   <script src="script-custom.js" defer></script>
 
   <!-- Title -->
-  <title>Sapiengraph - </title>
+  <title>Sapiengraph - Cancel plan</title>
 </head>
 
 <body>
@@ -37,20 +37,15 @@
           <!-- Header -->
           <div class="header mt-md-5">
             <div class="header-body">
-
-              <div class="d-flex justify-content-between align-items-center">
-
+              <!-- Desktop view (hidden on mobile) -->
+              <div class="d-none d-md-flex justify-content-between align-items-center">
                 <div>
-
-                  <!-- Title -->
                   <h1 class="header-title mb-2">
                     Cancel plan
                   </h1>
-
                   <p class="text-gray-700 mb-0">
                     oligarkiby@mulyono.com
                   </p>
-
                 </div>
 
                 <div>
@@ -66,10 +61,45 @@
                     </div>
                   </div>
                 </div>
-
               </div>
 
+              <!-- Mobile view (hidden on desktop) -->
+              <div class="d-md-none">
+                <div class="text-center mb-4">
+                  <h1 class="header-title h3 mb-2">
+                    Cancel plan
+                  </h1>
+                  <p class="text-gray-700 mb-4">
+                    oligarkiby@mulyono.com
+                  </p>
+                </div>
+
+                <div class="card card-body mb-2">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img class="img-fluid img icons" width="32" height="auto" alt="pro icon" src="assets/img/icons/pro.svg">
+                    <div class="ms-2">
+                      <p class="fw-bold mb-0 small">
+                        Pro | Annual plan, billed monthly
+                      </p>
+                      <p class="text-muted mb-0 small">
+                        Active until 31 Dec 2024
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <!--Warning Message -->
+          <div class="alert alert-warning alert-dismissible fade show d-none mb-4" role="alert" id="warningMessage">
+            <div class="d-flex">
+              <i class="fe fe-alert-triangle me-2"></i>
+              <div>
+                Please select a reason for cancellation before proceeding
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
 
           <!--Cancel card-->
@@ -133,8 +163,13 @@
                 <div class="col-12 col-md-4">
                   <div class="form-check mb-3">
                     <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel5">
-                    <label class="form-check-label" for="radioCancel5">
-                      <i class="fe fe-alert-circle me-1"></i> Technical issues
+                    <label class="form-check-label d-block" for="radioCancel5">
+                      <div class="mb-2">
+                        <i class="fe fe-alert-circle me-1"></i> Technical issues
+                      </div>
+                      <p class="text-muted small mb-0 d-none" id="technicalSupportText">
+                        Contact us: <a href="mailto:hello@sapiengraph.com" class="text-success">hello@sapiengraph.com</a>
+                      </p>
                     </label>
                   </div>
                 </div>
@@ -197,13 +232,11 @@
               </h4>
             </div>
             <div class="card-body">
-
-              <div class="d-flex justify-content-between">
-
+              <!-- Desktop view (hidden on mobile) -->
+              <div class="d-none d-md-flex justify-content-between align-items-start">
                 <div>
-
+                  <!-- Current Pro Plan Card -->
                   <div class="card card-body">
-
                     <div class="text-end mt-n5 mb-3">
                       <span class="badge bg-secondary text-uppercase">Current plan</span>
                     </div>
@@ -318,19 +351,17 @@
                     </div>
 
                   </div>
-
                 </div>
 
-                <div>
+                <div class="d-flex align-items-center mx-4">
                   <i class="fe fe-arrow-right text-success display-1"></i>
                 </div>
 
                 <div>
-
+                  <!-- Lite Plan Card -->
                   <div class="card card-body border border-success shadow-lg">
-
                     <div class="text-end mt-n5 mb-3">
-                      <span class="badge bg-success text-uppercase text-bg-success">Lower plan</span>
+                      <span class="badge bg-success text-uppercase text-bg-success">Save 84% per year</span>
                     </div>
 
                     <div class="mb-4">
@@ -346,7 +377,7 @@
                     </h3>
 
                     <p class="mb-2 text-success">
-                      Save -$3,000 or 84%/yr
+                      Save -$3,000/yr
                     </p>
 
                     <div class="mb-2">
@@ -454,28 +485,364 @@
                     </div>
 
                   </div>
+                </div>
+              </div>
 
+              <!-- Mobile view (hidden on desktop) -->
+              <div class="d-md-none">
+                <div class="mb-4">
+                  <!-- Current Pro Plan Card -->
+                  <div class="card card-body">
+                    <div class="text-end mt-n5 mb-3">
+                      <span class="badge bg-secondary text-uppercase">Current plan</span>
+                    </div>
+
+                    <div class="mb-4">
+                      <img class="img-fluid img icons" width="40" alt="pro icon" src="assets/img/icons/pro.svg">
+                    </div>
+
+                    <h2 class="h3 fw-bold mb-4">
+                      Pro
+                    </h2>
+
+                    <h3 id="proPrice" class="display-4 font-weight-bold mb-2">
+                      $<span class="base-price">3588</span><span class="h5">/yr</span>
+                    </h3>
+
+                    <div class="mb-2">
+                      <p class="small text-muted billedText">
+                        Billed yearly · All credits issued upfront · Credits expire end of year
+                      </p>
+                    </div>
+
+                    <p class="mb-0 d-flex align-items-start">
+                      <i class="fe fe-database text-success"></i>
+                      <span class="ms-2 me-1">1,500,000 credits <br>
+                        <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
+                        data-bs-toggle="tooltip" data-bs-placement="right" title="These extra credits are part of the 2 months’ free offer">
+                          + Free 250,000 <i class="fe fe-info"></i> 
+                        </span>
+                      </span>
+                    </p>
+
+                    <hr class="mb-5">
+
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Export leads for prospecting
+                    </small>
+
+                    <div class="mt-0 mb-2">
+                      <p class="d-flex">
+                        <i class="fe fe-star text-success"></i>
+                        <span class="ms-2">Up to 4,166 leads</span>
+                      </p>
+                    </div>
+
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Track job changes
+                    </small>
+
+                    <div class="mt-0 mb-2">
+                      <p class="d-flex">
+                        <i class="fe fe-user text-success mt-2"></i>
+                        <span class="ms-2">Up to 6,260 profiles 
+                          <span class="badge text-success rounded-pill h6 text-uppercase mt-2 ms-1" style="background-color: #EDF8F5;"
+                          data-bs-toggle="tooltip" data-bs-placement="right" title="Only for work emails. Not applicable to free emails (e.g. @gmail.com, @yahoo.com)">
+                            10 Free <i class="fe fe-info"></i> 
+                          </span>
+                        </span>
+                      </p>
+                    </div>
+
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Enrich data in google sheets
+                    </small>
+
+                    <div class="mt-1 mb-3">
+                      <p class="d-flex">
+                        <i class="fe fe-zap text-success"></i>
+                        <span class="ms-2 me-1">Up to 1,500,000 formulas
+                          <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
+                          data-bs-toggle="tooltip" data-bs-placement="right" title="These extra formulas are part of the 2 months’ free offer">
+                            + Free 250,000 <i class="fe fe-info"></i> 
+                          </span>
+                        </span>
+                      </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="text-center mt-n4" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                      title="Available only on Data Enrichment Spreadsheets">
+                      <span class="badge bg-white rounded-pill h6 text-info border border-info">
+                        <i class="fe fe-info"></i> Fresh data add-on
+                      </span>
+                    </div>
+
+                    <div class="mt-4">
+
+                      <p class="d-flex p-custom mb-0">
+                        <i class="fe fe-dollar-sign text-success mt-0"></i>
+                        <span class="ms-2">+$3,600/yr</span>
+                      </p>
+                      <p class="d-flex p-custom mt-0 mb-3">
+                        <small class="text-muted ms-4">Billed yearly</small>
+                      </p>
+
+                      <p class="d-flex mb-5">
+                        <i class="fe fe-user-check text-success"></i>
+                        <span class="ms-2 me-1">150,000 fresh profiles
+                          <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
+                          data-bs-toggle="tooltip" data-bs-placement="right" title="These extra fresh profiles are part of the 2 months’ free offer">
+                            + Free 25,000 <i class="fe fe-info"></i> 
+                          </span>
+                        </span>
+                      </p>
+
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="profresh">
+                        <label class="form-check-label" for="profresh">Add freshness </label>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="text-center my-4">
+                  <i class="fe fe-arrow-down text-success display-4"></i>
+                </div>
+
+                <div>
+                  <!-- Lite Plan Card -->
+                  <div class="card card-body border border-success shadow-lg">
+                    <div class="text-end mt-n5 mb-3">
+                      <span class="badge bg-success text-uppercase text-bg-success">Save 84% per year</span>
+                    </div>
+
+                    <div class="mb-4">
+                      <img class="img-fluid img icons" width="40" alt="lite icon" src="assets/img/icons/lite.svg">
+                    </div>
+
+                    <h2 class="h3 fw-bold mb-4">
+                      Lite
+                    </h2>
+
+                    <h3 id="litePrice" class="display-4 font-weight-bold mb-2">
+                      $<span class="base-price">588</span><span class="h5">/yr</span>
+                    </h3>
+
+                    <p class="mb-2 text-success">
+                      Save -$3,000/yr
+                    </p>
+
+                    <div class="mb-2">
+                      <p class="small text-muted billedText">
+                        Billed yearly · All credits issued upfront · Credits expire end of year
+                      </p>
+                    </div>
+
+                    <p class="mb-4 d-flex align-items-start">
+                      <i class="fe fe-database text-success"></i>
+                      <span class="ms-2 me-1">150,000 credits <br>
+                        <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
+                        data-bs-toggle="tooltip" data-bs-placement="right" title="These extra credits are part of the 2 months’ free offer">
+                          + Free 25,000 <i class="fe fe-info"></i> 
+                        </span>
+                      </span>
+                    </p>
+
+                    <div class="mb-3">
+                      <button type="submit" class="btn btn-success rounded-pill w-100" data-bs-toggle="modal"
+                        data-bs-target="#modalNext">
+                        Switch to Lite plan
+                      </button>
+                    </div>
+
+                    <hr class="mb-5">
+
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Export leads for prospecting
+                    </small>
+
+                    <div class="mt-0 mb-2">
+                      <p class="d-flex">
+                        <i class="fe fe-star text-success"></i>
+                        <span class="ms-2">Up to 416 leads</span>
+                      </p>
+                    </div>
+
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Track job changes
+                    </small>
+
+                    <div class="mt-0 mb-2">
+                      <p class="d-flex">
+                        <i class="fe fe-user text-success mt-2"></i>
+                        <span class="ms-2">Up to 635 profiles 
+                          <span class="badge text-success rounded-pill h6 text-uppercase mt-2 ms-1" style="background-color: #EDF8F5;"
+                          data-bs-toggle="tooltip" data-bs-placement="right" title="Only for work emails. Not applicable to free emails (e.g. @gmail.com, @yahoo.com)">
+                            10 Free <i class="fe fe-info"></i> 
+                          </span>
+                        </span>
+                      </p>
+                    </div>
+
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Enrich data in google sheets
+                    </small>
+
+                    <div class="mt-1 mb-3">
+                      <p class="d-flex">
+                        <i class="fe fe-zap text-success"></i>
+                        <span class="ms-2 me-1">Up to 150,000 formulas
+                          <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
+                          data-bs-toggle="tooltip" data-bs-placement="right" title="These extra formulas are part of the 2 months’ free offer">
+                            + Free 25,000 <i class="fe fe-info"></i> 
+                          </span>
+                        </span>
+                      </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="text-center mt-n4" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                      title="Available only on Data Enrichment Spreadsheets">
+                      <span class="badge bg-white rounded-pill h6 text-info border border-info">
+                        <i class="fe fe-info"></i> Fresh data add-on
+                      </span>
+                    </div>
+
+                    <div class="mt-4">
+
+                      <p class="d-flex p-custom mb-0">
+                        <i class="fe fe-dollar-sign text-success mt-0"></i>
+                        <span class="ms-2">+$600/yr</span>
+                      </p>
+                      <p class="d-flex p-custom mt-0 mb-3">
+                        <small class="text-muted ms-4">Billed yearly</small>
+                      </p>
+
+                      <p class="d-flex mb-5">
+                        <i class="fe fe-user-check text-success"></i>
+                        <span class="ms-2 me-1">15,000 fresh profiles
+                          <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
+                          data-bs-toggle="tooltip" data-bs-placement="right" title="These extra fresh profiles are part of the 2 months’ free offer">
+                            + Free 2,500 <i class="fe fe-info"></i> 
+                          </span>
+                        </span>
+                      </p>
+
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="litefresh">
+                        <label class="form-check-label" for="litefresh">Add freshness </label>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Help Resources Card -->
+          <div class="card mb-4 d-none" id="helpResourcesCard">
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h4 class="card-header-title">
+                    Need Help Getting Started?
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row g-4">
+
+                <!-- User Guide -->
+                <div class="col-12 col-md-4 d-flex">
+                  <div class="card card-body lift mb-0">
+                    <img class="img-fluid img icons mb-3 py-2 px-2 border rounded-3 bg-lighter" width="40" alt="pro icon" src="assets/img/icons/fi-book-user__24__fill.svg">
+                    <h5 class="mb-2 text-body fs-4">
+                      User Guide
+                    </h5>
+                    <p class="text-muted mb-0">
+                      Learn how to use Sapiengraph effectively with our comprehensive guide
+                    </p>
+                    <a class="text-success mt-4 d-flex align-items-center" href="https://sapiengraph.com/user-guide#sapiengraph-user-guide" 
+                       target="_blank">
+                      Read the guide <i class="fe fe-external-link ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- FAQ -->
+                <div class="col-12 col-md-4 d-flex">
+                  <div class="card card-body lift mb-0">
+                    <img class="img-fluid img icons mb-3 py-2 px-2 border rounded-3 bg-lighter" width="40" alt="pro icon" src="assets/img/icons/fi-question-mark__24__fill.svg">
+                    <h5 class="mb-2 text-body fs-4">
+                      FAQ
+                    </h5>
+                    <p class="text-muted mb-0">
+                      Find answers to commonly asked questions about our features
+                    </p>
+                    <a class="text-success mt-4 d-flex align-items-center" href="https://sapiengraph.com/blog/tag/faq/" 
+                       target="_blank">
+                      Read the FAQ <i class="fe fe-external-link ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Support -->
+                <div class="col-12 col-md-4 d-flex">
+                  <div class="card card-body lift mb-0">
+                    <img class="img-fluid img icons mb-3 py-2 px-2 border rounded-3 bg-lighter" width="40" alt="pro icon" src="assets/img/icons/fi-mail-alt__24__fill.svg">
+                    <h5 class="mb-2 text-body fs-4">
+                      Contact Support
+                    </h5>
+                    <p class="text-muted mb-0">
+                      Email us at hello@sapiengraph.com
+                    </p>
+                    <a class="text-success mt-md-auto mt-4 d-flex align-items-center" href="mailto:hello@sapiengraph.com">
+                      Contact support <i class="fe fe-arrow-right ms-2"></i>
+                    </a>
+                  </div>
                 </div>
 
               </div>
-
             </div>
           </div>
 
           <!--Cancel button-->
           <div class="card card-body">
             
-            <div class="d-flex justify-content-between">
-              <div class="d-flex justify-content-start">
-                <button class="btn btn-success">
-                  Back to dashboard
-                </button>
+            <div class="mb-0">
+              <!-- Desktop view (hidden on mobile) -->
+              <div class="d-none d-md-flex justify-content-between">
+                <div class="d-flex justify-content-start">
+                  <a class="btn btn-success" href="index.html">
+                    Back to dashboard
+                  </a>
+                </div>
+                
+                <div class="d-flex justify-content-end">
+                  <a class="btn btn-outline-success" href="cancel-plans-next.html">
+                    Next to cancelation
+                  </a>
+                </div>
               </div>
-              
-              <div class="d-flex justify-content-end">
-                <button class="btn btn-outline-success">
-                  Next to cancelation
-                </button>
+
+              <!-- Mobile view (hidden on desktop) -->
+              <div class="d-md-none">
+                <div class="d-grid gap-2">
+                  <a class="btn btn-success mb-2" href="index.html">
+                    Back to dashboard
+                  </a>
+                  <a class="btn btn-outline-success" href="cancel-plans-next.html">
+                    Next to cancelation
+                  </a>
+                </div>
               </div>
             </div>
 
