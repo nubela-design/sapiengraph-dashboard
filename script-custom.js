@@ -47,9 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
       helpResourcesCard.classList.add('d-none');
       elaborateTextarea.value = '';
 
-      // Reset button text to default
-      nextButton.textContent = 'Next to cancelation';
-
       // Handle specific cases
       if (textareaOptions.includes(this.id)) {
         textareaCard.classList.remove('d-none');
@@ -58,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
       } 
       else if (this.id === 'radioCancel3') { // Out of budget option
         lowerPricingCard.classList.remove('d-none');
-        nextButton.textContent = 'Decline offer';
       }
       else if (this.id === 'radioCancel5') { // Technical issues
         technicalSupportText.classList.remove('d-none');

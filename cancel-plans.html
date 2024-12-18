@@ -27,6 +27,148 @@
 
 <body>
 
+  <!--MODAL TOPUP-->
+  <div class="modal fade" id="modalNext" tabindex="-1" aria-labelledby="modalNextLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <a type="button" class="btn-close h1 ps-4 pt-4" data-bs-dismiss="modal" aria-label="Close">
+        </a>
+
+        <div class="modal-body">
+
+          <div class="row justify-content-center">
+
+            <div class="col-12">
+
+              <h1 class="fw-bold mb-3">
+                Order confirmation
+              </h1>
+
+              <p class="lead mb-1">
+                Would you like to subscribe a plan for<br>
+              </p>
+
+              <p class="mb-4 pb-4 border-bottom lead">
+                $49/month (<span class="fw-bold font-monospace badge bg-light">1,055,000</span> credits) + (<span
+                  class="fw-bold font-monospace badge bg-light">1,055,000</span> formulas) + (<span
+                  class="fw-bold font-monospace badge bg-light">35,166</span> leads) + (<span
+                  class="fw-bold font-monospace badge bg-light">52,760</span> profiles) and (<span
+                  class="fw-bold font-monospace badge bg-light">105,500</span> fresh profiles)?
+              </p>
+
+              <div class="row border-bottom pb-2 mb-4">
+                <div class="col-12 col-md-8">
+                  <h2 class="h2 fw-bold">
+                    Credits
+                  </h2>
+                  <p class="lead">
+                    <span class="fw-bold font-monospace badge bg-light">1,055,000</span> credits + <span
+                      class="fw-bold font-monospace badge bg-light">1,055,000</span> formulas + <span
+                      class="fw-bold font-monospace badge bg-light">35,166</span> leads + <span
+                      class="fw-bold font-monospace badge bg-light">52,760</span> profiles
+                  </p>
+                  <p class="lead mt-0">
+                    <span class="fw-bold font-monospace badge bg-light">105,500</span> fresh profiles
+                  </p>
+                  <p class="small text-muted mb-4">
+                    Credits will expire at the end of every billing period
+                  </p>
+                </div>
+
+                <div class="col-12 col-md-4 text-md-end">
+                  <h2 class="h2 fw-bold">
+                    Subtotal
+                  </h2>
+                  <p class="lead">
+                    <span class="fw-bold">$1899</span>/month
+                  </p>
+                  <p class="lead mt-md-5 pt-md-3">
+                    <span class="fw-bold">$1900</span>/month
+                  </p>
+                </div>
+              </div>
+
+              <div class="row border-bottom pb-2 mb-4">
+
+                <div class="col-12 col-md-4">
+                  <h2 class="h2 fw-bold">
+                    Total
+                  </h2>
+                </div>
+
+                <div class="col-12 col-md-8 text-md-end">
+                  <p class="lead">
+                    <span class="fw-bold">$3799</span>/month
+                  </p>
+                </div>
+
+              </div>
+
+              <div class="row border-bottom pb-2 mb-4">
+                <div class="col-6">
+                  <p class="lead">
+                    Payment method
+                  </p>
+                </div>
+
+                <div class="col-6 text-end">
+                  <p class="lead">
+                    Visa ending in <span class="fw-bold me-2">1234</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="row mb-4">
+                <div class="col-12 text-md-end">
+                  <p class="text-muted small mb-0">
+                    All prices include VAT where applicable
+                  </p>
+                </div>
+              </div>
+
+              <h2 class="h3 mb-4">
+                12-Month Contract
+              </h2>
+
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1" checked onclick="handleCheckbox(this)">
+                <label class="form-check-label small text-muted" for="flexRadioDefault1">
+                  By ticking this checkbox, I agree to a 12-month service contract with Sapiengraph as detailed in the
+                  <a class="text-success" href="#!" target="_blank">sales agreement</a>. I understand that this contract
+                  will automatically renew every 12 months unless I cancel it before the renewal date. If I cancel early
+                  before the end of the 12-month period, I acknowledge my obligation to pay the remaining balance of the
+                  contract term, and I agree that Sapiengraph may bill me for this amount. I have read and understood
+                  these terms.
+                </label>
+              </div>
+
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" onclick="handleCheckbox(this)">
+                <label class="form-check-label small text-muted" for="flexRadioDefault2">
+                  I do not want a 12 month contract, and I accept an additional 100% increase in the price for my casual
+                  use of Sapiengraph.
+                </label>
+              </div>
+
+              <a class="btn btn-lg btn-success w-100" href="account-buy-credits-after-stripe-prompt.html">
+                Buy credits
+              </a>
+
+              <button class="btn btn-lg btn-link text-success w-100 mt-3 close" data-bs-dismiss="modal">
+                Cancel
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <!-- MAIN CONTENT -->
   <div class="main-content">
 
@@ -213,7 +355,7 @@
               <div class="row align-items-center">
                 <div class="col">
                   <h4 class="card-header-title">
-                    Would you like to elaborate? (optional)
+                    Please elaborate?
                   </h4>
                 </div>
               </div>
@@ -302,8 +444,8 @@
                       Enrich data in google sheets
                     </small>
 
-                    <div class="mt-1 mb-3">
-                      <p class="d-flex">
+                    <div class="mt-1">
+                      <p class="d-flex mb-0">
                         <i class="fe fe-zap text-success"></i>
                         <span class="ms-2 me-1">Up to 1,500,000 formulas
                           <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
@@ -312,42 +454,6 @@
                           </span>
                         </span>
                       </p>
-                    </div>
-
-                    <hr>
-
-                    <div class="text-center mt-n4" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                      title="Available only on Data Enrichment Spreadsheets">
-                      <span class="badge bg-white rounded-pill h6 text-info border border-info">
-                        <i class="fe fe-info"></i> Fresh data add-on
-                      </span>
-                    </div>
-
-                    <div class="mt-4">
-
-                      <p class="d-flex p-custom mb-0">
-                        <i class="fe fe-dollar-sign text-success mt-0"></i>
-                        <span class="ms-2">+$3,600/yr</span>
-                      </p>
-                      <p class="d-flex p-custom mt-0 mb-3">
-                        <small class="text-muted ms-4">Billed yearly</small>
-                      </p>
-
-                      <p class="d-flex mb-5">
-                        <i class="fe fe-user-check text-success"></i>
-                        <span class="ms-2 me-1">150,000 fresh profiles
-                          <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
-                          data-bs-toggle="tooltip" data-bs-placement="right" title="These extra fresh profiles are part of the 2 months’ free offer">
-                            + Free 25,000 <i class="fe fe-info"></i> 
-                          </span>
-                        </span>
-                      </p>
-
-                      <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="profresh">
-                        <label class="form-check-label" for="profresh">Add freshness </label>
-                      </div>
-
                     </div>
 
                   </div>
@@ -360,7 +466,7 @@
                 <div>
                   <!-- Lite Plan Card -->
                   <div class="card card-body border border-success shadow-lg">
-                    <div class="text-end mt-n5 mb-3">
+                    <div class="text-end mt-n5 mb-3 h1">
                       <span class="badge bg-success text-uppercase text-bg-success">Save 84% per year</span>
                     </div>
 
@@ -436,8 +542,8 @@
                       Enrich data in google sheets
                     </small>
 
-                    <div class="mt-1 mb-3">
-                      <p class="d-flex">
+                    <div class="mt-1">
+                      <p class="d-flex mb-0">
                         <i class="fe fe-zap text-success"></i>
                         <span class="ms-2 me-1">Up to 150,000 formulas
                           <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
@@ -446,42 +552,6 @@
                           </span>
                         </span>
                       </p>
-                    </div>
-
-                    <hr>
-
-                    <div class="text-center mt-n4" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                      title="Available only on Data Enrichment Spreadsheets">
-                      <span class="badge bg-white rounded-pill h6 text-info border border-info">
-                        <i class="fe fe-info"></i> Fresh data add-on
-                      </span>
-                    </div>
-
-                    <div class="mt-4">
-
-                      <p class="d-flex p-custom mb-0">
-                        <i class="fe fe-dollar-sign text-success mt-0"></i>
-                        <span class="ms-2">+$600/yr</span>
-                      </p>
-                      <p class="d-flex p-custom mt-0 mb-3">
-                        <small class="text-muted ms-4">Billed yearly</small>
-                      </p>
-
-                      <p class="d-flex mb-5">
-                        <i class="fe fe-user-check text-success"></i>
-                        <span class="ms-2 me-1">15,000 fresh profiles
-                          <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
-                          data-bs-toggle="tooltip" data-bs-placement="right" title="These extra fresh profiles are part of the 2 months’ free offer">
-                            + Free 2,500 <i class="fe fe-info"></i> 
-                          </span>
-                        </span>
-                      </p>
-
-                      <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="litefresh">
-                        <label class="form-check-label" for="litefresh">Add freshness </label>
-                      </div>
-
                     </div>
 
                   </div>
@@ -752,7 +822,7 @@
               <div class="row align-items-center">
                 <div class="col">
                   <h4 class="card-header-title">
-                    Need Help Getting Started?
+                    We are here to help
                   </h4>
                 </div>
               </div>
@@ -828,7 +898,7 @@
                 
                 <div class="d-flex justify-content-end">
                   <a class="btn btn-outline-success" href="cancel-plans-next.html">
-                    Next to cancelation
+                    Next
                   </a>
                 </div>
               </div>
@@ -840,7 +910,7 @@
                     Back to dashboard
                   </a>
                   <a class="btn btn-outline-success" href="cancel-plans-next.html">
-                    Next to cancelation
+                    Next
                   </a>
                 </div>
               </div>
