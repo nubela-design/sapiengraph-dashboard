@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
 
   <!-- Title -->
-  <title>People - Sapiengraph Prospector - Dashboard</title>
+  <title>Companies - Sapiengraph Prospector - Dashboard</title>
   <style>
     th.active-header {
       color: black !important;
@@ -719,6 +719,9 @@
                       href="prospector-companies.html">Reset</a>
                     <a class="btn btn-link text-secondary rounded-pill btn-sm disabled h3 ms-n1" href="#!"><i
                         class="neu neu-so-save d-none d-md-inline-block"></i> Save search</a>
+                    <a href="prospector-companies-collapsed.html" class="btn btn-sm btn-success rounded-pill lift  ms-auto d-none d-xl-block mt-n3"><i
+                        class="fe fe-chevron-left"></i>
+                    </a>
                   </div>
 
                   <!-- Scrollable filter content -->
@@ -1144,7 +1147,7 @@
   <script>
     // JavaScript to handle the visibility based on screen size
     function handleResize() {
-      const filter = document.getElementById('peoplePersonal');
+      const filter = document.getElementById('companyOverviewFilter');
       if (window.innerWidth >= 1199) { // md breakpoint
         filter.classList.add('show');
         filter.classList.remove('collapse');
