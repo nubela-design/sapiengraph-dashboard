@@ -187,6 +187,291 @@
     </div>
   </div>
 
+  <!--MODAL CANCEL OUT OF MY BUDGETS-->
+  <div class="modal fade" id="modalCancelOutOfMyBudgets" aria-labelledby="modalCancelOutOfMyBudgetsLabel" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-light">
+
+        <a type="button" class="btn-close h1 ps-4 pt-4 mb-0" data-bs-dismiss="modal" aria-label="Close">
+        </a>
+
+        <div class="modal-body pt-0">
+
+          <div class="row justify-content-center">
+
+            <div class="col-12">
+
+              <div class="card card-body border mb-3">
+
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <h1 class="fw-bold mb-2">
+                      How about a <span class="text-success">lower plan</span>?
+                    </h1>
+      
+                    <p class="text-gray-700 mb-0">
+                      Currently, you are on a <span class="fw-bold text-black">Pro+ plan</span> with annual plans, billed monthly.
+                      <br>
+                      These might be a better fit for your needs. Or <a class="text-success" href="account-plans-and-payments.html">consider other plans</a>.
+                    </p>
+                  </div>
+
+                  <div>
+                    <img class="img-fluid img icons" width="72" height="auto" alt="offer icon" src="Illustration_placement.png">
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row g-3">
+
+                <div class="col-12 col-lg-6">
+
+                  <div class="card card-body">
+
+                    <div class="mb-4">
+                      <img class="img-fluid img icons" width="40" alt="lite icon" src="assets/img/icons/lite.svg">
+                    </div>
+
+                    <h2 class="h3 fw-bold mb-4">
+                      Lite
+                    </h2>
+
+                    <h3 id="litePrice" class="display-4 font-weight-bold mb-2">
+                      $<span class="base-price">98</span><span class="h5">/mo</span>
+                    </h3>
+
+                    <div class="mb-2">
+                      <p class="small text-muted billedText">
+                        Billed monthly · Credits issued monthly · Credits expire end of month
+                      </p>
+                    </div>
+
+                    <p class="mb-4 d-flex">
+                      <i class="fe fe-database text-success"></i>
+                      <span class="ms-2">12,500 credits</span>
+                    </p>
+
+                    <div class="mb-3">
+                      <button type="submit" class="btn btn-success rounded-pill w-100" data-bs-toggle="modal"
+                        data-bs-target="#modalNext">
+                        Switch plan
+                      </button>
+                    </div>
+
+                    <hr class="mb-5">
+
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Export leads for prospecting
+                    </small>
+
+                    <div class="mt-0 mb-2">
+                      <p class="d-flex">
+                        <i class="fe fe-star text-success"></i>
+                        <span class="ms-2">Up to 416 leads</span>
+                      </p>
+                    </div>
+
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Track job changes
+                    </small>
+
+                    <div class="mt-0 mb-2">
+                      <p class="d-flex">
+                        <i class="fe fe-user text-success mt-2"></i>
+                        <span class="ms-2">Up to 635 profiles 
+                          <span class="badge text-success rounded-pill h6 text-uppercase mt-2 ms-1" style="background-color: #EDF8F5;"
+                          data-bs-toggle="tooltip" data-bs-placement="right" title="Only for work emails. Not applicable to free emails (e.g. @gmail.com, @yahoo.com)">
+                            10 Free <i class="fe fe-info"></i> 
+                          </span>
+                        </span>
+                      </p>
+                    </div>
+
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Enrich data in google sheets
+                    </small>
+
+                    <div class="mt-1 mb-3">
+                      <p class="d-flex">
+                        <i class="fe fe-zap text-success"></i>
+                        <span class="ms-2">Up to 12,500 formulas</span>
+                      </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="text-center mt-n4" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                      title="Available only on Data Enrichment Spreadsheets">
+                      <span class="badge bg-white rounded-pill h6 text-info border border-info">
+                        <i class="fe fe-info"></i> Fresh data add-on
+                      </span>
+                    </div>
+
+                    <div class="mt-4">
+
+                      <p class="d-flex p-custom mb-0">
+                        <i class="fe fe-dollar-sign text-success mt-0"></i>
+                        <span class="ms-2">+$50/mo</span>
+                      </p>
+                      <p class="d-flex p-custom mt-0 mb-3">
+                        <small class="text-muted ms-4">Billed monthly</small>
+                      </p>
+
+                      <p class="d-flex mb-5">
+                        <i class="fe fe-user-check text-success"></i>
+                        <span class="ms-2">1,250 fresh profiles</span>
+                      </p>
+
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="litefresh">
+                        <label class="form-check-label" for="litefresh">Add freshness </label>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="col-12 col-lg-6">
+
+                  <div class="card card-body">
+
+                    <div class="mb-4">
+                      <img class="img-fluid img icons" width="40" alt="pro icon" src="assets/img/icons/pro.svg">
+                    </div>
+
+                    <h2 class="h3 fw-bold mb-4">
+                      Pro
+                    </h2>
+
+                    <h3 id="proPrice" class="display-4 font-weight-bold mb-2">
+                      $<span class="base-price">598</span><span class="h5">/mo</span>
+                    </h3>
+
+                    <div class="mb-2">
+                      <p class="small text-muted billedText">
+                        Billed monthly · Credits issued monthly · Credits expire end of month
+                      </p>
+                    </div>
+
+                    <p class="mb-4 d-flex">
+                      <i class="fe fe-database text-success"></i>
+                      <span class="ms-2">125,000 credits</span>
+                    </p>
+
+                    <div class="mb-3">
+                      <button type="submit" class="btn btn-success rounded-pill w-100" data-bs-toggle="modal"
+                        data-bs-target="#modalNext">
+                        Switch plan
+                      </button>
+                    </div>
+
+                    <hr class="mb-5">
+
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Export leads for prospecting
+                    </small>
+
+                    <div class="mt-0 mb-2">
+                      <p class="d-flex">
+                        <i class="fe fe-star text-success"></i>
+                        <span class="ms-2">Up to 4,166 leads</span>
+                      </p>
+                    </div>
+
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Track job changes
+                    </small>
+
+                    <div class="mt-0 mb-2">
+                      <p class="d-flex">
+                        <i class="fe fe-user text-success mt-2"></i>
+                        <span class="ms-2">Up to 6,260 profiles 
+                          <span class="badge text-success rounded-pill h6 text-uppercase mt-2 ms-1" style="background-color: #EDF8F5;"
+                          data-bs-toggle="tooltip" data-bs-placement="right" title="Only for work emails. Not applicable to free emails (e.g. @gmail.com, @yahoo.com)">
+                            10 Free <i class="fe fe-info"></i> 
+                          </span>
+                        </span>
+                      </p>
+                    </div>
+
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Enrich data in google sheets
+                    </small>
+
+                    <div class="mt-1 mb-3">
+                      <p class="d-flex">
+                        <i class="fe fe-zap text-success"></i>
+                        <span class="ms-2">Up to 125,000 formulas</span>
+                      </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="text-center mt-n4" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                      title="Available only on Data Enrichment Spreadsheets">
+                      <span class="badge bg-white rounded-pill h6 text-info border border-info">
+                        <i class="fe fe-info"></i> Fresh data add-on
+                      </span>
+                    </div>
+
+                    <div class="mt-4">
+
+                      <p class="d-flex p-custom mb-0">
+                        <i class="fe fe-dollar-sign text-success mt-0"></i>
+                        <span class="ms-2">+$300/mo</span>
+                      </p>
+                      <p class="d-flex p-custom mt-0 mb-3">
+                        <small class="text-muted ms-4">Billed monthly</small>
+                      </p>
+
+                      <p class="d-flex mb-5">
+                        <i class="fe fe-user-check text-success"></i>
+                        <span class="ms-2">12,500 fresh profiles</span>
+                      </p>
+
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="profresh">
+                        <label class="form-check-label" for="profresh">Add freshness </label>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="row align-items-center">
+
+                <div class="col-12 col-md-6">
+                  <button class="btn btn-link text-success w-100 mt-4" data-bs-target="#modalCancel" data-bs-toggle="modal"
+                    data-bs-dismiss="modal">
+                    Back
+                  </button>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <button class="btn btn-outline-success w-100 mt-4" data-bs-target="#modalCancelNext" data-bs-toggle="modal">
+                    Decline offer
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <!--MODAL CANCEL 2-->
   <div class="modal fade" id="modalCancelNext" aria-labelledby="modalCancelNextLabel" aria-hidden="true" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
@@ -655,7 +940,7 @@
                     Change plan
                   </a>
 
-                  <a class="text-muted d-block mt-3" type="submit" data-bs-toggle="modal" data-bs-target="#modalCancel">
+                  <a class="text-muted d-block mt-3" href="cancel-plans.html">
                     Cancel plan
                   </a>
 

@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc." />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon" />
+
+  <!-- Map CSS -->
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
+
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+  <link rel="stylesheet" href="style-custom.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neuicons@1.9.0/css/neu.min.css">
+  <script src="script-custom.js" defer></script>
+
+  <!-- Title -->
+  <title>Sapiengraph - Proceed to cancelation</title>
+</head>
+
+<body>
+
+  <!--MODAL CANCEL 2-->
+  <div class="modal fade" id="modalCancelNext" aria-labelledby="modalCancelNextLabel" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <a type="button" class="btn-close h1 ps-4 pt-4 mb-0" data-bs-dismiss="modal" aria-label="Close">
+        </a>
+
+        <div class="modal-body pt-0 pb-5">
+
+          <div class="row justify-content-center">
+
+            <div class="col-12 col-md-11">
+
+              <h1 class="fw-bold">
+                Cancel your subscription plan?
+              </h1>
+
+              <p class="mb-4 lead">
+                This is the last warning before you cancel your plan. Your existing plan will stay active <span class="fw-bold">until 31 December 2024</span>.
+                <br>
+                <br>
+                By pressing the <code class="text-danger fw-bold py-2 px-2 rounded bg-lighter border">Proceed to cancel my plan</code> button will cancel your current plan immediately.
+              </p>
+
+              <div class="d-flex justify-content-end">
+
+                <a type="button" class="mt-4 btn btn-light w-100" data-bs-dismiss="modal">
+                  Don't cancel my plan
+                </a>
+
+                <div class="mx-1"></div>
+
+                <a class="btn btn-danger mt-4 w-100" href="account-plans-and-payments-cancel-success.html">
+                  Proceed to cancel my plan
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12">
+
+          <!-- Header -->
+          <div class="header mt-md-5">
+            <div class="header-body">
+              <!-- Desktop view (hidden on mobile) -->
+              <div class="d-none d-md-flex justify-content-between align-items-center">
+                <div>
+                  <h1 class="header-title mb-2">
+                    Cancel plan
+                  </h1>
+                  <p class="text-gray-700 mb-0">
+                    oligarkiby@mulyono.com
+                  </p>
+                </div>
+
+                <div>
+                  <div class="d-flex align-items-center border rounded px-3 py-2 pe-3 bg-white">
+                    <img class="img-fluid img icons" width="40" height="auto" alt="pro icon" src="assets/img/icons/pro.svg">
+                    <div class="ms-2">
+                      <p class="fw-bold mb-0">
+                        Pro | Annual plan, billed monthly
+                      </p>
+                      <p class="text-muted mb-0">
+                        Active until 31 Dec 2024
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mobile view (hidden on desktop) -->
+              <div class="d-md-none">
+                <div class="text-center mb-4">
+                  <h1 class="header-title h3 mb-2">
+                    Cancel plan
+                  </h1>
+                  <p class="text-gray-700 mb-4">
+                    oligarkiby@mulyono.com
+                  </p>
+                </div>
+
+                <div class="card card-body mb-2">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img class="img-fluid img icons" width="32" height="auto" alt="pro icon" src="assets/img/icons/pro.svg">
+                    <div class="ms-2">
+                      <p class="fw-bold mb-0 small">
+                        Pro | Annual plan, billed monthly
+                      </p>
+                      <p class="text-muted mb-0 small">
+                        Active until 31 Dec 2024
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Cancel card-->
+          <div class="card">
+
+            <!--Plan info-->
+            <div class="card-body">
+
+              <div class="row">
+
+                <div class="col-12">
+
+                  <h2 class="mb-3 h1">
+                    Are you sure you want to cancel your plan?
+                  </h2>
+
+                  <p class="mb-4 text-gray-700">
+                    Your plan will remain active until <code class="text-dark fw-bold py-2 px-2 rounded bg-lighter border">31 Dec 2024</code>. Currently, you are on a Pro | Annual plan, billed monthly.
+                    <br>
+                    <span class="text-danger">After cancellation, you will lose access to the platform and all of the features</span>.
+                  </p>
+
+                  <div class="row g-4 mb-5">
+
+                    <!-- Lose access to all credits -->
+                    <div class="col-12 col-md-4 d-flex">
+                      <div class="card card-body lift mb-0">
+                        <img class="img-fluid img rounded mb-4" alt="..." src="Illustration_landscape_placement.png">
+                        <h5 class="mb-3 text-body fs-2">
+                          You will lose access to all credits
+                        </h5>
+                        <p class="text-muted mb-0 lead">
+                          Remaining credit balance will be reset to 0 at the end of your billing cycle.
+                        </p>
+                      </div>
+                    </div>
+    
+                    <!-- Lose access to new prospect or enrich data -->
+                    <div class="col-12 col-md-4 d-flex">
+                      <div class="card card-body lift mb-0">
+                        <img class="img-fluid img rounded mb-4" alt="..." src="Illustration_landscape_placement.png">
+                        <h5 class="mb-3 text-body fs-2">
+                          You'll no longer be able to unlock new prospects or enrich your leads' data
+                        </h5>
+                        <p class="text-muted mb-0 lead">
+                          Previously unlocked leads remain viewable on your dashboard, but you lose all access to export capabilities.
+                        </p>
+                      </div>
+                    </div>
+    
+                    <!-- Support -->
+                    <div class="col-12 col-md-4 d-flex">
+                      <div class="card card-body lift mb-0">
+                        <img class="img-fluid img rounded mb-4" alt="..." src="Illustration_landscape_placement.png">
+                        <h5 class="mb-3 text-body fs-2">
+                          You will lose access to all monitored job changes
+                        </h5>
+                        <p class="text-muted mb-0 lead">
+                          You won't get any updates from the people you are monitoring.
+                        </p>
+                      </div>
+                    </div>
+    
+                  </div>
+                  
+                  <hr class="my-4">
+
+                  <!-- So far, you've already used -->
+                  <div class="row">
+                  
+                    <div class="col-12">
+                      <h2 class="h1">
+                        So far, you've already used
+                      </h2>
+                    </div>
+                  
+                    <!-- Credits left -->
+                    <div class="col-12 col-md-4 d-flex">
+                      <div class="card card-body lift mb-0">
+                        <img class="img-fluid img icons mb-3 py-2 px-2 border rounded-3 bg-lighter" width="40" alt="pro icon"
+                          src="assets/img/icons/re-database__24__outline.svg">
+                        <h5 class="mb-3 text-body fs-4">
+                          1,179,755 credits left
+                        </h5>
+                        <p class="text-muted mb-0">
+                          You've used <span class="fw-bold text-dark">320,245</span>/<span class="fw-bold text-dark">1,500,000</span> credits so far. You will have access to your remaining credits until the end of your billing cycle.
+                        </p>
+                      </div>
+                    </div>
+                  
+                    <!-- Profiles left -->
+                    <div class="col-12 col-md-4 d-flex">
+                      <div class="card card-body lift mb-0">
+                        <img class="img-fluid img icons mb-3 py-2 px-2 border rounded-3 bg-lighter" width="40" alt="pro icon"
+                          src="assets/img/icons/re-users-group-screen__24__outline.svg">
+                        <h5 class="mb-3 text-body fs-4">
+                          455 profiles left to monitor
+                        </h5>
+                        <p class="text-muted mb-0">
+                          You have tracked <span class="fw-bold text-dark">5,805</span>/<span class="fw-bold text-dark">6,260</span> profiles so far. You will have access to your tracking dashboard until the end of your billing cycle
+                        </p>
+                      </div>
+                    </div>
+                  
+                    <!-- Prospoecting left -->
+                    <div class="col-12 col-md-4 d-flex">
+                      <div class="card card-body lift mb-0">
+                        <img class="img-fluid img icons mb-3 py-2 px-2 border rounded-3 bg-lighter" width="40" alt="pro icon"
+                          src="assets/img/icons/re-users-detail__24__outline.svg">
+                        <h5 class="mb-3 text-body fs-4">
+                          966 leads left to unlock
+                        </h5>
+                        <p class="text-muted mb-0">
+                          You've unlocked <span class="fw-bold text-dark">3,200</span>/<span class="fw-bold text-dark">4,166</span> leads so far. You will have access to your Prospector dashboard until the end of your billing cycle.
+                        </p>
+                      </div>
+                    </div>
+                  
+                  </div>
+
+                </div>
+                
+              </div>
+
+            </div>
+
+          </div>
+
+          <!--Cancel button-->
+          <div class="card card-body">
+            
+            <div class="mb-0">
+              <!-- Desktop view (hidden on mobile) -->
+              <div class="d-none d-md-flex justify-content-between">
+                <div class="d-flex justify-content-start">
+                  <a class="btn btn-success" href="index.html">
+                    Back to dashboard
+                  </a>
+                </div>
+                
+                <div class="d-flex justify-content-end">
+                  <a class="btn btn-danger" href="account-plans-and-payments-cancel-success.html">
+                    Proceed to cancel my plan
+                  </a>
+                </div>
+              </div>
+
+              <!-- Mobile view (hidden on desktop) -->
+              <div class="d-md-none">
+                <div class="d-grid gap-2">
+                  <a class="btn btn-success mb-2" href="index.html">
+                    Back to dashboard
+                  </a>
+                  <a class="btn btn-danger" href="account-plans-and-payments-cancel-success.html">
+                    Proceed to cancel my plan
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div> <!-- / .row -->
+    </div>
+
+  </div> <!-- / .main-content -->
+
+  <!-- JAVASCRIPT -->
+
+  <!-- Map JS -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+  <!-- Vendor JS -->
+  <script src="./assets/js/vendor.bundle.js"></script>
+
+  <!-- Theme JS -->
+  <script src="./assets/js/theme.bundle.js"></script>
+
+</body>
+
+</html>
