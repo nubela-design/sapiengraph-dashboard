@@ -450,11 +450,11 @@
 
                 <form>
                   <div class="mb-2">
-                    <label for="exampleInputCompany" class="form-label ">Company Name</label>
+                    <label for="exampleInputCompany" class="form-label ">Company Name </label>
                     <input type="text" class="form-control form-control-sm"
-                      placeholder="E.g. Apple, Amazon, Microsoft" id="exampleInputCompany"
+                      placeholder="E.g. Apple, Amazon, Microsoft" id="exampleInputCompany2"
                       aria-describedby="emailHelp">
-                    <ul class="list-group suggestions" id="companySuggestions"></ul>
+                    <ul class="list-group suggestions" id="companySuggestions2"></ul>
                     <div class="mt-2">
                       <div class="btn rounded-pill btn-sm btn-outline-success me-1 ps-3 mt-2"> Google <i
                           class="neu neu-so-close-circle ms-1"></i></div>
@@ -477,30 +477,6 @@
               </div>
             </div>
         </div>
-    </div>
-  </div>
-  
-  <!-- MODAL All Filters -->
-  <div class="modal fade" id="modalTutorial" tabindex="-1" aria-labelledby="modalTutorialLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header pb-0">
-          <h2 class="modal-title" id="modalAllFilterLabel">Filter and search criteria
-            <p class="small fw-normal text-gray-700">Easily find prospects, get their emails and phone numbers, and export them to your favorite spreadsheet.</p>
-          </h2>
-          <button type="button" class="btn-close pe-6 mt-n5" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <img class="img-fluid" src="assets/img/gifs/loading-template.gif">
-        </div>
-        <div class="modal-footer">
-          <div class="w-100 d-flex justify-content-end">
-            <div>
-              <button type="button" class="btn btn-lg btn-success"  data-bs-dismiss="modal">Got it, start search criteria</button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -569,9 +545,9 @@
                             <div class="mb-2">
                               <label for="exampleInputCompany" class="form-label ">Company Name</label>
                               <input type="text" class="form-control form-control-sm"
-                                placeholder="E.g. Apple, Amazon, Microsoft" id="exampleInputCompany2"
+                                placeholder="E.g. Apple, Amazon, Microsoft" id="exampleInputCompany"
                                 aria-describedby="emailHelp">
-                              <ul class="list-group suggestions" id="companySuggestions2"></ul>
+                              <ul class="list-group suggestions" id="companySuggestions"></ul>
                             </div>
                           </form>
                         </div>
@@ -682,22 +658,30 @@
 
                   </div>
 
-                  <div class="d-flex align-items-center py-5 py-xl-0"> <!-- Adjusted Flexbox classes -->
+                  <div class="d-flex align-items-center py-6 py-xl-0"> 
+                    <div class="text-center w-100"> 
+                      <div class="row justify-content-center">
+                        <div class="col-11 col-md-10 col-lg-7">
 
-                    <div class="text-center"> <!-- Added text-center for centering text -->
-                      <div class="row justify-content-center">
-                        <div class="col-10 col-md-8 col-lg-4">
-                          <img class="img-fluid" alt="Prospector search illustration" src="assets/img/illustrations/prospector-search.png">
+                          <label for="searchPrompt" class="h3 mb-4">Company name</label>
+                          <div class="input-group mb-5">
+                            <input type="text" 
+                                   class="form-control form-control-lg rounded-end" 
+                                   id="exampleInputCompany3"
+                                   placeholder="E.g. Apple, Amazon, Microsoft"
+                                   style="padding-right: 90px;" 
+                                   aria-describedby="emailHelp">
+                            <a class="btn btn-sm btn-success rounded-pill px-4 py-1 position-absolute end-0 top-50 translate-middle-y me-3"
+                               href="prospector-customers-loading.html" type="button" style="z-index: 4;">
+                              <i class="fe fe-arrow-right"></i>
+                            </a>
+                            <!-- Move suggestions list inside input-group -->
+                            <ul class="list-group new-suggestions" id="companySuggestions3"></ul>
+                          </div>
                         </div>
-                      </div>
-                      <div class="row justify-content-center">
-                        <div class="col-10 col-md-11 col-lg-12">
-                          <p class="lead mb-2 fw-bold">Filter and search your criteria to show the result</p>
-                          <p class="text-gray-700 mb-0">Please filter and search your criteria or see <a href="#modalTutorial" data-bs-toggle="modal" class="text-success">how it works</a>.</p>
-                        </div>
+
                       </div>
                     </div>
-                  
                   </div>
 
                   <div class="row card-body mt-0 pt-4 mx-0 border-top align-items-center sticky-bottom-action">
