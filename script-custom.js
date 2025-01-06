@@ -85,24 +85,30 @@ document.addEventListener('DOMContentLoaded', function() {
       if (section) section.classList.add('d-none');
     });
     
-    // Show the selected section
+    // Get the current plan badge in the dropdown button
+    const currentPlanBadge = document.querySelector('.dropdown-toggle .badge');
+    
+    // Show the selected section and update badge visibility
     switch(planType) {
       case 'annual-yearly':
         if (billingPlanSections['annual-yearly']) {
           billingPlanSections['annual-yearly'].classList.remove('d-none');
           billingText.textContent = 'Annual plan, billed yearly';
+          if (currentPlanBadge) currentPlanBadge.classList.remove('d-none');
         }
         break;
       case 'annual-monthly':
         if (billingPlanSections['annual-monthly']) {
           billingPlanSections['annual-monthly'].classList.remove('d-none');
           billingText.textContent = 'Annual plan, billed monthly';
+          if (currentPlanBadge) currentPlanBadge.classList.add('d-none');
         }
         break;
       case 'monthly':
         if (billingPlanSections['monthly']) {
           billingPlanSections['monthly'].classList.remove('d-none');
           billingText.textContent = 'Monthly plan';
+          if (currentPlanBadge) currentPlanBadge.classList.add('d-none');
         }
         break;
     }
@@ -118,16 +124,6 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Add active class to clicked item
       this.classList.add('active');
-      
-      // Update current plan badge
-      const badges = document.querySelectorAll('.dropdown-item .badge');
-      badges.forEach(badge => badge.remove());
-      this.appendChild(createCurrentPlanBadge());
-      
-      // Update button badge
-      const buttonBadge = document.querySelector('.dropdown-toggle .badge');
-      if (buttonBadge) buttonBadge.remove();
-      document.querySelector('.dropdown-toggle').appendChild(createCurrentPlanBadge());
       
       // Determine which plan was selected
       if (this.href.endsWith('cancel-plans.html')) {
