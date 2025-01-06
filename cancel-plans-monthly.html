@@ -221,7 +221,7 @@
                     <img class="img-fluid img icons" width="32" height="auto" alt="pro icon" src="assets/img/icons/business.svg">
                     <div class="ms-2">
                       <p class="fw-bold mb-0 small">
-                        Business | Annual plan, billed yearly
+                        Business | Annual plan, billed monthly
                       </p>
                       <p class="text-muted mb-0 small">
                         Active until 31 Dec 2024
@@ -382,12 +382,18 @@
                           data-bs-toggle="dropdown" 
                           aria-expanded="false">
                     <i class="fe fe-calendar"></i>
-                    <span class="billing-text">Annual plan, billed yearly</span>
-                    <span class="badge bg-secondary">Current plan</span>
+                    <span class="billing-text">Monthly plan</span>
+
                   </button>
                   <ul class="dropdown-menu dropdown-menu-end">
                     <li>
-                      <a class="dropdown-item d-flex align-items-center gap-2 active" href="cancel-plans.html">
+                      <a class="dropdown-item d-flex align-items-center gap-2 active" href="cancel-plans-monthly.html">
+                        <i class="fe fe-calendar"></i>
+                        Monthly plan
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item d-flex align-items-center gap-2" href="cancel-plans.html">
                         <i class="fe fe-calendar"></i>
                         Annual plan, billed yearly
                         <span class="badge bg-secondary">Current plan</span>
@@ -397,12 +403,6 @@
                       <a class="dropdown-item d-flex align-items-center gap-2" href="cancel-plans-annual-monthly.html">
                         <i class="fe fe-calendar"></i>
                         Annual plan, billed monthly
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item d-flex align-items-center gap-2" href="cancel-plans-monthly.html">
-                        <i class="fe fe-calendar"></i>
-                        Monthly plan
                       </a>
                     </li>
                   </ul>
@@ -501,48 +501,41 @@
                 </div>
 
                 <div>
-                  <!-- Lite Plan Card -->
+                  <!-- Business Plan monthly Card -->
                   <div class="card card-body border border-success shadow-lg">
-                    <div class="text-end mt-n5 mb-3 h1">
-                      <span class="badge bg-success text-uppercase text-bg-success">Save 53% per year</span>
+                    <div class="text-end mt-n5 mb-3">
+                      <span class="badge bg-success text-uppercase text-bg-success">
+                        Double the price, cancel anytime
+                      </span>
                     </div>
 
                     <div class="mb-4">
-                      <img class="img-fluid img icons" width="40" alt="lite icon" src="assets/img/icons/pro-plus.svg">
+                      <img class="img-fluid img icons" width="40" alt="pro icon" src="assets/img/icons/business.svg">
                     </div>
 
                     <h2 class="h3 fw-bold mb-4">
-                      Pro+
+                      Business
                     </h2>
 
-                    <h3 id="litePrice" class="display-4 font-weight-bold mb-2">
-                      $<span class="base-price">10,788</span><span class="h5">/yr</span>
+                    <h3 id="proPrice" class="display-4 font-weight-bold mb-2">
+                      $<span class="base-price">3,798</span><span class="h5">/mo</span>
                     </h3>
-
-                    <p class="mb-2 text-success">
-                      Save -$12,000/yr
-                    </p>
 
                     <div class="mb-2">
                       <p class="small text-muted billedText">
-                        Billed yearly · All credits issued upfront · Credits expire end of year
+                        Billed monthly · Credits issued monthly · Credits expire end of month
                       </p>
                     </div>
 
                     <p class="mb-4 d-flex align-items-start">
                       <i class="fe fe-database text-success"></i>
-                      <span class="ms-2 me-1">5,394,000 credits <br>
-                        <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
-                        data-bs-toggle="tooltip" data-bs-placement="right" title="These extra credits are part of the 2 months’ free offer">
-                          + Free 899,000 <i class="fe fe-info"></i> 
-                        </span>
-                      </span>
+                      <span class="ms-2 me-1">1,055,000 credits</span>
                     </p>
 
                     <div class="mb-3">
                       <button type="submit" class="btn btn-success rounded-pill w-100" data-bs-toggle="modal"
                         data-bs-target="#modalNext">
-                        Switch to Pro+ | Annual plan, billed yearly
+                        Switch to Business | Monthly plan
                       </button>
                     </div>
 
@@ -555,7 +548,7 @@
                     <div class="mt-0 mb-2">
                       <p class="d-flex">
                         <i class="fe fe-star text-success"></i>
-                        <span class="ms-2">Up to 209,766 leads</span>
+                        <span class="ms-2">Up to 35,166 leads</span>
                       </p>
                     </div>
 
@@ -566,7 +559,7 @@
                     <div class="mt-0 mb-2">
                       <p class="d-flex">
                         <i class="fe fe-user text-success mt-2"></i>
-                        <span class="ms-2">Up to 314,650 profiles 
+                        <span class="ms-2">Up to 52,750 profiles 
                           <span class="badge text-success rounded-pill h6 text-uppercase mt-2 ms-1" style="background-color: #EDF8F5;"
                           data-bs-toggle="tooltip" data-bs-placement="right" title="Only for work emails. Not applicable to free emails (e.g. @gmail.com, @yahoo.com)">
                             10 Free <i class="fe fe-info"></i> 
@@ -582,12 +575,7 @@
                     <div class="mt-1">
                       <p class="d-flex mb-0">
                         <i class="fe fe-zap text-success"></i>
-                        <span class="ms-2 me-1">Up to 5,394,000 formulas
-                          <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
-                          data-bs-toggle="tooltip" data-bs-placement="right" title="These extra formulas are part of the 2 months’ free offer">
-                            + Free 899,000 <i class="fe fe-info"></i> 
-                          </span>
-                        </span>
+                        <span class="ms-2 me-1">Up to 1,055,000 formulas</span>
                       </p>
                     </div>
 
@@ -860,12 +848,12 @@
 
               <div class="row g-3">
 
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-4">
 
                   <div class="card card-body">
 
                     <div class="text-end mt-n5 mb-3">
-                      <span class="badge bg-success text-uppercase text-bg-success">Save 98% per year</span>
+                      <span class="badge bg-success text-uppercase text-bg-success">Double the price, cancel anytime</span>
                     </div>
 
                     <div class="mb-4">
@@ -877,33 +865,24 @@
                     </h2>
 
                     <h3 id="litePrice" class="display-4 font-weight-bold mb-2">
-                      $<span class="base-price">588</span><span class="h5">/yr</span>
+                      $<span class="base-price">98</span><span class="h5">/mo</span>
                     </h3>
-
-                    <p class="mb-2 text-success">
-                      Save -$22,200/yr
-                    </p>
 
                     <div class="mb-2">
                       <p class="small text-muted billedText">
-                        Billed yearly · All credits issued upfront · Credits expire end of year
+                        Billed monthly · All credits issued monthly · Credits expire end of month
                       </p>
                     </div>
 
                     <p class="mb-4 d-flex align-items-start">
                       <i class="fe fe-database text-success"></i>
-                      <span class="ms-2 me-1">150,000 credits <br>
-                        <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
-                        data-bs-toggle="tooltip" data-bs-placement="right" title="These extra credits are part of the 2 months’ free offer">
-                          + Free 25,000 <i class="fe fe-info"></i> 
-                        </span>
-                      </span>
+                      <span class="ms-2 me-1">12,500 credits</span>
                     </p>
 
                     <div class="mb-3">
                       <button type="submit" class="btn btn-outline-success rounded-pill w-100" data-bs-toggle="modal"
                         data-bs-target="#modalNext">
-                        Switch to Lite | Annual plan, billed yearly
+                        Switch to Lite | Monthly plan
                       </button>
                     </div>
 
@@ -927,7 +906,7 @@
                     <div class="mt-0 mb-2">
                       <p class="d-flex">
                         <i class="fe fe-user text-success mt-2"></i>
-                        <span class="ms-2">Up to 635 profiles 
+                        <span class="ms-2">Up to 625 profiles 
                           <span class="badge text-success rounded-pill h6 text-uppercase mt-2 ms-1" style="background-color: #EDF8F5;"
                           data-bs-toggle="tooltip" data-bs-placement="right" title="Only for work emails. Not applicable to free emails (e.g. @gmail.com, @yahoo.com)">
                             10 Free <i class="fe fe-info"></i> 
@@ -943,12 +922,7 @@
                     <div class="mt-1">
                       <p class="d-flex mb-0">
                         <i class="fe fe-zap text-success"></i>
-                        <span class="ms-2 me-1">Up to 150,000 formulas
-                          <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
-                          data-bs-toggle="tooltip" data-bs-placement="right" title="These extra formulas are part of the 2 months’ free offer">
-                            + Free 25,000 <i class="fe fe-info"></i> 
-                          </span>
-                        </span>
+                        <span class="ms-2 me-1">Up to 12,500 formulas</span>
                       </p>
                     </div>
 
@@ -956,12 +930,12 @@
 
                 </div>
 
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-4">
 
                   <div class="card card-body">
 
                     <div class="text-end mt-n5 mb-3">
-                      <span class="badge bg-success text-uppercase text-bg-success">Save 85% per year</span>
+                      <span class="badge bg-success text-uppercase text-bg-success">Double the price, cancel anytime</span>
                     </div>
 
                     <div class="mb-4">
@@ -973,12 +947,8 @@
                     </h2>
 
                     <h3 id="proPrice" class="display-4 font-weight-bold mb-2">
-                      $<span class="base-price">3588</span><span class="h5">/yr</span>
+                      $<span class="base-price">598</span><span class="h5">/mo</span>
                     </h3>
-
-                    <p class="mb-2 text-success">
-                      Save -$19,200/yr
-                    </p>
 
                     <div class="mb-2">
                       <p class="small text-muted billedText">
@@ -988,18 +958,13 @@
 
                     <p class="mb-4 d-flex align-items-start">
                       <i class="fe fe-database text-success"></i>
-                      <span class="ms-2 me-1">1,500,000 credits <br>
-                        <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
-                        data-bs-toggle="tooltip" data-bs-placement="right" title="These extra credits are part of the 2 months’ free offer">
-                          + Free 250,000 <i class="fe fe-info"></i> 
-                        </span>
-                      </span>
+                      <span class="ms-2 me-1">125,000 credits</span>
                     </p>
 
                     <div class="mb-3">
                       <button type="submit" class="btn btn-outline-success rounded-pill w-100" data-bs-toggle="modal"
                         data-bs-target="#modalNext">
-                        Switch to Pro | Annual plan, billed yearly
+                        Switch to Pro | Monthly plan
                       </button>
                     </div>
 
@@ -1023,7 +988,7 @@
                     <div class="mt-0 mb-2">
                       <p class="d-flex">
                         <i class="fe fe-user text-success mt-2"></i>
-                        <span class="ms-2">Up to 6,260 profiles 
+                        <span class="ms-2">Up to 6,250 profiles 
                           <span class="badge text-success rounded-pill h6 text-uppercase mt-2 ms-1" style="background-color: #EDF8F5;"
                           data-bs-toggle="tooltip" data-bs-placement="right" title="Only for work emails. Not applicable to free emails (e.g. @gmail.com, @yahoo.com)">
                             10 Free <i class="fe fe-info"></i> 
@@ -1039,12 +1004,89 @@
                     <div class="mt-1">
                       <p class="d-flex mb-0">
                         <i class="fe fe-zap text-success"></i>
-                        <span class="ms-2 me-1">Up to 1,500,000 formulas
-                          <span class="badge bg-warning rounded-pill h6 text-uppercase mt-2"
-                          data-bs-toggle="tooltip" data-bs-placement="right" title="These extra formulas are part of the 2 months’ free offer">
-                            + Free 250,000 <i class="fe fe-info"></i> 
+                        <span class="ms-2 me-1">Up to 125,000 formulas</span>
+                      </p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="col-12 col-lg-4">
+
+                  <div class="card card-body">
+
+                    <div class="text-end mt-n5 mb-3">
+                      <span class="badge bg-success text-uppercase text-bg-success">Double the price, cancel anytime</span>
+                    </div>
+
+                    <div class="mb-4">
+                      <img class="img-fluid img icons" width="40" alt="pro icon" src="assets/img/icons/pro-plus.svg">
+                    </div>
+
+                    <h2 class="h3 fw-bold mb-4">
+                      Pro+
+                    </h2>
+
+                    <h3 id="proPrice" class="display-4 font-weight-bold mb-2">
+                      $<span class="base-price">1,798</span><span class="h5">/mo</span>
+                    </h3>
+
+                    <div class="mb-2">
+                      <p class="small text-muted billedText">
+                        Billed monthly · All credits issued monthly · Credits expire end of month
+                      </p>
+                    </div>
+
+                    <p class="mb-4 d-flex align-items-start">
+                      <i class="fe fe-database text-success"></i>
+                      <span class="ms-2 me-1">449,500 credits</span>
+                    </p>
+
+                    <div class="mb-3">
+                      <button type="submit" class="btn btn-outline-success rounded-pill w-100" data-bs-toggle="modal"
+                        data-bs-target="#modalNext">
+                        Switch to Pro+ | Monthly plan
+                      </button>
+                    </div>
+
+                    <hr class="mb-5">
+
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Export leads for prospecting
+                    </small>
+
+                    <div class="mt-0 mb-2">
+                      <p class="d-flex">
+                        <i class="fe fe-star text-success"></i>
+                        <span class="ms-2">Up to 14,983 leads</span>
+                      </p>
+                    </div>
+
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Track job changes
+                    </small>
+
+                    <div class="mt-0 mb-2">
+                      <p class="d-flex">
+                        <i class="fe fe-user text-success mt-2"></i>
+                        <span class="ms-2">Up to 22,475 profiles 
+                          <span class="badge text-success rounded-pill h6 text-uppercase mt-2 ms-1" style="background-color: #EDF8F5;"
+                          data-bs-toggle="tooltip" data-bs-placement="right" title="Only for work emails. Not applicable to free emails (e.g. @gmail.com, @yahoo.com)">
+                            10 Free <i class="fe fe-info"></i> 
                           </span>
                         </span>
+                      </p>
+                    </div>
+
+                    <small class="h6 font-weight-bold text-uppercase text-muted">
+                      Enrich data in google sheets
+                    </small>
+
+                    <div class="mt-1">
+                      <p class="d-flex mb-0">
+                        <i class="fe fe-zap text-success"></i>
+                        <span class="ms-2 me-1">Up to 449,500 formulas</span>
                       </p>
                     </div>
 
