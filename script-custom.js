@@ -8,15 +8,17 @@ document.addEventListener('DOMContentLoaded', function() {
   const nextButton = document.querySelector('.btn-outline-success');
   const warningMessage = document.getElementById('warningMessage');
 
-  // Options that should show textarea
-  const textareaOptions = ['radioCancel2', 'radioCancel4', 'radioCancel6', 'radioCancel8'];
-
   // Custom placeholders for each option
   const placeholders = {
-    'radioCancel2': 'Tell us what you need...',
-    'radioCancel4': 'What features are you looking for?',
-    'radioCancel6': 'Which provider are you switching to?',
-    'radioCancel8': 'Tell us why...'
+    'radioCancel1': 'Tell us more about why your company has shut down...',
+    'radioCancel2': 'Tell us more about why your project stopped / ended...',
+    'radioCancel3': "Tell us more about why it doesn't fit your needs...",
+    'radioCancel4': 'Tell us more about your budget constraints...',
+    'radioCancel5': 'What features are you looking for?',
+    'radioCancel6': 'Please describe the technical issues you\'re experiencing...',
+    'radioCancel7': 'Which provider are you switching to and why?',
+    'radioCancel8': 'What aspects of the platform are unclear to you?',
+    'radioCancel9': 'Please tell us more about your reason...'
   };
 
   // Check if any radio button is selected
@@ -40,28 +42,16 @@ document.addEventListener('DOMContentLoaded', function() {
       // Hide warning message if shown
       warningMessage.classList.add('d-none');
 
-      // Hide all cards first
-      textareaCard.classList.add('d-none');
-      lowerPricingCard.classList.add('d-none');
-      technicalSupportText.classList.add('d-none');
-      helpResourcesCard.classList.add('d-none');
+      // Show textarea for all options
+      textareaCard.classList.remove('d-none');
       elaborateTextarea.value = '';
+      elaborateTextarea.placeholder = placeholders[this.id];
+      elaborateTextarea.focus();
 
-      // Handle specific cases
-      if (textareaOptions.includes(this.id)) {
-        textareaCard.classList.remove('d-none');
-        elaborateTextarea.placeholder = placeholders[this.id];
-        elaborateTextarea.focus();
-      } 
-      else if (this.id === 'radioCancel3') { // Out of budget option
-        lowerPricingCard.classList.remove('d-none');
-      }
-      else if (this.id === 'radioCancel5') { // Technical issues
-        technicalSupportText.classList.remove('d-none');
-      }
-      else if (this.id === 'radioCancel7') { // Not sure how to use
-        helpResourcesCard.classList.remove('d-none');
-      }
+      // Show additional info for specific cases
+      lowerPricingCard.classList.toggle('d-none', this.id !== 'radioCancel4');
+      technicalSupportText.classList.toggle('d-none', this.id !== 'radioCancel6');
+      helpResourcesCard.classList.toggle('d-none', this.id !== 'radioCancel8');
     });
   });
 
