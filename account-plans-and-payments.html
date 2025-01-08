@@ -98,81 +98,126 @@
 
             <div class="col-12 col-md-8">
 
-              <!--Radio button-->
+              <!--Warning Alert-->
               <div class="mb-5">
-                <div class="form-check mb-3">
-                  <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel1">
-                  <label class="form-check-label" for="radioCancel1">
-                    My project stopped / ended
-                  </label>
-                </div>
-                <div class="form-check mb-3">
-                  <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel2">
-                  <label class="form-check-label" for="radioCancel2">
-                    Doesn't fit my needs
-                  </label>
-                  <textarea class="form-control mt-2 d-none" placeholder="Tell us what you need" id="needsTextarea"
-                    style="height: 100px"></textarea>
-                </div>
-                <div class="form-check mb-3">
-                  <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel3">
-                  <label class="form-check-label" for="radioCancel3">
-                    Out of my budget
-                  </label>
-                </div>
-                <div class="form-check mb-3">
-                  <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel4">
-                  <label class="form-check-label" for="radioCancel4">
-                    Missing features
-                  </label>
-                  <textarea class="form-control mt-2 d-none" placeholder="What features are you looking for?" id="featuresTextarea"
-                    style="height: 100px"></textarea>
-                </div>
-                <div class="form-check mb-3">
-                  <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel5">
-                  <label class="form-check-label" for="radioCancel5">
-                    Technical issues
-                  </label>
-                  <p class="text-muted d-none" id="technicalInfo"></p>
-                </div>
-                <div class="form-check mb-3">
-                  <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel6">
-                  <label class="form-check-label" for="radioCancel6">
-                    Switching to a different provider
-                  </label>
-                  <textarea class="form-control mt-2 d-none" placeholder="Which provider are you switching to?" id="providerTextarea"
-                    style="height: 100px"></textarea>
-                </div>
-                <div class="form-check mb-3">
-                  <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel7">
-                  <label class="form-check-label" for="radioCancel7">
-                    Not sure how to use
-                  </label>
-                  <p class="text-muted d-none" id="helpInfo"></p>
-                </div>
-                <div class="form-check mb-3">
-                  <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel8">
-                  <label class="form-check-label" for="radioCancel8">
-                    Other
-                  </label>
-                  <textarea class="form-control mt-2 d-none" placeholder="Tell us why" id="floatingTextarea2"
-                    style="height: 100px"></textarea>
-                </div>
-              </div>
-
-              <div class="row align-items-center">
-
-                <div class="col-12 col-md-6 text-center">
-                  <a type="button" class="mt-4 text-success" data-bs-dismiss="modal">
-                    Don't cancel
-                  </a>
+                <div class="alert alert-warning alert-dismissible fade show d-none" role="alert" id="warningMessage">
+                  <div class="d-flex align-items-center">
+                    <i class="fe fe-alert-triangle me-2"></i>
+                    <div>
+                      Please select a reason for cancellation before proceeding.
+                    </div>
+                  </div>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
 
-                <div class="col-12 col-md-6">
-                  <button class="btn btn-success w-100 mt-4" data-bs-target="#modalCancelNext" data-bs-toggle="modal"
-                    data-bs-dismiss="modal">
-                    Next
-                  </button>
+                <!--Radio button-->
+                <div class="mb-5">
+                  <!-- My company has shut down -->
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel1">
+                    <label class="form-check-label" for="radioCancel1">
+                      <i class="fe fe-x-circle me-1"></i> My company has shut down
+                    </label>
+                    <textarea class="form-control mt-2 d-none" placeholder="Please elaborate..." 
+                      id="companyTextarea" style="height: 100px"></textarea>
+                  </div>
+
+                  <!-- My project stopped / ended -->
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel2">
+                    <label class="form-check-label" for="radioCancel2">
+                      <i class="fe fe-stop-circle me-1"></i> My project stopped / ended
+                    </label>
+                    <textarea class="form-control mt-2 d-none" placeholder="Please elaborate..." 
+                      id="projectTextarea" style="height: 100px"></textarea>
+                  </div>
+
+                  <!-- Doesn't fit my needs -->
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel3">
+                    <label class="form-check-label" for="radioCancel3">
+                      <i class="fe fe-x me-1"></i> Doesn't fit my needs
+                    </label>
+                    <textarea class="form-control mt-2 d-none" placeholder="Please elaborate..." 
+                      id="needsTextarea" style="height: 100px"></textarea>
+                  </div>
+
+                  <!-- Out of my budget -->
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel4">
+                    <label class="form-check-label" for="radioCancel4">
+                      <i class="fe fe-dollar-sign me-1"></i> Out of my budget
+                    </label>
+                    <textarea class="form-control mt-2 d-none" placeholder="Please elaborate..." 
+                      id="budgetTextarea" style="height: 100px"></textarea>
+                  </div>
+
+                  <!-- Missing features -->
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel5">
+                    <label class="form-check-label" for="radioCancel5">
+                      <i class="fe fe-list me-1"></i> Missing features
+                    </label>
+                    <textarea class="form-control mt-2 d-none" placeholder="Please elaborate..." 
+                      id="featuresTextarea" style="height: 100px"></textarea>
+                  </div>
+
+                  <!-- Technical issues -->
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel6">
+                    <label class="form-check-label" for="radioCancel6">
+                      <i class="fe fe-alert-triangle me-1"></i> Technical issues
+                    </label>
+                    <textarea class="form-control mt-2 d-none" placeholder="Please elaborate..." 
+                      id="technicalTextarea" style="height: 100px"></textarea>
+                  </div>
+
+                  <!-- Switching to a different provider -->
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel7">
+                    <label class="form-check-label" for="radioCancel7">
+                      <i class="fe fe-refresh-cw me-1"></i> Switching to a different provider
+                    </label>
+                    <textarea class="form-control mt-2 d-none" placeholder="Please elaborate..." 
+                      id="providerTextarea" style="height: 100px"></textarea>
+                  </div>
+
+                  <!-- Not sure how to use -->
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel8">
+                    <label class="form-check-label" for="radioCancel8">
+                      <i class="fe fe-help-circle me-1"></i> Not sure how to use
+                    </label>
+                    <textarea class="form-control mt-2 d-none" placeholder="Please elaborate..." 
+                      id="helpTextarea" style="height: 100px"></textarea>
+                  </div>
+
+                  <!-- Others -->
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="radioCancel" id="radioCancel9">
+                    <label class="form-check-label" for="radioCancel9">
+                      <i class="fe fe-more-horizontal me-1"></i> Others
+                    </label>
+                    <textarea class="form-control mt-2 d-none" placeholder="Please elaborate..." 
+                      id="otherTextarea" style="height: 100px"></textarea>
+                  </div>
+                </div>
+
+                <div class="row align-items-center">
+
+                  <div class="col-12 col-md-6 text-center">
+                    <a type="button" class="mt-4 text-success" data-bs-dismiss="modal">
+                      Don't cancel
+                    </a>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <button class="btn btn-success w-100 mt-4" data-bs-target="#modalCancelNext" data-bs-toggle="modal"
+                      data-bs-dismiss="modal">
+                      Next
+                    </button>
+                  </div>
+
                 </div>
 
               </div>
@@ -186,292 +231,7 @@
       </div>
     </div>
   </div>
-
-  <!--MODAL CANCEL OUT OF MY BUDGETS-->
-  <div class="modal fade" id="modalCancelOutOfMyBudgets" aria-labelledby="modalCancelOutOfMyBudgetsLabel" aria-hidden="true" tabindex="-1">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content bg-light">
-
-        <a type="button" class="btn-close h1 ps-4 pt-4 mb-0" data-bs-dismiss="modal" aria-label="Close">
-        </a>
-
-        <div class="modal-body pt-0">
-
-          <div class="row justify-content-center">
-
-            <div class="col-12">
-
-              <div class="card card-body border mb-3">
-
-                <div class="d-flex justify-content-between align-items-center">
-                  <div>
-                    <h1 class="fw-bold mb-2">
-                      How about a <span class="text-success">lower plan</span>?
-                    </h1>
-      
-                    <p class="text-gray-700 mb-0">
-                      Currently, you are on a <span class="fw-bold text-black">Pro+ plan</span> with annual plans, billed monthly.
-                      <br>
-                      These might be a better fit for your needs. Or <a class="text-success" href="account-plans-and-payments.html">consider other plans</a>.
-                    </p>
-                  </div>
-
-                  <div>
-                    <img class="img-fluid img icons" width="72" height="auto" alt="offer icon" src="Illustration_placement.png">
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="row g-3">
-
-                <div class="col-12 col-lg-6">
-
-                  <div class="card card-body">
-
-                    <div class="mb-4">
-                      <img class="img-fluid img icons" width="40" alt="lite icon" src="assets/img/icons/lite.svg">
-                    </div>
-
-                    <h2 class="h3 fw-bold mb-4">
-                      Lite
-                    </h2>
-
-                    <h3 id="litePrice" class="display-4 font-weight-bold mb-2">
-                      $<span class="base-price">98</span><span class="h5">/mo</span>
-                    </h3>
-
-                    <div class="mb-2">
-                      <p class="small text-muted billedText">
-                        Billed monthly · Credits issued monthly · Credits expire end of month
-                      </p>
-                    </div>
-
-                    <p class="mb-4 d-flex">
-                      <i class="fe fe-database text-success"></i>
-                      <span class="ms-2">12,500 credits</span>
-                    </p>
-
-                    <div class="mb-3">
-                      <button type="submit" class="btn btn-success rounded-pill w-100" data-bs-toggle="modal"
-                        data-bs-target="#modalNext">
-                        Switch plan
-                      </button>
-                    </div>
-
-                    <hr class="mb-5">
-
-                    <small class="h6 font-weight-bold text-uppercase text-muted">
-                      Export leads for prospecting
-                    </small>
-
-                    <div class="mt-0 mb-2">
-                      <p class="d-flex">
-                        <i class="fe fe-star text-success"></i>
-                        <span class="ms-2">Up to 416 leads</span>
-                      </p>
-                    </div>
-
-                    <small class="h6 font-weight-bold text-uppercase text-muted">
-                      Track job changes
-                    </small>
-
-                    <div class="mt-0 mb-2">
-                      <p class="d-flex">
-                        <i class="fe fe-user text-success mt-2"></i>
-                        <span class="ms-2">Up to 635 profiles 
-                          <span class="badge text-success rounded-pill h6 text-uppercase mt-2 ms-1" style="background-color: #EDF8F5;"
-                          data-bs-toggle="tooltip" data-bs-placement="right" title="Only for work emails. Not applicable to free emails (e.g. @gmail.com, @yahoo.com)">
-                            10 Free <i class="fe fe-info"></i> 
-                          </span>
-                        </span>
-                      </p>
-                    </div>
-
-                    <small class="h6 font-weight-bold text-uppercase text-muted">
-                      Enrich data in google sheets
-                    </small>
-
-                    <div class="mt-1 mb-3">
-                      <p class="d-flex">
-                        <i class="fe fe-zap text-success"></i>
-                        <span class="ms-2">Up to 12,500 formulas</span>
-                      </p>
-                    </div>
-
-                    <hr>
-
-                    <div class="text-center mt-n4" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                      title="Available only on Data Enrichment Spreadsheets">
-                      <span class="badge bg-white rounded-pill h6 text-info border border-info">
-                        <i class="fe fe-info"></i> Fresh data add-on
-                      </span>
-                    </div>
-
-                    <div class="mt-4">
-
-                      <p class="d-flex p-custom mb-0">
-                        <i class="fe fe-dollar-sign text-success mt-0"></i>
-                        <span class="ms-2">+$50/mo</span>
-                      </p>
-                      <p class="d-flex p-custom mt-0 mb-3">
-                        <small class="text-muted ms-4">Billed monthly</small>
-                      </p>
-
-                      <p class="d-flex mb-5">
-                        <i class="fe fe-user-check text-success"></i>
-                        <span class="ms-2">1,250 fresh profiles</span>
-                      </p>
-
-                      <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="litefresh">
-                        <label class="form-check-label" for="litefresh">Add freshness </label>
-                      </div>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-                <div class="col-12 col-lg-6">
-
-                  <div class="card card-body">
-
-                    <div class="mb-4">
-                      <img class="img-fluid img icons" width="40" alt="pro icon" src="assets/img/icons/pro.svg">
-                    </div>
-
-                    <h2 class="h3 fw-bold mb-4">
-                      Pro
-                    </h2>
-
-                    <h3 id="proPrice" class="display-4 font-weight-bold mb-2">
-                      $<span class="base-price">598</span><span class="h5">/mo</span>
-                    </h3>
-
-                    <div class="mb-2">
-                      <p class="small text-muted billedText">
-                        Billed monthly · Credits issued monthly · Credits expire end of month
-                      </p>
-                    </div>
-
-                    <p class="mb-4 d-flex">
-                      <i class="fe fe-database text-success"></i>
-                      <span class="ms-2">125,000 credits</span>
-                    </p>
-
-                    <div class="mb-3">
-                      <button type="submit" class="btn btn-success rounded-pill w-100" data-bs-toggle="modal"
-                        data-bs-target="#modalNext">
-                        Switch plan
-                      </button>
-                    </div>
-
-                    <hr class="mb-5">
-
-                    <small class="h6 font-weight-bold text-uppercase text-muted">
-                      Export leads for prospecting
-                    </small>
-
-                    <div class="mt-0 mb-2">
-                      <p class="d-flex">
-                        <i class="fe fe-star text-success"></i>
-                        <span class="ms-2">Up to 4,166 leads</span>
-                      </p>
-                    </div>
-
-                    <small class="h6 font-weight-bold text-uppercase text-muted">
-                      Track job changes
-                    </small>
-
-                    <div class="mt-0 mb-2">
-                      <p class="d-flex">
-                        <i class="fe fe-user text-success mt-2"></i>
-                        <span class="ms-2">Up to 6,260 profiles 
-                          <span class="badge text-success rounded-pill h6 text-uppercase mt-2 ms-1" style="background-color: #EDF8F5;"
-                          data-bs-toggle="tooltip" data-bs-placement="right" title="Only for work emails. Not applicable to free emails (e.g. @gmail.com, @yahoo.com)">
-                            10 Free <i class="fe fe-info"></i> 
-                          </span>
-                        </span>
-                      </p>
-                    </div>
-
-                    <small class="h6 font-weight-bold text-uppercase text-muted">
-                      Enrich data in google sheets
-                    </small>
-
-                    <div class="mt-1 mb-3">
-                      <p class="d-flex">
-                        <i class="fe fe-zap text-success"></i>
-                        <span class="ms-2">Up to 125,000 formulas</span>
-                      </p>
-                    </div>
-
-                    <hr>
-
-                    <div class="text-center mt-n4" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                      title="Available only on Data Enrichment Spreadsheets">
-                      <span class="badge bg-white rounded-pill h6 text-info border border-info">
-                        <i class="fe fe-info"></i> Fresh data add-on
-                      </span>
-                    </div>
-
-                    <div class="mt-4">
-
-                      <p class="d-flex p-custom mb-0">
-                        <i class="fe fe-dollar-sign text-success mt-0"></i>
-                        <span class="ms-2">+$300/mo</span>
-                      </p>
-                      <p class="d-flex p-custom mt-0 mb-3">
-                        <small class="text-muted ms-4">Billed monthly</small>
-                      </p>
-
-                      <p class="d-flex mb-5">
-                        <i class="fe fe-user-check text-success"></i>
-                        <span class="ms-2">12,500 fresh profiles</span>
-                      </p>
-
-                      <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="profresh">
-                        <label class="form-check-label" for="profresh">Add freshness </label>
-                      </div>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div class="row align-items-center">
-
-                <div class="col-12 col-md-6">
-                  <button class="btn btn-link text-success w-100 mt-4" data-bs-target="#modalCancel" data-bs-toggle="modal"
-                    data-bs-dismiss="modal">
-                    Back
-                  </button>
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <button class="btn btn-outline-success w-100 mt-4" data-bs-target="#modalCancelNext" data-bs-toggle="modal">
-                    Decline offer
-                  </button>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-
+  
   <!--MODAL CANCEL 2-->
   <div class="modal fade" id="modalCancelNext" aria-labelledby="modalCancelNextLabel" aria-hidden="true" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
@@ -484,34 +244,88 @@
 
           <div class="row justify-content-center pb-md-5">
 
-            <div class="col-12 col-md-9 text-center mb-4">
-              <i class="neu-so-faq text-success display-1"></i>
-            </div>
-
-            <div class="col-12 col-md-9 text-center">
+            <div class="col-12 col-md-11">
 
               <h1 class="fw-bold">
                 Cancel your subscription plan?
               </h1>
 
               <p class="mb-4 lead">
-                Pressing the "Yes, continue" button will cancel your current plan. Are you sure want to cancel your
-                Sapiengraph subscription?<br>
-                <br>
-                Your existing plan will stay active<br>
-                <span class="fw-bold">until 31 December 2023</span>.
+                Pressing the <span class="fw-bold text-success">“Yes, continue”</span> button will cancel your current plan.
               </p>
+
+              <p class="mb-4 lead">
+                Your plan will remain active until <code class="text-dark fw-bold py-2 px-2 rounded bg-lighter border">31 Dec 2024</code>.
+              </p>
+
+              <p class="mb-4 lead">
+                Currently, you are on a <span class="border bg-lighter rounded px-3 py-2 mt-2 fw-bold d-block">
+                  <img class="img-fluid img icons" width="24" height="auto" alt="pro icon" src="assets/img/icons/pro.svg"> Business |
+                  Annual plan, billed yearly.
+                </span>
+              </p>
+
+              <p class="mb-4 lead text-danger border border-danger rounded px-3 py-2" style="background-color: #fee2e2;">
+                After cancellation, you will lose access to the platform and all of the features.
+              </p>
+
+              <div class="card border bg-lighter rounded pb-3">
+              
+                <div class="card-header bg-white">
+                  <div class="row align-items-center">
+                    <div class="col">
+              
+                      <h4 class="card-header-title">
+                        You will lose access to the following:
+                      </h4>
+              
+                    </div>
+              
+                  </div>
+                </div>
+              
+                <div class="card-body">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-start pt-0">
+                      <div class="ms-2 me-auto">
+                        <div>
+                          You will lose access to any remaining credits at the end of your billing cycle.
+                          <span class="badge bg-secondary rounded-pill py-2 px-3">1,179,755 credits left</span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        <div>
+                          Previously unlocked leads remain viewable on your dashboard, but you cannot export new leads.
+                          <span class="badge bg-secondary rounded-pill py-2 px-3">966 leads left</span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-start pb-0">
+                      <div class="ms-2 me-auto">
+                        <div>
+                          You won't get any job change updates from the people you have been monitoring.
+                          <span class="badge bg-secondary rounded-pill py-2 px-3">455 more profiles to monitor</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
               <div class="row align-items-center">
 
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 text-center">
                   <a type="button" class="mt-4 text-success" data-bs-dismiss="modal">
                     Don't cancel
                   </a>
                 </div>
 
                 <div class="col-12 col-md-6">
-                  <a class="btn btn-lg btn-success w-100 mt-4" href="account-plans-and-payments-cancel-success.html">
+                  <a class="btn btn-lg btn-success w-100 mt-4" href="cancel-success.html">
                     Yes, continue
                   </a>
                 </div>
@@ -944,7 +758,7 @@
                     Change plan
                   </a>
 
-                  <a class="text-muted d-block mt-3" href="cancel-plans.html">
+                  <a class="text-muted d-block mt-3" type="submit" data-bs-toggle="modal" data-bs-target="#modalCancel">
                     Cancel plan
                   </a>
 

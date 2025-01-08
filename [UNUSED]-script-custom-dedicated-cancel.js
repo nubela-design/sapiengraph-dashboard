@@ -1,50 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const radioButtons = document.querySelectorAll('input[name="radioCancel"]');
-  const textareas = {
-    'radioCancel1': document.getElementById('companyTextarea'),
-    'radioCancel2': document.getElementById('projectTextarea'),
-    'radioCancel3': document.getElementById('needsTextarea'),
-    'radioCancel4': document.getElementById('budgetTextarea'),
-    'radioCancel5': document.getElementById('featuresTextarea'),
-    'radioCancel6': document.getElementById('technicalTextarea'),
-    'radioCancel7': document.getElementById('providerTextarea'),
-    'radioCancel8': document.getElementById('helpTextarea'),
-    'radioCancel9': document.getElementById('otherTextarea')
-  };
-
-  const additionalInfo = {
-    'radioCancel6': document.getElementById('technicalInfo'),
-    'radioCancel8': document.getElementById('helpInfo')
-  };
-
-  // Hide warning when a radio is selected
-  radioButtons.forEach(radio => {
-    radio.addEventListener('change', function() {
-      // Hide all textareas first
-      Object.values(textareas).forEach(textarea => {
-        if (textarea) textarea.classList.add('d-none');
-      });
-
-      // Hide all additional info
-      Object.values(additionalInfo).forEach(info => {
-        if (info) info.classList.add('d-none');
-      });
-
-      // Show the selected textarea
-      const selectedTextarea = textareas[this.id];
-      if (selectedTextarea) {
-        selectedTextarea.classList.remove('d-none');
-        selectedTextarea.focus();
-      }
-
-      // Show additional info if applicable
-      const selectedInfo = additionalInfo[this.id];
-      if (selectedInfo) {
-        selectedInfo.classList.remove('d-none');
-      }
-    });
-  });
-
+  const textareaCard = document.getElementById('textareaCard');
+  const elaborateTextarea = document.getElementById('elaborateTextarea');
   const lowerPricingCard = document.getElementById('lowerPricingCard');
   const technicalSupportText = document.getElementById('technicalSupportText');
   const helpResourcesCard = document.getElementById('helpResourcesCard');
@@ -53,15 +10,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Custom placeholders for each option
   const placeholders = {
-    'radioCancel1': 'Please elaborate...',
-    'radioCancel2': 'Please elaborate...',
-    'radioCancel3': 'Please elaborate...',
-    'radioCancel4': 'Please elaborate...',
-    'radioCancel5': 'Please elaborate...',
-    'radioCancel6': 'Please elaborate...',
-    'radioCancel7': 'Please elaborate...',
-    'radioCancel8': 'Please elaborate...',
-    'radioCancel9': 'Please elaborate...'
+    'radioCancel1': 'Tell us more about why your company has shut down...',
+    'radioCancel2': 'Tell us more about why your project stopped / ended...',
+    'radioCancel3': "Tell us more about why it doesn't fit your needs...",
+    'radioCancel4': 'Tell us more about your budget constraints...',
+    'radioCancel5': 'What features are you looking for?',
+    'radioCancel6': 'Please describe the technical issues you\'re experiencing...',
+    'radioCancel7': 'Which provider are you switching to and why?',
+    'radioCancel8': 'What aspects of the platform are unclear to you?',
+    'radioCancel9': 'Please tell us more about your reason...'
   };
 
   // Check if any radio button is selected
@@ -77,6 +34,25 @@ document.addEventListener('DOMContentLoaded', function() {
       // Scroll to warning message
       warningMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
+  });
+
+  // Hide warning when a radio is selected
+  radioButtons.forEach(radio => {
+    radio.addEventListener('change', function() {
+      // Hide warning message if shown
+      warningMessage.classList.add('d-none');
+
+      // Show textarea for all options
+      textareaCard.classList.remove('d-none');
+      elaborateTextarea.value = '';
+      elaborateTextarea.placeholder = placeholders[this.id];
+      elaborateTextarea.focus();
+
+      // Show additional info for specific cases
+      lowerPricingCard.classList.toggle('d-none', this.id !== 'radioCancel4');
+      technicalSupportText.classList.toggle('d-none', this.id !== 'radioCancel6');
+      helpResourcesCard.classList.toggle('d-none', this.id !== 'radioCancel8');
+    });
   });
 
   // Add billing plan switcher functionality
