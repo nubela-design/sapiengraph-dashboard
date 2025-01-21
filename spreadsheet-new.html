@@ -6,6 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc." />
 
+  <!-- SPREADSHEET-->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/rxjs/dist/bundles/rxjs.umd.min.js"></script>
+
+  <script src="https://unpkg.com/@univerjs/presets/lib/umd/index.js"></script>
+
+  <script src="https://unpkg.com/@univerjs/preset-sheets-core/lib/umd/index.js"></script>
+  <script src="https://unpkg.com/@univerjs/preset-sheets-core/lib/umd/locales/en-US.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@univerjs/preset-sheets-core/lib/index.css" />
+
+
   <!-- Favicon -->
   <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon" />
 
@@ -232,38 +244,55 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="prospector-collapsed.html">
+            <a class="nav-link" href="#sidebarProspector" data-bs-toggle="collapse" role="button" aria-expanded="false"
+            aria-controls="sidebarProspector">
               <i class="fe fe-target"></i> Prospector
             </a>
+            <div class="collapse" id="sidebarProspector">
+              <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                  <a href="prospector-collapsed.html" class="nav-link">
+                    <span class="border-start border-2 ps-3">People Prospector</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="prospector-companies-collapsed.html" class="nav-link">
+                    <span class="border-start border-2 ps-3">Company Prospector</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="prospector-customers-collapsed.html" class="nav-link">
+                    <span class="border-start border-2 ps-3">Customers Prospector </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#!" class="nav-link">
+                    <span class="border-start border-2 ps-3">Unlocked Result <i class="fe fe-external-link text-muted"></i></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#sidebarJobChangeMonitor"
-              data-bs-toggle="collapse"
-              role="button"
-              aria-expanded="false"
-              aria-controls="sidebarJobChangeMonitor"
-            >
+            <a class="nav-link" href="#sidebarJobChangeMonitor" data-bs-toggle="collapse" role="button" aria-expanded="false"
+              aria-controls="sidebarJobChangeMonitor">
               <i class="fe fe-briefcase"></i> Job Change Monitor
             </a>
             <div class="collapse" id="sidebarJobChangeMonitor">
               <ul class="nav nav-sm flex-column">
                 <li class="nav-item">
-                  <a
-                    href="job-change-monitor.html"
-                    class="nav-link"
-                  >
-                    <span class="border-start border-2 ps-3"
-                      >Job Change Monitor</span
-                    >
+                  <a href="job-change-monitor.html" class="nav-link">
+                    <span class="border-start border-2 ps-3">Job Change Monitor</span>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a href="job-change-bulk-upload.html" class="nav-link">
-                    <span class="border-start border-2 ps-3"
-                      >Bulk Upload</span
-                    >
+                    <span class="border-start border-2 ps-3">Bulk Upload</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="job-change-monitor.html" class="nav-link">
+                    <span class="border-start border-2 ps-3">Recent Job Change </span>
                   </a>
                 </li>
               </ul>
@@ -288,7 +317,7 @@
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link">
-                    <span class="border-start border-2 ps-3">Formula Documentation</span>
+                    <span class="border-start border-2 ps-3">Formula Documentation <i class="fe fe-external-link text-muted"></i></span>
                   </a>
                 </li>
                 <li class="nav-item">
@@ -502,7 +531,7 @@
               </h1>
 
               <p class="mb-4 text-gray-700 fs-lg">
-                We’re sorry to see you go. Would you tell us why?
+                We're sorry to see you go. Would you tell us why?
               </p>
             </div>
 
@@ -641,106 +670,107 @@
 
   <!-- MAIN CONTENT -->
   <div class="main-content">
-
+  
     <div class="container-fluid">
       <div class="row justify-content-center">
         <div class="col-12">
-
+  
           <!-- Header -->
           <div class="header mt-md-5">
             <div class="header-body">
-
+  
               <div class="row align-items-center">
                 <div class="col">
-
+  
                   <!-- Pretitle -->
                   <h6 class="header-pretitle">
                     Overview
                   </h6>
-
+  
                   <!-- Title -->
                   <h1 class="header-title">
                     New Spreadsheet
                   </h1>
-
+  
                 </div>
               </div> <!-- / .row -->
-
+  
               <div class="row align-items-center">
                 <div class="col">
-
                   <!-- Nav -->
-                  <ul class="nav nav-tabs nav-overflow header-tabs">
-                    <li class="nav-item">
-                      <a href="spreadsheet-new.html" class="nav-link active border-success">
-                        New Spreadsheet
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="spreadsheet-your.html" class="nav-link">
-                        Your Spreadsheet
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a href=#" class="nav-link" target="_blank">
-                        Formula Documentation <i class="fe fe-external-link text-muted"></i>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a href=#" class="nav-link" target="_blank">
-                        Enrichment in Google Sheets <i class="fe fe-external-link text-muted"></i>
-                      </a>
-                    </li>
-                  </ul>
-
+                  <div class="nav-wrapper position-relative">
+                    <ul class="nav nav-tabs nav-overflow header-tabs flex-nowrap overflow-auto hide-scrollbar">
+                      <li class="nav-item">
+                        <a href="spreadsheet-new.html" class="nav-link active border-success text-nowrap">
+                          New Spreadsheet
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="spreadsheet-your.html" class="nav-link text-nowrap">
+                          Your Spreadsheet
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link text-nowrap mt-n1" target="_blank">
+                          Formula Documentation <i class="fe fe-external-link text-muted"></i>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link text-nowrap mt-n1" target="_blank">
+                          Enrichment in Google Sheets <i class="fe fe-external-link text-muted"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-
+  
             </div>
-
+  
           </div>
-
+  
           <div class="card">
-
+  
             <div class="card-header">
               <div class="row align-items-center">
-
+  
                 <div class="col">
-
+  
                   <!-- Title -->
                   <h4 class="card-header-title">
                     Create new spreadsheet
                   </h4>
-
+  
                 </div>
-
+  
               </div>
             </div>
-
-            <div class="card-body">
-
+  
+            <div class="card-body pb-2 pt-1 px-0">
+  
               <div class="row">
-
-                <div class="col-12 mb-5">
-
-                  <div class="row mb-3">
-
+  
+                <div class="col-12">
+  
+                  <div class="row">
+  
                     <div class="col-12">
-                      <div id="enrichment-company-sheet" class="w-100" style="height: 500px;"></div>
+                      <div id="univerContainer" style="height: calc(100vh - 310px);"></div>
                     </div>
-
+  
                   </div>
-
+  
+                </div>
+  
               </div>
-
+  
             </div>
-
+  
           </div>
-
-        </div>
-      </div> <!-- / .row -->
+        </div> <!-- / .row -->
+      </div>
     </div>
-
+  
   </div> <!-- / .main-content -->
 
   <!-- JAVASCRIPT -->
@@ -762,199 +792,8 @@
   <script src="https://unpkg.com/@univerjs/preset-sheets-core@latest/lib/umd/index.js"></script>
   <script src="https://unpkg.com/@univerjs/preset-sheets-core@latest/lib/umd/locales/en-US.js"></script>
 
-  <script>
-    window.onload = function () {
-      try {
-        // Get required components
-        const { createUniver, LocaleType, defaultTheme } = UniverPresets;
-        const { UniverSheetsCorePreset } = UniverPresetSheetsCore;
-        const { enUS: UniverPresetSheetsCoreEnUS } = UniverPresetSheetsCore;
-
-        // People Sheet Data
-        const peopleSheetData = {
-          id: 'peopleWorkbook',
-          name: 'People Enrichment',
-          sheetOrder: ['sheet1'],
-          sheets: {
-            sheet1: {
-              id: 'sheet1',
-              name: 'Sheet1',
-              cellData: {
-                0: {
-                  0: {
-                    v: 'Get person\'s first name',
-                    t: 2,
-                    s: {
-                      ht: 1,
-                      bl: 1
-                    }
-                  },
-                  1: {
-                    v: 'https://www.linkedin.com/in/johnrmarty',
-                    t: 2,
-                    s: {
-                      ht: 1
-                    }
-                  },
-                  2: {
-                    f: '=SG_PERSON(C1, "first_name")',
-                    t: 2,
-                    s: {
-                      ht: 1,
-                      bg: { rgb: '#f0fdf4' }  // Light green background color
-                    }
-                  },
-                },
-                1: {
-                  0: {
-                    v: 'Get profile\'s current company',
-                    t: 2,
-                    s: {
-                      ht: 1,
-                      bl: 1
-                    }
-                  },
-                  1: {
-                    v: 'https://www.linkedin.com/in/johnrmarty',
-                    t: 2,
-                    s: {
-                      ht: 1
-                    }
-                  },
-                  2: {
-                    f: '=SG_PERSON_WORK(C2, "company")',
-                    t: 2,
-                    s: {
-                      ht: 1,
-                      bg: { rgb: '#f0fdf4' }  // Light green background color
-                    }
-                  },
-                },
-                2: {
-                  0: {
-                    v: 'Get profile\'s current job title',
-                    t: 2,
-                    s: {
-                      ht: 1,
-                      bl: 1
-                    }
-                  },
-                  1: {
-                    v: 'https://www.linkedin.com/in/johnrmarty',
-                    t: 2,
-                    s: {
-                      ht: 1
-                    }
-                  },
-                  2: {
-                    f: '=SG_PERSON_WORK(C3, "title")',
-                    t: 2,
-                    s: {
-                      ht: 1,
-                      bg: { rgb: '#f0fdf4' }  // Light green background color
-                    }
-                  },
-                }
-              },
-              rowCount: 50,
-              columnCount: 50,
-              defaultRowHeight: 25,
-              defaultColumnWidth: 120, // Default width for all columns
-              columnData: {            // Specific widths for columns
-                0: { w: 250 },        // Last Name column
-                1: { w: 320 },        // Company column
-                2: { w: 350 },        // Title column
-              }
-            }
-          }
-        };
-
-        // Initialize first spreadsheet
-        const { univerAPI: peopleAPI } = createUniver({
-          locale: LocaleType.EN_US,
-          locales: {
-            enUS: UniverPresetSheetsCoreEnUS,
-          },
-          theme: defaultTheme,
-          presets: [
-            UniverSheetsCorePreset({
-              container: 'enrichment-people-sheet',
-            }),
-          ],
-        });
-
-        // Create both spreadsheets with their respective data
-        peopleAPI.createUniverSheet(peopleSheetData);
-
-        console.log('All sheets initialized successfully');
-
-      } catch (error) {
-        console.error('Error initializing sheets:', error);
-      }
-    };
-  </script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Add number formatting function
-      function formatNumber(num) {
-        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-      }
-
-      // Format initial prices
-      document.querySelectorAll('.base-price').forEach(price => {
-        if (price.textContent) {
-          price.textContent = formatNumber(parseInt(price.textContent));
-        }
-      });
-
-      // Existing select handler code
-      const selects = document.querySelectorAll('.fresh-profiles-select');
-
-      selects.forEach(select => {
-        const priceElement = select.closest('.card').querySelector('.base-price');
-        const initialBasePrice = parseInt(priceElement.textContent.replace(/,/g, ''));
-        priceElement.setAttribute('data-base-price', initialBasePrice);
-
-        select.addEventListener('change', function () {
-          const priceElement = this.closest('.card').querySelector('.base-price');
-          const basePrice = parseInt(priceElement.getAttribute('data-base-price'));
-          const priceAddon = parseInt(this.options[this.selectedIndex].getAttribute('data-price-addon'));
-          const newPrice = basePrice + priceAddon;
-
-          if (priceElement) {
-            priceElement.textContent = formatNumber(newPrice);
-          }
-        });
-      });
-
-      // Handler for checkboxes
-      const checkboxes = {
-        'litefresh': 600,
-        'profresh': 3600,
-        'proplusfresh': 10800,
-        'businessfresh': 22800
-      };
-
-      Object.entries(checkboxes).forEach(([id, additionalPrice]) => {
-        const checkbox = document.getElementById(id);
-        if (checkbox) {
-          const priceElement = checkbox.closest('.card').querySelector('.base-price');
-          const initialBasePrice = parseInt(priceElement.textContent.replace(/,/g, ''));
-          priceElement.setAttribute('data-base-price', initialBasePrice);
-
-          checkbox.addEventListener('change', function () {
-            const basePrice = parseInt(priceElement.getAttribute('data-base-price'));
-            if (this.checked) {
-              priceElement.textContent = formatNumber(basePrice + additionalPrice);
-            } else {
-              priceElement.textContent = formatNumber(basePrice);
-            }
-          });
-        }
-      });
-    });
-  </script>
+  <!-- Initialize Univer -->
+  <script src="script-formula.js"></script>
 
 </body>
 
