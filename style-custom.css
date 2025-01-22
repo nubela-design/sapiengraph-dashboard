@@ -732,3 +732,45 @@ td, th {
   border-color: #00bd94;
   box-shadow: 0 0 0 0.2rem rgba(66, 186, 150, 0.25);
 }
+
+
+/* AJI 22 JAN 2025
+Override the lift hover behavior for dropdowns */
+
+.lift:hover {
+  position: relative;
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  z-index: 2;
+}
+
+.dropdown-menu.show {
+  z-index: 9999 !important;
+}
+
+/* Ensure the dropdown container stays above even during card hover */
+.card:hover .dropdown {
+  z-index: 9999;
+}
+
+/* Card hover effect */
+.card.hover-light:hover {
+  background-color: #F9FBFD !important;
+  outline: 1px solid #ffffff !important;
+  outline-offset: -1px !important;
+  cursor: pointer;
+}
+
+/* Folder icon container hover effect - only affects the hovered card */
+.card.hover-light:hover .card-body .d-flex .border.bg-lighter {
+  background-color: #ffffff !important;
+  transition: background-color 0.2s ease;
+}
+
+/* Default state */
+.border.bg-lighter {
+  transition: background-color 0.1s ease;
+}
