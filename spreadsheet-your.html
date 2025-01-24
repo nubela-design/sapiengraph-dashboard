@@ -806,36 +806,62 @@
   <div class="main-content">
   
     <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-12">
-  
-          <!-- Header -->
-          <div class="header mt-md-5 mb-4 mb-lg-5">
-            <div class="header-body border-0">
-  
-              <div class="row align-items-end">
-                <div class="col">
-  
-                  <!-- Title -->
-                  <h1 class="header-title mb-4 mb-lg-0">
-                    Your Spreadsheet
-                  </h1>
-  
-                </div>
-                <div class="col-auto">
-                  <!-- Add buttons -->
-                  <button class="btn btn-sm rounded-pill btn-outline-success px-4 py-2 me-2" data-bs-toggle="modal" data-bs-target="#addFolderModal">
-                    <i class="fe fe-folder-plus me-1"></i> Add new folder
-                  </button>
-                  <a class="btn btn-sm rounded-pill btn-success px-5 py-2" href="spreadsheet-new.html">
-                    <i class="fe fe-file-plus me-1"></i> Add new sheet
-                  </a>
-                </div>
-              </div> <!-- / .row -->
-  
+    
+      <!-- Header -->
+      <div class="header mt-md-5 mb-4 mb-lg-5">
+        <div class="header-body border-0">
+    
+          <div class="row align-items-end">
+            <div class="col">
+    
+              <!-- Title -->
+              <h1 class="header-title mb-4 mb-lg-0">
+                Your Spreadsheet
+              </h1>
+    
             </div>
-  
+            <div class="col-auto">
+              <!-- Add buttons -->
+              <button class="btn btn-sm rounded-pill btn-outline-success px-4 py-2 me-2" data-bs-toggle="modal"
+                data-bs-target="#addFolderModal">
+                <i class="fe fe-folder-plus me-1"></i> Add new folder
+              </button>
+              <a class="btn btn-sm rounded-pill btn-success px-5 py-2" href="spreadsheet-new.html">
+                <i class="fe fe-file-plus me-1"></i> Add new sheet
+              </a>
+            </div>
+          </div> <!-- / .row -->
+    
+        </div>
+    
+      </div>
+      
+      <!-- Spinner-->
+      <div class="row justify-content-center" id="spinnerContent">
+        <div class="col-12 py-4">
+          <div class="d-flex align-items-center py-8">
+            <div class="text-center w-100">
+              <div class="row justify-content-center">
+                <div class="col-12">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <div id="spinnerContainer">
+                      <div id="spinner1" class="spinner-grow text-success me-2 d-none"
+                        style="width: 2rem; height: 2rem;" role="status"></div>
+                      <div id="spinner2" class="spinner-grow text-success me-2 d-none"
+                        style="width: 2rem; height: 2rem;" role="status"></div>
+                      <div id="spinner3" class="spinner-grow text-success d-none"
+                        style="width: 2rem; height: 2rem;" role="status"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center d-none" id="realContent">
+        <div class="col-12">
   
           <!-- FOLDERS-->
           <div class="row align-items-center mb-4">
@@ -1260,7 +1286,7 @@
           </div>
 
         </div> <!-- / .row -->
-      </div>
+      </div>      
     </div>
   
   </div> <!-- / .main-content -->
@@ -1274,6 +1300,30 @@
 
   <!-- Theme JS -->
   <script src="./assets/js/theme.bundle.js"></script>
+
+  <!-- Spinner loading JS and AUTO SHOW CONTENT BY AJI-24-JAN-25 -->
+  <script>
+    // Function to show spinners with a delay
+    function showSpinnerWithDelay(spinnerId, delay) {
+      setTimeout(function () {
+        document.getElementById(spinnerId).classList.remove('d-none');
+      }, delay);
+    }
+
+    // Function to switch from spinner to real content
+    function switchToRealContent() {
+      document.getElementById('spinnerContent').classList.add('d-none');
+      document.getElementById('realContent').classList.remove('d-none');
+    }
+
+    // Show spinners in sequence
+    showSpinnerWithDelay('spinner1', 500);
+    showSpinnerWithDelay('spinner2', 600);
+    showSpinnerWithDelay('spinner3', 700);
+
+    // Switch to real content after 2 seconds
+    setTimeout(switchToRealContent, 2000);
+  </script>  
 
 </body>
 

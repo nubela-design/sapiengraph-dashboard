@@ -806,30 +806,42 @@
   <div class="main-content">
   
     <div class="container-fluid">
-
+    
       <!-- Header -->
       <div class="header mt-md-5 mb-4 mb-lg-5">
         <div class="header-body border-0">
-          <div class="row align-items-end">
+    
+          <div class="row align-items-center">
             <div class="col">
+    
               <!-- Title -->
               <h1 class="header-title mb-4 mb-lg-0">
-                Your Spreadsheet
+                <div class="d-block d-xl-inline">
+                  <a href="spreadsheet-your.html" class="text-reset text-decoration-none hover-success">Your Spreadsheet</a>
+                </div>
+                <small class="fw-normal h4 d-block d-xl-inline mt-2 mt-lg-0 ms-xl-2">
+                  <i class="fe fe-chevron-right"></i>
+                  <span class="text-muted">Prospector</span>
+                </small>
               </h1>
+    
             </div>
             <div class="col-auto">
               <!-- Add buttons -->
-              <button class="btn btn-sm rounded-pill btn-outline-success px-4 py-2 me-2 mb-3 mb-md-0" data-bs-toggle="modal" data-bs-target="#addFolderModal">
+              <button class="btn btn-sm rounded-pill btn-outline-success px-4 py-2 me-2" data-bs-toggle="modal"
+                data-bs-target="#addFolderModal">
                 <i class="fe fe-folder-plus me-1"></i> Add new folder
               </button>
               <a class="btn btn-sm rounded-pill btn-success px-5 py-2" href="spreadsheet-new.html">
-                <i class="fe fe-file-plus me-1"></i> Create new sheet
+                <i class="fe fe-file-plus me-1"></i> Add new sheet
               </a>
             </div>
           </div> <!-- / .row -->
+    
         </div>
+    
       </div>
-
+      
       <!-- Spinner-->
       <div class="row justify-content-center" id="spinnerContent">
         <div class="col-12 py-4">
@@ -854,10 +866,9 @@
         </div>
       </div>
 
-      <!-- Real Content-->
       <div class="row justify-content-center d-none" id="realContent">
         <div class="col-12">
-  
+
           <!-- FOLDERS-->
           <div class="row align-items-center mb-4">
           
@@ -871,7 +882,7 @@
               <div class="row">
                 <!-- Folder Item prospector-->
                 <div class="col-auto mb-4">
-                  <div class="card border-0 shadow-sm mb-0 lift hover-light py-1" style="width: 300px; cursor: pointer;" onclick="window.location.href='spreadsheet-folder.html'">
+                  <div class="card border-0 shadow-sm mb-0 lift hover-light" style="width: 300px; cursor: pointer;">
                     <div class="card-body p-3">
                       <div class="d-flex align-items-center">
                         <div class="border bg-lighter rounded px-3 py-2 me-3">
@@ -879,7 +890,7 @@
                         </div>
                         <div class="flex-grow-1">
                           <div class="d-flex align-items-center">
-                            <h4 class="card-title text-truncate mb-0 flex-grow-1">Prospector</h4>
+                            <h4 class="card-title text-truncate mb-0 flex-grow-1">My list</h4>
                             <div class="dropdown">
                               <button class="btn btn-link text-muted p-0" type="button" data-bs-toggle="dropdown" onclick="event.stopPropagation()">
                                 <i class="fe fe-more-vertical"></i>
@@ -890,52 +901,141 @@
                               </ul>
                             </div>
                           </div>
+                          <small class="text-muted">1 sheets</small>
                         </div>
                       </div>
                     </div>
-                    <a href="spreadsheet-folder.html" class="stretched-link"></a>
+                    <a href="spreadsheet-folder-sheet-only.html" class="stretched-link"></a>
                   </div>
                 </div>
+
+              </div>
+        
+            </div>
+        
+        
+          </div>          
+
+          <div class="row pt-3">
+            <div class="col-12 mb-3">
+              <h4 class="text-muted">
+                All sheets
+              </h4>
+            </div>
+            
+            <!-- First set of cards -->
+            <div class="col-12">
+              <div class="row g-2 g-md-4 g-lg-4">
+                <!-- -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                  <div class="card border-0 shadow-sm lift hover-light">
+                    <div class="card-img-top p-1 pb-3">
+                      <div class="rounded border" style="background: #f8f9fa;">
+                        <img src="assets/img/illustrations/spreadsheet-sample-p2.png" class="img-fluid rounded" alt="Spreadsheet preview">
+                      </div>
+                    </div>
+                    <div class="card-body p-3">
+                      <div class="d-flex align-items-center mb-3">
+                        <div class="border bg-lighter rounded px-3 py-2 me-3">
+                          <i class="fe fe-file-text text-success h4 d-flex align-items-center mb-0"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                          <h5 class="card-title mb-1">Competitor's top buyers</h5>
+                          <small class="text-muted">Tue, 21 Jan 2025 10:48:41</small>
+                        </div>
+                        <div class="dropdown">
+                          <button class="btn btn-link text-muted p-0" type="button" data-bs-toggle="dropdown">
+                            <i class="fe fe-more-vertical"></i>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#renameSheetModal" onclick="event.stopPropagation(); document.querySelector('[data-bs-toggle=dropdown]').click();"><i class="fe fe-edit-2 me-2"></i>Rename</a></li>
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#copySuccessModal" onclick="event.stopPropagation(); this.closest('.dropdown').querySelector('[data-bs-toggle=dropdown]').click();">
+                              <i class="fe fe-copy me-2"></i>Make a copy</a></li>
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#deleteSheetModal" onclick="event.stopPropagation(); document.querySelector('[data-bs-toggle=dropdown]').click();"><i class="fe fe-trash-2 me-2"></i>Delete</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="#!" class="stretched-link"></a>
+                  </div>
+                </div>        
                 
+                <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                  <div class="card border-0 shadow-sm lift hover-light">
+                    <div class="card-img-top p-1 pb-3">
+                      <div class="rounded border" style="background: #f8f9fa;">
+                        <img src="assets/img/illustrations/spreadsheet-sample-p.png" class="img-fluid rounded" alt="Spreadsheet preview">
+                      </div>
+                    </div>
+                    <div class="card-body p-3">
+                      <div class="d-flex align-items-center mb-3">
+                        <div class="border bg-lighter rounded px-3 py-2 me-3">
+                          <i class="fe fe-file-text text-success h4 d-flex align-items-center mb-0"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                          <h5 class="card-title mb-1">Top 9 potential buyer</h5>
+                          <small class="text-muted">Tue, 21 Jan 2025 08:48:48</small>
+                        </div>
+                        <div class="dropdown">
+                          <button class="btn btn-link text-muted p-0" type="button" data-bs-toggle="dropdown">
+                            <i class="fe fe-more-vertical"></i>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#renameSheetModal" onclick="event.stopPropagation(); document.querySelector('[data-bs-toggle=dropdown]').click();"><i class="fe fe-edit-2 me-2"></i>Rename</a></li>
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#copySuccessModal" onclick="event.stopPropagation(); this.closest('.dropdown').querySelector('[data-bs-toggle=dropdown]').click();">
+                              <i class="fe fe-copy me-2"></i>Make a copy</a></li>
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#deleteSheetModal" onclick="event.stopPropagation(); document.querySelector('[data-bs-toggle=dropdown]').click();"><i class="fe fe-trash-2 me-2"></i>Delete</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="#!" class="stretched-link"></a>
+                  </div>
+                </div>  
+                
+                <div class="col-12 col-md-6 col-lg-6 col-xl-3">
+                  <div class="card border-0 shadow-sm lift hover-light">
+                    <div class="card-img-top p-1 pb-3">
+                      <div class="rounded border" style="background: #f8f9fa;">
+                        <img src="assets/img/illustrations/spreadsheet-sample-p4.png" class="img-fluid rounded" alt="Spreadsheet preview">
+                      </div>
+                    </div>
+                    <div class="card-body p-3">
+                      <div class="d-flex align-items-center mb-3">
+                        <div class="border bg-lighter rounded px-3 py-2 me-3">
+                          <i class="fe fe-file-text text-success h4 d-flex align-items-center mb-0"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                          <h5 class="card-title mb-1">Prospector enrichment</h5>
+                          <small class="text-muted">Tue, 21 Jan 2025 04:48:40</small>
+                        </div>
+                        <div class="dropdown">
+                          <button class="btn btn-link text-muted p-0" type="button" data-bs-toggle="dropdown">
+                            <i class="fe fe-more-vertical"></i>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#renameSheetModal" onclick="event.stopPropagation(); document.querySelector('[data-bs-toggle=dropdown]').click();"><i class="fe fe-edit-2 me-2"></i>Rename</a></li>
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#copySuccessModal" onclick="event.stopPropagation(); this.closest('.dropdown').querySelector('[data-bs-toggle=dropdown]').click();">
+                              <i class="fe fe-copy me-2"></i>Make a copy</a></li>
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#deleteSheetModal" onclick="event.stopPropagation(); document.querySelector('[data-bs-toggle=dropdown]').click();"><i class="fe fe-trash-2 me-2"></i>Delete</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="#!" class="stretched-link"></a>
+                  </div>
+                </div>                  
+
               </div>
-        
-            </div>
-        
-        
-          </div>
-
-          <div class="card card-body border-0 shadow-none bg-light mb-4 pb-4">
-                    
-            <div class="row align-items-center">
-          
-              <div class="col-12 text-center py-5">
-          
-                <!-- Illustration -->
-                <img src="assets/img/illustrations/create-sheet.png" alt="Create Sheet" class="img-fluid mb-5" style="max-width: 300px;">
-
-                <!-- Title -->
-                <h2 class="text-success mb-2">
-                  No sheets yet
-                </h2>
-
-                <!-- Description -->
-                <p class="text-gray-700 mb-5">
-                  Create your first sheet to start organizing and enriching your data
-                </p>
-
-                <!-- Button -->
-                <a href="spreadsheet-new.html" class="btn btn-success px-5 rounded-pill">
-                  <i class="fe fe-file-plus me-2"></i> Create new sheet
-                </a>
-          
-              </div>
-          
-            </div>
-          
+              
+            </div>         
+            
+            
+            
           </div>
 
         </div> <!-- / .row -->
-      </div>
+      </div>      
     </div>
   
   </div> <!-- / .main-content -->
@@ -972,7 +1072,7 @@
 
     // Switch to real content after 2 seconds
     setTimeout(switchToRealContent, 2000);
-  </script>
+  </script>  
 
 </body>
 

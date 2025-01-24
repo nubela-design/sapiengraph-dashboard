@@ -774,3 +774,7 @@ Override the lift hover behavior for dropdowns */
 .border.bg-lighter {
   transition: background-color 0.1s ease;
 }
+
+.hover-success:hover {
+  color: #02BD94 !important;
+}
